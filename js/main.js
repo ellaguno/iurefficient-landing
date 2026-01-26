@@ -178,15 +178,27 @@ function initContactForm() {
         const data = Object.fromEntries(formData.entries());
 
         try {
-            // Here you would typically send to your backend
-            // For now, we'll simulate a successful submission
-            await simulateFormSubmission(data);
+            // Send to Brevo via PHP backend
+            const response = await fetch('/api/send-contact.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
 
-            // Show success message
-            showFormMessage(form, 'success', '¡Gracias! Nos pondremos en contacto contigo pronto.');
-            form.reset();
+            const result = await response.json();
+
+            if (result.success) {
+                // Show success message
+                showFormMessage(form, 'success', '¡Gracias! Te hemos enviado un correo de confirmación. Nos pondremos en contacto contigo pronto.');
+                form.reset();
+            } else {
+                throw new Error(result.error || 'Error al enviar');
+            }
 
         } catch (error) {
+            console.error('Form error:', error);
             // Show error message
             showFormMessage(form, 'error', 'Hubo un error. Por favor intenta de nuevo o escríbenos a contacto@iurefficient.com');
         } finally {
@@ -194,23 +206,6 @@ function initContactForm() {
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
         }
-    });
-}
-
-function simulateFormSubmission(data) {
-    return new Promise((resolve, reject) => {
-        // Simulate network delay
-        setTimeout(() => {
-            // Log the data (in production, send to backend)
-            console.log('Form submitted:', data);
-
-            // Simulate success (90% of the time)
-            if (Math.random() > 0.1) {
-                resolve({ success: true });
-            } else {
-                reject(new Error('Simulated error'));
-            }
-        }, 1500);
     });
 }
 
