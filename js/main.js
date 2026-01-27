@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeader();
     initMobileNav();
     initSwiper();
+    initGLightbox();
     initSmoothScroll();
     initContactForm();
 });
@@ -115,6 +116,24 @@ function initSwiper() {
                 spaceBetween: 40,
             },
         },
+    });
+}
+
+/* --------------------------------------------------------------------------
+   GLightbox - Image Lightbox for Screenshots
+   -------------------------------------------------------------------------- */
+function initGLightbox() {
+    const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: false,
+        openEffect: 'zoom',
+        closeEffect: 'fade',
+        cssEfects: {
+            fade: { in: 'fadeIn', out: 'fadeOut' },
+            zoom: { in: 'zoomIn', out: 'zoomOut' }
+        }
     });
 }
 
