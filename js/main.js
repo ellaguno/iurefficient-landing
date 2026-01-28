@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initGLightbox();
     initSmoothScroll();
     initContactForm();
+    initScrollButton();
 });
 
 /* --------------------------------------------------------------------------
@@ -273,6 +274,61 @@ function showFormMessage(form, type, message) {
         messageEl.style.transition = 'opacity 0.3s ease';
         setTimeout(() => messageEl.remove(), 300);
     }, 5000);
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Button - Go to top/bottom
+   -------------------------------------------------------------------------- */
+function initScrollButton() {
+    const scrollBtn = document.getElementById('scrollBtn');
+    if (!scrollBtn) return;
+
+    const showThreshold = 300;
+
+    function updateButtonState() {
+        const scrollTop = window.pageYOffset;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const scrollBottom = documentHeight - scrollTop - windowHeight;
+
+        // Show/hide button
+        if (scrollTop > showThreshold) {
+            scrollBtn.classList.add('visible');
+        } else {
+            scrollBtn.classList.remove('visible');
+        }
+
+        // Toggle between up/down arrows
+        // Show up arrow when near the bottom (less than 200px from bottom)
+        if (scrollBottom < 200) {
+            scrollBtn.classList.add('at-bottom');
+        } else {
+            scrollBtn.classList.remove('at-bottom');
+        }
+    }
+
+    // Initial state
+    updateButtonState();
+
+    // Update on scroll
+    window.addEventListener('scroll', throttle(updateButtonState, 100));
+
+    // Click handler
+    scrollBtn.addEventListener('click', () => {
+        if (scrollBtn.classList.contains('at-bottom')) {
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        } else {
+            // Scroll to bottom
+            window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    });
 }
 
 /* --------------------------------------------------------------------------
