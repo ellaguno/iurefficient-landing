@@ -14,7 +14,27 @@ define('ADMIN_EMAIL', 'contacto@iurefficient.com'); // Email del administrador
 define('ADMIN_NAME', 'Iurefficient');
 define('FROM_EMAIL', 'noreply@iurefficient.com'); // Debe estar verificado en Brevo
 define('FROM_NAME', 'Iurefficient');
+define('DEBUG_MODE', true); // Cambiar a false en producción
+define('LOG_FILE', __DIR__ . '/contact-log.txt');
 // ===========================================
+
+// Función para escribir logs
+function writeLog($message, $data = null) {
+    if (!DEBUG_MODE) return;
+
+    $timestamp = date('Y-m-d H:i:s');
+    $logMessage = "[{$timestamp}] {$message}";
+    if ($data !== null) {
+        $logMessage .= "\n" . print_r($data, true);
+    }
+    $logMessage .= "\n" . str_repeat('-', 50) . "\n";
+
+    file_put_contents(LOG_FILE, $logMessage, FILE_APPEND | LOCK_EX);
+}
+
+writeLog("=== Nueva solicitud recibida ===");
+writeLog("Método: " . $_SERVER['REQUEST_METHOD']);
+writeLog("Headers recibidos", getallheaders());
 
 // Headers CORS para permitir requests desde el frontend
 header('Content-Type: application/json');
@@ -37,23 +57,33 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 // Obtener datos del formulario
 $input = file_get_contents('php://input');
+writeLog("Raw input recibido", $input);
+
 $data = json_decode($input, true);
+writeLog("JSON decode result", $data);
+writeLog("JSON decode error (si hay)", json_last_error_msg());
 
 // Si no es JSON, intentar con form data
 if (!$data) {
+    writeLog("No es JSON, intentando form data", $_POST);
     $data = [
-        'name' => $_POST['name'] ?? '',
+        'nombre' => $_POST['nombre'] ?? '',
         'email' => $_POST['email'] ?? '',
-        'company' => $_POST['company'] ?? '',
-        'phone' => $_POST['phone'] ?? '',
-        'message' => $_POST['message'] ?? ''
+        'telefono' => $_POST['telefono'] ?? '',
+        'tamano' => $_POST['tamano'] ?? ''
     ];
 }
 
-// Validación básica
-if (empty($data['name']) || empty($data['email']) || empty($data['message'])) {
+writeLog("Datos finales a procesar", $data);
+
+// Validación básica (solo nombre y email son requeridos)
+if (empty($data['nombre']) || empty($data['email'])) {
+    writeLog("ERROR: Validación falló - campos vacíos", [
+        'nombre_empty' => empty($data['nombre']),
+        'email_empty' => empty($data['email'])
+    ]);
     http_response_code(400);
-    echo json_encode(['success' => false, 'error' => 'Faltan campos requeridos: nombre, email y mensaje son obligatorios']);
+    echo json_encode(['success' => false, 'error' => 'Faltan campos requeridos: nombre y email son obligatorios']);
     exit();
 }
 
@@ -65,11 +95,19 @@ if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
 }
 
 // Sanitizar datos
-$name = htmlspecialchars(strip_tags($data['name']));
+$name = htmlspecialchars(strip_tags($data['nombre']));
 $email = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
-$company = htmlspecialchars(strip_tags($data['company'] ?? 'No especificado'));
-$phone = htmlspecialchars(strip_tags($data['phone'] ?? 'No especificado'));
-$message = htmlspecialchars(strip_tags($data['message']));
+$phone = htmlspecialchars(strip_tags($data['telefono'] ?? 'No especificado'));
+$tamano = htmlspecialchars(strip_tags($data['tamano'] ?? 'No especificado'));
+
+// Mapear tamaño a texto legible
+$tamanoTexto = [
+    '1' => 'Solo yo',
+    '2-5' => '2-5 abogados',
+    '6-20' => '6-20 abogados',
+    '20+' => 'Más de 20 abogados'
+];
+$tamanoDisplay = $tamanoTexto[$tamano] ?? $tamano;
 
 // ============== EMAIL AL ADMINISTRADOR ==============
 $adminEmailContent = "
@@ -89,7 +127,7 @@ $adminEmailContent = "
 <body>
     <div class='container'>
         <div class='header'>
-            <h2 style='margin:0;'>📬 Nuevo contacto desde iurefficient.com</h2>
+            <h2 style='margin:0;'>📬 Nueva solicitud de Demo desde iurefficient.com</h2>
         </div>
         <div class='content'>
             <div class='field'>
@@ -101,16 +139,12 @@ $adminEmailContent = "
                 <div class='value'><a href='mailto:{$email}'>{$email}</a></div>
             </div>
             <div class='field'>
-                <div class='label'>🏢 Empresa/Despacho:</div>
-                <div class='value'>{$company}</div>
-            </div>
-            <div class='field'>
                 <div class='label'>📱 Teléfono:</div>
                 <div class='value'>{$phone}</div>
             </div>
             <div class='field'>
-                <div class='label'>💬 Mensaje:</div>
-                <div class='value' style='background:white; padding:15px; border-radius:4px; border:1px solid #e5e7eb;'>{$message}</div>
+                <div class='label'>🏢 Tamaño del despacho:</div>
+                <div class='value'>{$tamanoDisplay}</div>
             </div>
         </div>
         <div class='footer'>
@@ -138,20 +172,18 @@ $clientEmailContent = "
 <body>
     <div class='container'>
         <div class='header'>
-            <h1 style='margin:0; font-size:24px;'>¡Gracias por contactarnos!</h1>
-            <p style='margin:10px 0 0 0; opacity:0.9;'>Hemos recibido tu mensaje</p>
+            <h1 style='margin:0; font-size:24px;'>¡Gracias por tu interés!</h1>
+            <p style='margin:10px 0 0 0; opacity:0.9;'>Hemos recibido tu solicitud de demo</p>
         </div>
         <div class='content'>
             <p>Hola <strong>{$name}</strong>,</p>
 
-            <p>Gracias por tu interés en Iurefficient. Hemos recibido tu mensaje y nuestro equipo lo revisará a la brevedad.</p>
+            <p>Gracias por tu interés en Iurefficient. Hemos recibido tu solicitud de demo y nuestro equipo se pondrá en contacto contigo muy pronto.</p>
 
             <div class='highlight'>
-                <strong>📋 Resumen de tu mensaje:</strong><br>
-                <em>\"{$message}\"</em>
+                <strong>📋 Próximos pasos:</strong><br>
+                Un miembro de nuestro equipo te contactará en las próximas <strong>24 horas hábiles</strong> para agendar tu demo personalizada.
             </div>
-
-            <p>Te responderemos en un plazo máximo de <strong>24 horas hábiles</strong>.</p>
 
             <p>Mientras tanto, te invitamos a conocer más sobre cómo Iurefficient puede transformar tu práctica legal:</p>
 
@@ -213,12 +245,16 @@ function sendBrevoEmail($to, $toName, $subject, $htmlContent, $replyTo = null) {
     $error = curl_error($ch);
     curl_close($ch);
 
-    return [
+    $result = [
         'success' => $httpCode >= 200 && $httpCode < 300,
         'httpCode' => $httpCode,
         'response' => json_decode($response, true),
         'error' => $error
     ];
+
+    writeLog("Brevo API response para {$to}", $result);
+
+    return $result;
 }
 
 // Enviar email al administrador
@@ -240,18 +276,22 @@ $clientResult = sendBrevoEmail(
 
 // Respuesta
 if ($adminResult['success'] && $clientResult['success']) {
+    writeLog("SUCCESS: Ambos emails enviados correctamente");
     echo json_encode([
         'success' => true,
         'message' => 'Mensaje enviado correctamente. Te hemos enviado un correo de confirmación.'
     ]);
 } else {
-    // Log del error (en producción deberías guardar esto en un archivo de log)
-    error_log("Brevo Error - Admin: " . json_encode($adminResult) . " Client: " . json_encode($clientResult));
+    writeLog("ERROR: Fallo al enviar emails", [
+        'adminResult' => $adminResult,
+        'clientResult' => $clientResult
+    ]);
 
     http_response_code(500);
     echo json_encode([
         'success' => false,
-        'error' => 'Error al enviar el mensaje. Por favor intenta de nuevo o contáctanos directamente a contacto@iurefficient.com'
+        'error' => 'Error al enviar el mensaje. Por favor intenta de nuevo o contáctanos directamente a contacto@iurefficient.com',
+        'debug' => DEBUG_MODE ? ['admin' => $adminResult, 'client' => $clientResult] : null
     ]);
 }
 ?>
