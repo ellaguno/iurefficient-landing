@@ -1,0 +1,551 @@
+<?php
+$base_path = '';
+$current_page = 'home';
+$page_title = 'Iurefficient - El derecho, a un click de distancia';
+$page_description = 'Iurefficient - Gestiona casos, analiza documentos y potencia tu práctica legal con inteligencia artificial. Ahorra hasta 70% de tu tiempo.';
+$og_image = 'https://iurefficient.com/images/og-image.png';
+$og_url = 'https://iurefficient.com';
+$extra_css = ['aos', 'swiper', 'glightbox'];
+$extra_scripts = ['aos', 'swiper', 'glightbox'];
+include 'includes/pricing-data.php';
+?>
+<!DOCTYPE html>
+<html lang="es">
+<?php include 'includes/head.php'; ?>
+<body>
+<?php include 'includes/header.php'; ?>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">
+                    El derecho, <span class="gradient-text">a un click</span> de distancia
+                </h1>
+                <p class="hero-subtitle">
+                    Gestiona casos, analiza documentos y potencia tu práctica legal con inteligencia artificial.
+                    <strong>Ahorra hasta 70% de tu tiempo.</strong>
+                </p>
+                <div class="hero-ctas">
+                    <a href="#contacto" class="btn btn-primary btn-lg">
+                        Solicitar Demo Gratuita
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=2RqRNHPVC9U" target="_blank" rel="noopener noreferrer" class="btn btn-youtube btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        ¿Por qué usar Iurefficient?
+                    </a>
+                    <a href="#video" class="btn btn-secondary btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                        Ver cómo funciona
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image" data-aos="fade-up" data-aos-delay="200">
+                <div class="hero-mockup">
+                    <img src="images/dashboard-mockup.png" alt="Dashboard de Iurefficient">
+                </div>
+            </div>
+
+            <div class="hero-social-proof" data-aos="fade-up" data-aos-delay="400">
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <span class="trust-icon">🔒</span>
+                        <span>Cifrado AES-256</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-icon">🔐</span>
+                        <span>Servidores Privados</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-icon">⚡</span>
+                        <span>99.9% Uptime</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-icon">🛡️</span>
+                        <span>Seguridad Enterprise</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="problem-solution" id="problema">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Abogados modernos, <span class="gradient-text">desafíos constantes</span></h2>
+                <p class="section-subtitle">Sabemos lo que enfrentas cada día. Por eso creamos Iurefficient.</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-card comparison-before" data-aos="fade-right">
+                    <div class="comparison-header">
+                        <span class="comparison-icon">😫</span>
+                        <h3>Sin Iurefficient</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li>
+                            <svg class="icon-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                            Documentos dispersos en carpetas y emails
+                        </li>
+                        <li>
+                            <svg class="icon-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                            Plazos que se olvidan hasta el último momento
+                        </li>
+                        <li>
+                            <svg class="icon-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                            Horas buscando información en expedientes
+                        </li>
+                        <li>
+                            <svg class="icon-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                            Trabajo repetitivo que consume tu tiempo
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="comparison-arrow" data-aos="zoom-in">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+
+                <div class="comparison-card comparison-after" data-aos="fade-left">
+                    <div class="comparison-header">
+                        <span class="comparison-icon">😊</span>
+                        <h3>Con Iurefficient</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li>
+                            <svg class="icon-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Todo centralizado en una plataforma segura
+                        </li>
+                        <li>
+                            <svg class="icon-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Alertas automáticas de fechas importantes
+                        </li>
+                        <li>
+                            <svg class="icon-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            IA que encuentra lo que necesitas en segundos
+                        </li>
+                        <li>
+                            <svg class="icon-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Automatización que te libera para lo importante
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="caracteristicas">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Todo lo que necesitas para <span class="gradient-text">potenciar tu práctica</span></h2>
+                <p class="section-subtitle">Herramientas diseñadas específicamente para profesionales del derecho</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Gestión Inteligente de Documentos</h3>
+                    <p>Organiza, busca y analiza documentos legales con IA. Extrae cláusulas clave automáticamente.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Control Total de Clientes y Casos</h3>
+                    <p>Centraliza expedientes, seguimiento de casos y comunicación con clientes en un solo lugar.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 011 1v3a1 1 0 01-1 1h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 01-1-1v-3a1 1 0 011-1h1a7 7 0 017-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/>
+                            <circle cx="9" cy="14" r="1"/>
+                            <circle cx="15" cy="14" r="1"/>
+                        </svg>
+                    </div>
+                    <h3>Asistente de IA Legal</h3>
+                    <p>Pregunta en lenguaje natural sobre tus casos. Obtén respuestas basadas en tus documentos.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                            <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+                        </svg>
+                    </div>
+                    <h3>Calendario Legal Inteligente</h3>
+                    <p>Nunca pierdas un plazo. Alertas automáticas de audiencias, vencimientos y fechas clave.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Mira Iurefficient <span class="gradient-text">en acción</span></h2>
+                <p class="section-subtitle">Descubre cómo puedes ahorrar hasta 70% de tu tiempo</p>
+            </div>
+
+            <div class="video-wrapper" data-aos="zoom-in">
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/SAdlFVYjVI0"
+                        title="Iurefficient - Beneficios"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Carousel -->
+    <section class="screenshots" id="plataforma">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Conoce la <span class="gradient-text">plataforma</span></h2>
+                <p class="section-subtitle">Una interfaz intuitiva diseñada para abogados</p>
+            </div>
+
+            <div class="swiper screenshots-swiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="screenshot-card">
+                            <a href="images/screenshot-1.png" class="glightbox" data-gallery="screenshots" data-title="Dashboard" data-description="Tu centro de comando legal">
+                                <img src="images/screenshot-1.png" alt="Dashboard">
+                            </a>
+                            <div class="screenshot-info">
+                                <h4>Dashboard</h4>
+                                <p>Tu centro de comando legal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-card">
+                            <a href="images/screenshot-2.png" class="glightbox" data-gallery="screenshots" data-title="Gestión de Casos" data-description="Todos tus expedientes organizados">
+                                <img src="images/screenshot-2.png" alt="Gestión de Casos">
+                            </a>
+                            <div class="screenshot-info">
+                                <h4>Gestión de Casos</h4>
+                                <p>Todos tus expedientes organizados</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-card">
+                            <a href="images/screenshot-3.png" class="glightbox" data-gallery="screenshots" data-title="Análisis de Documentos" data-description="IA que extrae lo importante">
+                                <img src="images/screenshot-3.png" alt="Análisis de Documentos">
+                            </a>
+                            <div class="screenshot-info">
+                                <h4>Análisis de Documentos</h4>
+                                <p>IA que extrae lo importante</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-card">
+                            <a href="images/screenshot-4.png" class="glightbox" data-gallery="screenshots" data-title="Asistente IA" data-description="Pregunta, obtén respuestas">
+                                <img src="images/screenshot-4.png" alt="Asistente IA">
+                            </a>
+                            <div class="screenshot-info">
+                                <h4>Asistente IA</h4>
+                                <p>Pregunta, obtén respuestas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-card">
+                            <a href="images/screenshot-5.png" class="glightbox" data-gallery="screenshots" data-title="Calendario" data-description="Plazos bajo control">
+                                <img src="images/screenshot-5.png" alt="Calendario">
+                            </a>
+                            <div class="screenshot-info">
+                                <h4>Calendario</h4>
+                                <p>Plazos bajo control</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-card">
+                            <a href="images/screenshot-6.png" class="glightbox" data-gallery="screenshots" data-title="Clientes" data-description="Relaciones bien gestionadas">
+                                <img src="images/screenshot-6.png" alt="Clientes">
+                            </a>
+                            <div class="screenshot-info">
+                                <h4>Clientes</h4>
+                                <p>Relaciones bien gestionadas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="screenshot-card">
+                            <a href="images/screenshot-7.png" class="glightbox" data-gallery="screenshots" data-title="Reportes" data-description="Métricas de tu práctica">
+                                <img src="images/screenshot-7.png" alt="Reportes">
+                            </a>
+                            <div class="screenshot-info">
+                                <h4>Reportes</h4>
+                                <p>Métricas de tu práctica</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Resultados que <span class="gradient-text">transforman</span></h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="0">
+                    <div class="benefit-icon">⏱️</div>
+                    <div class="benefit-content">
+                        <h4>Ahorra hasta 70% de tu tiempo</h4>
+                        <p>En tareas administrativas y búsqueda de información</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">📈</div>
+                    <div class="benefit-content">
+                        <h4>Aumenta tu productividad 3x</h4>
+                        <p>Más casos atendidos con la misma dedicación</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">🔒</div>
+                    <div class="benefit-content">
+                        <h4>Seguridad de nivel bancario</h4>
+                        <p>Tus datos y los de tus clientes siempre protegidos</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon">💡</div>
+                    <div class="benefit-content">
+                        <h4>Decisiones informadas</h4>
+                        <p>Datos y métricas de tu práctica en tiempo real</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-content">
+                        <h4>Enfócate en tus clientes</h4>
+                        <p>Dedica tu tiempo a lo que realmente importa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security" id="seguridad">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Tu información, <span class="gradient-text">siempre protegida</span></h2>
+                <p class="section-subtitle">Seguridad de nivel empresarial para proteger los datos más sensibles de tu práctica</p>
+            </div>
+
+            <div class="security-grid">
+                <div class="security-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0110 0v4"/>
+                        </svg>
+                    </div>
+                    <h4>Cifrado AES-256</h4>
+                    <p>Todos tus documentos y conversaciones cifrados en reposo y en tránsito</p>
+                </div>
+
+                <div class="security-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>Google Cloud Platform</h4>
+                    <p>Infraestructura alojada en Google Cloud con controles de seguridad empresarial</p>
+                </div>
+
+                <div class="security-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h4>Backups Automáticos</h4>
+                    <p>Respaldos diarios con retención de 30 días para tu tranquilidad</p>
+                </div>
+
+                <div class="security-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h4>Privacidad de IA</h4>
+                    <p>Tus documentos nunca se usan para entrenar modelos externos</p>
+                </div>
+            </div>
+
+            <div class="security-standards" data-aos="fade-up">
+                <h4>Nuestros estándares de seguridad</h4>
+                <div class="standards-logos">
+                    <div class="standard-badge">
+                        <span class="standard-icon">🔐</span>
+                        <span>SSL/TLS</span>
+                    </div>
+                    <div class="standard-badge">
+                        <span class="standard-icon">🛡️</span>
+                        <span>Controles Enterprise</span>
+                    </div>
+                    <div class="standard-badge">
+                        <span class="standard-icon">🌐</span>
+                        <span>GDPR Ready</span>
+                    </div>
+                    <div class="standard-badge">
+                        <span class="standard-icon">☁️</span>
+                        <span>Basado en ISO 27001</span>
+                    </div>
+                </div>
+                <a href="seguridad/" class="btn btn-outline">Conoce más sobre nuestra seguridad</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="equipo">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Creado por abogados, <span class="gradient-text">para abogados</span></h2>
+                <p class="section-subtitle">Conocemos tus desafíos porque los vivimos cada día</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="0">
+                    <div class="member-photo">
+                        <img src="images/eduardo.jpg" alt="Eduardo Llaguno Velasco">
+                    </div>
+                    <h4>Eduardo Llaguno Velasco</h4>
+                    <p class="member-role">Co-fundador</p>
+                    <p class="member-bio">Apasionado por la intersección entre derecho y tecnología. Creamos Iurefficient para resolver los problemas que enfrentamos en nuestra propia práctica.</p>
+                </div>
+
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-photo">
+                        <img src="images/frida.jpg" alt="Frida Velázquez Esquer">
+                    </div>
+                    <h4>Frida Velázquez Esquer</h4>
+                    <p class="member-role">Co-fundadora</p>
+                    <p class="member-bio">Abogada con visión de futuro. Nuestra misión es democratizar el acceso a herramientas de IA que antes solo tenían las grandes firmas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="precios">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Planes que se adaptan a <span class="gradient-text">tu práctica</span></h2>
+                <p class="section-subtitle">Sin contratos forzosos. Cancela cuando quieras.</p>
+            </div>
+
+<?php
+$show_toggle = false;
+$show_overage = false;
+$show_extra_features = false;
+$show_footer_link = true;
+include 'includes/pricing-cards.php';
+?>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contacto">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>¿Listo para transformar tu práctica legal?</h2>
+                <p>Únete a cientos de abogados que ya optimizaron su trabajo</p>
+
+                <form class="cta-form" id="contactForm">
+                    <div class="form-row">
+                        <input type="text" name="nombre" placeholder="Tu nombre" required>
+                        <input type="email" name="email" placeholder="Tu email" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" name="telefono" placeholder="Tu teléfono (opcional)">
+                        <select name="tamano">
+                            <option value="">Tamaño de tu despacho</option>
+                            <option value="1">Solo yo</option>
+                            <option value="2-5">2-5 abogados</option>
+                            <option value="6-20">6-20 abogados</option>
+                            <option value="20+">Más de 20</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                        Solicitar Demo Gratuita
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </form>
+
+                <p class="cta-note">Sin compromiso • Setup en 24 horas • Soporte incluido</p>
+            </div>
+        </div>
+    </section>
+
+<?php include 'includes/footer.php'; ?>
+
+    <!-- Scroll to Top/Bottom Button -->
+    <button class="scroll-btn" id="scrollBtn" aria-label="Scroll">
+        <svg class="scroll-icon-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+        </svg>
+        <svg class="scroll-icon-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 11l-5-5-5 5M17 18l-5-5-5 5"/>
+        </svg>
+    </button>
+
+<?php include 'includes/scripts.php'; ?>
+</body>
+</html>

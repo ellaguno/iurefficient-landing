@@ -1,0 +1,201 @@
+<?php
+/**
+ * Datos centralizados de pricing.
+ * Editar SOLO este archivo para actualizar planes en todo el sitio.
+ */
+
+$plans = [
+    'basico' => [
+        'name' => 'Básico',
+        'description' => 'Pequeños despachos e independientes',
+        'monthly' => 999,
+        'annual' => 916,
+        'badge' => null,
+        'featured' => false,
+        'cta_text' => 'Comenzar prueba gratuita',
+        'cta_style' => 'outline', // 'outline' o 'primary'
+        'features' => [
+            '3 usuarios incluidos',
+            '50 casos/proyectos',
+            '500 consultas IA al mes',
+            '20 GB almacenamiento',
+            'Soporte por email',
+        ],
+        'extra_features' => [
+            'Exportación de datos',
+        ],
+        'overage' => '+$25/usuario, +$2/GB, +$5/caso, +$10/1000 IA',
+        // Datos para tabla comparativa
+        'comparison' => [
+            'casos_activos' => '50',
+            'gestion_clientes' => true,
+            'calendario_legal' => true,
+            'alertas_plazos' => true,
+            'consultas_ia' => '500',
+            'analisis_documentos' => true,
+            'extraccion_clausulas' => true,
+            'resumen_automatico' => true,
+            'busqueda_semantica' => false,
+            'almacenamiento' => '20 GB',
+            'versionado' => true,
+            'ocr' => false,
+            'usuarios' => '3',
+            'roles_permisos' => false,
+            'historial' => '30 días',
+            'google_calendar' => false,
+            'google_drive' => false,
+            'microsoft_365' => false,
+            'api' => false,
+            'webhooks' => false,
+            'soporte' => 'Email',
+            'tiempo_respuesta' => '48 horas',
+            'capacitacion' => 'Documentación',
+            'sla' => false,
+        ],
+    ],
+    'profesional' => [
+        'name' => 'Profesional',
+        'description' => 'Despachos en crecimiento',
+        'monthly' => 4999,
+        'annual' => 2999,
+        'badge' => 'Más popular',
+        'featured' => true,
+        'cta_text' => 'Comenzar prueba gratuita',
+        'cta_style' => 'primary',
+        'features' => [
+            '15 usuarios incluidos',
+            '200 casos/proyectos',
+            '2,000 consultas IA al mes',
+            '100 GB almacenamiento',
+            'Soporte prioritario',
+            'Integraciones',
+        ],
+        'extra_features' => [
+            'Reportes avanzados',
+            'API access',
+        ],
+        'overage' => '+$20/usuario, +$1.50/GB, +$3/caso, +$8/1000 IA',
+        'comparison' => [
+            'casos_activos' => '200',
+            'gestion_clientes' => true,
+            'calendario_legal' => true,
+            'alertas_plazos' => true,
+            'consultas_ia' => '2,000',
+            'analisis_documentos' => true,
+            'extraccion_clausulas' => true,
+            'resumen_automatico' => true,
+            'busqueda_semantica' => true,
+            'almacenamiento' => '100 GB',
+            'versionado' => true,
+            'ocr' => true,
+            'usuarios' => '15',
+            'roles_permisos' => true,
+            'historial' => '90 días',
+            'google_calendar' => true,
+            'google_drive' => true,
+            'microsoft_365' => false,
+            'api' => true,
+            'webhooks' => false,
+            'soporte' => 'Prioritario',
+            'tiempo_respuesta' => '12 horas',
+            'capacitacion' => 'Webinars',
+            'sla' => '99.5%',
+        ],
+    ],
+    'enterprise' => [
+        'name' => 'Enterprise',
+        'description' => 'Grandes organizaciones',
+        'monthly' => 9999,
+        'annual' => 9166,
+        'badge' => null,
+        'featured' => false,
+        'cta_text' => 'Contactar ventas',
+        'cta_style' => 'outline',
+        'features' => [
+            '100 usuarios incluidos',
+            'Casos ilimitados',
+            '10,000 consultas IA al mes',
+            '1 TB almacenamiento',
+            'Soporte dedicado 24/7',
+            'Personalización',
+            'Capacitación incluida',
+        ],
+        'extra_features' => [
+            'SLA garantizado 99.9%',
+        ],
+        'overage' => '+$1/GB, +$5/1000 IA',
+        'comparison' => [
+            'casos_activos' => 'Ilimitados',
+            'gestion_clientes' => true,
+            'calendario_legal' => true,
+            'alertas_plazos' => true,
+            'consultas_ia' => '10,000',
+            'analisis_documentos' => true,
+            'extraccion_clausulas' => true,
+            'resumen_automatico' => true,
+            'busqueda_semantica' => true,
+            'almacenamiento' => '1 TB',
+            'versionado' => true,
+            'ocr' => true,
+            'usuarios' => '100',
+            'roles_permisos' => true,
+            'historial' => 'Ilimitado',
+            'google_calendar' => true,
+            'google_drive' => true,
+            'microsoft_365' => true,
+            'api' => true,
+            'webhooks' => true,
+            'soporte' => 'Dedicado 24/7',
+            'tiempo_respuesta' => '2 horas',
+            'capacitacion' => 'Personalizada',
+            'sla' => '99.9%',
+        ],
+    ],
+];
+
+// Categorías para la tabla comparativa
+$comparison_categories = [
+    'Gestión de Casos' => [
+        'casos_activos' => 'Casos activos',
+        'gestion_clientes' => 'Gestión de clientes',
+        'calendario_legal' => 'Calendario legal',
+        'alertas_plazos' => 'Alertas de plazos',
+    ],
+    'Inteligencia Artificial' => [
+        'consultas_ia' => 'Consultas IA mensuales',
+        'analisis_documentos' => 'Análisis de documentos',
+        'extraccion_clausulas' => 'Extracción de cláusulas',
+        'resumen_automatico' => 'Resumen automático',
+        'busqueda_semantica' => 'Búsqueda semántica avanzada',
+    ],
+    'Almacenamiento y Documentos' => [
+        'almacenamiento' => 'Almacenamiento',
+        'versionado' => 'Versionado de documentos',
+        'ocr' => 'OCR para PDFs escaneados',
+    ],
+    'Colaboración' => [
+        'usuarios' => 'Usuarios incluidos',
+        'roles_permisos' => 'Roles y permisos',
+        'historial' => 'Historial de actividad',
+    ],
+    'Integraciones' => [
+        'google_calendar' => 'Google Calendar',
+        'google_drive' => 'Google Drive',
+        'microsoft_365' => 'Microsoft 365',
+        'api' => 'API acceso',
+        'webhooks' => 'Webhooks',
+    ],
+    'Soporte' => [
+        'soporte' => 'Tipo de soporte',
+        'tiempo_respuesta' => 'Tiempo de respuesta',
+        'capacitacion' => 'Capacitación',
+        'sla' => 'SLA garantizado',
+    ],
+];
+
+/**
+ * Formatea un precio con separador de miles.
+ */
+function format_price($amount) {
+    return number_format($amount, 0, '.', ',');
+}

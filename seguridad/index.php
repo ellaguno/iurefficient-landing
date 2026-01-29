@@ -1,0 +1,1530 @@
+<?php
+$base_path = '../';
+$current_page = 'seguridad';
+$page_title = 'Seguridad, Confidencialidad y Privacidad - Iurefficient';
+$page_description = 'Seguridad, Confidencialidad y Privacidad en Iurefficient. Conoce cómo protegemos tus datos y los de tus clientes con cifrado de nivel bancario.';
+$extra_css = ['aos'];
+$extra_scripts = ['aos'];
+$page_styles = <<<'CSS'
+        .security-hero {
+            padding: calc(80px + var(--spacing-4xl)) 0 var(--spacing-4xl);
+            background: linear-gradient(135deg, #064e3b 0%, #0f766e 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .security-hero h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .security-hero p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .security-hero .last-update {
+            font-size: 0.875rem;
+            opacity: 0.7;
+            margin-top: var(--spacing-md);
+        }
+
+        /* Table of Contents */
+        .toc-section {
+            padding: var(--spacing-3xl) 0;
+            background: var(--white);
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-md) var(--spacing-lg);
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            color: var(--gray-700);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: all var(--transition-base);
+        }
+
+        .toc-item:hover {
+            background: var(--primary-50);
+            color: var(--primary-600);
+            transform: translateX(4px);
+        }
+
+        .toc-item span {
+            font-size: 1.25rem;
+        }
+
+        /* Key Points Grid */
+        .key-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-2xl) 0;
+        }
+
+        .key-point {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 1px solid #a7f3d0;
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+        }
+
+        .key-point-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .key-point-header span {
+            font-size: 1.5rem;
+        }
+
+        .key-point-header h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #065f46;
+        }
+
+        .key-point p {
+            font-size: 0.875rem;
+            color: #047857;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            padding: var(--spacing-4xl) 0;
+            background: var(--gray-50);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .comparison-table thead {
+            background: var(--gray-900);
+            color: var(--white);
+        }
+
+        .comparison-table th {
+            padding: var(--spacing-lg);
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .comparison-table td {
+            padding: var(--spacing-lg);
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 0.9375rem;
+        }
+
+        .comparison-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: var(--gray-50);
+        }
+
+        .comparison-table .feature-name {
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .comparison-table .other-services {
+            color: var(--gray-500);
+        }
+
+        .comparison-table .iurefficient {
+            color: #059669;
+            font-weight: 600;
+        }
+
+        /* Security Overview */
+        .security-overview {
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .security-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-xl);
+        }
+
+        .pillar-card {
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pillar-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto var(--spacing-lg);
+            background: linear-gradient(135deg, var(--success-500) 0%, var(--accent-500) 100%);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .pillar-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .pillar-card p {
+            color: var(--gray-600);
+            font-size: 0.9375rem;
+        }
+
+        /* Technical Section */
+        .technical-section {
+            background: var(--gray-50);
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .technical-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-2xl);
+        }
+
+        .technical-block {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+        }
+
+        .technical-block h3 {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .technical-block h3 svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--primary-500);
+        }
+
+        .technical-block ul {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .technical-block li {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+            color: var(--gray-600);
+            font-size: 0.9375rem;
+        }
+
+        .technical-block li::before {
+            content: '✓';
+            color: var(--success-500);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* RAG Section */
+        .rag-section {
+            padding: var(--spacing-4xl) 0;
+            background: var(--white);
+        }
+
+        .rag-flow {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .rag-steps {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .rag-step {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-lg);
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+        }
+
+        .rag-step-number {
+            width: 36px;
+            height: 36px;
+            background: var(--primary-500);
+            color: var(--white);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+
+        .rag-step-content h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .rag-step-content p {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        /* AI Providers */
+        .ai-providers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .ai-provider-card {
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+        }
+
+        .ai-provider-card h4 {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .ai-provider-card p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            font-style: italic;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .ai-provider-card a {
+            font-size: 0.8125rem;
+            color: var(--primary-500);
+        }
+
+        /* Confidentiality Section */
+        .confidentiality-section {
+            background: var(--gray-50);
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .isolation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .isolation-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            border: 1px solid var(--gray-100);
+        }
+
+        .isolation-card h4 {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .isolation-card h4 span {
+            font-size: 1.5rem;
+        }
+
+        .isolation-card ul {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .isolation-card li {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.9375rem;
+            color: var(--gray-600);
+        }
+
+        .isolation-card li::before {
+            content: '✓';
+            color: var(--success-500);
+            font-weight: 700;
+        }
+
+        /* Compliance Section */
+        .compliance-section {
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .compliance-badge {
+            background: var(--white);
+            border: 2px solid var(--gray-100);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+
+        .compliance-badge:hover {
+            border-color: var(--primary-500);
+        }
+
+        .compliance-badge .badge-icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .compliance-badge h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .compliance-badge p {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+        }
+
+        /* ARCO Rights */
+        .arco-section {
+            background: var(--gray-50);
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .arco-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .arco-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+        }
+
+        .arco-card span {
+            font-size: 2rem;
+        }
+
+        .arco-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .arco-card p {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: var(--spacing-2xl) auto 0;
+        }
+
+        .faq-item {
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-md);
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            padding: var(--spacing-lg) var(--spacing-xl);
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--gray-900);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '▼';
+            font-size: 0.75rem;
+            color: var(--gray-400);
+            transition: transform var(--transition-base);
+        }
+
+        .faq-item[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-item .faq-answer {
+            padding: 0 var(--spacing-xl) var(--spacing-lg);
+            font-size: 0.9375rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        .faq-item .faq-answer ul {
+            margin-top: var(--spacing-sm);
+            padding-left: var(--spacing-lg);
+        }
+
+        .faq-item .faq-answer li {
+            margin-bottom: var(--spacing-xs);
+        }
+
+        /* Infrastructure Section */
+        .infrastructure-section {
+            padding: var(--spacing-4xl) 0;
+            background: var(--gray-50);
+        }
+
+        .deploy-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .deploy-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            text-align: center;
+            border: 2px solid var(--gray-100);
+            transition: all var(--transition-base);
+        }
+
+        .deploy-card:hover {
+            border-color: var(--primary-300);
+            transform: translateY(-4px);
+        }
+
+        .deploy-card span {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .deploy-card h4 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .deploy-card p {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        .infra-visual {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .infra-layers {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .infra-layer {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+            padding: var(--spacing-lg);
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary-500);
+        }
+
+        .infra-layer .layer-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .infra-layer .layer-content h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .infra-layer .layer-content p {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        /* Tip Boxes */
+        .tip-box {
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-md);
+        }
+
+        .tip-box span {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .tip-box.security {
+            background: #f3e8ff;
+            border: 1px solid #d8b4fe;
+        }
+
+        .tip-box.warning {
+            background: #fef3c7;
+            border: 1px solid #fcd34d;
+        }
+
+        .tip-box.info {
+            background: #dbeafe;
+            border: 1px solid #93c5fd;
+        }
+
+        .tip-box.success {
+            background: #d1fae5;
+            border: 1px solid #6ee7b7;
+        }
+
+        .tip-box h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .tip-box.security h4 { color: #7c3aed; }
+        .tip-box.warning h4 { color: #d97706; }
+        .tip-box.info h4 { color: #2563eb; }
+        .tip-box.success h4 { color: #059669; }
+
+        .tip-box p {
+            font-size: 0.9375rem;
+            color: var(--gray-700);
+        }
+
+        /* Contact Security */
+        .contact-security {
+            padding: var(--spacing-4xl) 0;
+            text-align: center;
+        }
+
+        .contact-security-card {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: var(--spacing-2xl);
+            background: linear-gradient(135deg, var(--primary-50) 0%, #dbeafe 100%);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--primary-200);
+        }
+
+        .contact-security-card h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .contact-security-card > p {
+            color: var(--gray-600);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            justify-content: center;
+        }
+
+        .contact-buttons a {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            font-size: 0.9375rem;
+            font-weight: 500;
+            transition: all var(--transition-base);
+            text-decoration: none;
+        }
+
+        .contact-buttons a.primary {
+            background: var(--primary-500);
+            color: var(--white);
+        }
+
+        .contact-buttons a.primary:hover {
+            background: var(--primary-600);
+        }
+
+        .contact-buttons a.secondary {
+            background: var(--white);
+            color: var(--gray-700);
+            border: 1px solid var(--gray-200);
+        }
+
+        .contact-buttons a.secondary:hover {
+            background: var(--gray-50);
+        }
+
+        /* AI Privacy Section (hero-style) */
+        .ai-privacy-section {
+            background: var(--gradient-hero);
+            color: var(--white);
+            padding: var(--spacing-4xl) 0;
+        }
+
+        .ai-privacy-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .ai-privacy-content h2 {
+            color: var(--white);
+        }
+
+        .ai-privacy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .ai-privacy-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+        }
+
+        .ai-privacy-card h4 {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .ai-privacy-card h4 span {
+            font-size: 1.5rem;
+        }
+
+        .ai-privacy-card p {
+            opacity: 0.85;
+            font-size: 0.9375rem;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-table {
+                font-size: 0.8125rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: var(--spacing-md);
+            }
+
+            .technical-grid,
+            .isolation-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+CSS;
+?>
+<!DOCTYPE html>
+<html lang="es">
+<?php include $base_path . 'includes/head.php'; ?>
+<body>
+<?php include $base_path . 'includes/header.php'; ?>
+
+    <!-- Hero -->
+    <section class="security-hero">
+        <div class="container">
+            <h1 data-aos="fade-up">Seguridad, Confidencialidad y <span style="color: var(--accent-400)">Privacidad</span></h1>
+            <p data-aos="fade-up" data-aos-delay="100">
+                Informacion completa sobre como protegemos tu informacion y la de tus clientes. A diferencia de servicios de IA genericos, tu informacion nunca sale de tu control.
+            </p>
+            <p class="last-update" data-aos="fade-up" data-aos-delay="150">
+                Ultima actualizacion: Enero 2026 | Version del documento: 1.0
+            </p>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="toc-section">
+        <div class="container">
+            <div class="toc-grid" data-aos="fade-up">
+                <a href="#resumen" class="toc-item"><span>📋</span> Resumen Ejecutivo</a>
+                <a href="#seguridad-datos" class="toc-item"><span>🔐</span> Seguridad de Datos</a>
+                <a href="#confidencialidad" class="toc-item"><span>🤫</span> Confidencialidad</a>
+                <a href="#privacidad-ia" class="toc-item"><span>🤖</span> Privacidad e IA</a>
+                <a href="#infraestructura" class="toc-item"><span>🏗️</span> Infraestructura</a>
+                <a href="#cumplimiento" class="toc-item"><span>⚖️</span> Cumplimiento Legal</a>
+                <a href="#derechos" class="toc-item"><span>✋</span> Tus Derechos</a>
+                <a href="#faq" class="toc-item"><span>❓</span> Preguntas Frecuentes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section id="resumen" class="security-overview">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Resumen <span class="gradient-text">Ejecutivo</span></h2>
+            </div>
+
+            <div class="tip-box security" data-aos="fade-up">
+                <span>🔒</span>
+                <div>
+                    <h4>Compromiso de Seguridad</h4>
+                    <p><strong>Iurefficient</strong> esta diseñado desde su arquitectura para proteger la informacion confidencial de profesionales y sus clientes. A diferencia de servicios de IA genericos, tu informacion <strong>nunca sale de tu control</strong>.</p>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle" style="text-align: left; margin-top: var(--spacing-2xl);">Puntos Clave de Seguridad</h3>
+
+            <div class="key-points" data-aos="fade-up">
+                <div class="key-point">
+                    <div class="key-point-header">
+                        <span>✅</span>
+                        <h4>Tus datos son tuyos</h4>
+                    </div>
+                    <p>Todos los documentos, conversaciones y analisis permanecen en tu infraestructura.</p>
+                </div>
+
+                <div class="key-point">
+                    <div class="key-point-header">
+                        <span>✅</span>
+                        <h4>Sin entrenamiento de IA</h4>
+                    </div>
+                    <p>Tu informacion nunca se usa para entrenar modelos de inteligencia artificial.</p>
+                </div>
+
+                <div class="key-point">
+                    <div class="key-point-header">
+                        <span>✅</span>
+                        <h4>Aislamiento por caso</h4>
+                    </div>
+                    <p>Cada caso tiene su propia base de conocimiento aislada. Sin mezcla de informacion.</p>
+                </div>
+
+                <div class="key-point">
+                    <div class="key-point-header">
+                        <span>✅</span>
+                        <h4>Cifrado completo</h4>
+                    </div>
+                    <p>Cifrado en transito (TLS 1.3) y en reposo (AES-256) para toda la informacion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Comparacion con Servicios de <span class="gradient-text">IA Publicos</span></h2>
+                <p class="section-subtitle">Entiende la diferencia entre usar ChatGPT/Claude.ai directamente vs Iurefficient</p>
+            </div>
+
+            <div data-aos="fade-up" style="overflow-x: auto;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Caracteristica</th>
+                            <th>ChatGPT / Claude.ai</th>
+                            <th>Iurefficient</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Ubicacion de datos</td>
+                            <td class="other-services">Servidores de terceros (EE.UU.)</td>
+                            <td class="iurefficient">Tu infraestructura privada</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Entrenamiento con tus datos</td>
+                            <td class="other-services">Posible (segun configuracion)</td>
+                            <td class="iurefficient">Nunca - solo procesamiento</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Base de conocimiento</td>
+                            <td class="other-services">Conocimiento general publico</td>
+                            <td class="iurefficient">Solo tus documentos (RAG local)</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Aislamiento de datos</td>
+                            <td class="other-services">Compartido entre usuarios</td>
+                            <td class="iurefficient">Aislamiento por caso/cliente</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Retencion de conversaciones</td>
+                            <td class="other-services">Segun politicas del proveedor</td>
+                            <td class="iurefficient">Tu controlas completamente</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Auditoria y trazabilidad</td>
+                            <td class="other-services">Limitada</td>
+                            <td class="iurefficient">Completa con logs detallados</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Security Section -->
+    <section id="seguridad-datos" class="technical-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Seguridad de <span class="gradient-text">Datos</span></h2>
+                <p class="section-subtitle">Detalles tecnicos sobre como protegemos tu informacion</p>
+            </div>
+
+            <div class="technical-grid">
+                <div class="technical-block" data-aos="fade-up" data-aos-delay="0">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0110 0v4"/>
+                        </svg>
+                        Cifrado y Proteccion
+                    </h3>
+                    <ul>
+                        <li><strong>Cifrado en transito:</strong> TLS 1.3 con certificados SSL validos</li>
+                        <li><strong>Cifrado en reposo:</strong> AES-256 para documentos, base de datos y backups</li>
+                        <li><strong>Cifrado de archivos (v4.5.0+):</strong> AES-256-GCM con claves derivadas unicas por caso</li>
+                        <li><strong>Tokens y credenciales:</strong> Contraseñas hasheadas con bcrypt, JWT con expiracion corta</li>
+                        <li>Llaves de cifrado gestionadas de forma segura y separada</li>
+                    </ul>
+                </div>
+
+                <div class="technical-block" data-aos="fade-up" data-aos-delay="100">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        Control de Acceso
+                    </h3>
+                    <ul>
+                        <li><strong>Autenticacion robusta:</strong> JWT con tokens de corta duracion, soporte OAuth 2.0</li>
+                        <li><strong>MFA disponible:</strong> Autenticacion multifactor opcional</li>
+                        <li><strong>Roles y permisos:</strong> Sistema granular (Admin, Abogado, Asistente, Solo lectura)</li>
+                        <li><strong>Auditoria completa:</strong> Registro de todas las acciones con marcas de tiempo</li>
+                        <li>Logs inmutables para cumplimiento regulatorio</li>
+                    </ul>
+                </div>
+
+                <div class="technical-block" data-aos="fade-up" data-aos-delay="200">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                        Respaldos y Recuperacion
+                    </h3>
+                    <ul>
+                        <li>Backups automaticos cada 6 horas</li>
+                        <li>Retencion de 30 dias (90 dias en plan Despacho)</li>
+                        <li>Backups cifrados y geograficamente distribuidos</li>
+                        <li>Pruebas de restauracion mensuales</li>
+                        <li>RTO (Recovery Time Objective): &lt; 4 horas</li>
+                        <li>RPO (Recovery Point Objective): &lt; 6 horas</li>
+                    </ul>
+                </div>
+
+                <div class="technical-block" data-aos="fade-up" data-aos-delay="300">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        Monitoreo y Deteccion
+                    </h3>
+                    <ul>
+                        <li>Monitoreo 24/7 de infraestructura</li>
+                        <li>Deteccion de anomalias con machine learning</li>
+                        <li>Alertas automaticas de actividad sospechosa</li>
+                        <li>Logs inmutables de auditoria</li>
+                        <li>Pruebas de penetracion anuales</li>
+                        <li>Programa de bug bounty</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tip-box info" data-aos="fade-up" style="max-width: 800px; margin: var(--spacing-2xl) auto 0;">
+                <span>ℹ️</span>
+                <div>
+                    <h4>Registro de Auditoria</h4>
+                    <p>Puedes acceder al registro de auditoria completo desde <strong>Configuracion → Registros de Auditoria</strong>. Alli veras todas las acciones realizadas en el sistema con marcas de tiempo precisas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confidentiality Section -->
+    <section id="confidencialidad" class="confidentiality-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Confidencialidad y <span class="gradient-text">Aislamiento</span></h2>
+                <p class="section-subtitle">Como garantizamos que la informacion de cada caso permanezca completamente separada</p>
+            </div>
+
+            <div class="isolation-cards">
+                <div class="isolation-card" data-aos="fade-up" data-aos-delay="0">
+                    <h4><span>🏢</span> Arquitectura Multi-Tenant</h4>
+                    <ul>
+                        <li>Cada organizacion tiene su propia instancia aislada</li>
+                        <li>Base de datos separada por tenant</li>
+                        <li>Almacenamiento de documentos aislado</li>
+                        <li>Indices de busqueda independientes</li>
+                    </ul>
+                </div>
+
+                <div class="isolation-card" data-aos="fade-up" data-aos-delay="100">
+                    <h4><span>📁</span> Aislamiento por Caso</h4>
+                    <ul>
+                        <li>Cada caso tiene su propia coleccion RAG (base de conocimiento)</li>
+                        <li>El chat de IA solo accede a documentos del caso activo</li>
+                        <li>Imposibilidad tecnica de "filtracion" entre casos</li>
+                        <li>Permisos granulares por caso y usuario</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tip-box security" data-aos="fade-up" style="max-width: 800px; margin: var(--spacing-2xl) auto 0;">
+                <span>🔒</span>
+                <div>
+                    <h4>Secreto Profesional</h4>
+                    <p>El diseño de Iurefficient respeta el secreto profesional abogado-cliente. La arquitectura tecnica garantiza que incluso los administradores del sistema no pueden acceder al contenido de los documentos sin autorizacion explicita y registrada.</p>
+                </div>
+            </div>
+
+            <div style="max-width: 800px; margin: var(--spacing-2xl) auto 0;" data-aos="fade-up">
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--gray-900); margin-bottom: var(--spacing-lg);">Compartir Documentos de Forma Segura</h3>
+                <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">Cuando necesites compartir documentos con terceros:</p>
+                <ul style="display: flex; flex-direction: column; gap: var(--spacing-sm); color: var(--gray-600);">
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--primary-500);">🔗</span> Enlaces temporales con expiracion configurable</li>
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--primary-500);">🔑</span> Proteccion opcional con contraseña</li>
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--primary-500);">📊</span> Registro de cada acceso al documento compartido</li>
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--primary-500);">⏰</span> Revocacion instantanea del acceso cuando sea necesario</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Privacy Section -->
+    <section id="privacidad-ia" class="ai-privacy-section">
+        <div class="container">
+            <div class="ai-privacy-content">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title" style="color: var(--white);">Privacidad e <span style="color: var(--accent-400);">Inteligencia Artificial</span></h2>
+                    <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Entendemos la diferencia crucial entre servicios de IA genericos y nuestra plataforma</p>
+                </div>
+
+                <div class="tip-box warning" data-aos="fade-up" style="background: rgba(254, 243, 199, 0.2); border-color: rgba(252, 211, 77, 0.4);">
+                    <span>⚠️</span>
+                    <div>
+                        <h4 style="color: #fcd34d;">Importante: Diferencia con ChatGPT y Claude.ai</h4>
+                        <p style="color: rgba(255,255,255,0.9);">Cuando usas servicios como ChatGPT o Claude.ai directamente, tus conversaciones se envian a servidores de terceros y <em>pueden</em> ser utilizadas para mejorar sus modelos. <strong>Iurefficient funciona diferente:</strong> Tu informacion se procesa localmente y las llamadas a APIs de IA solo envian consultas procesadas, nunca documentos completos ni datos sensibles.</p>
+                    </div>
+                </div>
+
+                <div class="ai-privacy-grid">
+                    <div class="ai-privacy-card" data-aos="fade-up" data-aos-delay="0">
+                        <h4><span>🚫</span> Sin entrenamiento externo</h4>
+                        <p>Tus documentos y conversaciones NUNCA se usan para entrenar modelos de IA de terceros como OpenAI, Google o Anthropic.</p>
+                    </div>
+
+                    <div class="ai-privacy-card" data-aos="fade-up" data-aos-delay="100">
+                        <h4><span>🔐</span> Procesamiento aislado</h4>
+                        <p>Cada consulta de IA se procesa en un entorno aislado. Los datos se eliminan de la memoria inmediatamente despues del procesamiento.</p>
+                    </div>
+
+                    <div class="ai-privacy-card" data-aos="fade-up" data-aos-delay="200">
+                        <h4><span>📍</span> Servidores Privados</h4>
+                        <p>Toda la infraestructura corre en servidores privados dedicados, cumpliendo con las regulaciones de proteccion de datos aplicables.</p>
+                    </div>
+
+                    <div class="ai-privacy-card" data-aos="fade-up" data-aos-delay="300">
+                        <h4><span>🗑️</span> Sin retencion</h4>
+                        <p>No almacenamos el contenido de tus consultas de IA mas alla del tiempo necesario para procesarlas y mostrarte la respuesta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RAG System -->
+    <section class="rag-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">¿Como Funciona la <span class="gradient-text">IA en Iurefficient</span>?</h2>
+                <p class="section-subtitle">Sistema RAG (Retrieval-Augmented Generation)</p>
+            </div>
+
+            <div class="rag-flow" data-aos="fade-up">
+                <div class="rag-steps">
+                    <div class="rag-step">
+                        <div class="rag-step-number">1</div>
+                        <div class="rag-step-content">
+                            <h4>Indexacion Local</h4>
+                            <p>Tus documentos se procesan y almacenan en una base de datos vectorial <strong>dentro de tu infraestructura</strong>. Los embeddings (representaciones numericas) se generan localmente o mediante APIs que no retienen datos.</p>
+                        </div>
+                    </div>
+
+                    <div class="rag-step">
+                        <div class="rag-step-number">2</div>
+                        <div class="rag-step-content">
+                            <h4>Busqueda Semantica Local</h4>
+                            <p>Cuando haces una pregunta, el sistema busca en TU base de conocimiento local los fragmentos mas relevantes. Esta busqueda ocurre completamente en tu servidor.</p>
+                        </div>
+                    </div>
+
+                    <div class="rag-step">
+                        <div class="rag-step-number">3</div>
+                        <div class="rag-step-content">
+                            <h4>Consulta a IA con Contexto Limitado</h4>
+                            <p>Solo los fragmentos relevantes (sin identificadores de clientes ni datos sensibles directos) se envian a la API de IA junto con tu pregunta. La IA genera una respuesta basada en ese contexto especifico.</p>
+                        </div>
+                    </div>
+
+                    <div class="rag-step">
+                        <div class="rag-step-number">4</div>
+                        <div class="rag-step-content">
+                            <h4>Respuesta con Citas</h4>
+                            <p>La respuesta incluye referencias [1], [2], etc. a los documentos originales, permitiendote verificar la fuente de cada afirmacion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header" data-aos="fade-up" style="margin-top: var(--spacing-4xl);">
+                <h3 class="section-title" style="font-size: 1.5rem;">Politicas de los <span class="gradient-text">Proveedores de IA</span></h3>
+                <p class="section-subtitle">Todos los proveedores seleccionados tienen politicas de no-entrenamiento con datos de API</p>
+            </div>
+
+            <div class="ai-providers-grid" data-aos="fade-up">
+                <div class="ai-provider-card">
+                    <h4><span style="color: #10b981;">🟢</span> OpenAI (API)</h4>
+                    <p>"We do not train on your business data (data sent through the API)"</p>
+                    <a href="https://openai.com/enterprise-privacy" target="_blank" rel="noopener noreferrer">Ver politica de privacidad empresarial →</a>
+                </div>
+
+                <div class="ai-provider-card">
+                    <h4><span style="color: #10b981;">🟢</span> Anthropic (Claude API)</h4>
+                    <p>"We do not train our models on customer API data"</p>
+                    <a href="https://www.anthropic.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer">Ver politica de privacidad →</a>
+                </div>
+
+                <div class="ai-provider-card">
+                    <h4><span style="color: #10b981;">🟢</span> OpenRouter</h4>
+                    <p>Enrutador que respeta las politicas de privacidad de cada modelo subyacente.</p>
+                    <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">Ver politica →</a>
+                </div>
+
+                <div class="ai-provider-card">
+                    <h4><span style="color: #10b981;">🟢</span> DeepSeek / Qwen</h4>
+                    <p>APIs empresariales con politicas de no-retencion de datos.</p>
+                </div>
+            </div>
+
+            <div class="tip-box success" data-aos="fade-up" style="max-width: 800px; margin: var(--spacing-2xl) auto 0;">
+                <span>✅</span>
+                <div>
+                    <h4>Garantia Anti-Entrenamiento</h4>
+                    <p>Ningun proveedor de IA que utiliza Iurefficient entrena sus modelos con los datos enviados a traves de sus APIs empresariales. Esta es una garantia contractual de cada proveedor.</p>
+                </div>
+            </div>
+
+            <div style="max-width: 800px; margin: var(--spacing-3xl) auto 0;" data-aos="fade-up">
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--gray-900); margin-bottom: var(--spacing-lg);">Sistema Anti-Alucinacion</h3>
+                <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">Iurefficient implementa multiples capas de proteccion contra "alucinaciones" de la IA (informacion inventada):</p>
+                <ul style="display: flex; flex-direction: column; gap: var(--spacing-sm); color: var(--gray-600);">
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--success-500);">✓</span> Respuestas basadas <strong>unicamente</strong> en tus documentos, no en conocimiento general</li>
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--success-500);">✓</span> Citas numeradas [1], [2] que puedes verificar</li>
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--success-500);">✓</span> Indicadores de confianza (excelente, alto, moderado, bajo)</li>
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--success-500);">✓</span> Alertas cuando no hay informacion suficiente para responder</li>
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--success-500);">✓</span> Validacion automatica de respuestas para detectar posibles alucinaciones</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section id="infraestructura" class="infrastructure-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Infraestructura <span class="gradient-text">Tecnica</span></h2>
+                <p class="section-subtitle">Despliegue seguro con multiples opciones</p>
+            </div>
+
+            <div class="deploy-options">
+                <div class="deploy-card" data-aos="fade-up" data-aos-delay="0">
+                    <span>🏠</span>
+                    <h4>On-Premise</h4>
+                    <p>Instalacion en tus propios servidores. Maximo control y cumplimiento con politicas internas de seguridad.</p>
+                </div>
+
+                <div class="deploy-card" data-aos="fade-up" data-aos-delay="100">
+                    <span>☁️</span>
+                    <h4>Cloud Privado</h4>
+                    <p>Despliegue en tu cuenta de AWS, Azure o GCP. Beneficios del cloud con control total.</p>
+                </div>
+
+                <div class="deploy-card" data-aos="fade-up" data-aos-delay="200">
+                    <span>🌍</span>
+                    <h4>Cloud Administrado</h4>
+                    <p>Nosotros gestionamos la infraestructura con SLAs de seguridad y disponibilidad garantizados.</p>
+                </div>
+            </div>
+
+            <div class="infra-visual" data-aos="fade-up">
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--gray-900); margin-bottom: var(--spacing-lg); text-align: center;">Capas de Proteccion</h3>
+                <div class="infra-layers">
+                    <div class="infra-layer">
+                        <span class="layer-icon">🌐</span>
+                        <div class="layer-content">
+                            <h4>CDN & WAF</h4>
+                            <p>Cloudflare Enterprise con proteccion DDoS, firewall de aplicaciones web y rate limiting</p>
+                        </div>
+                    </div>
+                    <div class="infra-layer">
+                        <span class="layer-icon">🔒</span>
+                        <div class="layer-content">
+                            <h4>Load Balancer con SSL</h4>
+                            <p>Terminacion SSL/TLS 1.3, certificados renovados automaticamente, HSTS habilitado</p>
+                        </div>
+                    </div>
+                    <div class="infra-layer">
+                        <span class="layer-icon">🖥️</span>
+                        <div class="layer-content">
+                            <h4>Servidores de Aplicacion</h4>
+                            <p>Contenedores aislados en Kubernetes, auto-scaling, actualizaciones sin downtime</p>
+                        </div>
+                    </div>
+                    <div class="infra-layer">
+                        <span class="layer-icon">🗄️</span>
+                        <div class="layer-content">
+                            <h4>Base de Datos</h4>
+                            <p>MySQL/PostgreSQL con cifrado en reposo, replicas en tiempo real, backups automaticos</p>
+                        </div>
+                    </div>
+                    <div class="infra-layer">
+                        <span class="layer-icon">📁</span>
+                        <div class="layer-content">
+                            <h4>Almacenamiento de Archivos</h4>
+                            <p>Object storage cifrado con AES-256-GCM, redundancia geografica, versionado automatico</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Section -->
+    <section id="cumplimiento" class="compliance-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Cumplimiento <span class="gradient-text">Legal</span></h2>
+                <p class="section-subtitle">Nuestros estandares y compromisos de seguridad</p>
+            </div>
+
+            <div class="compliance-grid">
+                <div class="compliance-badge" data-aos="fade-up" data-aos-delay="0">
+                    <div class="badge-icon">🔐</div>
+                    <h4>SSL/TLS</h4>
+                    <p>Cifrado en transito con TLS 1.2/1.3</p>
+                </div>
+
+                <div class="compliance-badge" data-aos="fade-up" data-aos-delay="50">
+                    <div class="badge-icon">🛡️</div>
+                    <h4>Controles Enterprise</h4>
+                    <p>Controles de seguridad de nivel empresarial</p>
+                </div>
+
+                <div class="compliance-badge" data-aos="fade-up" data-aos-delay="100">
+                    <div class="badge-icon">🌐</div>
+                    <h4>GDPR Ready</h4>
+                    <p>Arquitectura preparada para regulacion europea</p>
+                </div>
+
+                <div class="compliance-badge" data-aos="fade-up" data-aos-delay="150">
+                    <div class="badge-icon">☁️</div>
+                    <h4>Basado en ISO 27001</h4>
+                    <p>Practicas alineadas al estandar internacional</p>
+                </div>
+
+                <div class="compliance-badge" data-aos="fade-up" data-aos-delay="200">
+                    <div class="badge-icon">🏛️</div>
+                    <h4>Secreto Profesional</h4>
+                    <p>Diseñado para cumplir con etica legal</p>
+                </div>
+            </div>
+
+            <div style="max-width: 800px; margin: var(--spacing-2xl) auto 0;" data-aos="fade-up">
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--gray-900); margin-bottom: var(--spacing-lg);">Secreto Profesional</h3>
+                <p style="color: var(--gray-600); margin-bottom: var(--spacing-md);">Iurefficient esta diseñado para respetar las obligaciones de secreto profesional de abogados, contadores y otros profesionales:</p>
+                <ul style="display: flex; flex-direction: column; gap: var(--spacing-sm); color: var(--gray-600);">
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--success-500);">✓</span> Aislamiento tecnico que impide acceso no autorizado a expedientes</li>
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--success-500);">✓</span> Cifrado que protege la informacion incluso de administradores de sistemas</li>
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--success-500);">✓</span> Logs de auditoria para demostrar cumplimiento</li>
+                    <li style="display: flex; align-items: center; gap: var(--spacing-sm);"><span style="color: var(--success-500);">✓</span> Contratos de confidencialidad con proveedores de servicios</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARCO Rights Section -->
+    <section id="derechos" class="arco-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Tus <span class="gradient-text">Derechos</span></h2>
+                <p class="section-subtitle">Derechos ARCO+ (Acceso, Rectificacion, Cancelacion, Oposicion)</p>
+            </div>
+
+            <div class="arco-grid">
+                <div class="arco-card" data-aos="fade-up" data-aos-delay="0">
+                    <span>👁️</span>
+                    <div>
+                        <h4>Acceso</h4>
+                        <p>Puedes solicitar una copia de todos tus datos personales almacenados en el sistema.</p>
+                    </div>
+                </div>
+
+                <div class="arco-card" data-aos="fade-up" data-aos-delay="50">
+                    <span>✏️</span>
+                    <div>
+                        <h4>Rectificacion</h4>
+                        <p>Puedes corregir cualquier dato personal inexacto o incompleto.</p>
+                    </div>
+                </div>
+
+                <div class="arco-card" data-aos="fade-up" data-aos-delay="100">
+                    <span>🗑️</span>
+                    <div>
+                        <h4>Cancelacion (Eliminacion)</h4>
+                        <p>Puedes solicitar la eliminacion de tus datos cuando ya no sean necesarios.</p>
+                    </div>
+                </div>
+
+                <div class="arco-card" data-aos="fade-up" data-aos-delay="150">
+                    <span>🚫</span>
+                    <div>
+                        <h4>Oposicion</h4>
+                        <p>Puedes oponerte al tratamiento de tus datos para fines especificos.</p>
+                    </div>
+                </div>
+
+                <div class="arco-card" data-aos="fade-up" data-aos-delay="200">
+                    <span>📦</span>
+                    <div>
+                        <h4>Portabilidad</h4>
+                        <p>Puedes solicitar tus datos en formato estructurado para transferirlos a otro servicio.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box info" data-aos="fade-up" style="max-width: 800px; margin: var(--spacing-2xl) auto 0;">
+                <span>ℹ️</span>
+                <div>
+                    <h4>¿Como ejercer estos derechos?</h4>
+                    <p>Contacta al administrador de tu organizacion o envia una solicitud a traves de la seccion de <strong>Perfil → Privacidad</strong>. Responderemos en un plazo maximo de 20 dias habiles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Preguntas <span class="gradient-text">Frecuentes</span></h2>
+            </div>
+
+            <div class="faq-list" data-aos="fade-up">
+                <details class="faq-item">
+                    <summary>¿La IA puede inventar informacion sobre mis casos?</summary>
+                    <div class="faq-answer">
+                        <p>El sistema esta diseñado para minimizar este riesgo. La IA solo responde basandose en los documentos de tu caso, no en conocimiento general. Ademas, cada respuesta incluye citas verificables y un indicador de confianza. Si no hay informacion suficiente, el sistema lo indica claramente.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Mis documentos se envian a servidores externos?</summary>
+                    <div class="faq-answer">
+                        <p>No. Tus documentos completos nunca salen de tu infraestructura. Solo se envian a las APIs de IA fragmentos pequeños y descontextualizados cuando haces una consulta. Estos fragmentos no contienen identificadores de clientes ni informacion que permita relacionarlos con un caso especifico.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿OpenAI/Anthropic pueden ver mis datos?</summary>
+                    <div class="faq-answer">
+                        <p>Las APIs empresariales de estos proveedores tienen politicas estrictas de no-retencion y no-entrenamiento. Los datos enviados a traves de la API se procesan en tiempo real y se descartan inmediatamente. No se almacenan ni se usan para mejorar sus modelos. Esto esta garantizado contractualmente.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Puedo usar Iurefficient para informacion clasificada?</summary>
+                    <div class="faq-answer">
+                        <p>Para informacion altamente sensible o clasificada, recomendamos un despliegue on-premise con modelos de IA locales (sin conexion a APIs externas). Esta configuracion esta disponible para organizaciones con requisitos especiales de seguridad.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Que pasa si hay una brecha de seguridad?</summary>
+                    <div class="faq-answer">
+                        <p>Tenemos un protocolo de respuesta a incidentes que incluye: deteccion automatica de anomalias, notificacion inmediata a los afectados (dentro de 72 horas segun GDPR), analisis forense, correccion de vulnerabilidades y reporte a autoridades cuando sea requerido por ley.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Como puedo verificar que mis datos estan seguros?</summary>
+                    <div class="faq-answer">
+                        <p>Puedes revisar los logs de auditoria en cualquier momento para ver quien ha accedido a que informacion. Tambien ofrecemos auditorias de seguridad independientes y reportes de cumplimiento bajo solicitud.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Mis archivos estan cifrados en el servidor?</summary>
+                    <div class="faq-answer">
+                        <p>Si. A partir de la version 4.5.0, todos los archivos subidos se cifran automaticamente con <strong>AES-256-GCM</strong>, el estandar de cifrado mas seguro disponible. Caracteristicas:</p>
+                        <ul>
+                            <li><strong>Cifrado transparente:</strong> Los archivos se cifran al subir y descifran al descargar automaticamente</li>
+                            <li><strong>Claves por caso:</strong> Cada caso utiliza una clave derivada unica (HKDF)</li>
+                            <li><strong>Autenticacion GCM:</strong> Detecta cualquier manipulacion del archivo</li>
+                            <li><strong>Retrocompatible:</strong> Los archivos anteriores siguen funcionando normalmente</li>
+                        </ul>
+                        <p style="margin-top: var(--spacing-sm);">Incluso si alguien obtuviera acceso fisico al servidor, los archivos serian completamente ilegibles sin la clave maestra de cifrado.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Security Team -->
+    <section class="contact-security">
+        <div class="container">
+            <div class="contact-security-card" data-aos="fade-up">
+                <h3><span>📧</span> ¿Tienes mas preguntas?</h3>
+                <p>Nuestro equipo de seguridad esta disponible para responder cualquier duda sobre como protegemos tu informacion.</p>
+                <div class="contact-buttons">
+                    <a href="mailto:seguridad@iurefficient.com" class="primary">
+                        <span>✉️</span> seguridad@iurefficient.com
+                    </a>
+                    <a href="../legal/privacidad.php" class="secondary">
+                        <span>📄</span> Aviso de Privacidad
+                    </a>
+                </div>
+                <p style="margin-top: var(--spacing-md); font-size: 0.875rem; color: var(--gray-500);">
+                    Para reportar vulnerabilidades: <a href="mailto:security@iurefficient.com" style="color: var(--primary-500);">security@iurefficient.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Tu informacion esta segura con nosotros</h2>
+                <p>Prueba Iurefficient con la confianza de que tus datos estan protegidos</p>
+                <a href="../#contacto" class="btn btn-primary btn-lg">Comenzar prueba gratuita</a>
+            </div>
+        </div>
+    </section>
+
+<?php include $base_path . 'includes/footer.php'; ?>
+<?php include $base_path . 'includes/scripts.php'; ?>
+</body>
+</html>
