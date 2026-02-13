@@ -347,58 +347,17 @@ function throttle(func, limit) {
 }
 
 /* --------------------------------------------------------------------------
-   News Ticker - Blog headlines ribbon
+   Blog News Banner - Horizontal scrolling carousel
    -------------------------------------------------------------------------- */
 function initNewsTicker() {
-    const ticker = document.getElementById('newsTicker');
-    const closeBtn = document.getElementById('newsTickerClose');
-
-    if (!ticker || !closeBtn) return;
-
-    // Check if user previously closed the ticker this session
-    if (sessionStorage.getItem('newsTickerClosed') === '1') {
-        ticker.classList.add('news-ticker--hidden');
-        return;
-    }
+    const scroll = document.querySelector('.blog-banner__scroll');
+    if (!scroll) return;
 
     // Set dynamic animation duration based on content width
-    const content = ticker.querySelector('.news-ticker__content');
-    if (content) {
-        const contentWidth = content.scrollWidth / 2;
-        const pixelsPerSecond = 50;
-        const duration = Math.max(20, contentWidth / pixelsPerSecond);
-        content.style.animationDuration = duration + 's';
-    }
-
-    // Close button
-    closeBtn.addEventListener('click', () => {
-        ticker.classList.add('news-ticker--hidden');
-        sessionStorage.setItem('newsTickerClosed', '1');
-    });
-
-    // Auto-hide when pricing or contact sections are visible
-    const hideTargets = document.querySelectorAll('#precios, #contacto');
-
-    if (hideTargets.length > 0) {
-        const visibilityMap = new Map();
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                visibilityMap.set(entry.target, entry.isIntersecting);
-            });
-
-            const anyVisible = Array.from(visibilityMap.values()).some(v => v);
-            if (anyVisible) {
-                ticker.classList.add('news-ticker--hidden');
-            } else if (sessionStorage.getItem('newsTickerClosed') !== '1') {
-                ticker.classList.remove('news-ticker--hidden');
-            }
-        }, {
-            threshold: 0.1
-        });
-
-        hideTargets.forEach(el => observer.observe(el));
-    }
+    const contentWidth = scroll.scrollWidth / 2;
+    const pixelsPerSecond = 40;
+    const duration = Math.max(20, contentWidth / pixelsPerSecond);
+    scroll.style.animationDuration = duration + 's';
 }
 
 /* --------------------------------------------------------------------------

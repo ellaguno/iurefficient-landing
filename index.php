@@ -534,9 +534,9 @@ include 'includes/pricing-cards.php';
         </div>
     </section>
 
-<?php include 'includes/footer.php'; ?>
-
 <?php include 'includes/news-ticker.php'; ?>
+
+<?php include 'includes/footer.php'; ?>
 
     <!-- Scroll to Top/Bottom Button -->
     <button class="scroll-btn" id="scrollBtn" aria-label="Scroll">
