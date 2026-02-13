@@ -536,6 +536,8 @@ include 'includes/pricing-cards.php';
 
 <?php include 'includes/footer.php'; ?>
 
+<?php include 'includes/news-ticker.php'; ?>
+
     <!-- Scroll to Top/Bottom Button -->
     <button class="scroll-btn" id="scrollBtn" aria-label="Scroll">
         <svg class="scroll-icon-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
