@@ -27,6 +27,7 @@
                     <li><a href="<?= $base_path ?>#equipo"<?= $current_page === 'equipo' ? ' class="active"' : '' ?>>Equipo</a></li>
                     <li><a href="https://blog.iurefficient.com" target="_blank">Blog</a></li>
                     <li><a href="<?= $base_path ?>precios/"<?= $current_page === 'precios' ? ' class="active"' : '' ?>>Precios</a></li>
+                    <li><a href="<?= $base_path ?>help-portal/"<?= $current_page === 'ayuda' ? ' class="active"' : '' ?>>Ayuda</a></li>
                     <li><a href="https://demo.iurefficient.com" target="_blank" class="btn btn-primary btn-sm">Usar Demo</a></li>
                 </ul>
             </nav>

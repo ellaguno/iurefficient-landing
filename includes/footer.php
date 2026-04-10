@@ -33,6 +33,7 @@
                         <li><a href="<?= $base_path ?>#caracteristicas">Características</a></li>
                         <li><a href="<?= $base_path ?>precios/">Precios</a></li>
                         <li><a href="<?= $base_path ?>seguridad/">Seguridad</a></li>
+                        <li><a href="<?= $base_path ?>help-portal/">Centro de Ayuda</a></li>
                         <li><a href="<?= $base_path ?>#contacto">Demo</a></li>
                     </ul>
                 </div>
