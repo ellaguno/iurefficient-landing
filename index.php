@@ -18,6 +18,10 @@ include 'includes/pricing-data.php';
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-bg"></div>
+
+        <!-- WebGL Shader Background -->
+        <canvas id="hero-shader" aria-hidden="true"></canvas>
+
         <div class="container">
             <div class="hero-content" data-aos="fade-up">
                 <h1 class="hero-title">
