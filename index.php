@@ -6,7 +6,7 @@ $page_description = 'Iurefficient - Gestiona casos, analiza documentos y potenci
 $og_image = 'https://iurefficient.com/images/og-image.png';
 $og_url = 'https://iurefficient.com';
 $extra_css = ['aos', 'swiper', 'glightbox'];
-$extra_scripts = ['aos', 'swiper', 'glightbox'];
+$extra_scripts = ['aos', 'swiper', 'glightbox', 'three'];
 include 'includes/pricing-data.php';
 ?>
 <!DOCTYPE html>
@@ -159,7 +159,7 @@ include 'includes/pricing-data.php';
             </div>
 
             <div class="features-grid">
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="feature-card" data-glow="blue" data-aos="fade-up" data-aos-delay="0">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -169,7 +169,7 @@ include 'includes/pricing-data.php';
                     <p>Organiza, busca y analiza documentos legales con IA. Extrae cláusulas clave automáticamente.</p>
                 </div>
 
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card" data-glow="purple" data-aos="fade-up" data-aos-delay="100">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
@@ -181,7 +181,7 @@ include 'includes/pricing-data.php';
                     <p>Centraliza expedientes, seguimiento de casos y comunicación con clientes en un solo lugar.</p>
                 </div>
 
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-card" data-glow="cyan" data-aos="fade-up" data-aos-delay="200">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 011 1v3a1 1 0 01-1 1h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 01-1-1v-3a1 1 0 011-1h1a7 7 0 017-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/>
@@ -193,7 +193,7 @@ include 'includes/pricing-data.php';
                     <p>Pregunta en lenguaje natural sobre tus casos. Obtén respuestas basadas en tus documentos.</p>
                 </div>
 
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-card" data-glow="green" data-aos="fade-up" data-aos-delay="300">
                     <div class="feature-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
@@ -232,98 +232,32 @@ include 'includes/pricing-data.php';
         </div>
     </section>
 
-    <!-- Screenshots Carousel -->
+    <!-- Screenshots 3D Gallery -->
     <section class="screenshots" id="plataforma">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
+        <div class="gallery3d-wrapper" data-aos="fade-up">
+            <div class="gallery3d-header">
                 <h2 class="section-title">Conoce la <span class="gradient-text">plataforma</span></h2>
                 <p class="section-subtitle">Una interfaz intuitiva diseñada para abogados</p>
             </div>
-
-            <div class="swiper screenshots-swiper" data-aos="fade-up">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="screenshot-card">
-                            <a href="images/screenshot-1.png" class="glightbox" data-gallery="screenshots" data-title="Dashboard" data-description="Tu centro de comando legal">
-                                <img src="images/screenshot-1.png" alt="Dashboard">
-                            </a>
-                            <div class="screenshot-info">
-                                <h4>Dashboard</h4>
-                                <p>Tu centro de comando legal</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="screenshot-card">
-                            <a href="images/screenshot-2.png" class="glightbox" data-gallery="screenshots" data-title="Gestión de Casos" data-description="Todos tus expedientes organizados">
-                                <img src="images/screenshot-2.png" alt="Gestión de Casos">
-                            </a>
-                            <div class="screenshot-info">
-                                <h4>Gestión de Casos</h4>
-                                <p>Todos tus expedientes organizados</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="screenshot-card">
-                            <a href="images/screenshot-3.png" class="glightbox" data-gallery="screenshots" data-title="Análisis de Documentos" data-description="IA que extrae lo importante">
-                                <img src="images/screenshot-3.png" alt="Análisis de Documentos">
-                            </a>
-                            <div class="screenshot-info">
-                                <h4>Análisis de Documentos</h4>
-                                <p>IA que extrae lo importante</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="screenshot-card">
-                            <a href="images/screenshot-4.png" class="glightbox" data-gallery="screenshots" data-title="Asistente IA" data-description="Pregunta, obtén respuestas">
-                                <img src="images/screenshot-4.png" alt="Asistente IA">
-                            </a>
-                            <div class="screenshot-info">
-                                <h4>Asistente IA</h4>
-                                <p>Pregunta, obtén respuestas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="screenshot-card">
-                            <a href="images/screenshot-5.png" class="glightbox" data-gallery="screenshots" data-title="Calendario" data-description="Plazos bajo control">
-                                <img src="images/screenshot-5.png" alt="Calendario">
-                            </a>
-                            <div class="screenshot-info">
-                                <h4>Calendario</h4>
-                                <p>Plazos bajo control</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="screenshot-card">
-                            <a href="images/screenshot-6.png" class="glightbox" data-gallery="screenshots" data-title="Clientes" data-description="Relaciones bien gestionadas">
-                                <img src="images/screenshot-6.png" alt="Clientes">
-                            </a>
-                            <div class="screenshot-info">
-                                <h4>Clientes</h4>
-                                <p>Relaciones bien gestionadas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="screenshot-card">
-                            <a href="images/screenshot-7.png" class="glightbox" data-gallery="screenshots" data-title="Reportes" data-description="Métricas de tu práctica">
-                                <img src="images/screenshot-7.png" alt="Reportes">
-                            </a>
-                            <div class="screenshot-info">
-                                <h4>Reportes</h4>
-                                <p>Métricas de tu práctica</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+            <canvas id="gallery3d-canvas"></canvas>
+            <div class="gallery3d-overlay">
+                <p class="gallery3d-hint">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                    Usa el scroll para explorar
+                </p>
             </div>
+            <!-- Fallback for no-WebGL -->
+            <noscript>
+                <div class="gallery3d-fallback">
+                    <img src="images/screenshot-1.png" alt="Dashboard">
+                    <img src="images/screenshot-2.png" alt="Gestión de Casos">
+                    <img src="images/screenshot-3.png" alt="Análisis de Documentos">
+                    <img src="images/screenshot-4.png" alt="Asistente IA">
+                    <img src="images/screenshot-5.png" alt="Calendario">
+                    <img src="images/screenshot-6.png" alt="Clientes">
+                    <img src="images/screenshot-7.png" alt="Reportes">
+                </div>
+            </noscript>
         </div>
     </section>
 

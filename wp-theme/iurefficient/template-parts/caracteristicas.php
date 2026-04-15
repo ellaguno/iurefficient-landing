@@ -7,7 +7,7 @@
         </div>
 
         <div class="features-grid">
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="feature-card" data-glow="blue" data-aos="fade-up" data-aos-delay="0">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -17,7 +17,7 @@
                 <p>Organiza, busca y analiza documentos legales con IA. Extrae cláusulas clave automáticamente.</p>
             </div>
 
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card" data-glow="purple" data-aos="fade-up" data-aos-delay="100">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
@@ -29,7 +29,7 @@
                 <p>Centraliza expedientes, seguimiento de casos y comunicación con clientes en un solo lugar.</p>
             </div>
 
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card" data-glow="cyan" data-aos="fade-up" data-aos-delay="200">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 011 1v3a1 1 0 01-1 1h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 01-1-1v-3a1 1 0 011-1h1a7 7 0 017-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/>
@@ -41,7 +41,7 @@
                 <p>Pregunta en lenguaje natural sobre tus casos. Obtén respuestas basadas en tus documentos.</p>
             </div>
 
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card" data-glow="green" data-aos="fade-up" data-aos-delay="300">
                 <div class="feature-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>

@@ -19,4 +19,7 @@ if (!isset($extra_scripts)) $extra_scripts = [];
 <?php if (in_array('glightbox', $extra_scripts)): ?>
     <script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
 <?php endif; ?>
+<?php if (in_array('three', $extra_scripts)): ?>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<?php endif; ?>
     <script src="<?= $base_path ?>js/main.js"></script>
