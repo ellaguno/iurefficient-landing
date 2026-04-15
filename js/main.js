@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initNewsTicker();
     initMockup3D();
     initHeroShader();
+    initCtaGradient();
 });
 
 /* --------------------------------------------------------------------------
@@ -465,6 +466,31 @@ function initVideoLazyLoad() {
 
         container.appendChild(thumbnail);
     });
+}
+
+/* --------------------------------------------------------------------------
+   CTA Gradient - Interactive pointer blob
+   -------------------------------------------------------------------------- */
+function initCtaGradient() {
+    var pointer = document.querySelector('.cta-blob--pointer');
+    var cta = document.querySelector('.cta');
+    if (!pointer || !cta) return;
+
+    var curX = 0, curY = 0, tgX = 0, tgY = 0;
+
+    cta.addEventListener('mousemove', function(e) {
+        var rect = cta.getBoundingClientRect();
+        tgX = e.clientX - rect.left;
+        tgY = e.clientY - rect.top;
+    });
+
+    function animate() {
+        curX += (tgX - curX) / 20;
+        curY += (tgY - curY) / 20;
+        pointer.style.transform = 'translate(' + Math.round(curX) + 'px, ' + Math.round(curY) + 'px)';
+        requestAnimationFrame(animate);
+    }
+    animate();
 }
 
 /* --------------------------------------------------------------------------

@@ -205,84 +205,45 @@ $clientEmailContent = "
 </html>
 ";
 
-// ============== ENVIAR CON BREVO API ==============
-function sendBrevoEmail($to, $toName, $subject, $htmlContent, $replyTo = null) {
-    $url = 'https://api.brevo.com/v3/smtp/email';
-
-    $payload = [
-        'sender' => [
-            'name' => FROM_NAME,
-            'email' => FROM_EMAIL
-        ],
-        'to' => [
-            [
-                'email' => $to,
-                'name' => $toName
-            ]
-        ],
-        'subject' => $subject,
-        'htmlContent' => $htmlContent
-    ];
-
+// ============== ENVIAR EMAILS ==============
+function sendEmail($to, $subject, $htmlContent, $replyTo = null) {
+    $headers = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $headers .= "From: " . FROM_NAME . " <" . FROM_EMAIL . ">\r\n";
     if ($replyTo) {
-        $payload['replyTo'] = [
-            'email' => $replyTo
-        ];
+        $headers .= "Reply-To: {$replyTo}\r\n";
     }
 
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Accept: application/json',
-        'Content-Type: application/json',
-        'api-key: ' . BREVO_API_KEY
-    ]);
+    $result = mail($to, $subject, $htmlContent, $headers);
+    writeLog("mail() result para {$to}: " . ($result ? 'OK' : 'FAIL'));
 
-    $response = curl_exec($ch);
-    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    $error = curl_error($ch);
-    curl_close($ch);
-
-    $result = [
-        'success' => $httpCode >= 200 && $httpCode < 300,
-        'httpCode' => $httpCode,
-        'response' => json_decode($response, true),
-        'error' => $error
-    ];
-
-    writeLog("Brevo API response para {$to}", $result);
-
-    return $result;
+    return ['success' => $result];
 }
 
 // Enviar email al administrador
-$adminResult = sendBrevoEmail(
+$adminResult = sendEmail(
     ADMIN_EMAIL,
-    ADMIN_NAME,
-    "🔔 Nuevo contacto: {$name} - Solicitud de Demo",
+    "Nuevo contacto: {$name} - Solicitud de Demo",
     $adminEmailContent,
-    $email // Reply-To del cliente
+    $email
 );
 
 // Enviar confirmación al cliente
-$clientResult = sendBrevoEmail(
+$clientResult = sendEmail(
     $email,
-    $name,
     "Gracias por contactar a Iurefficient - Hemos recibido tu mensaje",
     $clientEmailContent
 );
 
 // Respuesta
-if ($adminResult['success'] && $clientResult['success']) {
-    writeLog("SUCCESS: Ambos emails enviados correctamente");
+if ($adminResult['success']) {
+    writeLog("SUCCESS: Email al admin enviado correctamente");
     echo json_encode([
         'success' => true,
         'message' => 'Mensaje enviado correctamente. Te hemos enviado un correo de confirmación.'
     ]);
 } else {
-    writeLog("ERROR: Fallo al enviar emails", [
+    writeLog("ERROR: Fallo al enviar email", [
         'adminResult' => $adminResult,
         'clientResult' => $clientResult
     ]);
@@ -290,8 +251,7 @@ if ($adminResult['success'] && $clientResult['success']) {
     http_response_code(500);
     echo json_encode([
         'success' => false,
-        'error' => 'Error al enviar el mensaje. Por favor intenta de nuevo o contáctanos directamente a contacto@iurefficient.com',
-        'debug' => DEBUG_MODE ? ['admin' => $adminResult, 'client' => $clientResult] : null
+        'error' => 'Error al enviar el mensaje. Por favor contáctanos directamente a contacto@iurefficient.com'
     ]);
 }
 ?>

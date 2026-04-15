@@ -1166,11 +1166,109 @@ section {
    CTA Section
    -------------------------------------------------------------------------- */
 .cta {
-    background: var(--gradient-hero);
+    position: relative;
+    background: linear-gradient(40deg, rgb(108, 0, 162), rgb(0, 17, 82));
     color: var(--white);
+    overflow: hidden;
+}
+
+/* SVG filter (hidden) */
+.cta-svg-filter {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+/* Blobs container */
+.cta-gradients {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    filter: url(#cta-goo) blur(40px);
+    pointer-events: none;
+}
+
+/* Shared blob styles */
+.cta-blob {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: calc(50% - 40%);
+    left: calc(50% - 40%);
+    border-radius: 50%;
+    mix-blend-mode: hard-light;
+    opacity: 1;
+}
+
+.cta-blob--1 {
+    background: radial-gradient(circle at center, rgba(18, 113, 255, 1) 0, rgba(18, 113, 255, 1) 50%) no-repeat;
+    transform-origin: center center;
+    animation: ctaMoveVertical 30s ease infinite;
+}
+
+.cta-blob--2 {
+    background: radial-gradient(circle at center, rgba(221, 74, 255, 0.8) 0, rgba(221, 74, 255, 0) 50%) no-repeat;
+    transform-origin: calc(50% - 400px);
+    animation: ctaMoveCircle 20s reverse infinite;
+}
+
+.cta-blob--3 {
+    background: radial-gradient(circle at center, rgba(100, 220, 255, 0.8) 0, rgba(100, 220, 255, 0) 50%) no-repeat;
+    transform-origin: calc(50% + 400px);
+    animation: ctaMoveCircle 40s linear infinite;
+}
+
+.cta-blob--4 {
+    background: radial-gradient(circle at center, rgba(200, 50, 50, 0.8) 0, rgba(200, 50, 50, 0) 50%) no-repeat;
+    transform-origin: calc(50% - 200px);
+    animation: ctaMoveHorizontal 40s ease infinite;
+    opacity: 0.7;
+}
+
+.cta-blob--5 {
+    background: radial-gradient(circle at center, rgba(180, 180, 50, 0.8) 0, rgba(180, 180, 50, 0) 50%) no-repeat;
+    transform-origin: calc(50% - 800px) calc(50% + 800px);
+    animation: ctaMoveCircle 20s ease infinite;
+}
+
+.cta-blob--pointer {
+    background: radial-gradient(circle at center, rgba(140, 100, 255, 0.8) 0, rgba(140, 100, 255, 0) 50%) no-repeat;
+    mix-blend-mode: hard-light;
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    left: -50%;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Keyframes */
+@keyframes ctaMoveVertical {
+    0%   { transform: translateY(-50%); }
+    50%  { transform: translateY(50%); }
+    100% { transform: translateY(-50%); }
+}
+
+@keyframes ctaMoveHorizontal {
+    0%   { transform: translateX(-50%) translateY(-10%); }
+    50%  { transform: translateX(50%) translateY(10%); }
+    100% { transform: translateX(-50%) translateY(-10%); }
+}
+
+@keyframes ctaMoveCircle {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cta-gradients { display: none; }
 }
 
 .cta-content {
+    position: relative;
+    z-index: 1;
     max-width: 600px;
     margin: 0 auto;
     text-align: center;

@@ -505,6 +505,25 @@ include 'includes/pricing-cards.php';
 
     <!-- CTA Section -->
     <section class="cta" id="contacto">
+        <!-- Animated gradient background -->
+        <svg class="cta-svg-filter" aria-hidden="true">
+            <defs>
+                <filter id="cta-goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo"/>
+                    <feBlend in="SourceGraphic" in2="goo"/>
+                </filter>
+            </defs>
+        </svg>
+        <div class="cta-gradients" aria-hidden="true">
+            <div class="cta-blob cta-blob--1"></div>
+            <div class="cta-blob cta-blob--2"></div>
+            <div class="cta-blob cta-blob--3"></div>
+            <div class="cta-blob cta-blob--4"></div>
+            <div class="cta-blob cta-blob--5"></div>
+            <div class="cta-blob cta-blob--pointer"></div>
+        </div>
+
         <div class="container">
             <div class="cta-content" data-aos="fade-up">
                 <h2>¿Listo para transformar tu práctica legal?</h2>
