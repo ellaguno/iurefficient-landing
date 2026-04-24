@@ -24,7 +24,7 @@ $plans = [
         'extra_features' => [
             'Exportación de datos',
         ],
-        'overage' => '+$25/usuario, +$2/GB, +$5/caso, +$10/1000 IA',
+        'overage' => '+$250/usuario, +$50/GB, +$50/caso, +$100/1000 IA',
         // Datos para tabla comparativa
         'comparison' => [
             'casos_activos' => '50',
@@ -74,7 +74,7 @@ $plans = [
             'Reportes avanzados',
             'API access',
         ],
-        'overage' => '+$20/usuario, +$1.50/GB, +$3/caso, +$8/1000 IA',
+        'overage' => '+$200/usuario, +$75.0/GB, +$30/caso, +$80/1000 IA',
         'comparison' => [
             'casos_activos' => '200',
             'gestion_clientes' => true,
