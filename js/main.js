@@ -122,7 +122,7 @@ function initMobileNav() {
 function initSwiper() {
     const swiperElement = document.querySelector('.screenshots-swiper');
 
-    if (!swiperElement) return;
+    if (!swiperElement || typeof Swiper === 'undefined') return;
 
     new Swiper('.screenshots-swiper', {
         slidesPerView: 1,
@@ -158,6 +158,8 @@ function initSwiper() {
    GLightbox - Image Lightbox for Screenshots
    -------------------------------------------------------------------------- */
 function initGLightbox() {
+    if (typeof GLightbox === 'undefined') return;
+
     const lightbox = GLightbox({
         selector: '.glightbox',
         touchNavigation: true,
