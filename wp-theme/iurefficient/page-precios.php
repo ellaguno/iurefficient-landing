@@ -260,7 +260,7 @@ get_template_part('template-parts/pricing', 'cards');
 
                 <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
                     <h4>Ofrecen descuentos para despachos pequenos?</h4>
-                    <p>Si, ofrecemos un 20% de descuento en planes anuales. Tambien tenemos programas especiales para recien egresados y despachos pro bono. Contactanos para mas informacion.</p>
+                    <p>Si, en planes anuales obtienes un mes gratis (equivalente a un 8.3% de descuento). Tambien tenemos programas especiales para recien egresados y despachos pro bono. Contactanos para mas informacion.</p>
                 </div>
 
                 <div class="faq-item" data-aos="fade-up" data-aos-delay="200">

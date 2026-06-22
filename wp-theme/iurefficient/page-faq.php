@@ -203,7 +203,7 @@ get_template_part('template-parts/help-nav');
     <div class="faq-item">
       <button class="faq-question">Ofrecen descuentos por volumen o pago anual?</button>
       <div class="faq-answer">
-        <p>Si. <strong>Pago anual:</strong> 20% de descuento sobre el precio mensual. <strong>Descuento por volumen:</strong> Disponible para contratos de 20+ usuarios (contactar ventas). <strong>ONGs y educacion:</strong> Descuento especial &mdash; contactanos.</p>
+        <p>Si. <strong>Pago anual:</strong> un mes gratis (equivalente a ~8.3% de descuento sobre el precio mensual). <strong>Descuento por volumen:</strong> Disponible para contratos de 20+ usuarios (contactar ventas). <strong>ONGs y educacion:</strong> Descuento especial &mdash; contactanos.</p>
       </div>
     </div>
 

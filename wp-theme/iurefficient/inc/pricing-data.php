@@ -39,7 +39,7 @@ function iurefficient_get_pricing_data() {
             'name' => 'Profesional',
             'description' => 'Despachos en crecimiento',
             'monthly' => 4999,
-            'annual' => 2999,
+            'annual' => 4582,
             'badge' => 'Más popular',
             'featured' => true,
             'cta_text' => 'Comenzar prueba gratuita',

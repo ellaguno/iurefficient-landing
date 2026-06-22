@@ -103,6 +103,7 @@ html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 body {
@@ -312,8 +313,14 @@ textarea {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
+    .nav {
+        flex-wrap: nowrap;
+    }
+
     .nav-toggle {
         display: flex;
+        flex-shrink: 0;
+        order: 2;
     }
 
     .nav-menu {
@@ -329,6 +336,7 @@ textarea {
         background: var(--white);
         box-shadow: var(--shadow-2xl);
         transition: right var(--transition-slow);
+        order: 3;
     }
 
     .nav-menu.active {

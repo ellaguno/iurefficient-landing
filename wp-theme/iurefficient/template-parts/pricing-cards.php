@@ -34,7 +34,7 @@ $checkmark_svg = '<svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>';
                 <span class="active" id="monthlyLabel">Mensual</span>
                 <div class="toggle-switch" id="pricingToggle"></div>
                 <span id="annualLabel">Anual</span>
-                <span class="discount-badge">Ahorra 20%</span>
+                <span class="discount-badge">1 mes gratis</span>
             </div>
 <?php endif; ?>
 
