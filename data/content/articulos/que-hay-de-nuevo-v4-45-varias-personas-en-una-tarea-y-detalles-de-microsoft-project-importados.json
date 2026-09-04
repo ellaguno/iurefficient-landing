@@ -1,0 +1,23 @@
+{
+    "slug": "que-hay-de-nuevo-v4-45-varias-personas-en-una-tarea-y-detalles-de-microsoft-project-importados",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.45. Varias personas en una tarea y detalles de Microsoft Project importados",
+    "excerpt": "v4.45.0 — Varias personas por tarea, y planes de Microsoft Project que por fin viajan completos Una tarea puede tener varios responsables. Se conserva un responsable principal —quien responde por ella, y a quien se le cuentan las horas y el costo— y le agregas los co-responsables que hagan falta. Todos la ven en su lista y todos…",
+    "body": "<h2>v4.45.0 — Varias personas por tarea, y planes de Microsoft Project que por fin viajan completos</h2>\n\n<p><strong>Una tarea puede tener varios responsables.</strong>&nbsp;Se conserva un&nbsp;<strong>responsable principal</strong>&nbsp;—quien responde por ella, y a quien se le cuentan las horas y el costo— y le agregas los co-responsables que hagan falta. Todos la ven en su lista y todos reciben los avisos de vencimiento, pero los co-responsables&nbsp;<strong>no suman horas</strong>: el esfuerzo del proyecto sigue cuadrando y el mapa de carga no se infla. Un contacto externo también puede ser co-responsable y, si tiene acceso al portal, ve la tarea y actualiza su estado.</p>\n\n<p><strong>Importar y exportar Microsoft Project deja de perder información.</strong>&nbsp;Antes, al exportar, el archivo salía&nbsp;<strong>sin el equipo</strong>&nbsp;— ni siquiera el responsable único. Ahora viajan todas las personas con sus tarifas, y al reimportar se reconocen sin duplicar contactos. Las&nbsp;<strong>notas</strong>&nbsp;de las tareas van y vienen como comentarios, y lo que el plan trae y aquí no tiene campo propio —avance, línea base, restricciones, columnas personalizadas del planificador— se guarda como un comentario legible en lugar de perderse. Se acabó también la tarea basura con el nombre del archivo («msproj11») que aparecía colgada en la raíz del proyecto.</p>\n\n<p><strong>El presupuesto también cruza.</strong>&nbsp;Costo del proyecto, costo fijo de cada tarea y tarifas del equipo, en ambos sentidos y&nbsp;<strong>en la moneda del proyecto</strong>&nbsp;(antes siempre decía dólares).</p>\n\n<p><strong>Mapa de carga dentro del proyecto.</strong>&nbsp;El tablero de carga del equipo ahora se puede ver desde el propio caso, en su pestaña de Miembros — justo lo que quieres mirar después de importar un plan, para ver cómo quedó repartido.</p>\n\n<p><strong>Portal externo, dos detalles que se pedían solos:</strong>&nbsp;la&nbsp;<strong>dirección de acceso está a la vista</strong>&nbsp;en la pantalla de administración (era la causa habitual del «¿cuál era la liga?»), y al sumar un contacto a un proyecto puedes dejar su invitación&nbsp;<strong>preparada sin enviarla todavía</strong>&nbsp;(viene apagado; se enciende en la configuración del portal).</p>\n\n<p><strong>Los comentarios se ven con formato.</strong>&nbsp;Negritas, listas, tablas y código se muestran como tales, no con los símbolos a la vista — y las menciones siguen intactas.</p>\n\n<p><strong>Correcciones a la vista:</strong>&nbsp;el responsable de las subtareas salía como un guion en la vista de árbol (y con varios responsables llegó a mostrar al equivocado); los contactos de un solo nombre —un área como «Tesorería», una razón social— aparecían como «Unnamed Contact» en toda la aplicación; y la pantalla de configuración del portal guardaba en el vacío, perdiendo los cambios sin avisar.</p>\n\n<p><em>Trae una migración aditiva que no toca ninguna tarea existente y corre sola al arrancar. Actualiza backend y frontend juntos.</em></p>\n\n<hr>",
+    "date": "2026-08-05",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "mmpx",
+        "responsables",
+        "Tareas"
+    ],
+    "image": "uploads/blog/imagen-1.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.45.0 — Varias personas por tarea, y planes de Microsoft Project que por fin viajan completos Una tarea puede tener varios responsables. Se conserva un responsable principal —quien responde por ella, y a quien se le cuentan las horas y el costo— y le agregas los co-responsables que hagan falta. Todos la ven en su lista y todos…",
+    "created": "2026-08-05",
+    "updated": "2026-08-05",
+    "wp_id": 807,
+    "wp_url": "https://blog.iurefficient.com/2026/08/05/que-hay-de-nuevo-v4-45-varias-personas-en-una-tarea-y-detalles-de-microsoft-project-importados/"
+}

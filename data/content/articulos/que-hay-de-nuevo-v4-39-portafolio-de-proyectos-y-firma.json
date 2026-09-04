@@ -1,0 +1,26 @@
+{
+    "slug": "que-hay-de-nuevo-v4-39-portafolio-de-proyectos-y-firma",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.39. Portafolio de proyectos y firma electrónica",
+    "excerpt": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.39.0 — Tu portafolio decide con datos: ponderación de proyectos y Firma Electrónica ¿En qué proyecto debería estar el equipo esta semana? El nuevo Portafolio (botón en Proyectos) responde con números: cada proyecto activo…",
+    "body": "<p><em>Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.</em></p>\n\n<hr>\n\n<h2>v4.39.0 — Tu portafolio decide con datos: ponderación de proyectos y Firma Electrónica</h2>\n\n<p><strong>¿En qué proyecto debería estar el equipo esta semana?</strong>&nbsp;El nuevo&nbsp;<strong>Portafolio</strong>&nbsp;(botón en Proyectos) responde con números: cada proyecto activo recibe un&nbsp;<strong>score de 0 a 100</strong>&nbsp;que combina su prioridad, su&nbsp;<strong>criticidad</strong>&nbsp;(el impacto de no hacerlo) y su&nbsp;<strong>alineación estratégica</strong>, con pesos que el administrador ajusta a la realidad de tu organización. La tabla llega ordenada de mayor a menor score, con el desglose al pasar el cursor — y evaluar un proyecto es literalmente un clic: cinco puntos para criticidad, cinco para estrategia, directo en la tabla. Lo que no has evaluado no castiga al proyecto (se marca como evaluación parcial), así que puedes adoptarlo gradualmente. El score también aparece en la ficha de cada proyecto.</p>\n\n<p><strong>La ponderación y el balanceo, juntos donde deben estar.</strong>&nbsp;El mapa de calor de carga de trabajo de la versión anterior ahora vive como segunda pestaña del mismo Portafolio: primero decides qué importa (ponderación), luego ves quién tiene manos libres para hacerlo (balanceo). Las ligas anteriores redirigen solas.</p>\n\n<figure><img src=\"{{base}}/uploads/blog/imagen-16.png\" alt=\"\" width=\"1024\" height=\"412\" loading=\"lazy\"></figure>\n\n<hr>\n\n<p><strong>Firma Electrónica llega a la plataforma</strong>&nbsp;(nuevo plugin, se habilita por organización). Envía cualquier documento del expediente a firma y recíbelo firmado&nbsp;<strong>como una nueva versión del mismo documento</strong>:</p>\n\n<ul>\n<li><strong>Con proveedores oficiales</strong>: <strong>Mifiel</strong> — cada firmante firma con su propia <strong>e.firma del SAT</strong> y el documento regresa con su <strong>constancia de conservación NOM-151</strong> (el estándar probatorio mexicano) — o <strong>DocuSign</strong> para firmantes internacionales. Los archivos Word se convierten a PDF automáticamente; tú eliges firmantes y orden, la plataforma les avisa por correo y te muestra quién falta.</li>\n\n<li><strong>Autorizaciones internas</strong>, sin proveedor y sin costo: ¿el PM necesita que dirección <strong>autorice la propuesta</strong> antes de enviarla? Crea una solicitud interna: cada autorizador recibe el aviso, revisa el documento exacto y confirma <strong>tecleando su contraseña</strong> (y su código de dos factores si lo usa). Al completarse, el PDF regresa al expediente con una <strong>hoja de autorización</strong> — quién, cuándo, con qué método y la huella digital del documento — y un registro completo del proceso. También se puede rechazar con motivo, y hay una bandeja de «Por firmar (yo)».</li>\n</ul>\n\n<figure><img src=\"{{base}}/uploads/blog/imagen-15.png\" alt=\"\" width=\"1024\" height=\"242\" loading=\"lazy\"></figure>\n\n<p>Al actualizar, la migración corre sola. La Firma Electrónica se habilita por organización desde la administración de plugins; las autorizaciones internas funcionan de inmediato, los proveedores oficiales requieren dar de alta las credenciales de tu cuenta.</p>\n\n<hr>",
+    "date": "2026-07-21",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "criticidad",
+        "estrategia",
+        "firma electrónica",
+        "portafolio",
+        "prioridad",
+        "proyectos"
+    ],
+    "image": "uploads/blog/imagen-9.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.39.0 — Tu portafolio decide con datos: ponderación de proyectos y Firma Electrónica ¿En qué proyecto debería estar el equipo esta semana? El nuevo Portafolio (botón en Proyectos) responde con números: cada proyecto activo…",
+    "created": "2026-07-21",
+    "updated": "2026-07-23",
+    "wp_id": 751,
+    "wp_url": "https://blog.iurefficient.com/2026/07/21/que-hay-de-nuevo-v4-39-portafolio-de-proyectos-y-firma/"
+}

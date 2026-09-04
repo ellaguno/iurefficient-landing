@@ -1,0 +1,25 @@
+{
+    "slug": "que-hay-de-nuevo-v4-54-sus-formatos-puede-reutilizarlos",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.54 – Sus formatos puede reutilizarlos",
+    "excerpt": "v4.54.0 — Sus formatos de siempre, listos para reusarse * Plantillas de proyecto. Guarde cualquier proyecto como plantilla desde su propia ficha y vuelva a levantarlo cuando quiera. La plantilla guarda la ESTRUCTURA —tareas, jerarquía, dependencias y duraciones— pero no las fechas: al crear el proyecto nuevo usted elige el día de arranque y todo el plan se…",
+    "body": "<p><strong>v4.54.0 — Sus formatos de siempre, listos para reusarse</strong></p>\n\n<p>*&nbsp;<strong>Plantillas de proyecto.</strong>&nbsp;Guarde cualquier proyecto como plantilla desde su propia ficha y vuelva a levantarlo cuando quiera. La plantilla guarda la ESTRUCTURA —tareas, jerarquía, dependencias y duraciones— pero&nbsp;<strong>no las fechas</strong>: al crear el proyecto nuevo usted elige el día de arranque y todo el plan se recalcula solo, conservando la misma forma. Una auditoría que dura seis meses sigue durando seis meses, empiece en enero o en octubre. Se administran en Ajustes y se eligen al crear el proyecto.&nbsp;</p>\n\n<p>*&nbsp;<strong>Copiar de otro proyecto, ahora de verdad.</strong>&nbsp;Al partir de un proyecto existente usted decide qué se lleva: tareas y dependencias, plazos, el equipo con sus roles, los documentos y los campos personalizados. Antes la casilla de plazos no hacía nada y los campos personalizados se perdían en el camino, incluso los obligatorios.&nbsp;</p>\n\n<p>*&nbsp;<strong>Los formatos vuelven a abrirse.</strong>&nbsp;Los formatos de Word, Excel y PowerPoint del despacho daban error al abrirlos. Ya abren, y además&nbsp;<strong>se pueden editar</strong>: los de texto desde el editor del sistema y los de Office con el editor completo. Hasta ahora solo se podía cambiarles el nombre.&nbsp;</p>\n\n<p>*&nbsp;<strong>Los formatos del sistema ya se ven.</strong>&nbsp;La pantalla donde se activan los formatos que publicamos desde Central solo mostraba los que ya estaban activados, así que un despacho nuevo veía una lista vacía y no tenía manera de activar ninguno. Ahora se ven todos, con su interruptor.&nbsp;</p>\n\n<p>*&nbsp;<strong>Guardar un documento como formato.</strong>&nbsp;Cualquier documento del expediente se convierte en formato del catálogo con una opción del menú. Antes solo se podía al momento de subirlo.&nbsp;</p>\n\n<p>*&nbsp;<strong>Generar documentos con IA, para todo el equipo.</strong>&nbsp;Las plantillas estructuradas (blueprints) estaban encerradas en la configuración del administrador. Ahora cualquier colaborador genera un documento desde Documentos, eligiendo la plantilla de una lista; crearlas y publicarlas sigue siendo del administrador. En el chat, cuando el asistente propone una plantilla, usted puede cambiarla antes de generar. *&nbsp;<strong>La lista de tareas ya no esconde nada.</strong>&nbsp;Un plan importado de MS Project con 342 tareas mostraba solo 100, sin decirlo. Dentro de un proyecto se ven todas; en la vista general hay paginación con «Mostrando 1–100 de 342».&nbsp;</p>\n\n<p>*&nbsp;<strong>Filtrar tareas por estado funciona.</strong>&nbsp;Al filtrar por Pendientes aparecían tareas de otros estados —las subtareas se colaban sin filtrar— y, peor,&nbsp;<strong>desaparecían tareas que sí cumplían</strong>&nbsp;el filtro cuando su tarea superior no lo cumplía. Ambas cosas corregidas.&nbsp;</p>\n\n<p>*&nbsp;<strong>Mover muchas tareas de una vez.</strong>&nbsp;Cambiar la tarea superior de más de 100 tareas fallaba. Ahora admite hasta 1000 en una sola operación.&nbsp;</p>\n\n<p>*&nbsp;<strong>La tarjeta de tareas del panel lleva a lo que cuenta.</strong>&nbsp;Al pulsar «Tareas Pendientes» se abría una lista distinta a la del número mostrado. Actualizar backend y frontend juntos. La migración corre sola al arrancar.</p>",
+    "date": "2026-08-15",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "formatos",
+        "plantillas",
+        "reutilizar",
+        "templates",
+        "Versiones"
+    ],
+    "image": "uploads/blog/imagen.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.54.0 — Sus formatos de siempre, listos para reusarse * Plantillas de proyecto. Guarde cualquier proyecto como plantilla desde su propia ficha y vuelva a levantarlo cuando quiera. La plantilla guarda la ESTRUCTURA —tareas, jerarquía, dependencias y duraciones— pero no las fechas: al crear el proyecto nuevo usted elige el día de arranque y todo el plan se…",
+    "created": "2026-08-15",
+    "updated": "2026-08-24",
+    "wp_id": 901,
+    "wp_url": "https://blog.iurefficient.com/2026/08/15/que-hay-de-nuevo-v4-54-sus-formatos-puede-reutilizarlos/"
+}

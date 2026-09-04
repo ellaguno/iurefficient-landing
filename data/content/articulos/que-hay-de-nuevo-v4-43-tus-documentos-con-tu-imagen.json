@@ -1,0 +1,24 @@
+{
+    "slug": "que-hay-de-nuevo-v4-43-tus-documentos-con-tu-imagen",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.43. Tus documentos con tu imagen",
+    "excerpt": "v4.43.0 — Tus documentos generados, con tu papelería La IA ya escribe sobre tu hoja membretada. Al importar un blueprint desde un .docx, ese archivo se conserva como plantilla de diseño: cuando pides un documento (una minuta, un escrito, una propuesta), sale en Word con el membrete, el logo, las fuentes y los márgenes de tu despacho…",
+    "body": "<h2>v4.43.0 — Tus documentos generados, con tu papelería</h2>\n\n<p><strong>La IA ya escribe sobre tu hoja membretada.</strong>&nbsp;Al importar un blueprint desde un .docx, ese archivo se conserva como&nbsp;<strong>plantilla de diseño</strong>: cuando pides un documento (una minuta, un escrito, una propuesta), sale en Word con el membrete, el logo, las fuentes y los márgenes de tu despacho — no en un Word genérico. Solo cuida que el logo esté en el encabezado del documento, como en cualquier papelería bien hecha.</p>\n\n<p><strong>Modo formulario para formatos oficiales.</strong>&nbsp;Si tu formato trae huecos como&nbsp;<code>{{asistentes}}</code>,&nbsp;<code>{{acuerdos}}</code>&nbsp;o&nbsp;<code>{{fecha}}</code>, el sistema respeta el cuerpo del formato&nbsp;<strong>tal cual</strong>&nbsp;— portada, tablas, cláusulas fijas — y solo rellena los huecos con el contenido generado. El caso estrella: pedir en el chat «genera la minuta de la reunión» a partir de la transcripción y recibirla en el formato oficial del despacho, con fecha, caso y cliente ya puestos. Editar el documento después no rompe el diseño.</p>\n\n<p><strong>El editor markdown creció.</strong>&nbsp;Fórmulas matemáticas LaTeX que se ven bien también en modo vista (y los montos con&nbsp;<code>$</code>&nbsp;ya no se convierten en fórmulas por accidente), plantillas de fórmulas y de diagramas Mermaid con vista previa en vivo, un&nbsp;<strong>esquema lateral</strong>&nbsp;del documento para saltar entre secciones e insertar índice, y ancho de lectura ajustable.</p>\n\n<p><em>Sin migraciones; actualizar backend y frontend juntos.</em></p>",
+    "date": "2026-08-03",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "documentos",
+        "formato",
+        "imagen",
+        "plantilla"
+    ],
+    "image": "uploads/blog/imagen.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.43.0 — Tus documentos generados, con tu papelería La IA ya escribe sobre tu hoja membretada. Al importar un blueprint desde un .docx, ese archivo se conserva como plantilla de diseño: cuando pides un documento (una minuta, un escrito, una propuesta), sale en Word con el membrete, el logo, las fuentes y los márgenes de tu despacho…",
+    "created": "2026-08-03",
+    "updated": "2026-08-05",
+    "wp_id": 802,
+    "wp_url": "https://blog.iurefficient.com/2026/08/03/que-hay-de-nuevo-v4-43-tus-documentos-con-tu-imagen/"
+}

@@ -4,7 +4,7 @@ $hasList = empty($def['no_list']);
 $meta = [];
 if (!empty($item['date'])) $meta[] = cms_e($t('published_on', 'Publicado el')) . ' ' . cms_e(cms_date((string) $item['date'], $lang));
 if (!empty($item['author'])) $meta[] = cms_e($t('by_author', 'por')) . ' ' . cms_e($item['author']);
-if (!empty($item['category'])) $meta[] = cms_e($item['category']);
+if (!empty($item['category'])) $meta[] = $hasList ? '<a href="' . cms_url('list:articulos', $lang) . '?cat=' . rawurlencode((string) $item['category']) . '">' . cms_e($item['category']) . '</a>' : cms_e($item['category']);
 ?>
     <main class="legal-page page-articulo">
         <div class="container">

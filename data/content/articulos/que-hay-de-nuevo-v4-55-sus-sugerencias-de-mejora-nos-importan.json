@@ -1,0 +1,23 @@
+{
+    "slug": "que-hay-de-nuevo-v4-55-sus-sugerencias-de-mejora-nos-importan",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.55 – Sus sugerencias de mejora nos importan",
+    "excerpt": "v4.55.1 — Abrir un contacto vuelve a funcionar, y la IA cita por nombre  * Hacer clic en un contacto ya no da «página no encontrada». En la lista de Contactos, pulsar cualquier renglón llevaba a un error; lo mismo el botón «Ver contacto» de un prospecto o una oportunidad del CRM, y el aviso que aparece…",
+    "body": "<p><strong>v4.55.1 — Abrir un contacto vuelve a funcionar, y la IA cita por nombre </strong></p>\n\n<p>*&nbsp;<strong>Hacer clic en un contacto ya no da «página no encontrada».</strong>&nbsp;En la lista de Contactos, pulsar cualquier renglón llevaba a un error; lo mismo el botón «Ver contacto» de un prospecto o una oportunidad del CRM, y el aviso que aparece al detectar un contacto duplicado. La ficha existía y el contacto también: era el enlace, que apuntaba a una dirección que no existe. Quedó a la vista en la versión 4.52.0, cuando el clic en el renglón volvió a funcionar en computadora: el clic funcionaba, pero llevaba a ningún lado.&nbsp;</p>\n\n<p>*&nbsp;<strong>La recomendación de la IA al entrar ya cita por nombre.</strong>&nbsp;Debajo del «Resumen del día», el consejo del asistente mencionaba los asuntos por su código —«PENA-2024-001»— mientras el resumen de arriba los citaba por su nombre. Ahora ambos hablan igual: el nombre del asunto, como liga para abrirlo. Y las tareas que menciona también son ligas, así que se puede saltar directamente a la que hay que atender. Incluye todo lo de la 4.55.0. Sin cambios en la base de datos. Actualizar backend y frontend juntos.</p>\n\n<hr>\n\n<p><strong>v4.55.0 — Sus sugerencias llegan a quien las puede atender&nbsp;</strong>Esta versión no cambia nada de lo que usted ve hoy.&nbsp;</p>\n\n<p>Instala la base de un ciclo que se activa despacho por despacho, y que sigue APAGADO mientras no se encienda expresamente. *&nbsp;<strong>Lo que usted pide conversando, deja de perderse.</strong>&nbsp;Cuando en el chat con la IA aparece un «esto debería…», «falta que se pueda…» o «sería útil que…», el sistema lo reconoce como una sugerencia sobre el PROGRAMA y la hace llegar a quienes lo desarrollamos, como una petición atendible. Hasta ahora esas frases se quedaban en la conversación y se perdían ahí.&nbsp;</p>\n\n<p>*&nbsp;<strong>Y le avisamos cuando se hace.</strong>&nbsp;Si su sugerencia se implementa, usted recibe un aviso dentro del sistema: «Tu sugerencia se implementó en la versión X». Solo en ese momento — no se le avisa nada al detectarla, para no molestarle con un acuse por cada frase.&nbsp;</p>\n\n<p>*&nbsp;<strong>Solo se manda lo que se pidió, nunca su expediente.</strong>&nbsp;Lo que sale de su instancia es un resumen redactado de la mejora, sin nombres, sin clientes, sin montos y sin números de expediente; su mensaje original NUNCA sale. Tampoco viaja su nombre ni su correo: la petición se identifica como «despacho · rol». El administrador de su despacho puede consultar en cualquier momento la lista exacta de lo que se envió. *&nbsp;<strong>Se distingue una sugerencia de su trabajo.</strong>&nbsp;«El contrato debería incluir una cláusula de confidencialidad» es trabajo de su expediente, no una petición al software, y el sistema no la toma como tal. Solo se registran las frases que hablan del programa. Además hay topes: un mismo tema no se registra dos veces, y hay un máximo por persona al día. *&nbsp;<strong>Nada de esto se enciende solo.</strong>&nbsp;Cada despacho se activa por separado desde la administración central, y arranca apagado. Mientras no se active, el sistema se comporta exactamente igual que en la versión anterior. Actualizar backend y frontend juntos. Las migraciones corren solas al arrancar.</p>",
+    "date": "2026-08-16",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "Automejora",
+        "Mejora",
+        "Sugerencias"
+    ],
+    "image": "uploads/blog/imagen-8.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.55.1 — Abrir un contacto vuelve a funcionar, y la IA cita por nombre  * Hacer clic en un contacto ya no da «página no encontrada». En la lista de Contactos, pulsar cualquier renglón llevaba a un error; lo mismo el botón «Ver contacto» de un prospecto o una oportunidad del CRM, y el aviso que aparece…",
+    "created": "2026-08-16",
+    "updated": "2026-08-24",
+    "wp_id": 903,
+    "wp_url": "https://blog.iurefficient.com/2026/08/16/que-hay-de-nuevo-v4-55-sus-sugerencias-de-mejora-nos-importan/"
+}

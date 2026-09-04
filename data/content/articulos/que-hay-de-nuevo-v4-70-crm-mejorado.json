@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-v4-70-crm-mejorado",
+    "status": "published",
+    "title": "¿Qué hay de nuevo? – v4.70 CRM mejorado",
+    "excerpt": "v4.70.0 — El CRM deja de ser una lista de prospectos Un buzón de ventas propio: los correos entran al CRM y se cuelgan de su oportunidad. Cuando el encaminamiento no es inequívoco no se adivina — va a una bandeja sin asignar, porque un correo colgado de la oportunidad equivocada es peor que uno sin…",
+    "body": "<h2>v4.70.0 — El CRM deja de ser una lista de prospectos</h2>\n\n<p><strong>Un buzón de ventas propio</strong>: los correos entran al CRM y se cuelgan de su oportunidad. Cuando el encaminamiento no es inequívoco no se adivina — va a una <strong>bandeja sin asignar</strong>, porque un correo colgado de la oportunidad equivocada es peor que uno sin asignar: nadie vuelve a revisarlo.</p>\n\n<p><strong>El perfil de la empresa, investigado en internet</strong>, con fuentes citadas y editable; y un&nbsp;<strong>guion de ventas</strong>prellenado con esos datos. Si no hay material, se niega a redactar: un perfil inventado se lee igual de seguro que uno investigado.</p>\n\n<p><strong>«¿Por qué perdemos?» ya se puede contestar.</strong>&nbsp;Cerrar una oportunidad como perdida exige elegir el motivo de un catálogo, en vez del «No especificado» que se escribía solo — y como quedaba escrito, nadie volvía a preguntar.</p>\n\n<p><strong>El tiempo por etapa del embudo</strong>, con las oportunidades estancadas a la vista. Y una&nbsp;<strong>biblioteca de conocimiento</strong>&nbsp;de la organización, cuyos precios se leen del catálogo de facturación en vez de copiarse: un precio duplicado en un documento es un precio que un día será falso.</p>\n\n<p><strong>Y el gasto de IA y de correo tiene tope.</strong>&nbsp;Los límites los fija la administración central y una llave propia libera del tope: quien paga su propio proveedor no consume el compartido.</p>\n\n<p><em>Trae varios cambios de base de datos que corren solos.&nbsp;</em><strong><em>Actualizar no enciende correo ni campañas</em></strong><em>: sin buzón dado de alta no se lee ningún correo y sin llaves configuradas no se envía nada. Lo único que aparece solo son dos listas que antes estaban vacías: los motivos de pérdida y el catálogo base de plantillas.</em></p>\n\n<hr>",
+    "date": "2026-09-01",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/imagen.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.70.0 — El CRM deja de ser una lista de prospectos Un buzón de ventas propio: los correos entran al CRM y se cuelgan de su oportunidad. Cuando el encaminamiento no es inequívoco no se adivina — va a una bandeja sin asignar, porque un correo colgado de la oportunidad equivocada es peor que uno sin…",
+    "created": "2026-09-01",
+    "updated": "2026-09-02",
+    "wp_id": 959,
+    "wp_url": "https://blog.iurefficient.com/2026/09/01/que-hay-de-nuevo-v4-70-crm-mejorado/"
+}

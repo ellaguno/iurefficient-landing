@@ -1,0 +1,23 @@
+{
+    "slug": "que-hay-de-nuevo-soporta-ingles-v4-31",
+    "status": "published",
+    "title": "¿Que hay de nuevo? Soporta inglés v4.31",
+    "excerpt": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.31.0 — Iurefficient ahora habla inglés Escríbele al asistente en inglés y te responde en inglés. Hasta ahora, sin importar el idioma en que preguntaras, el asistente contestaba en español. A…",
+    "body": "<p><em>Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.</em></p>\n\n<hr>\n\n<h2>v4.31.0 — Iurefficient ahora habla inglés</h2>\n\n<p><strong>Escríbele al asistente en inglés y te responde en inglés.</strong> Hasta ahora, sin importar el idioma en que preguntaras, el asistente contestaba en español. A partir de esta versión detecta el idioma de tu mensaje (y usa el idioma de tu cuenta como respaldo) y te responde en ese mismo idioma, con el contexto de tus casos y documentos igual que siempre. Funciona en el chat del caso, el chat global y el modo de respuesta en vivo. Si trabajas en español, todo sigue exactamente igual.</p>\n\n<p><strong>Tus notificaciones y los mensajes del portal, en tu idioma.</strong> Los avisos que genera el sistema —tarea asignada, vencimientos, OCR listo, respuesta del asistente— y los mensajes automáticos que recibe tu cliente en el portal (como el cambio de estado de un caso) ahora salen en el idioma de cada destinatario, en todos los canales: dentro de la app, por correo, Telegram y WhatsApp.</p>\n\n<p><strong>El CRM y el Sistema Fiscal, completamente traducidos.</strong> Toda la interfaz de los módulos de <strong>Prospección (CRM)</strong> y <strong>Fiscal</strong> está disponible en inglés. Cambia tu idioma en <strong>Ajustes → Perfil</strong> y verás menús, botones, formularios y pantallas en el idioma que elijas. Los códigos y siglas fiscales mexicanos (RFC, CFDI, SAT, FIEL, ISR…) se conservan tal cual, porque son términos propios que no se traducen.</p>\n\n<p><strong>Editar una oportunidad del CRM.</strong> Ya puedes cambiar el nombre, el monto, la descripción, la moneda, la probabilidad y la fecha estimada de cierre de una oportunidad con el nuevo botón <strong>Editar</strong> en su ficha.</p>\n\n<p>Para elegir tu idioma, entra a <strong>Ajustes → Perfil</strong> y selecciónalo; el resto es automático.</p>",
+    "date": "2026-07-03",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "english",
+        "idioma",
+        "inglés"
+    ],
+    "image": "uploads/blog/imagen.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.31.0 — Iurefficient ahora habla inglés Escríbele al asistente en inglés y te responde en inglés. Hasta ahora, sin importar el idioma en que preguntaras, el asistente contestaba en español. A…",
+    "created": "2026-07-03",
+    "updated": "2026-07-02",
+    "wp_id": 629,
+    "wp_url": "https://blog.iurefficient.com/2026/07/03/que-hay-de-nuevo-soporta-ingles-v4-31/"
+}

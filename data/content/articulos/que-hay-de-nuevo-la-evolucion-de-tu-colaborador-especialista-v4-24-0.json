@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-la-evolucion-de-tu-colaborador-especialista-v4-24-0",
+    "status": "published",
+    "title": "¿Que hay de nuevo? La evolución de tu Colaborador Especialista v4.24.0",
+    "excerpt": "v4.24.0 — Audio y video en el visor, transcripción robusta y descripción de imágenes con IA Reproduce audio y video directamente en el visor. Los archivos de audio y video ahora se reproducen con el reproductor nativo del navegador dentro del visor de documentos, en lugar del antiguo «Formato no soportado». Transcripción que sí se…",
+    "body": "<p>v4.24.0 — Audio y video en el visor, transcripción robusta y descripción de imágenes con IA</p>\n\n<p><strong>Reproduce audio y video directamente en el visor.</strong> Los archivos de audio y video ahora se reproducen con el reproductor nativo del navegador dentro del visor de documentos, en lugar del antiguo «Formato no soportado».</p>\n\n<p><strong>Transcripción que sí se activa, y ahora también para video.</strong> La detección de archivos transcribibles ya no depende del tipo de archivo que reporta el navegador (que para <code>.m4a</code>, <code>.ogg</code> o <code>.mov</code> suele llegar genérico y dejaba el botón de transcribir invisible): ahora reconoce el formato por su extensión, así que la opción aparece siempre que corresponde. Además se añadió soporte de <strong>video</strong> (mp4, mov, mkv, webm…): se transcribe extrayendo su pista de audio.</p>\n\n<p><strong>OCR de imágenes con descripción por IA.</strong> Al aplicar OCR a una imagen, el modelo de visión, además de transcribir el texto que contenga, <strong>describe la imagen</strong>. Esa descripción se incorpora como texto visible debajo de la imagen en el PDF generado, se suma al contenido buscable, y puedes consultarla en un panel del visor que se abre desde la notificación de OCR. Se controla con la opción <code>OCR_IMAGE_DESCRIPTION_ENABLED</code> (activa por defecto); si no hay clave de visión disponible, simplemente se omite la descripción y el OCR sigue funcionando igual.</p>\n\n<p>La transcripción de video y los formatos de video adicionales requieren reconstruir el servicio de transcripción; por lo demás, no requiere ninguna acción de tu parte. (El video como tipo de archivo subible sigue siendo opcional en <em>Configuración › Documentos</em>.)</p>",
+    "date": "2026-06-21",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/pleca_version_4.16.14.jpg",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.24.0 — Audio y video en el visor, transcripción robusta y descripción de imágenes con IA Reproduce audio y video directamente en el visor. Los archivos de audio y video ahora se reproducen con el reproductor nativo del navegador dentro del visor de documentos, en lugar del antiguo «Formato no soportado». Transcripción que sí se…",
+    "created": "2026-06-21",
+    "updated": "2026-06-23",
+    "wp_id": 563,
+    "wp_url": "https://blog.iurefficient.com/2026/06/21/que-hay-de-nuevo-la-evolucion-de-tu-colaborador-especialista-v4-24-0/"
+}

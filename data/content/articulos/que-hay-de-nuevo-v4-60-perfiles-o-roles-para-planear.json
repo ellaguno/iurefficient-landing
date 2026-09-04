@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-v4-60-perfiles-o-roles-para-planear",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.60 – Perfiles o roles para planear",
+    "excerpt": "v4.60.0 — Planear con perfiles, antes de tener nombres",
+    "body": "<p><strong>v4.60.0 — Planear con perfiles, antes de tener nombres</strong></p>\n\n<ul>\n<li><strong>Una tarea ya puede pedir un perfil en vez de una persona.</strong> Al arrancar un proyecto se sabe que hacen falta «dos consultores funcionales», pero todavía no quiénes. Ahora eso se captura tal cual: en el formulario de la tarea hay un campo «Perfil requerido», junto al de responsable. Ya no hace falta inventar un usuario genérico que después ensucia el directorio y los reportes.</li>\n\n<li><strong>Los perfiles llevan tarifa.</strong> En Configuración, cada rol de proyecto puede tener su tarifa de costo y de venta por hora. Con eso, <strong>el costo planeado del proyecto es real desde el primer día</strong>, cuando el equipo todavía es una lista de perfiles. En el panel de presupuesto esos renglones aparecen marcados como pendientes de cubrir.</li>\n\n<li><strong>El balanceo de cargas muestra lo que falta.</strong> Las tareas que piden un perfil y no tienen persona aparecen abajo, en renglones «Por cubrir», con las horas comprometidas por semana. No se le suman a nadie: la capacidad de un rol no es la de una persona, y cargárselas a alguien mostraría una saturación que no existe. Ese renglón es exactamente la señal de a quién hay que contratar o liberar.</li>\n\n<li><strong>Cuando ya se sabe quién, se cubre todo de una vez.</strong> Al asignar a una persona a un perfil, todas las tareas de ese perfil en el proyecto quedan a su nombre en un solo paso, y se puede deshacer si fue un error.</li>\n\n<li><strong>El perfil no desaparece al asignar a alguien.</strong> Sigue diciendo qué perfil requiere la tarea, que es información del plan y sirve para el siguiente proyecto parecido. Incluye una migración que corre sola al actualizar. Actualizar backend y frontend juntos.</li>\n</ul>",
+    "date": "2026-08-19",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/pleca_version_4.16.14.jpg",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.60.0 — Planear con perfiles, antes de tener nombres",
+    "created": "2026-08-19",
+    "updated": "2026-08-24",
+    "wp_id": 913,
+    "wp_url": "https://blog.iurefficient.com/2026/08/19/que-hay-de-nuevo-v4-60-perfiles-o-roles-para-planear/"
+}

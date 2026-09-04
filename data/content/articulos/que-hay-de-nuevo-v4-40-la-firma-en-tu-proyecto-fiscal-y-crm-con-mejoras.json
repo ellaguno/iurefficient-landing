@@ -1,0 +1,26 @@
+{
+    "slug": "que-hay-de-nuevo-v4-40-la-firma-en-tu-proyecto-fiscal-y-crm-con-mejoras",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.41. La firma en tu proyecto. Fiscal y CRM con mejoras",
+    "excerpt": "v4.41.0 — La firma vive en el proyecto, el fiscal entiende tu nómina y el CRM te dice a quién ya conoces Firmar un documento es parte del proyecto, no un trámite aparte. Desde el menú de cualquier documento aparece «✍️ Enviar a firma», con el documento y el proyecto ya elegidos. El tablero del proyecto estrena…",
+    "body": "<h2>v4.41.0 — La firma vive en el proyecto, el fiscal entiende tu nómina y el CRM te dice a quién ya conoces</h2>\n\n<figure><img src=\"{{base}}/uploads/blog/imagen-13.png\" alt=\"\" width=\"207\" height=\"437\" loading=\"lazy\"></figure>\n\n<p><strong>Firmar un documento es parte del proyecto, no un trámite aparte.</strong> Desde el menú de cualquier documento aparece <strong>«&#x270d;&#xfe0f; Enviar a firma»</strong>, con el documento y el proyecto ya elegidos. El tablero del proyecto estrena chip y pestaña <strong>«Firmas»</strong> con el avance de cada solicitud, y al enviar se crea una <strong>tarea con subtareas por firmante</strong> que se van completando solas conforme cada quien firma (la fecha de la tarea es la fecha real de la firma). La notificación de la campana te lleva <strong>directo a la pantalla de firma</strong>.</p>\n\n<p><strong>El fiscal ya sabe que tu nómina es un ingreso.</strong>&nbsp;Un recibo de nómina recibido dejó de contarse como gasto: tiene su propio distintivo y una tarjeta&nbsp;<strong>«Nómina percibida»</strong>&nbsp;en el resumen del mes (informativa, nunca entra a deducciones). Además llega un&nbsp;<strong>buscador de CFDIs</strong>&nbsp;(por UUID, RFC, emisor/receptor o concepto) y la&nbsp;<strong>deducibilidad parcial</strong>: ajustas el porcentaje deducible de un comprobante —por ejemplo la renta según su uso— y queda como&nbsp;<strong>regla permanente de ese contribuyente</strong>&nbsp;que se aplica hacia atrás y hacia adelante a todos los comprobantes de ese emisor, aunque le cambien la descripción cada mes.</p>\n\n<p><strong>El CRM te muestra a quién ya conoces.</strong>&nbsp;El OSINT ahora guarda todo lo que encuentra de un prospecto —fuentes, sitio web, redes sociales, referencias— y si el lead&nbsp;<strong>ya existe en tu sistema</strong>&nbsp;(como cliente o contacto), su ficha muestra el panel&nbsp;<strong>«&#x1f4c1; Ya en el sistema»</strong>: sus proyectos, tareas, documentos, contactos y personas relacionadas, con liga directa a cada uno.</p>\n\n<p><strong>El tablero del proyecto, a tu medida.</strong>&nbsp;En Editar proyecto puedes&nbsp;<strong>ocultar las secciones que ese proyecto no necesita</strong>&nbsp;(Presupuesto, Tickets, Análisis, Grafo, Memoria, Miembros); documentos y tareas siempre quedan visibles. Y en móvil, los indicadores del panel principal ahora caben dos por renglón.</p>\n\n<figure><img src=\"{{base}}/uploads/blog/imagen-14.png\" alt=\"\" width=\"686\" height=\"110\" loading=\"lazy\"></figure>\n\n<p>Al actualizar, las migraciones corren solas. La Firma Electrónica se habilita por organización; los ajustes fiscales y de CRM funcionan de inmediato.</p>\n\n<hr>",
+    "date": "2026-07-23",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "crm",
+        "firma electrónica",
+        "Fiscal",
+        "Mejoras",
+        "nómina",
+        "subtareas"
+    ],
+    "image": "uploads/blog/imagen-12.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.41.0 — La firma vive en el proyecto, el fiscal entiende tu nómina y el CRM te dice a quién ya conoces Firmar un documento es parte del proyecto, no un trámite aparte. Desde el menú de cualquier documento aparece «✍️ Enviar a firma», con el documento y el proyecto ya elegidos. El tablero del proyecto estrena…",
+    "created": "2026-07-23",
+    "updated": "2026-07-23",
+    "wp_id": 758,
+    "wp_url": "https://blog.iurefficient.com/2026/07/23/que-hay-de-nuevo-v4-40-la-firma-en-tu-proyecto-fiscal-y-crm-con-mejoras/"
+}

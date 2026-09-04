@@ -1,0 +1,22 @@
+{
+    "slug": "que-hay-de-nuevo-v4-51-fiscal-cuanto-declaraste",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.51 – Fiscal ¿cuanto declaraste?",
+    "excerpt": "v4.51.0 — Fiscal: lo que realmente se pagó al SAT ahora cuenta Si su contador le indicaba pagar cantidades distintas a las que mostraba el sistema, esta versión explica por qué y lo corrige. Ya puede capturar su declaración presentada, mes a mes y la anual. Se registra lo que efectivamente se declaró y pagó de…",
+    "body": "<h2>v4.51.0 — Fiscal: lo que realmente se pagó al SAT ahora cuenta</h2>\n\n<p><em>Si su contador le indicaba pagar cantidades distintas a las que mostraba el sistema, esta versión explica por qué y lo corrige.</em></p>\n\n<p><strong>Ya puede capturar su declaración presentada, mes a mes y la anual.</strong>&nbsp;Se registra lo que efectivamente se declaró y pagó de ISR e IVA, con su línea de captura y fechas. A partir de ahí,&nbsp;<strong>el cálculo de los meses siguientes usa ese importe</strong>&nbsp;y no el suyo propio. Antes el sistema arrastraba sus propias cifras: una sola diferencia en un mes se iba agrandando el resto del año.</p>\n\n<p><strong>El saldo a favor de IVA se acredita contra los meses siguientes.</strong>&nbsp;No estaba implementado: un mes con más IVA acreditable que trasladado aparecía en negativo y se perdía, de modo que&nbsp;<strong>al mes siguiente el sistema pedía pagar de más</strong>. En un caso real, marzo pedía $23,711 cuando correspondían $20,576, porque enero y febrero habían generado saldo a favor.</p>\n\n<p><strong>Comparativo a la vista.</strong>&nbsp;Cada mes muestra lo calculado junto a lo declarado y la diferencia, así se ve de inmediato dónde y cuánto discrepan. Y el reporte anual estima el ISR del ejercicio, las retenciones y los pagos provisionales, para contrastarlo con la declaración anual capturada.</p>\n\n<p>Si no captura ninguna declaración, el ISR se comporta igual que antes; el saldo a favor de IVA sí se corrige en todos los casos, porque era un cálculo incompleto.</p>\n\n<p><em>Recomendado para quien use el módulo Fiscal. Trae una migración del plugin que corre sola al arrancar; actualizar backend y frontend juntos.</em></p>\n\n<hr>",
+    "date": "2026-08-14",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "Declaraciones",
+        "Fiscal"
+    ],
+    "image": "uploads/blog/imagen-5.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.51.0 — Fiscal: lo que realmente se pagó al SAT ahora cuenta Si su contador le indicaba pagar cantidades distintas a las que mostraba el sistema, esta versión explica por qué y lo corrige. Ya puede capturar su declaración presentada, mes a mes y la anual. Se registra lo que efectivamente se declaró y pagó de…",
+    "created": "2026-08-14",
+    "updated": "2026-08-14",
+    "wp_id": 878,
+    "wp_url": "https://blog.iurefficient.com/2026/08/14/que-hay-de-nuevo-v4-51-fiscal-cuanto-declaraste/"
+}

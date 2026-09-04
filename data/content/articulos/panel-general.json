@@ -1,0 +1,22 @@
+{
+    "slug": "panel-general",
+    "status": "published",
+    "title": "Panel general",
+    "excerpt": "Elementos del Dashboard",
+    "body": "<div class=\"video-embed\"><iframe src=\"https://www.youtube-nocookie.com/embed/ZPot1HcxB0o\" title=\"Video\" loading=\"lazy\" allow=\"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe></div>\n\n<h2>Elementos del Dashboard</h2>\n\n<ol>\n<li><strong>Barra Superior</strong></li>\n</ol>\n\n<ul>\n<li>Navegación principal (Proyectos, Documentos, Asistente IA)</li>\n\n<li>Notificaciones (campana &#x1f514;)</li>\n\n<li>Configuración personal (&#x2699;&#xfe0f;)</li>\n\n<li>Foto de perfil</li>\n</ul>\n\n<ol>\n<li><strong>Widget «Mis Proyectos Activos»</strong></li>\n</ol>\n\n<ul>\n<li>Muestra proyectos donde estás asignado</li>\n\n<li>Código de color según urgencia:\n<ul>\n<li>&#x1f534; Rojo: Vence en &lt; 48 horas</li>\n\n<li>&#x1f7e1; Amarillo: Vence en &lt; 7 días</li>\n\n<li>&#x1f7e2; Verde: Vence en > 7 días</li>\n</ul>\n</li>\n</ul>\n\n<ol>\n<li><strong>Widget «Tareas Pendientes»</strong></li>\n</ol>\n\n<ul>\n<li>Tareas asignadas a ti</li>\n\n<li>Ordenadas por fecha de vencimiento</li>\n\n<li>Puedes marcar como completadas directamente</li>\n</ul>\n\n<ol>\n<li><strong>Feed de Actividad Reciente</strong></li>\n</ol>\n\n<ul>\n<li>Actualizaciones de tus proyectos</li>\n\n<li>Menciones (@tu_nombre)</li>\n\n<li>Cambios importantes</li>\n</ul>",
+    "date": "2026-07-01",
+    "author": "Iurefficient",
+    "category": "Tutorial",
+    "tags": [
+        "dashboard",
+        "panel"
+    ],
+    "image": "uploads/blog/imagen-1.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Elementos del Dashboard",
+    "created": "2026-07-01",
+    "updated": "2026-07-01",
+    "wp_id": 619,
+    "wp_url": "https://blog.iurefficient.com/2026/07/01/panel-general/"
+}

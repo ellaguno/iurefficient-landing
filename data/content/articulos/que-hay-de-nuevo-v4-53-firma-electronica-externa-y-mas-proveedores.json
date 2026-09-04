@@ -1,0 +1,27 @@
+{
+    "slug": "que-hay-de-nuevo-v4-53-firma-electronica-externa-y-mas-proveedores",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.53 – Firma electrónica externa y más proveedores",
+    "excerpt": "Iurefficient: La evolución de tu Colaborador Especialista Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.53.0 — Que su cliente firme, sin darle una cuenta Hasta ahora, para que alguien firmara un documento tenía que existir en el sistema…",
+    "body": "<h2>Iurefficient: La evolución de tu Colaborador Especialista</h2>\n\n<p><em>Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.</em></p>\n\n<hr>\n\n<h2>v4.53.0 — Que su cliente firme, sin darle una cuenta</h2>\n\n<p><strong>Hasta ahora, para que alguien firmara un documento tenía que existir en el sistema o pasar por un proveedor de pago.</strong>&nbsp;Las dos cosas sobran cuando lo único que necesita es que un cliente apruebe una propuesta, un entregable o un cambio de alcance.</p>\n\n<p><strong>Ahora se manda un enlace y ya.</strong>&nbsp;Elija el documento del expediente, agregue a la persona por su correo y envíe. Recibe un enlace personal; al abrirlo se identifica con un&nbsp;<strong>código de seis dígitos</strong>&nbsp;que le llega a ese mismo correo, revisa el documento y&nbsp;<strong>traza su firma en la pantalla</strong>, con el ratón o con el dedo. No crea cuenta, no instala nada, no paga nada. Si prefiere una clave en vez del código, el sistema se la muestra a usted una sola vez para que se la entregue por teléfono o mensaje —nunca viaja en el mismo correo que el enlace, porque entonces no protegería de nada—.</p>\n\n<p><strong>Queda constancia de todo.</strong>&nbsp;Al PDF se le anexa una hoja de firmas con el trazo de cada firmante, la fecha y hora, su dirección IP, el navegador que usó, la declaración de consentimiento que aceptó y la huella digital del documento. El firmado regresa al expediente como una versión nueva y, aparte, se descarga el registro completo del proceso.</p>\n\n<p><strong>Lo que se firma no cambia.</strong>&nbsp;El documento se congela al enviarlo: aunque alguien edite el original mientras la firma está en curso, el firmante ve y firma exactamente lo que se le mandó.</p>\n\n<blockquote>\n<p><strong>Pensado para un enlace que viaja por correo.</strong>&nbsp;Es personal, caduca a los catorce días, se bloquea tras varios intentos fallidos y deja de servir en cuanto se firma o se rechaza. Si el cliente lo pierde, desde la solicitud se le genera uno nuevo con un clic y el anterior queda inservible.</p>\n</blockquote>\n\n<p><strong>Conviene saber qué es y qué no.</strong> Esto <strong>es firma electrónica simple con evidencia sólida:</strong> perfecta para aprobar y autorizar, y defendible entre las partes. Para un contrato que pueda acabar en tribunales sigue estando Mifiel, la única modalidad con firma avanzada y e.firma del SAT. La regla corta: <strong>aprobar → enlace; autorizar internamente → contraseña; contratar → Mifiel.</strong></p>\n\n<p><strong>Dos proveedores nuevos, para dos necesidades distintas.</strong>&nbsp;<strong>Documenso</strong>&nbsp;se instala en el servidor del despacho o del cliente, para quien exige que el documento no salga de su infraestructura.&nbsp;<strong>SignWell</strong>&nbsp;es una opción económica en la nube que también emite constancia NOM-151.</p>\n\n<p><strong>Y la conexión con </strong>Mifiel<strong> quedó reparada.</strong> La integración nunca había podido conectarse: la firma de autenticación se armaba mal, las direcciones de su servicio habían cambiado y sus avisos automáticos ya no funcionaban como antes. Todo el ciclo —conectar, enviar, firmar y recibir el documento con su constancia <strong>NOM-151</strong>— quedó probado contra el ambiente de pruebas de <strong>Mifiel</strong>, y lo mismo con <strong>DocuSign</strong>.</p>\n\n<p><em>Trae una migración del plugin de Firma Electrónica que corre sola al arrancar. Actualizar backend y frontend juntos.</em></p>\n\n<hr>",
+    "date": "2026-08-14",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "documenso",
+        "docusign",
+        "firma",
+        "firma electrónica",
+        "mifiel",
+        "sign",
+        "signwell"
+    ],
+    "image": "uploads/blog/imagen-7.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Iurefficient: La evolución de tu Colaborador Especialista Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.53.0 — Que su cliente firme, sin darle una cuenta Hasta ahora, para que alguien firmara un documento tenía que existir en el sistema…",
+    "created": "2026-08-14",
+    "updated": "2026-08-14",
+    "wp_id": 885,
+    "wp_url": "https://blog.iurefficient.com/2026/08/14/que-hay-de-nuevo-v4-53-firma-electronica-externa-y-mas-proveedores/"
+}

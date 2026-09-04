@@ -98,6 +98,7 @@ function site_footer(array $page): void
     $precios = cms_url('page:precios', $lang) . '/';
     $seguridad = cms_url('page:seguridad', $lang) . '/';
     $legal = fn(string $slug) => cms_url('item:legal', $lang, $slug);
+    $articulos = cms_url('list:articulos', $lang);
     $email = (string) ($S['email'] ?? 'contacto@iurefficient.com');
     $logoWhite = iure_img((string) ($S['logo_white'] ?? ''), 'logo-white.svg');
     ?>
@@ -123,7 +124,8 @@ function site_footer(array $page): void
                     <h4>Iurefficient</h4>
                     <ul>
                         <li><a href="<?= $derecho ?>">Para Abogados</a></li>
-                        <li><a href="<?= cms_e(iure_link('blog_url')) ?>" target="_blank" rel="noopener">Blog</a></li>
+                        <li><a href="<?= $articulos ?>">Artículos y novedades</a></li>
+                        <li><a href="<?= cms_e(iure_link('blog_url')) ?>" target="_blank" rel="noopener">Noticias (blog)</a></li>
                         <li><a href="<?= cms_e(iure_link('help_url')) ?>" target="_blank" rel="noopener">Centro de Ayuda</a></li>
                         <li><a href="mailto:<?= cms_e($email) ?>">Contacto</a></li>
                     </ul>
@@ -143,7 +145,8 @@ function site_footer(array $page): void
                     <h4>Empresa</h4>
                     <ul>
                         <li><a href="<?= $derecho ?>#equipo">Equipo</a></li>
-                        <li><a href="<?= cms_e(iure_link('blog_url')) ?>" target="_blank" rel="noopener">Blog</a></li>
+                        <li><a href="<?= $articulos ?>">Artículos y novedades</a></li>
+                        <li><a href="<?= cms_e(iure_link('blog_url')) ?>" target="_blank" rel="noopener">Noticias (blog)</a></li>
                         <li><a href="<?= $home ?>">Iurefficient Teams</a></li>
                         <li><a href="mailto:<?= cms_e($email) ?>">Contacto</a></li>
                     </ul>

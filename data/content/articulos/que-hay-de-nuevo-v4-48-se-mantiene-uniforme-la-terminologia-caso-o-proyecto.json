@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-v4-48-se-mantiene-uniforme-la-terminologia-caso-o-proyecto",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.48. Se mantiene uniforme la terminología Caso o Proyecto",
+    "excerpt": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.49.0 — Tu despacho ya no tiene que leer «caso» si trabaja por proyectos La palabra que elegiste en Ajustes ahora se usa en toda la aplicación. Cada instancia decide cómo…",
+    "body": "<p><em>Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.</em></p>\n\n<hr>\n\n<h2>v4.49.0 — Tu despacho ya no tiene que leer «caso» si trabaja por proyectos</h2>\n\n<p><a href=\"https://github.com/ellaguno/expert-collaborator/blob/main/docs/BLOG_EVOLUCION_VERSIONES.md#v4490--tu-despacho-ya-no-tiene-que-leer-caso-si-trabaja-por-proyectos\"></a></p>\n\n<p><strong>La palabra que elegiste en Ajustes ahora se usa en toda la aplicación.</strong> Cada instancia decide cómo se llama su unidad de trabajo —caso, proyecto, expediente, oportunidad— pero esa elección solo llegaba a las pantallas que la pedían a mano. En el resto, la palabra venía escrita de fábrica: un despacho jurídico leía «Roles de Proyecto» en sus ajustes y una consultoría, «Documentos del Caso». Ya no ocurre en ningún lado: menú, buscador, tableros, listas, formularios, Gantt, ajustes, reportes y los paneles de los plugins hablan tu idioma. Se revisaron los textos de las dos lenguas contra las tres formas de trabajar más comunes, una por una.</p>\n\n<p><strong>El portal de tus clientes ya habla en dos idiomas —y con tus palabras.</strong> Hasta ahora el portal externo estaba escrito en español fijo. Ahora traduce y, además, usa la terminología de tu despacho: quien entra desde fuera ve lo mismo que ves tú, en el idioma que le configuraste al invitarlo.</p>\n\n<p><strong>La ayuda también.</strong> Las guías dentro de la aplicación —incluida la de seguridad— dejan de hablar de «casos» a quien trabaja por proyectos.</p>\n\n<p><strong>Y los correos y avisos, igual.</strong> Las notificaciones que salen por correo y las de la campana usan tu palabra, en el idioma de quien las recibe.</p>\n\n<p><strong>Las hojas de cálculo vuelven a poder consultarse en lenguaje natural.</strong> Si preguntabas por los números de una tabla que habías subido, el sistema respondía como si el proyecto no tuviera ninguna: los archivos se guardan cifrados y esa consulta en particular los leía sin descifrar, así que ninguna hoja llegaba nunca al motor de datos.</p>\n\n<p><em>Sin migraciones; actualizar backend y frontend juntos. La terminología que ya tenías configurada se respeta tal cual: no hay nada que volver a capturar.</em></p>\n\n<hr>",
+    "date": "2026-08-11",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/pleca_version_4.16.14.jpg",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.49.0 — Tu despacho ya no tiene que leer «caso» si trabaja por proyectos La palabra que elegiste en Ajustes ahora se usa en toda la aplicación. Cada instancia decide cómo…",
+    "created": "2026-08-11",
+    "updated": "2026-08-10",
+    "wp_id": 831,
+    "wp_url": "https://blog.iurefficient.com/2026/08/11/que-hay-de-nuevo-v4-48-se-mantiene-uniforme-la-terminologia-caso-o-proyecto/"
+}

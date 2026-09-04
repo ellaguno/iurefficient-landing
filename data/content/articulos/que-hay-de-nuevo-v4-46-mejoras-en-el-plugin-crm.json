@@ -1,0 +1,22 @@
+{
+    "slug": "que-hay-de-nuevo-v4-46-mejoras-en-el-plugin-crm",
+    "status": "published",
+    "title": "¿Que hay de nuevo? V4.46. Mejoras en el plugin CRM",
+    "excerpt": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.46.0 — El CRM registra a toda la mesa (y un nuevo «showroom» por fin habla el idioma de tu sector) Una venta casi nunca la decide una sola persona. Hasta ahora…",
+    "body": "<p><em>Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.</em></p>\n\n<hr>\n\n<h2>v4.46.0 — El CRM registra a toda la mesa (y un nuevo «showroom» por fin habla el idioma de tu sector)</h2>\n\n<p><strong>Una venta casi nunca la decide una sola persona.</strong>&nbsp;Hasta ahora una oportunidad tenía un solo nombre detrás; ya puedes registrar a toda la mesa —quien decide, quien influye, quien revisa lo técnico, quien aprueba el presupuesto, el aliado interno, quien nada más estuvo en la reunión—, cada quien con su papel y con un contacto marcado como principal. Y como son contactos del sistema, esa misma persona te sirve después en proyectos, tareas y tickets sin volver a capturarla.</p>\n\n<p><strong>Tomar notas sin salir de la ficha.</strong>&nbsp;En los Documentos de un lead o de una oportunidad hay un botón para&nbsp;<strong>crear un documento en blanco</strong>&nbsp;—nota, Word, texto u hoja de cálculo— que se abre enseguida para escribir. Antes solo se podían subir archivos ya hechos, así que la nota de la llamada terminaba en cualquier otro lado.</p>\n\n<p><strong>El buscador de arriba ya encuentra el CRM.</strong>&nbsp;Leads, oportunidades y actividades aparecen junto a los proyectos, clientes y documentos; la actividad te lleva a la oportunidad o al lead donde se lee.</p>\n\n<p><strong>Los leads que son personas ya aparecen en Contactos</strong>, con su etiqueta «Lead». No todos, a propósito: solo cuando el lead deja de ser materia prima —al calificarlo, al asignarle responsable, al crearle una oportunidad o al sumarlo a una— o cuando tú lo pides desde su ficha. Un despacho con miles de prospectos no ve su agenda inundada.</p>\n\n<p><strong>La hora de una actividad ya es la hora que escribes.</strong>&nbsp;Capturabas las doce y quedaba registrada seis horas antes. Corregido. Ojo: las actividades creadas antes de esta versión conservan el desfase; se arreglan volviéndolas a editar. También se corrigió que crear una factura&nbsp;<strong>sin proyecto asociado</strong>devolviera un error y no guardara nada.</p>\n\n<p><strong>Y las demos sectoriales dejaron de sonar a juzgado</strong>: los proyectos de ejemplo ahora traen equipo, el panel usa la terminología del giro —«área solicitante» o «hito» donde corresponde, no «cliente» y «vencimiento» a la fuerza— y los tipos de plazo salen del catálogo del sector en lugar de una lista de audiencias y apelaciones. </p>\n\n<ul>\n<li><a href=\"https://showroom.iurefficient.com\"><em><strong>https://showroom.iurefficient.com</strong></em></a> </li>\n</ul>\n\n<p><em>Trae una migración del módulo de CRM; es aditiva y corre sola al arrancar. Actualiza backend y frontend juntos.</em></p>\n\n<hr>",
+    "date": "2026-08-06",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "crm",
+        "showroom"
+    ],
+    "image": "uploads/blog/imagen-2.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.46.0 — El CRM registra a toda la mesa (y un nuevo «showroom» por fin habla el idioma de tu sector) Una venta casi nunca la decide una sola persona. Hasta ahora…",
+    "created": "2026-08-06",
+    "updated": "2026-08-05",
+    "wp_id": 811,
+    "wp_url": "https://blog.iurefficient.com/2026/08/06/que-hay-de-nuevo-v4-46-mejoras-en-el-plugin-crm/"
+}

@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-v4-61-cada-proyecto-decide-si-usa-cambios-riesgos-y-presupuesto",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.61 – Cada proyecto decide si usa cambios, riesgos y presupuesto.",
+    "excerpt": "v4.61.0 — Cada proyecto decide si usa Cambios y Riesgos",
+    "body": "<p><strong>v4.61.0 — Cada proyecto decide si usa Cambios y Riesgos</strong></p>\n\n<ul>\n<li><strong>Las pestañas «Cambios» y «Riesgos» ahora se encienden por proyecto</strong>, en Editar proyecto, junto a las demás secciones del tablero (Tareas, Plazos, Presupuesto, Tickets…). Antes «Riesgos» aparecía siempre y «Cambios» iba atada a que el proyecto mostrara Presupuesto, que es otra pregunta.</li>\n\n<li><strong>Nacen apagadas.</strong> Un proyecto que no lleva control de cambios ni matriz de riesgos ya no carga con dos pestañas que no usa. Encenderlas es marcar una casilla.</li>\n\n<li><strong>Los proyectos que ya las estaban usando no pierden nada.</strong> Al actualizar, la pestaña queda encendida en todo proyecto que ya tenga riesgos declarados, línea base u órdenes de cambio. Solo los proyectos que nunca las tocaron nacen apagados.</li>\n\n<li><strong>Apagar una sección esconde la pestaña, no borra el contenido.</strong> Los riesgos declarados y las líneas base siguen guardados; al volver a encenderla están igual que se dejaron. Incluye una migración que corre sola al actualizar. Actualizar backend y frontend juntos.</li>\n</ul>",
+    "date": "2026-08-20",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/imagen-12.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.61.0 — Cada proyecto decide si usa Cambios y Riesgos",
+    "created": "2026-08-20",
+    "updated": "2026-08-24",
+    "wp_id": 915,
+    "wp_url": "https://blog.iurefficient.com/2026/08/20/que-hay-de-nuevo-v4-61-cada-proyecto-decide-si-usa-cambios-riesgos-y-presupuesto/"
+}

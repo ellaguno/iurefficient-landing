@@ -16,7 +16,7 @@ tag `pre-cms-migration` de este repositorio y en `../backups/2026-09-03/`.
 | `/seguridad` | Seguridad, confidencialidad y privacidad | `site/templates/seguridad.php` + FAQ ("seguridad") |
 | `/legal/privacidad`, `/legal/terminos` | Páginas legales | tipo de contenido "Páginas legales" |
 | `/pages/{url}` | Páginas libres creadas desde el panel | tipo "Páginas" + `site/templates/pagina.php` |
-| `/articulos/{url}` | Artículos (blog) — declarado, sin uso aún | tipo "Artículos" + `articulo.php`; índice `/articulos/` desactivado (`no_list`) |
+| `/articulos/`, `/articulos/{url}` | Artículos, tutoriales y novedades de versión (88 entradas migradas del blog el 2026-09-04) | tipo "Artículos" + `articulos.php` / `articulo.php` |
 | `/proyectos/{url}` | Proyectos / casos de éxito — declarado, sin uso aún | tipo "Proyectos" + `proyecto.php`; índice `/proyectos/` desactivado (`no_list`) |
 | `/help-portal/` | Centro de ayuda | carpeta PHP independiente (fuera del CMS) |
 | `/presentacion/` | Presentación comercial | HTML estático (fuera del CMS) |
@@ -37,10 +37,19 @@ En el panel todos los tipos de contenido cuelgan del grupo plegable **Páginas**
   imagen de cabecera, índice opcional de subtítulos, bloque de contacto opcional y elección de cabecera/pie
   (Iurefficient o Teams). Para enlazarlas: Menú (portada) o Ajustes → Menú de la landing para abogados.
 - **Páginas legales**: título, fecha, resumen y contenido con editor visual. El índice se genera de los subtítulos.
-- **Artículos** y **Proyectos**: declarados para el futuro con plantillas de detalle e índice listas
-  (`articulos.php`/`articulo.php`, `proyectos.php`/`proyecto.php`). Los elementos publicados ya se ven en
-  `/articulos/{url}` y `/proyectos/{url}`; el índice público y su entrada en el sitemap se activan quitando
-  `'no_list' => true` del tipo en `site/config.php`. El menú sigue apuntando al blog externo (Ajustes → Blog).
+- **Artículos**: título, resumen, contenido, fecha, autor, categoría, etiquetas, imagen destacada y marca. El índice
+  `/articulos/` filtra por categoría, etiqueta y búsqueda, con paginación de 12. Los videos de YouTube se insertan
+  como `<div class="video-embed"><iframe …></div>`.
+- **Proyectos**: declarado con plantillas listas (`proyectos.php`/`proyecto.php`); el índice público se activa
+  quitando `'no_list' => true` del tipo en `site/config.php`.
+
+### Migración del blog (WordPress → Artículos)
+
+`tools/import-wp.php` importa las entradas de blog.iurefficient.com por la API REST: omite la categoría
+"Noticias" (resúmenes automáticos con audio, que siguen en WordPress), descarga imágenes y PDF a `uploads/blog/`,
+limpia el HTML de Gutenberg, convierte los embeds de YouTube y escribe `data/content/articulos/<slug>.json`.
+Genera además `tools/wp-redirects.txt` con las reglas 301 para el `.htaccess` de WordPress. Se puede repetir
+(`--dry-run`, `--slug=…`, `--limit=N`). Las entradas vacías quedan como borrador.
 - **Textos del sitio**: títulos, subtítulos, botones, textos del pie, SEO de cada página.
 - **Ajustes**: correo, redes, logotipos, capturas de la galería 3D, URLs de demos, blog, video de YouTube y menú de la
   landing para abogados.
@@ -103,6 +112,9 @@ La primera vez que abres `/admin/` te pide crear el usuario administrador (`data
 - **Textos**: títulos y descripciones SEO viven en Textos del sitio → SEO. Escribe siempre con acentos.
 
 ### Actualizar un sitio ya desplegado
+
+Contenido nuevo generado en local (por ejemplo `data/content/articulos/` y `uploads/blog/` de la migración) se sube
+aparte, como carpetas nuevas, sin tocar el resto de `data/`.
 
 Sube solo el código: todo **excepto** `data/` y `uploads/` (ahí viven el contenido, los ajustes, los usuarios y los
 archivos subidos en producción). Los textos nuevos que traiga el tema se completan solos desde

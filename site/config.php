@@ -9,7 +9,7 @@
  *   /seguridad       Seguridad, confidencialidad y privacidad (seguridad.php)
  *   /legal/{slug}    Aviso de privacidad, términos… (tipo "legal", legal.php)
  *   /pages/{slug}    Páginas libres creadas desde el panel (tipo "paginas", pagina.php)
- *   /articulos/      Artículos (tipo "articulos", articulos.php + articulo.php) — declarado, sin uso aún
+ *   /articulos/      Artículos, tutoriales y novedades (tipo "articulos", articulos.php + articulo.php)
  *   /proyectos/      Proyectos / casos (tipo "proyectos", proyectos.php + proyecto.php) — declarado, sin uso aún
  *   /help-portal/    Centro de ayuda (carpeta estática, fuera del CMS)
  *   /presentacion/   Presentación comercial (carpeta estática, fuera del CMS)
@@ -76,17 +76,15 @@ return [
             ],
         ],
 
-        // ---- Artículos y proyectos (declarados para el futuro) ---------------------------------------
-        // Mientras 'no_list' esté en true no existe el índice público (/articulos/, /proyectos/) ni aparece en el
-        // sitemap; los elementos publicados sí se ven en /articulos/{url} y /proyectos/{url}.
-        // Para activar el índice: quitar 'no_list' y enlazarlo desde el menú.
+        // ---- Artículos y proyectos ---------------------------------------------------------------------
+        // Un tipo con 'no_list' => true no tiene índice público ni entra al sitemap; sus elementos publicados sí
+        // se ven en /{ruta}/{url}. Proyectos sigue así hasta que tenga contenido; Artículos ya está activo.
         'articulos' => [
             'label' => 'Artículos',
             'group' => 'Páginas',
             'label_singular' => 'Artículo',
-            'help' => 'Blog / artículos. El índice público (/articulos/) está desactivado hasta que tenga contenido y diseño.',
+            'help' => 'Artículos, tutoriales y novedades de versión (migrados del blog el 2026-09-04). Índice público en /articulos/.',
             'routes' => ['es' => 'articulos'],
-            'no_list' => true,
             'template_list' => 'articulos',
             'template_single' => 'articulo',
             'schema' => 'Article',

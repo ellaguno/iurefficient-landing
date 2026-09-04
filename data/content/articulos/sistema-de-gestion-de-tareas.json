@@ -1,0 +1,28 @@
+{
+    "slug": "sistema-de-gestion-de-tareas",
+    "status": "published",
+    "title": "Sistema de gestión de tareas",
+    "excerpt": "📋 Sistema Avanzado de Tareas El sistema de tareas ofrece cuatro vistas complementarias para gestionar el trabajo de tu equipo, adaptándose a diferentes metodologías y necesidades. 👁️ Cuatro Vistas de Gestión 📊 Vista Kanban Metodología visual de flujo. Perfecta para metodologías ágiles. 📝 Vista Lista Vista tabular completa con todas las propiedades visibles. 🌳 Vista…",
+    "body": "<h2>&#x1f4cb; Sistema Avanzado de Tareas</h2>\n\n<p>El sistema de tareas ofrece cuatro vistas complementarias para gestionar el trabajo de tu equipo, adaptándose a diferentes metodologías y necesidades.</p>\n\n<h2>&#x1f441;&#xfe0f; Cuatro Vistas de Gestión</h2>\n\n<h2>&#x1f4ca; Vista Kanban</h2>\n\n<p>Metodología visual de flujo. Perfecta para metodologías ágiles.</p>\n\n<figure><img src=\"{{base}}/uploads/blog/kanban-view.png\" alt=\"\" width=\"1024\" height=\"702\" loading=\"lazy\"></figure>\n\n<ul>\n<li>Visualiza el flujo de trabajo</li>\n\n<li>Arrastra y suelta entre columnas</li>\n\n<li>Identifica cuellos de botella</li>\n</ul>\n\n<h2>&#x1f4dd; Vista Lista</h2>\n\n<p>Vista tabular completa con todas las propiedades visibles.</p>\n\n<figure><img src=\"{{base}}/uploads/blog/list-view.png\" alt=\"\" width=\"944\" height=\"776\" loading=\"lazy\"></figure>\n\n<ul>\n<li>Vista detallada de propiedades</li>\n\n<li>Ordenamiento y filtros avanzados</li>\n\n<li>Exportación a Excel/CSV</li>\n</ul>\n\n<h2>&#x1f333; Vista Árbol (WBS)</h2>\n\n<p>Work Breakdown Structure &#8211; Descomposición jerárquica del proyecto.</p>\n\n<figure><img src=\"{{base}}/uploads/blog/wbs-view.png\" alt=\"\" width=\"944\" height=\"776\" loading=\"lazy\"></figure>\n\n<ul>\n<li>Estructura jerárquica multinivel</li>\n\n<li>Tareas resumen y subtareas</li>\n\n<li>Reorganización por arrastre</li>\n</ul>\n\n<h2>&#x1f4ca; Vista Gantt</h2>\n\n<p>Diagrama temporal con planificación y dependencias del proyecto.</p>\n\n<figure><img src=\"{{base}}/uploads/blog/gantt-view.png\" alt=\"\" width=\"962\" height=\"764\" loading=\"lazy\"></figure>\n\n<ul>\n<li>Cronograma visual del proyecto</li>\n\n<li>Visualiza dependencias</li>\n\n<li>Ajusta fechas arrastrando barras</li>\n</ul>\n\n<h2>&#x2139;&#xfe0f; ¿Cuándo usar cada vista?</h2>\n\n<blockquote>\n<ul>\n<li><strong>Kanban:</strong> Equipos ágiles, trabajo continuo, daily standups</li>\n\n<li><strong>Lista:</strong> Revisión detallada, filtrado complejo, exportación</li>\n\n<li><strong>WBS:</strong> Planificación inicial, proyectos grandes y complejos</li>\n\n<li><strong>Gantt:</strong> Planificación temporal, análisis del camino crítico</li>\n</ul>\n</blockquote>\n\n<p><em>Para editar una tarea solo hay que picarle y puede editarse en línea (en modo de lista) o abrir una ventana para editar sus detalles.</em></p>",
+    "date": "2026-04-09",
+    "author": "Iurefficient",
+    "category": "Iurefficient",
+    "tags": [
+        "Árbol",
+        "Ayuda",
+        "Explicación",
+        "Kanban",
+        "Lista",
+        "Tareas",
+        "Tarjetas",
+        "WBS"
+    ],
+    "image": "uploads/blog/gantt-view.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "📋 Sistema Avanzado de Tareas El sistema de tareas ofrece cuatro vistas complementarias para gestionar el trabajo de tu equipo, adaptándose a diferentes metodologías y necesidades. 👁️ Cuatro Vistas de Gestión 📊 Vista Kanban Metodología visual de flujo. Perfecta para metodologías ágiles. 📝 Vista Lista Vista tabular completa con todas las propiedades visibles. 🌳 Vista…",
+    "created": "2026-04-09",
+    "updated": "2026-04-09",
+    "wp_id": 425,
+    "wp_url": "https://blog.iurefficient.com/2026/04/09/sistema-de-gestion-de-tareas/"
+}

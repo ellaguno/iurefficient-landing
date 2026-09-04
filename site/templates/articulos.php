@@ -4,9 +4,12 @@ $items = cms_items('articulos');
 if ($q !== '') { $n = mb_strtolower($q); $items = array_filter($items, fn($p) => mb_strpos(mb_strtolower(($p['title'] ?? '') . ' ' . ($p['excerpt'] ?? '') . ' ' . strip_tags((string) ($p['body'] ?? ''))), $n) !== false); }
 if ($tag !== '') $items = array_filter($items, fn($p) => in_array($tag, (array) ($p['tags'] ?? []), true));
 if ($cat !== '') $items = array_filter($items, fn($p) => ($p['category'] ?? '') === $cat);
-$per = 9; $pg = max(1, (int) ($_GET['pg'] ?? 1)); $pages = max(1, (int) ceil(count($items) / $per));
+$per = 12; $pg = max(1, (int) ($_GET['pg'] ?? 1)); $pages = max(1, (int) ceil(count($items) / $per));
 $items = array_slice($items, ($pg - 1) * $per, $per, true);
 $list = cms_url('list:articulos', $lang);
+$cats = [];
+foreach (cms_items('articulos') as $p) if (!empty($p['category'])) $cats[$p['category']] = ($cats[$p['category']] ?? 0) + 1;
+arsort($cats);
 ?>
     <main class="legal-page page-listado">
         <div class="container">
@@ -16,6 +19,14 @@ $list = cms_url('list:articulos', $lang);
                 <p class="legal-meta"><?= cms_e($t('articulos_intro')) ?></p>
 <?php endif; ?>
             </div>
+<?php if ($cats): ?>
+            <nav class="page-cats" aria-label="Categorías">
+                <a href="<?= $list ?>"<?= $cat === '' && $tag === '' && $q === '' ? ' class="on"' : '' ?>>Todos</a>
+<?php foreach ($cats as $c => $n): ?>
+                <a href="<?= $list ?>?cat=<?= rawurlencode((string) $c) ?>"<?= $cat === (string) $c ? ' class="on"' : '' ?>><?= cms_e($c) ?> <small><?= $n ?></small></a>
+<?php endforeach; ?>
+            </nav>
+<?php endif; ?>
 <?php if ($q || $tag || $cat): ?>
             <p class="page-filter">Resultados para <strong><?= cms_e($q ?: $tag ?: $cat) ?></strong> · <a href="<?= $list ?>">ver todo</a></p>
 <?php endif; ?>

@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-telegram-bidireccional-v4-29",
+    "status": "published",
+    "title": "¿Que hay de nuevo? Telegram bidireccional v4.29",
+    "excerpt": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.* v4.29.1 — Abre tus documentos de Office al instante Ver un Word, Excel o PowerPoint ahora es casi instantáneo. Al abrir un documento de Office para leerlo, ya no se carga…",
+    "body": "<p>Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.*</p>\n\n<hr>\n\n<h2>v4.29.1 — Abre tus documentos de Office al instante</h2>\n\n<p><strong>Ver un Word, Excel o PowerPoint ahora es casi instantáneo.</strong> Al abrir un documento de Office para <em>leerlo</em>, ya no se carga el editor completo (que tardaba 4–5 segundos): se muestra de inmediato una <strong>vista previa de solo lectura</strong> en el visor del navegador. Si quieres modificarlo, el botón <strong>Editar</strong> abre el editor completo como siempre. Y si la vista previa no está disponible por algún motivo, el documento se abre igual en modo lectura del editor.</p>\n\n<p><strong>Editor de documentos actualizado.</strong> El componente de edición colaborativa (OnlyOffice) se actualizó a su versión oficial más reciente, que elimina el límite de conexiones simultáneas: más usuarios pueden ver y editar documentos al mismo tiempo sin toparse con el tope anterior.</p>\n\n<p>No requiere ninguna acción de tu parte.</p>\n\n<hr>\n\n<h2>v4.29.0 — Chatea con tu asistente por Telegram</h2>\n\n<p><strong>Ahora puedes escribirle al bot de Telegram y te responde la IA de tu instancia.</strong> Hasta ahora el bot solo enviaba notificaciones; a partir de esta versión puedes mandarle preguntas desde Telegram y te contesta el mismo asistente de tu instancia, con el contexto de tus casos y documentos. Ideal para consultar algo rápido desde el celular sin abrir la aplicación.</p>\n\n<p><strong><code>/start</code> ya te entrega tu Chat ID.</strong> Antes, al escribir <code>/start</code> a <strong>@iurefficient_bot</strong> no pasaba nada. Ahora el bot te responde con tu Chat ID y los pasos para vincular tu cuenta: solo pégalo en <strong>Configuración → Notificaciones → Telegram</strong> y guarda. Desde ese momento recibes notificaciones y puedes chatear con el asistente.</p>\n\n<p>Para que el chat por Telegram funcione, tu instancia debe estar actualizada a esta versión; la obtención del Chat ID con <code>/start</code> ya funciona aunque tu instancia aún no se haya actualizado.</p>\n\n<figure><img src=\"{{base}}/uploads/blog/imagen-1.png\" alt=\"\" width=\"753\" height=\"839\" loading=\"lazy\"></figure>",
+    "date": "2026-06-29",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/imagen.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.* v4.29.1 — Abre tus documentos de Office al instante Ver un Word, Excel o PowerPoint ahora es casi instantáneo. Al abrir un documento de Office para leerlo, ya no se carga…",
+    "created": "2026-06-29",
+    "updated": "2026-07-02",
+    "wp_id": 606,
+    "wp_url": "https://blog.iurefficient.com/2026/06/29/que-hay-de-nuevo-telegram-bidireccional-v4-29/"
+}

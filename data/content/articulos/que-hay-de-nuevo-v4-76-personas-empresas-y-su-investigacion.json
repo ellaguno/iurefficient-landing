@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-v4-76-personas-empresas-y-su-investigacion",
+    "status": "published",
+    "title": "¿Qué hay de nuevo? v4.76 – Personas empresas y su investigación",
+    "excerpt": "v4.76.0 — Personas y empresas, y la investigación que ahora sí termina Es natural pensar que un prospecto trabaja en una empresa, y el CRM lo tenía previsto sin dejar capturarlo desde ninguna parte. En una instancia real: más de ocho mil personas y ninguna con empresa, frente a mil trescientas empresas dadas de alta. Lo que…",
+    "body": "<h2>v4.76.0 — Personas y empresas, y la investigación que ahora sí termina</h2>\n\n<p><strong>Es natural pensar que un prospecto trabaja en una empresa</strong>, y el CRM lo tenía previsto sin dejar capturarlo desde ninguna parte. En una instancia real: más de ocho mil personas y&nbsp;<strong>ninguna</strong>&nbsp;con empresa, frente a mil trescientas empresas dadas de alta. Lo que acababa pasando se leía en las propias oportunidades: prospectos llamados «Nombre (Empresa)», porque sin sitio donde poner las dos cosas se meten juntas donde caben.</p>\n\n<p>Ahora el vínculo se crea en las tres formas en que ocurre de verdad:&nbsp;<strong>desde el prospecto</strong>, con un campo que busca entre las empresas del despacho y deja crear una nueva sin salirse de la pantalla;&nbsp;<strong>desde la ficha de la empresa</strong>, vinculando a alguien que ya está o dando de alta a una persona nueva; y&nbsp;<strong>desde un prospecto tipo empresa</strong>, registrando a su persona de contacto y traspasándole las oportunidades abiertas — que es lo que hace que la venta quede a nombre de quien decide y no del membrete.</p>\n\n<p><strong>Las empresas dejan de duplicarse.</strong>&nbsp;La comprobación de «¿ya existe?» se podía esquivar lanzando dos detecciones a la vez, y una instancia acumulaba 579 duplicados de 1.351. Ahora lo impide la propia base de datos. Las que ya existan se limpian con una herramienta que enseña primero qué va a hacer.</p>\n\n<p><strong>Y «Investigar la empresa» llegó hasta el final por primera vez.</strong>&nbsp;Se negaba a escribir con un «no se pudo leer ninguna página»: descartaba las fuentes que la propia búsqueda le entregaba, leía el español con los acentos rotos y pedía las direcciones al modelo, que las inventa. De un caso real: de negarse siempre, a un perfil de 26.000 caracteres con 33 fuentes citadas — y las marcas de «sin fuente» donde no pudo confirmar algo, en vez de rellenarlo.</p>\n\n<p><em>Trae un cambio de base de datos del CRM que corre solo. Actualizar no enciende nada; lo único que ocurre por su cuenta es que las oportunidades heredan la empresa de su titular cuando la tenga.</em></p>\n\n<hr>",
+    "date": "2026-09-03",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/pleca_version_4.16.14.jpg",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.76.0 — Personas y empresas, y la investigación que ahora sí termina Es natural pensar que un prospecto trabaja en una empresa, y el CRM lo tenía previsto sin dejar capturarlo desde ninguna parte. En una instancia real: más de ocho mil personas y ninguna con empresa, frente a mil trescientas empresas dadas de alta. Lo que…",
+    "created": "2026-09-03",
+    "updated": "2026-09-03",
+    "wp_id": 973,
+    "wp_url": "https://blog.iurefficient.com/2026/09/03/que-hay-de-nuevo-v4-76-personas-empresas-y-su-investigacion/"
+}

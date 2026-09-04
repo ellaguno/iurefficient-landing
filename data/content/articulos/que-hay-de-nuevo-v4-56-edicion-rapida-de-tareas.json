@@ -1,0 +1,25 @@
+{
+    "slug": "que-hay-de-nuevo-v4-56-edicion-rapida-de-tareas",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.56 – Edición rápida de tareas",
+    "excerpt": "v4.56.0 — La sábana: poner al día muchas tareas de un golpe",
+    "body": "<p><strong>v4.56.0 — La sábana: poner al día muchas tareas de un golpe</strong></p>\n\n<ul>\n<li><strong>Nueva vista «Sábana» en Tareas.</strong> Junto a Árbol, Lista y Gantt aparece una cuarta vista: una cuadrícula, como una hoja de cálculo, donde se ven todas sus tareas —de todos sus proyectos— y se editan varias a la vez. Hasta ahora había que abrir cada tarea, guardarla y esperar a que la lista se recargara; después de una junta con treinta pendientes, eso era treinta veces el mismo trámite.</li>\n\n<li><strong>Se trabaja con el teclado.</strong> Las flechas arriba y abajo cambian de renglón, el tabulador avanza de columna, Esc deshace lo que acaba de escribir en una celda y Ctrl+S (⌘S en Mac) guarda todo. Las celdas que tocó quedan marcadas en ámbar, así que siempre se ve qué está por guardarse.</li>\n\n<li><strong>Se puede pegar desde Excel.</strong> Si trae su plan en una hoja de cálculo, se copia y se pega directamente sobre la cuadrícula: entiende las etiquetas en español («En proceso», «Alta») y las fechas en formato día/mes/año.</li>\n\n<li><strong>Se guarda una sola vez, y se puede deshacer.</strong> No hay guardado automático: usted decide cuándo. Al guardar aparece un aviso con el número de tareas actualizadas y un botón «Deshacer» que revierte el lote completo.</li>\n\n<li><strong>Si un compañero cambió algo mientras usted editaba, no se pisa.</strong> Esa fila se marca en rojo mostrando el dato que hay ahora en el sistema, y usted decide si insiste o se queda con lo del compañero. El resto del guardado se aplica normalmente.</li>\n\n<li><strong>En el teléfono la vista no se fuerza.</strong> Ocho columnas no caben en una pantalla pequeña, así que allí se sigue usando la lista de siempre. Dentro de un proyecto, la sábana muestra solo las tareas de ese proyecto. Desde la pantalla general de Tareas muestra las suyas, de todos los proyectos, con una columna de proyecto y un selector para ver las de un colaborador a su cargo. Sin cambios en la base de datos. Actualizar backend y frontend juntos.</li>\n</ul>",
+    "date": "2026-08-17",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "Edición",
+        "Hoja",
+        "rápido",
+        "Sábana",
+        "Tareas"
+    ],
+    "image": "uploads/blog/imagen-9.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.56.0 — La sábana: poner al día muchas tareas de un golpe",
+    "created": "2026-08-17",
+    "updated": "2026-08-24",
+    "wp_id": 906,
+    "wp_url": "https://blog.iurefficient.com/2026/08/17/que-hay-de-nuevo-v4-56-edicion-rapida-de-tareas/"
+}

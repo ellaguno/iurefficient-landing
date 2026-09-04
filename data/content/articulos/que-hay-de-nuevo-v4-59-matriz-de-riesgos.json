@@ -1,0 +1,25 @@
+{
+    "slug": "que-hay-de-nuevo-v4-59-matriz-de-riesgos",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.59 – Matriz de riesgos",
+    "excerpt": "v4.59.0 — Matriz de riesgos",
+    "body": "<p><strong>v4.59.0 — Matriz de riesgos</strong></p>\n\n<ul>\n<li><strong>Nueva pestaña «Riesgos» en cada proyecto.</strong> Se registra lo que puede salir mal antes de que pase: qué es, qué tan probable es (1 a 5), qué tan grave sería (1 a 5) y qué se va a hacer al respecto.</li>\n\n<li><strong>La matriz de siempre, pintada.</strong> Cada riesgo se ubica en una cuadrícula de 5×5 y el color indica la severidad: crítico, alto, medio o bajo. Al hacer clic en una casilla se ven los riesgos que están ahí.</li>\n\n<li><strong>El plan de mitigación se convierte en una tarea con un botón.</strong> La tarea nace en el proyecto, con el responsable del riesgo, la fecha de revisión como vencimiento y prioridad alta si el riesgo es crítico. Un plan que no está en la lista de trabajo de alguien no se ejecuta.</li>\n\n<li><strong>Un riesgo que finalmente ocurrió se marca como tal</strong>, y es distinto de cerrarlo. Sale de la matriz de riesgos vigentes pero se queda en el registro: es la lección aprendida del proyecto, y por eso no se puede borrar.</li>\n\n<li><strong>Vista de portafolio.</strong> Una pestaña con los riesgos de todos sus proyectos ordenados por severidad, para responder de un vistazo qué puede complicar el trimestre.</li>\n\n<li><strong>El riesgo puede pesar en la calificación del portafolio.</strong> Viene apagado: al actualizar, la calificación de todos sus proyectos queda exactamente igual que antes. Si lo quiere activar, se hace desde la pantalla de pesos del portafolio. Esto es distinto del semáforo de riesgo que ya existía. Aquel mide lo que está pasando (plazos vencidos, tareas atrasadas); la matriz registra lo que podría pasar. Se complementan. Incluye una migración que corre sola al actualizar. Actualizar backend y frontend juntos.</li>\n</ul>\n\n<hr>",
+    "date": "2026-08-18",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "Control",
+        "Impacto",
+        "Matriz",
+        "Probabilidad",
+        "Riesgos"
+    ],
+    "image": "uploads/blog/imagen-10.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.59.0 — Matriz de riesgos",
+    "created": "2026-08-18",
+    "updated": "2026-08-24",
+    "wp_id": 909,
+    "wp_url": "https://blog.iurefficient.com/2026/08/18/que-hay-de-nuevo-v4-59-matriz-de-riesgos/"
+}

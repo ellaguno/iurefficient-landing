@@ -1,0 +1,26 @@
+{
+    "slug": "que-hay-de-nuevo-carpetas-y-busqueda-de-textos-v4-34",
+    "status": "published",
+    "title": "¿Que hay de nuevo? Carpetas y busqueda de textos  v4.34",
+    "excerpt": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.* v4.34.2 — La búsqueda de contenido cubre Word, Excel y Markdown Buscar dentro de tus documentos ahora funciona con todos tus archivos de texto. La búsqueda de contenido estrenada en 4.34.0…",
+    "body": "<p>Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.*</p>\n\n<hr>\n\n<h2>v4.34.2 — La búsqueda de contenido cubre Word, Excel y Markdown</h2>\n\n<p><strong>Buscar dentro de tus documentos ahora funciona con todos tus archivos de texto.</strong> La búsqueda de contenido estrenada en 4.34.0 solo encontraba texto de documentos escaneados con OCR y de transcripciones; ahora también busca dentro de <strong>.docx</strong> (incluidas sus tablas), <strong>.md</strong>, <strong>.txt</strong>, hojas de cálculo (<strong>.xlsx/.csv</strong>) y PDFs con capa de texto. Escribe una palabra que solo aparece en el cuerpo de una propuesta de Word y saldrá el documento, con su etiqueta de «coincidencia en el contenido». Los documentos que ya tenías se van indexando solos tras la actualización (unos cientos por hora); lo que subas nuevo es buscable de inmediato — y si editas un documento por cualquier vía (editor, WebDAV, chat), la búsqueda se pone al día sola.</p>\n\n<p><strong>Las carpetas dentro del caso, sin ruido.</strong> El panel de carpetas de la pestaña Documentos de un caso ya no muestra todos los clientes y casos de la instancia: solo el cliente del caso y el caso mismo, con sus carpetas por tarea, por ticket y por etiqueta a un clic.</p>\n\n<p>Dos límites conocidos: las presentaciones .pptx aún no participan en la búsqueda de contenido, y los escaneos sin capa de texto siguen requiriendo OCR para ser buscables (como hasta ahora). No requiere ninguna acción de tu parte.</p>\n\n<hr>\n\n<h2>v4.34.1 — Hotfix: la búsqueda de contenido funciona</h2>\n\n<p><strong>Corrección.</strong> En 4.34.0, cualquier búsqueda que tocara el contenido de los documentos devolvía «Error de conexión». Esta versión lo corrige: la búsqueda de contenido con ranking por relevancia funciona como se anunció. Actualización recomendada e inmediata para toda instancia en 4.34.0.</p>\n\n<p>No requiere ninguna acción de tu parte.</p>\n\n<hr>\n\n<h2>v4.34.0 — Busca dentro de tus documentos y navega por carpetas virtuales</h2>\n\n<p><strong>El buscador ahora encuentra documentos por lo que llevan DENTRO.</strong> El buscador global (la lupa de arriba) deja de limitarse a títulos y nombres de archivo: busca en el texto reconocido por OCR y en las transcripciones de audio/video. Escribe una palabra que aparezca en el cuerpo de un escrito y saldrá el documento, marcado con la etiqueta <strong>«coincidencia en el contenido»</strong>, ordenado por relevancia y con comodín de prefijo (buscar «contrat» también encuentra «contrato» y «contratante»).</p>\n\n<p><strong>Carpetas virtuales en el panel de Documentos.</strong> Ahora puedes ver tus documentos agrupados en carpetas <strong>sin mover ningún archivo</strong>:</p>\n\n<ul>\n<li><strong>Por etiqueta</strong>: una carpeta por cada etiqueta de tus documentos, tanto global como dentro de cada caso.</li>\n\n<li><strong>Por tarea</strong> (dentro de un caso): una carpeta por cada tarea que tenga documentos vinculados.</li>\n\n<li><strong>Por ticket</strong> (si usas el módulo de tickets): una carpeta por ticket con documentos, aportada por el propio módulo.</li>\n</ul>\n\n<p>Un mismo documento puede aparecer en varias carpetas — son vistas, no copias: un distintivo junto a las migas de pan te recuerda desde qué vista estás mirando, y eliminar sigue significando eliminar el documento. Las carpetas se abren desde la barra lateral, con contadores y migas de pan como en un explorador de archivos.</p>\n\n<p>Al actualizar, la primera vez que arranque el sistema se crea el índice de búsqueda (tarda unos segundos). Por lo demás, no requiere ninguna acción de tu parte.</p>\n\n<hr>",
+    "date": "2026-07-09",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "busquedas",
+        "carpetas",
+        "folders",
+        "Tareas",
+        "texto",
+        "tickets"
+    ],
+    "image": "uploads/blog/imagen-18.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.* v4.34.2 — La búsqueda de contenido cubre Word, Excel y Markdown Buscar dentro de tus documentos ahora funciona con todos tus archivos de texto. La búsqueda de contenido estrenada en 4.34.0…",
+    "created": "2026-07-09",
+    "updated": "2026-07-24",
+    "wp_id": 655,
+    "wp_url": "https://blog.iurefficient.com/2026/07/09/que-hay-de-nuevo-carpetas-y-busqueda-de-textos-v4-34/"
+}

@@ -1,0 +1,30 @@
+{
+    "slug": "editor-de-textos-markdown-iureditor",
+    "status": "published",
+    "title": "Editor de textos markdown «iureditor»",
+    "excerpt": "Editor WYSIWYG de Markdown de escritorio, con diagramas Mermaid en vivo y exportación a PDF, DOCX y HTML. Se adapta o configura en modo oscuro o brillante. Diccionario ortográfico. Multiplataforma: Linux, Windows y macOS. Descargar de GitHub o usar el código para tu proyecto. Características Descarga iureditor el editor de textos MarkDown que soporta diagramas…",
+    "body": "<p>Editor WYSIWYG de Markdown de escritorio, con diagramas Mermaid en vivo y exportación a PDF, DOCX y HTML. Se adapta o configura en modo oscuro o brillante. Diccionario ortográfico.</p>\n\n<p>Multiplataforma: Linux, Windows y macOS.</p>\n\n<p><a href=\"https://github.com/ellaguno/iureditor/releases\">Descargar</a> de <a href=\"https://github.com/ellaguno/iureditor\">GitHub</a> o usar el código para tu proyecto.</p>\n\n<h2>Características</h2>\n\n<figure><a href=\"https://github.com/ellaguno/iureditor/releases\" target=\"_blank\" rel=\" noreferrer noopener\"><img src=\"{{base}}/uploads/blog/image-4.png\" alt=\"iureditor - Editor markdown\" width=\"961\" height=\"536\" loading=\"lazy\"></a></figure>\n\n<p><a href=\"https://github.com/ellaguno/iureditor#características\"></a></p>\n\n<ul>\n<li><strong>Editor WYSIWYG</strong>: edita markdown como texto enriquecido (encabezados, listas, tablas, tareas, código con resaltado de sintaxis, imágenes, enlaces).</li>\n\n<li><strong>Round-trip fiel markdown &#x2194; HTML</strong>: los archivos <code>.md</code> se conservan estables al abrir y guardar.</li>\n\n<li><strong>Mermaid en vivo</strong>: los bloques <code>```mermaid</code> se dibujan como diagramas dentro del editor; clic para editar el código. Exporta cada diagrama a SVG o PNG.</li>\n\n<li><strong>Exportación</strong>: PDF (texto seleccionable, diagramas vectoriales) y DOCX (compatible con Word y LibreOffice).</li>\n\n<li><strong>Imágenes locales</strong>: pega o arrastra imágenes y se guardan junto al documento en <code>assets/</code> con referencias relativas.</li>\n</ul>\n\n<hr>\n\n<div>\n<figure><a href=\"https://github.com/ellaguno/iureditor/releases\" target=\"_blank\" rel=\" noreferrer noopener\"><img src=\"{{base}}/uploads/blog/iureditor-1.png\" alt=\"\" width=\"250\" height=\"250\" loading=\"lazy\"></a></figure>\n\n<p><a href=\"https://github.com/ellaguno/iureditor/releases\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>Descarga</strong> <strong><em>iureditor</em></strong> e</a>l editor de textos <strong>MarkDown</strong> que soporta diagramas Mermaid y permite exportar a PDF o DOCX.</p>\n\n<ul>\n<li><strong><a href=\"https://github.com/ellaguno/iureditor/releases/download/v1.4.1/iureditor_1.4.1_x64-setup.exe\">Versión Windows</a></strong></li>\n\n<li><strong><a href=\"https://github.com/ellaguno/iureditor/releases/download/v1.4.1/iureditor_1.4.1_universal.dmg\">Versión MacOS</a></strong></li>\n\n<li><strong><a href=\"https://github.com/ellaguno/iureditor/releases/download/v1.4.1/iureditor_1.4.1_amd64.deb\">Versión Ubuntu</a></strong></li>\n\n<li><strong><a href=\"https://github.com/ellaguno/iureditor/releases/download/v1.4.1/iureditor_1.4.1_amd64.AppImage\">Versión Linux AppImage</a></strong></li>\n</ul>\n\n<p>Tendrá actualizaciones</p>\n\n<hr>\n</div>",
+    "date": "2026-07-15",
+    "author": "Iurefficient",
+    "category": "Aplicaciones",
+    "tags": [
+        "Aplicaciones",
+        "Editor",
+        "Gratis",
+        "Gratuito",
+        "Libres",
+        "Linux",
+        "Mac",
+        "Macos",
+        "Markdown",
+        "Windows"
+    ],
+    "image": "uploads/blog/Captura-desde-2026-07-14-17-25-51.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Editor WYSIWYG de Markdown de escritorio, con diagramas Mermaid en vivo y exportación a PDF, DOCX y HTML. Se adapta o configura en modo oscuro o brillante. Diccionario ortográfico. Multiplataforma: Linux, Windows y macOS. Descargar de GitHub o usar el código para tu proyecto. Características Descarga iureditor el editor de textos MarkDown que soporta diagramas…",
+    "created": "2026-07-15",
+    "updated": "2026-07-15",
+    "wp_id": 691,
+    "wp_url": "https://blog.iurefficient.com/2026/07/15/editor-de-textos-markdown-iureditor/"
+}

@@ -1,0 +1,23 @@
+{
+    "slug": "nuestro-folleto",
+    "status": "published",
+    "title": "Nuestro folleto/brochure",
+    "excerpt": "Descargalo aquí",
+    "body": "<p><strong><em><a href=\"{{base}}/uploads/blog/Iurefficient-Teams-Ficha-comercial.pdf\">Descargalo aquí</a></em></strong></p>\n\n<p><a class=\"btn btn-outline\" href=\"{{base}}/uploads/blog/Iurefficient-Teams-Ficha-comercial.pdf\" target=\"_blank\" rel=\"noopener\">Iurefficient Teams — Ficha comercial</a></p>",
+    "date": "2026-08-07",
+    "author": "Iurefficient",
+    "category": "Iurefficient",
+    "tags": [
+        "brochure",
+        "folleto",
+        "pdf"
+    ],
+    "image": "uploads/blog/imagen-3.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Descargalo aquí",
+    "created": "2026-08-07",
+    "updated": "2026-08-06",
+    "wp_id": 817,
+    "wp_url": "https://blog.iurefficient.com/2026/08/07/nuestro-folleto/"
+}

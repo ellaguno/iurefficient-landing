@@ -1,0 +1,19 @@
+{
+    "slug": "tutorial-jerarquia-de-informacion",
+    "status": "published",
+    "title": "Tutorial: Jerarquía de informacion",
+    "excerpt": "",
+    "body": "<ul>\n<li>Clientes</li>\n\n<li>Casos/Proyectos\n<ul>\n<li>Documentos</li>\n\n<li>Tareas</li>\n\n<li>Plazos</li>\n\n<li>Miembros</li>\n\n<li>Presupuesto</li>\n</ul>\n</li>\n\n<li>Inteligencia (Local y externa</li>\n</ul>\n\n<div class=\"video-embed\"><iframe src=\"https://www.youtube-nocookie.com/embed/yOI-HxgiWV4\" title=\"Video\" loading=\"lazy\" allow=\"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe></div>",
+    "date": "2026-06-30",
+    "author": "Iurefficient",
+    "category": "Tutorial",
+    "tags": [],
+    "image": "uploads/blog/image.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "",
+    "created": "2026-06-30",
+    "updated": "2026-07-01",
+    "wp_id": 615,
+    "wp_url": "https://blog.iurefficient.com/2026/06/30/tutorial-jerarquia-de-informacion/"
+}

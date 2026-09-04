@@ -1,0 +1,25 @@
+{
+    "slug": "que-hay-de-nuevo-la-evolucion-de-tu-colaborador-especialista-v4-28",
+    "status": "published",
+    "title": "¿Que hay de nuevo? La evolución de tu Colaborador Especialista v4.28",
+    "excerpt": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.* v4.28.1 — Edita tus documentos desde el chat sin que se altere el formato Pídele al asistente que cambie un dato de un documento y solo cambiará eso. Cuando necesitas corregir…",
+    "body": "<p>Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.*</p>\n\n<hr>\n\n<h2>v4.28.1 — Edita tus documentos desde el chat sin que se altere el formato</h2>\n\n<p><strong>Pídele al asistente que cambie un dato de un documento y solo cambiará eso.</strong> Cuando necesitas corregir un correo, un teléfono, una fecha o una frase dentro de un documento de Word, el asistente ahora aplica el cambio <strong>directamente sobre el archivo real</strong>, conservando intactos el formato, las imágenes y las tablas. Verás una vista previa con exactamente lo que se va a reemplazar antes de confirmar. Y si el texto que pides no está en el documento, te lo dice con claridad en lugar de inventarlo: <strong>nunca afirma que editó algo que no editó</strong>.</p>\n\n<p><strong>Tus avisos por correo de tareas vencidas vuelven a llegar.</strong> Se corrigió que los recordatorios de tareas y plazos vencidos no se enviaran por correo, y que lo vencido hace más de un día dejara de recordarse. Ahora llegan puntualmente (como máximo un recordatorio por día).</p>\n\n<p><strong>Las notificaciones llegan al correo correcto.</strong> Si te cambiaron el correo de tu cuenta, los avisos ahora van a tu correo actual (antes podían seguir yendo al anterior).</p>\n\n<p><strong>Los proyectos archivados o cerrados ya no generan recordatorios.</strong> Al guardar un caso, deja de molestarte con sus pendientes.</p>\n\n<p><strong>Y además.</strong> La recomendación diaria al entrar vuelve a generarse con todos los modelos de IA; al subir un Word, Excel o PowerPoint ya no se ofrece «descomprimir» por error; y el instructivo de Telegram muestra el bot correcto.</p>\n\n<p>No requiere ninguna acción de tu parte.</p>\n\n<hr>\n\n<h2>v4.28.0 — El chat encuentra los datos «escondidos» de un documento y guarda contactos</h2>\n\n<p><strong>El chat ya encuentra los datos «escondidos» de un documento.</strong> Si preguntas por un dato puntual de un documento que nombras —el correo en la última página de una propuesta, una cifra dentro de una tabla, los datos de una tarjeta—, el asistente ahora lee el <strong>documento completo</strong> en vez de quedarse solo con los fragmentos más «parecidos» a tu pregunta. Antes podía responder <em>«no tengo esa página»</em> aunque el documento estuviera bien cargado; eso se acabó para los documentos que mencionas por su nombre.</p>\n\n<p><strong>Guardar un contacto desde el chat.</strong> Cuando en un documento aparecen los datos de contacto de una persona u organización (una tarjeta de presentación, el bloque de firma de una propuesta), el asistente te ofrece <strong>guardarlos como Contacto del sistema</strong>. Aparece una tarjeta de confirmación donde puedes revisar y corregir nombre, empresa, puesto, correo, teléfono y tipo antes de crearlo. Nada se guarda sin tu confirmación.</p>\n\n<p>No requiere ninguna acción de tu parte.</p>",
+    "date": "2026-06-26",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "chat",
+        "documentos",
+        "Mejoras",
+        "Versiones",
+        "word"
+    ],
+    "image": "uploads/blog/pleca_version_4.16.14.jpg",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.* v4.28.1 — Edita tus documentos desde el chat sin que se altere el formato Pídele al asistente que cambie un dato de un documento y solo cambiará eso. Cuando necesitas corregir…",
+    "created": "2026-06-26",
+    "updated": "2026-06-26",
+    "wp_id": 587,
+    "wp_url": "https://blog.iurefficient.com/2026/06/26/que-hay-de-nuevo-la-evolucion-de-tu-colaborador-especialista-v4-28/"
+}

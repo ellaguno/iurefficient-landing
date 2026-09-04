@@ -1,0 +1,24 @@
+{
+    "slug": "demo-general-de-uso-de-la-aplicacion",
+    "status": "published",
+    "title": "Demo general de uso de la aplicación",
+    "excerpt": "Para acceder a la demo solo ve a https://demo.Iurefficient.com",
+    "body": "<p>Para acceder a la demo solo ve a <a href=\"https://demo.Iurefficient.com\">https://demo.Iurefficient.com</a></p>\n\n<div class=\"video-embed\"><iframe src=\"https://www.youtube-nocookie.com/embed/WQWbaRxsVHs\" title=\"Video\" loading=\"lazy\" allow=\"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe></div>",
+    "date": "2026-01-29",
+    "author": "Iurefficient",
+    "category": "Video",
+    "tags": [
+        "Demo",
+        "General",
+        "Navegación",
+        "Walkthrough"
+    ],
+    "image": "uploads/blog/iure_youtube.jpg",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Para acceder a la demo solo ve a https://demo.Iurefficient.com",
+    "created": "2026-01-29",
+    "updated": "2026-01-29",
+    "wp_id": 277,
+    "wp_url": "https://blog.iurefficient.com/2026/01/29/demo-general-de-uso-de-la-aplicacion/"
+}

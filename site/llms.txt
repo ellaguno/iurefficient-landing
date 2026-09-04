@@ -15,10 +15,11 @@ Precios: planes mensuales en pesos mexicanos desde $999 MXN, sin contratos forzo
 - [Seguridad, confidencialidad y privacidad]({{site}}/seguridad): cifrado, infraestructura, cumplimiento y preguntas frecuentes.
 - [Aviso de privacidad]({{site}}/legal/privacidad)
 - [Términos y condiciones]({{site}}/legal/terminos)
+- [Artículos, tutoriales y novedades de versión]({{site}}/articulos/): qué hace cada versión de Iurefficient, tutoriales en video y artículos sobre IA para despachos.
 - [Centro de ayuda]({{site}}/help-portal/): guías de inicio, funcionalidades y preguntas frecuentes.
 
 ## Recursos
-- Blog: https://blog.iurefficient.com
+- Noticias jurídicas diarias con audio: https://blog.iurefficient.com
 - Demo para abogados: https://demo.iurefficient.com
 - Contacto: contacto@iurefficient.com
 - Sitemap: {{site}}/sitemap.xml

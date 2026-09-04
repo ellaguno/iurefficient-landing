@@ -163,3 +163,24 @@
 .page-pager { display: flex; justify-content: center; gap: .5rem; margin-top: var(--spacing-2xl); }
 .page-pager a { padding: .4rem .8rem; border: 1px solid var(--gray-200); border-radius: var(--radius-md); color: var(--gray-700); }
 .page-pager a.on { background: var(--primary-500); border-color: var(--primary-500); color: #fff; }
+
+/* Contenido migrado del blog: videos, figuras, tablas, categorías del índice */
+.video-embed { position: relative; aspect-ratio: 16 / 9; margin: var(--spacing-xl) 0; border-radius: var(--radius-lg); overflow: hidden; background: #000; }
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.legal-content figure { margin: var(--spacing-xl) 0; }
+.legal-content figure img { display: block; margin: 0 auto; }
+.legal-content figcaption { text-align: center; font-size: .875rem; color: var(--gray-500); margin-top: var(--spacing-sm); }
+.legal-content hr { border: 0; border-top: 1px solid var(--gray-200); margin: var(--spacing-2xl) 0; }
+.legal-content table { width: 100%; border-collapse: collapse; margin: var(--spacing-xl) 0; font-size: .9375rem; }
+.legal-content th, .legal-content td { border: 1px solid var(--gray-200); padding: .6rem .8rem; text-align: left; vertical-align: top; }
+.legal-content th { background: var(--gray-50); font-weight: 600; }
+.legal-content .article-buttons { display: flex; flex-wrap: wrap; gap: var(--spacing-sm); }
+.legal-content code { background: var(--gray-100); padding: .1em .35em; border-radius: 4px; font-size: .9em; }
+.legal-content pre { background: var(--gray-900); color: #f3f4f6; padding: var(--spacing-lg); border-radius: var(--radius-md); overflow-x: auto; }
+.legal-meta a { color: var(--primary-500); }
+.page-cats { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin: 0 auto var(--spacing-2xl); }
+.page-cats a { padding: .35rem .9rem; border: 1px solid var(--gray-200); border-radius: 999px; color: var(--gray-700); font-size: .875rem; }
+.page-cats a small { color: var(--gray-400); }
+.page-cats a:hover { border-color: var(--primary-500); color: var(--primary-500); }
+.page-cats a.on { background: var(--primary-500); border-color: var(--primary-500); color: #fff; }
+.page-cats a.on small { color: rgba(255,255,255,.7); }

@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-v4-78-filtros-de-tareas-y-la-bandeja-de-prospectos",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.78 – Filtros de Tareas, y la bandeja de prospectos",
+    "excerpt": "v4.77.0 — Los filtros de Tareas, y la bandeja de prospectos entrantes El desplegable de estado filtraba por el estado del proyecto, no de la tarea. Como en un despacho casi ningún proyecto está en «pendiente», pedir «solo pendientes» devolvía una lista minúscula y con tareas del estado equivocado. Pasaba lo mismo con el filtro de…",
+    "body": "<h2>v4.77.0 — Los filtros de Tareas, y la bandeja de prospectos entrantes</h2>\n\n<p><strong>El desplegable de estado filtraba por el estado del proyecto, no de la tarea.</strong>&nbsp;Como en un despacho casi ningún proyecto está en «pendiente», pedir «solo pendientes» devolvía una lista minúscula y con tareas del estado equivocado. Pasaba lo mismo con el filtro de prioridad, y el de tipo de tarea directamente fallaba. Ninguno avisaba de nada: devolvían una lista, y una lista corta se lee como «hay pocas», no como «el filtro está roto».</p>\n\n<p><strong>Y se veían tareas completadas dentro de «lo que requiere atención»</strong>, porque la lista colgaba de cada tarea todas sus subtareas, cumplieran el filtro o no. Una lista filtrada que muestra renglones que no cumplen el filtro miente sobre lo que enseña.</p>\n\n<p><strong>El CRM abre con una bandeja de entrada.</strong>&nbsp;Quien llena el formulario de contacto de la página web entraba bien y ahí se perdía: había que ir a Prospectos y buscarlo por nombre. Ahora el tablero abre con lo que ha llegado solo y nadie ha atendido, arriba del todo — es lo único de esa pantalla que caduca. Se vacía al trabajarlo, no al mirarlo, y cuando no hay nada pendiente no se pinta.</p>\n\n<p><em>Sin cambios de base de datos. Actualizar no enciende nada; la bandeja sólo aparece si hay un formulario web dado de alta y alguien lo ha usado.</em></p>\n\n<hr>",
+    "date": "2026-09-03",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/imagen-17.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.77.0 — Los filtros de Tareas, y la bandeja de prospectos entrantes El desplegable de estado filtraba por el estado del proyecto, no de la tarea. Como en un despacho casi ningún proyecto está en «pendiente», pedir «solo pendientes» devolvía una lista minúscula y con tareas del estado equivocado. Pasaba lo mismo con el filtro de…",
+    "created": "2026-09-03",
+    "updated": "2026-09-03",
+    "wp_id": 980,
+    "wp_url": "https://blog.iurefficient.com/2026/09/03/que-hay-de-nuevo-v4-78-filtros-de-tareas-y-la-bandeja-de-prospectos/"
+}

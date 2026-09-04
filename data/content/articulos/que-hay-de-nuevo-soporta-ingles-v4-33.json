@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-soporta-ingles-v4-33",
+    "status": "published",
+    "title": "¿Que hay de nuevo?  v4.32. Actividades en el CRM, por fin visible",
+    "excerpt": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.32.2 — Gestión de tareas en el CRM, por fin visible Ahora sí puedes gestionar tareas dentro del CRM. En la ficha de un lead o una oportunidad, la sección de…",
+    "body": "<p><em>Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.</em></p>\n\n<hr>\n\n<h2>v4.32.2 — Gestión de tareas en el CRM, por fin visible</h2>\n\n<p><strong>Ahora sí puedes gestionar tareas dentro del CRM.</strong> En la ficha de un lead o una oportunidad, la sección de <strong>Actividades</strong> te permite registrar tareas con <strong>fecha de vencimiento</strong> —»Llamar», «Entregar propuesta», «Corregir alcance»—, verlas en una lista de <strong>pendientes</strong> (con las vencidas resaltadas en rojo) y marcarlas como completadas con un clic.</p>\n\n<p><strong>Un panel con todas tus tareas del CRM.</strong> El tablero del CRM ahora muestra, de un vistazo, las <strong>tareas pendientes de todo el CRM</strong>: su vencimiento, un enlace a su lead u oportunidad y un botón para completarlas.</p>\n\n<p>No requiere ninguna acción de tu parte.</p>\n\n<hr>\n\n<h2>v4.32.0 — Las sugerencias fiscales se quedan (dejan de regenerarse)</h2>\n\n<p><strong>Tus recomendaciones fiscales ya no se pierden.</strong> En el <strong>Sistema Fiscal</strong>, cuando pides «Generar sugerencias» el asistente las analiza y ahora <strong>las guarda por contribuyente y año</strong>. Si sales del panel y vuelves, aparecen al instante —sin volver a consultarlas y sin gastar tokens— mientras el contexto no haya cambiado.</p>\n\n<p><strong>Y se avisan solas cuando dejan de estar al día.</strong> Si subes CFDIs nuevos, avanza el mes o cambias el régimen, la sección muestra un aviso de que las sugerencias están <strong>desactualizadas</strong>, con un botón para <strong>actualizarlas</strong> cuando tú quieras. Nunca se regeneran por su cuenta, así que tú controlas cuándo se recalculan.</p>\n\n<p>No requiere ninguna acción de tu parte; al actualizar, la primera vez que abras cada panel se guardan y de ahí en adelante persisten.</p>\n\n<hr>",
+    "date": "2026-07-04",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/imagen-20.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.32.2 — Gestión de tareas en el CRM, por fin visible Ahora sí puedes gestionar tareas dentro del CRM. En la ficha de un lead o una oportunidad, la sección de…",
+    "created": "2026-07-04",
+    "updated": "2026-07-24",
+    "wp_id": 633,
+    "wp_url": "https://blog.iurefficient.com/2026/07/04/que-hay-de-nuevo-soporta-ingles-v4-33/"
+}

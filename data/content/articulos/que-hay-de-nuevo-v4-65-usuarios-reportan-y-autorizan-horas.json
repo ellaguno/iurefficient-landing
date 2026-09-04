@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-v4-65-usuarios-reportan-y-autorizan-horas",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.65 – Usuarios reportan y autorizan horas",
+    "excerpt": "v4.65.0 — La marca en su sitio, las horas que sí se reportan y los avisos que llevan a algún lado",
+    "body": "<p><strong>v4.65.0 — La marca en su sitio, las horas que sí se reportan y los avisos que llevan a algún lado</strong></p>\n\n<ul>\n<li><strong>La hoja de horas enviada llega a quien puede autorizarla.</strong> Quien no tiene supervisor capturado —el jefe, entre otros— mandaba su semana y no se enteraba nadie: como nadie autoriza sus propias horas, esa semana se quedaba en «enviada» para siempre. Ahora el aviso va a los administradores, que ya podían autorizarla, y si de plano no hay nadie que pueda hacerlo se le dice a quien la envió en vez de dejarlo esperando.</li>\n\n<li><strong>Y ese aviso ya lleva a la pantalla de revisión.</strong> Antes caía en el panel: la bandeja para autorizar o devolver existe desde la 4.57.0, pero sin liga no se descubría. El mismo aviso lleva a cada quien a donde le toca: a quien envió, su hoja; a quien autoriza, la bandeja.</li>\n\n<li><strong>El Excel de Tareas exporta las horas reales</strong>, y el mismo reporte en PDF dice ahora lo mismo que el Excel. Se añaden «Inicio» y «Horas Reales», y las horas van como número para poder sumarlas en la hoja. El responsable también sale cuando la tarea está asignada a un contacto externo.</li>\n\n<li><strong>Los iconos de la aplicación pasan a ser la marca oficial</strong>: el de la pantalla de inicio del teléfono, el de la pestaña del navegador y el iconito del aviso push, que salía como una mancha sólida.</li>\n\n<li><strong>El splash deja de enseñar un icono antes de la animación.</strong> Se veía una marca y encima entraba otra.</li>\n\n<li><strong>La recomendación del asistente al entrar vuelve a tener ligas clicables</strong>, como la tarjeta de «Resumen del día» que va justo encima; antes salía la URL desnuda a media frase.</li>\n\n<li><strong>La sábana de tareas explica qué es «pegar desde Excel»</strong> —copiar un bloque de celdas y soltarlo sobre una celda— y nombra Ctrl+S además de ⌘S. Sin migraciones. Actualizar backend y frontend juntos.</li>\n</ul>",
+    "date": "2026-08-23",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/imagen-15.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.65.0 — La marca en su sitio, las horas que sí se reportan y los avisos que llevan a algún lado",
+    "created": "2026-08-23",
+    "updated": "2026-08-24",
+    "wp_id": 926,
+    "wp_url": "https://blog.iurefficient.com/2026/08/23/que-hay-de-nuevo-v4-65-usuarios-reportan-y-autorizan-horas/"
+}

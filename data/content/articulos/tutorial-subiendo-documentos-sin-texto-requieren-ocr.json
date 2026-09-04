@@ -1,0 +1,19 @@
+{
+    "slug": "tutorial-subiendo-documentos-sin-texto-requieren-ocr",
+    "status": "published",
+    "title": "Tutorial: Subiendo documentos sin texto (requieren OCR)",
+    "excerpt": "Cuando subimos un documento sin OCR (Optical Character Recognition) que puede ser un PDF escaneado pero cuyas letras no son legibles para la computadora (no tiene texto solo fotos). Típicamente cuando se escanea un documento solo contiene imagenes de los textos, pero la computadora no puede leerlos y requiere un proceso de «reconocimiento de caracteres»…",
+    "body": "<p>Cuando subimos un documento sin OCR (Optical Character Recognition) que puede ser un PDF escaneado pero cuyas letras no son legibles para la computadora (no tiene texto solo fotos).</p>\n\n<p>Típicamente cuando se escanea un documento solo contiene imagenes de los textos, pero la computadora no puede leerlos y requiere un proceso de «reconocimiento de caracteres» llamado OCR.</p>\n\n<div class=\"video-embed\"><iframe src=\"https://www.youtube-nocookie.com/embed/NGnbuvyci6w\" title=\"Video\" loading=\"lazy\" allow=\"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe></div>",
+    "date": "2026-07-03",
+    "author": "Iurefficient",
+    "category": "General",
+    "tags": [],
+    "image": "uploads/blog/image-3.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Cuando subimos un documento sin OCR (Optical Character Recognition) que puede ser un PDF escaneado pero cuyas letras no son legibles para la computadora (no tiene texto solo fotos). Típicamente cuando se escanea un documento solo contiene imagenes de los textos, pero la computadora no puede leerlos y requiere un proceso de «reconocimiento de caracteres»…",
+    "created": "2026-07-03",
+    "updated": "2026-07-03",
+    "wp_id": 639,
+    "wp_url": "https://blog.iurefficient.com/2026/07/03/tutorial-subiendo-documentos-sin-texto-requieren-ocr/"
+}

@@ -1,0 +1,23 @@
+{
+    "slug": "que-hay-de-nuevo-v4-52-mejor-nuestro-crm",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.52 Mejor nuestro CRM",
+    "excerpt": "v4.52.0 — Las listas vuelven a abrirse con un clic Hacer clic en un renglón había dejado de abrir la ficha. En la computadora había que atinarle al nombre subrayado, y en Oportunidades del CRM no había forma de entrar salvo cambiando a la vista de tablero. Se perdió al adaptar las listas al teléfono en…",
+    "body": "<h2>v4.52.0 — Las listas vuelven a abrirse con un clic</h2>\n\n<p><strong>Hacer clic en un renglón había dejado de abrir la ficha.</strong>&nbsp;En la computadora había que atinarle al nombre subrayado, y en Oportunidades del CRM no había forma de entrar salvo cambiando a la vista de tablero. Se perdió al adaptar las listas al teléfono en la versión anterior, y afectaba a&nbsp;<strong>todas</strong>: Proyectos, Clientes, Contactos, Tickets, Facturas, Cotizaciones, CFDIs, Contribuyentes, Empleados, Firma Electrónica y las del CRM. Ya está arreglado, y además Ctrl+clic (⌘ en Mac) o el botón central del ratón abren la ficha en una pestaña nueva.</p>\n\n<p><strong>CRM — el monto de una oportunidad acepta cualquier cifra.</strong>&nbsp;El campo solo admitía múltiplos de mil: escribir 880 daba error diciendo que los valores válidos más cercanos eran 0 y 1000. Ahora acepta cualquier importe, con centavos.</p>\n\n<p><strong>CRM — elegir el prospecto ya habilita el botón de crear.</strong>&nbsp;La lista aparecía con el primero resaltado sin que nadie lo hubiera elegido, así que seleccionarlo —lo natural— no registraba nada y «Crear oportunidad» seguía deshabilitado sin explicación. Ahora nada aparece preseleccionado, el prospecto elegido se muestra confirmado arriba y ahí permanece aunque después busque otra cosa.</p>\n\n<p><strong>CRM — transcribir y aplicar OCR desde la ficha del prospecto o la oportunidad.</strong>&nbsp;Si sube el audio de una junta, el panel de documentos ya ofrece transcribirlo sin ir a buscarlo a Documentos, y muestra en el propio renglón si va en proceso o ya terminó.</p>\n\n<p><strong>La investigación automática vuelve a activarse donde debía.</strong>&nbsp;La configuración y las llaves se resuelven desde el panel central; antes cada instancia miraba primero sus propias variables de entorno, y eso la desactivaba en silencio.</p>\n\n<p><em>Sin migraciones. Actualizar backend y frontend juntos.</em></p>\n\n<hr>",
+    "date": "2026-08-14",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "crm",
+        "pipeline",
+        "Plugins"
+    ],
+    "image": "uploads/blog/imagen-6.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.52.0 — Las listas vuelven a abrirse con un clic Hacer clic en un renglón había dejado de abrir la ficha. En la computadora había que atinarle al nombre subrayado, y en Oportunidades del CRM no había forma de entrar salvo cambiando a la vista de tablero. Se perdió al adaptar las listas al teléfono en…",
+    "created": "2026-08-14",
+    "updated": "2026-08-14",
+    "wp_id": 881,
+    "wp_url": "https://blog.iurefficient.com/2026/08/14/que-hay-de-nuevo-v4-52-mejor-nuestro-crm/"
+}

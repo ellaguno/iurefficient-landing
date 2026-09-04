@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-v4-63-saber-donde-haz-estado-y-regresar",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.63 – Saber donde haz estado y regresar",
+    "excerpt": "v4.63.0 — Saber dónde estás, y volver Abrir un documento ya no te saca de donde estabas. Un documento de una oportunidad, de una firma o de una cotización se ve ahí mismo, sin viajar a la pantalla de Documentos y tener que regresar a fuerza de clics. El chat de las oportunidades y de los contribuyentes…",
+    "body": "<p><strong>v4.63.0 — Saber dónde estás, y volver</strong></p>\n\n<ul>\n<li><strong>Migajas de navegación y «continuar donde te quedaste».</strong> La aplicación te dice en qué parte estás y te ofrece volver a lo último que abriste.</li>\n</ul>\n\n<p><strong><em>Abrir un documento ya no te saca de donde estabas.</em></strong>&nbsp;<em>Un documento de una oportunidad, de una firma o de una cotización se ve ahí mismo, sin viajar a la pantalla de Documentos y tener que regresar a fuerza de clics.</em>&nbsp;<strong>El chat de las oportunidades y de los contribuyentes ya es un chat completo</strong>, como el de los proyectos: responde con los documentos de esa oportunidad, permite adjuntar archivos, lee enlaces, investiga en la web y muestra sus fuentes.</p>\n\n<p><strong><em>Configura con qué secciones nace un proyecto nuevo</em></strong>&nbsp;<em>(Ajustes → Defaults de proyecto) y</em>&nbsp;<strong><em>qué vistas de tareas ofrece la instancia</em></strong>&nbsp;<em>(Kanban, Árbol, Lista, Gantt, Sábana). Los defaults solo aplican a los proyectos NUEVOS: los que ya existen no cambian.</em>&nbsp;<strong>Los campos personalizados pueden verse en la ficha</strong>, sin entrar a editar. Se enciende campo por campo, y nacen apagados.</p>\n\n<p><strong><em>Vista de calendario dentro del proyecto</em></strong>&nbsp;<em>(apagada por omisión).</em>&nbsp;<strong>El asistente deja de citarse a sí mismo.</strong>Sus respuestas viejas ya no entran al buscador del proyecto, y cuando le preguntas algo que abarca varios documentos («una tabla con los pagos de todos los anexos») ahora los revisa todos en vez de contestar con los dos o tres primeros.</p>\n\n<ul>\n<li><strong>Se puede borrar el audio original de una transcripción</strong> sin que la transcripción quede huérfana y fuera del expediente.</li>\n\n<li><strong>Google Drive vuelve a sincronizar.</strong> Un defecto hacía fallar la subida de todo documento ya vinculado; los que estaban pendientes se actualizarán solos. Incluye migraciones que corren solas al actualizar. Actualizar backend y frontend juntos.</li>\n</ul>\n\n<hr>",
+    "date": "2026-08-22",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/imagen-14.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.63.0 — Saber dónde estás, y volver Abrir un documento ya no te saca de donde estabas. Un documento de una oportunidad, de una firma o de una cotización se ve ahí mismo, sin viajar a la pantalla de Documentos y tener que regresar a fuerza de clics. El chat de las oportunidades y de los contribuyentes…",
+    "created": "2026-08-22",
+    "updated": "2026-08-24",
+    "wp_id": 921,
+    "wp_url": "https://blog.iurefficient.com/2026/08/22/que-hay-de-nuevo-v4-63-saber-donde-haz-estado-y-regresar/"
+}

@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-v4-62-el-asistente-aprende-de-tus-riesgos-y-cambios",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.62 – el asistente aprende de tus riesgos y cambios",
+    "excerpt": "v4.62.0 — El asistente ya sabe de tus riesgos y de tus cambios",
+    "body": "<p><strong>v4.62.0 — El asistente ya sabe de tus riesgos y de tus cambios</strong></p>\n\n<ul>\n<li><strong>Pregúntale al asistente por los riesgos del proyecto y te contesta con los que tu equipo declaró</strong>, no con un número calculado: te dice cuáles están activos, su severidad, quién es el responsable de cada uno —y cuáles no tienen responsable asignado— y qué plan de mitigación tienen.</li>\n\n<li><strong>También conoce el control de cambios</strong>: cuánto era el proyecto original, cuánto es hoy, qué órdenes de cambio se autorizaron y cuánto sumó cada una. Preguntas como «¿por qué subió el presupuesto?» ya tienen respuesta.</li>\n\n<li><strong>Los riesgos que ya ocurrieron o se cerraron aparecen como historial</strong>, marcados como tales. Sirven de lección aprendida sin ensuciar la foto de lo que está vigente hoy.</li>\n\n<li><strong>Deja de confundir dos cosas que se llamaban igual.</strong> El sistema calcula por su cuenta un indicador de atraso a partir de plazos y tareas; eso no es la matriz de riesgos que captura una persona. Ahora el asistente distingue una de la otra y no presenta el número automático como si fuera la previsión del equipo.</li>\n\n<li><strong>Arreglo de fondo</strong>: cuando se guardaban varios cambios seguidos en un mismo proyecto, solo el primero llegaba al buscador del asistente y el resto se quedaba fuera hasta que algo más lo volviera a disparar. Ahora se procesan todos. Alcanza también a tareas y documentos. No requiere migración. Actualizar backend y frontend juntos.</li>\n</ul>",
+    "date": "2026-08-21",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/imagen-13.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.62.0 — El asistente ya sabe de tus riesgos y de tus cambios",
+    "created": "2026-08-21",
+    "updated": "2026-08-24",
+    "wp_id": 918,
+    "wp_url": "https://blog.iurefficient.com/2026/08/21/que-hay-de-nuevo-v4-62-el-asistente-aprende-de-tus-riesgos-y-cambios/"
+}

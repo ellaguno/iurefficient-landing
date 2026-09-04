@@ -1,0 +1,25 @@
+{
+    "slug": "que-hay-de-nuevo-v4-42-reportes-mejorados-y-con-envio-automatico",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.42. Reportes mejorados y con envío automático",
+    "excerpt": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.42.0 — Reportes que sí dibujan lo que pides, se envían solos y cuidan tus datos Tus gráficas por fin salen como las pediste. En el constructor de reportes, cuando elegías «pastel»…",
+    "body": "<p><em>Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional.</em></p>\n\n<hr>\n\n<h2>v4.42.0 — Reportes que sí dibujan lo que pides, se envían solos y cuidan tus datos</h2>\n\n<p><strong>Tus gráficas por fin salen como las pediste.</strong> En el constructor de reportes, cuando elegías «pastel» seguía saliendo de barras, y «línea» o «área» terminaban como una simple tabla. Ya no: cada reporte dibuja <strong>el tipo de gráfica que configuraste</strong> —barras, pastel, línea o área— y el pastel muestra porcentajes reales sobre el total, con su leyenda. Lo mismo aplica al PDF que descargas o envías.</p>\n\n<p><strong>Programa el envío y olvídate.</strong>&nbsp;¿Necesitas que el reporte de avance llegue&nbsp;<strong>cada lunes</strong>&nbsp;al equipo, o el resumen del mes&nbsp;<strong>el día primero</strong>? Desde la ficha de cada reporte ahora puedes&nbsp;<strong>programar su envío por correo</strong>: eliges la frecuencia (cada semana, cada mes, cada día o una sola vez), el día, la hora, el formato (PDF o Word) y los destinatarios. La plataforma lo genera y lo manda sola; tú puedes ver el próximo envío, pausarlo o cancelarlo cuando quieras. (Por ahora los destinatarios deben ser usuarios de la plataforma.)</p>\n\n<p><strong>Word y Excel que no se rompen.</strong>&nbsp;Los reportes con contenido de documentos escaneados, con títulos que llevan una diagonal («/») o con consultas de datos podían fallar al exportar a Word o Excel — y las tablas de consulta a veces repetían el nombre de la columna en cada celda en vez de los datos. Todo eso quedó corregido.</p>\n\n<p><strong>Consultas más útiles y una interfaz más pulida.</strong>&nbsp;En la pestaña de Consultas, el botón&nbsp;<strong>Ejecutar corre exactamente el SQL que editaste</strong>&nbsp;(antes lo volvía a inventar);&nbsp;<strong>«Agregar al dashboard» de verdad crea el widget</strong>; y hay mejoras de modo oscuro, fechas y exportación a CSV que Excel abre sin acentos rotos.</p>\n\n<p><strong>Y reforzamos la seguridad del módulo.</strong>&nbsp;Cerramos un hueco por el que, a través de las consultas de reportes, un usuario podía llegar a información que no le correspondía; ahora esas consultas están estrictamente acotadas. Además,&nbsp;<strong>un reporte solo puede mostrar los proyectos y documentos que quien lo genera tiene permiso de ver</strong>, y el envío por correo queda restringido a usuarios de la plataforma.</p>\n\n<p>Al actualizar, la migración corre sola. Actualiza backend y frontend juntos.</p>\n\n<hr>",
+    "date": "2026-07-24",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "envío automático",
+        "Mejoras",
+        "Reportes",
+        "Version",
+        "Versiones"
+    ],
+    "image": "uploads/blog/imagen-10.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "Conoce las mejoras que hemos incorporado en cada versión para hacer de Iurefficient una herramienta más potente, inteligente y segura para tu práctica profesional. v4.42.0 — Reportes que sí dibujan lo que pides, se envían solos y cuidan tus datos Tus gráficas por fin salen como las pediste. En el constructor de reportes, cuando elegías «pastel»…",
+    "created": "2026-07-24",
+    "updated": "2026-07-23",
+    "wp_id": 760,
+    "wp_url": "https://blog.iurefficient.com/2026/07/24/que-hay-de-nuevo-v4-42-reportes-mejorados-y-con-envio-automatico/"
+}

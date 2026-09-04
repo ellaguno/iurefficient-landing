@@ -1,0 +1,23 @@
+{
+    "slug": "que-hay-de-nuevo-v4-38-quien-puede-con-mas-el-mapa-de-calor-de-carga-de-trabajo",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.38. ¿Quién puede con más? El mapa de calor de carga de trabajo",
+    "excerpt": "v4.38.0 — ¿Quién puede con más? El mapa de calor de carga de trabajo Deja de adivinar quién está saturado. La nueva sección de balanceo de cargas muestra un mapa de calor por persona y semana: cuántas horas de trabajo estimado tiene cada quien frente a su capacidad, sumando todos los proyectos. Verde = con holgura, azul = en…",
+    "body": "<h2>v4.38.0 — ¿Quién puede con más? El mapa de calor de carga de trabajo</h2>\n\n<p><strong>Deja de adivinar quién está saturado.</strong>&nbsp;La nueva sección de&nbsp;<strong>balanceo de cargas</strong>&nbsp;muestra un mapa de calor por&nbsp;<strong>persona y semana</strong>: cuántas horas de trabajo estimado tiene cada quien frente a su capacidad, sumando todos los proyectos. Verde = con holgura, azul = en balance, ámbar = al límite, rojo = sobrecargado. Un clic en cualquier celda abre el detalle: exactamente qué tareas ocupan esa semana y cuántas horas aporta cada una.</p>\n\n<p><strong>La carga se calcula sola.</strong>&nbsp;Cada tarea reparte sus horas estimadas entre sus fechas de inicio y fin, respetando los&nbsp;<strong>días laborables de cada persona</strong>&nbsp;— y los administradores pueden ajustar la capacidad individual (¿alguien trabaja 30 horas? ¿de martes a sábado?) en el editor de capacidades. Los proyectos archivados o cerrados no cuentan como carga, y puedes ver 4, 8 o 12 semanas hacia adelante.</p>\n\n<p><strong>Un consejo para aprovecharlo</strong>: la precisión depende de que las tareas tengan&nbsp;<strong>horas estimadas y fechas</strong>&nbsp;— el mapa es el mejor incentivo para capturarlas.</p>\n\n<p><strong>Y por debajo del cofre</strong>: esta versión repara un problema silencioso del mecanismo de actualizaciones (las migraciones de base de datos se re-ejecutaban en cada arranque sin registrarse); sin efecto visible, pero importante para la estabilidad de los upgrades futuros.</p>",
+    "date": "2026-07-20",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [
+        "Balance",
+        "Trabajo",
+        "Versiones"
+    ],
+    "image": "uploads/blog/imagen-8.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.38.0 — ¿Quién puede con más? El mapa de calor de carga de trabajo Deja de adivinar quién está saturado. La nueva sección de balanceo de cargas muestra un mapa de calor por persona y semana: cuántas horas de trabajo estimado tiene cada quien frente a su capacidad, sumando todos los proyectos. Verde = con holgura, azul = en…",
+    "created": "2026-07-20",
+    "updated": "2026-07-20",
+    "wp_id": 748,
+    "wp_url": "https://blog.iurefficient.com/2026/07/20/que-hay-de-nuevo-v4-38-quien-puede-con-mas-el-mapa-de-calor-de-carga-de-trabajo/"
+}

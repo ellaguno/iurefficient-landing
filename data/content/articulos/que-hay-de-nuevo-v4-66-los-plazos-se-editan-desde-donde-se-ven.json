@@ -1,0 +1,19 @@
+{
+    "slug": "que-hay-de-nuevo-v4-66-los-plazos-se-editan-desde-donde-se-ven",
+    "status": "published",
+    "title": "¿Que hay de nuevo? v4.66 – Los plazos se editan desde donde se ven",
+    "excerpt": "v4.66.0 — Los plazos se editan desde donde se ven",
+    "body": "<p><strong>v4.66.0 — Los plazos se editan desde donde se ven</strong></p>\n\n<ul>\n<li><strong>El icono &#x1f4c5; de un plazo ya abre su edición</strong>. En la lista de tareas, una tarea se edita a detalle desde su icono &#x1f4dd;; el del plazo, en cambio, no hacía nada. Ahora abre la pantalla donde ese plazo se edita, y funciona en las tres formas e la lista: Árbol, Lista y el renglón del teléfono (que antes sólo llevaba a la pestaña y obligaba a buscarlo a mano).</li>\n\n<li><strong>En el calendario, un plazo se puede editar</strong>. Al abrirlo aparecían sólo «ICS» y «Cerrar»; ahora también «Editar» y «Ver proyecto».</li>\n\n<li><strong>La ayuda de la aplicación muestra las seis vistas de tareas</strong>, incluidas la Sábana y el Calendario del proyecto, que existían desde hace varias versiones y no estaban documentadas ahí. Se explica además qué vistas ofrece la organización y cómo se piden las que falten.</li>\n\n<li><strong>Los manuales se pusieron al día:</strong> el de usuario, el de administrador, el de PMO y los cinco complementos por industria ya cubren lo liberado en agosto —hoja de horas semanal con autorización, sábana de tareas, línea base y órdenes de cambio, matriz de riesgos, recursos por perfil, videollamada, agentes MCP y plantillas de proyecto—. Sin migraciones. Actualizar backend y frontend juntos.</li>\n</ul>",
+    "date": "2026-08-24",
+    "author": "Iurefficient",
+    "category": "Novedades de versión",
+    "tags": [],
+    "image": "uploads/blog/imagen-16.png",
+    "brand": "derecho",
+    "seo_title": "",
+    "seo_desc": "v4.66.0 — Los plazos se editan desde donde se ven",
+    "created": "2026-08-24",
+    "updated": "2026-08-24",
+    "wp_id": 929,
+    "wp_url": "https://blog.iurefficient.com/2026/08/24/que-hay-de-nuevo-v4-66-los-plazos-se-editan-desde-donde-se-ven/"
+}
