@@ -1,0 +1,57 @@
+{
+  "site_name": "Iurefficient",
+  "email": "contacto@iurefficient.com",
+  "form_to": "",
+  "phone": "",
+  "phone_href": "",
+  "whatsapp": "",
+  "author_name": "Iurefficient",
+  "country": "MX",
+  "languages": {},
+  "social": {
+    "linkedin": "",
+    "facebook": "",
+    "x": "",
+    "instagram": "",
+    "behance": "",
+    "youtube": ""
+  },
+  "other_sites": [
+    {
+      "label": "Blog",
+      "url": "https://blog.iurefficient.com"
+    }
+  ],
+  "logo": "logo.svg",
+  "favicon": "favicon.png",
+  "og_image": "og-image.jpg",
+  "google_verification": "",
+  "demo_teams_url": "https://0.ds.iurefficient.com",
+  "demo_derecho_url": "https://demo.iurefficient.com",
+  "blog_url": "https://blog.iurefficient.com",
+  "help_url": "/help-portal/",
+  "presentacion_url": "/presentacion/",
+  "youtube_video_id": "SAdlFVYjVI0",
+  "youtube_why_url": "https://www.youtube.com/watch?v=2RqRNHPVC9U",
+  "logo_teams": "logo_teams.svg",
+  "logo_white": "logo-white.svg",
+  "dashboard_mockup": "dashboard-mockup.png",
+  "screenshots": [
+    "screenshot-1.png",
+    "screenshot-2.png",
+    "screenshot-3.png",
+    "screenshot-4.png",
+    "screenshot-5.png",
+    "screenshot-6.png",
+    "screenshot-7.png"
+  ],
+  "team_placeholder": "",
+  "menu_derecho": [
+    "Características | /derecho/#caracteristicas",
+    "Seguridad | /derecho/#seguridad",
+    "Equipo | /derecho/#equipo",
+    "Blog | https://blog.iurefficient.com | 1",
+    "Precios | /precios/",
+    "Ayuda | /help-portal/ | 1"
+  ]
+}

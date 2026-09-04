@@ -1,0 +1,33 @@
+{
+  "slug": "precios-basico",
+  "status": "published",
+  "title": "Básico",
+  "product": "precios",
+  "description": "Pequeños despachos e independientes",
+  "price": "1,499",
+  "price_annual": "1,375",
+  "period": "MXN/mes",
+  "badge": "",
+  "featured": false,
+  "features": [
+    "2 usuarios incluidos",
+    "50 casos/proyectos",
+    "500 consultas IA al mes",
+    "2 GB almacenamiento",
+    "Soporte por email",
+    "Exportación de datos"
+  ],
+  "overage": "+$1,000/usuario, +$120.0/GB, +$50/caso, +$120/1000 IA",
+  "cta_text": "Comenzar prueba gratuita",
+  "cta_style": "outline",
+  "cta_url": "#contacto",
+  "order": 21,
+  "seo_title": {
+    "es": ""
+  },
+  "seo_desc": {
+    "es": ""
+  },
+  "created": "2026-09-03",
+  "updated": "2026-09-03"
+}

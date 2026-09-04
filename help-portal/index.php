@@ -9,7 +9,7 @@ $current_help_page = 'inicio';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Centro de Ayuda — Iurefficient</title>
   <meta name="description" content="Centro de ayuda de Iurefficient. Guias, tutoriales y soporte para tu Colaborador Especialista con IA.">
-  <link rel="icon" type="image/png" href="<?= $base_path ?>images/favicon.png">
+  <link rel="icon" type="image/png" href="<?= $base_path ?>site/assets/img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">

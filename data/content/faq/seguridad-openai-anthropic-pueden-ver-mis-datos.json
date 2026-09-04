@@ -1,0 +1,16 @@
+{
+  "slug": "seguridad-openai-anthropic-pueden-ver-mis-datos",
+  "status": "published",
+  "title": "¿OpenAI/Anthropic pueden ver mis datos?",
+  "section": "seguridad",
+  "answer": "<p>Las APIs empresariales de estos proveedores tienen politicas estrictas de no-retencion y no-entrenamiento. Los datos enviados a traves de la API se procesan en tiempo real y se descartan inmediatamente. No se almacenan ni se usan para mejorar sus modelos. Esto esta garantizado contractualmente.</p>",
+  "order": 13,
+  "seo_title": {
+    "es": ""
+  },
+  "seo_desc": {
+    "es": ""
+  },
+  "created": "2026-09-03",
+  "updated": "2026-09-03"
+}

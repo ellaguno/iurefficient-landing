@@ -1,0 +1,28 @@
+{
+  "es": [
+    {
+      "label": "Presentación",
+      "url": "/presentacion/"
+    },
+    {
+      "label": "Blog",
+      "url": "https://blog.iurefficient.com"
+    },
+    {
+      "label": "Para quien",
+      "url": "/#equipos"
+    },
+    {
+      "label": "Comparativa",
+      "url": "/#comparativa"
+    },
+    {
+      "label": "Precios",
+      "url": "/precios/"
+    },
+    {
+      "label": "Seguridad",
+      "url": "/#seguridad"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "from": "/teams",
+    "to": "/"
+  },
+  {
+    "from": "/teams/index.html",
+    "to": "/"
+  },
+  {
+    "from": "/index.html",
+    "to": "/"
+  },
+  {
+    "from": "/derecho/index.html",
+    "to": "/derecho"
+  },
+  {
+    "from": "/precios/index.html",
+    "to": "/precios"
+  },
+  {
+    "from": "/seguridad/index.html",
+    "to": "/seguridad"
+  },
+  {
+    "from": "/legal/privacidad.html",
+    "to": "/legal/privacidad"
+  },
+  {
+    "from": "/legal/privacidad.php",
+    "to": "/legal/privacidad"
+  },
+  {
+    "from": "/legal/terminos.html",
+    "to": "/legal/terminos"
+  },
+  {
+    "from": "/legal/terminos.php",
+    "to": "/legal/terminos"
+  }
+]

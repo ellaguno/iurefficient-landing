@@ -1,0 +1,32 @@
+{
+  "slug": "teams-starter",
+  "status": "published",
+  "title": "Teams Starter",
+  "product": "teams",
+  "description": "Equipos pequenos",
+  "price": "1,499",
+  "price_annual": "",
+  "period": "MXN/mes",
+  "badge": "",
+  "featured": false,
+  "features": [
+    "2 usuarios incluidos",
+    "30 proyectos activos",
+    "2,000 consultas IA al mes",
+    "2 GB almacenamiento",
+    "Soporte por email"
+  ],
+  "overage": "",
+  "cta_text": "Comenzar prueba gratuita",
+  "cta_style": "outline",
+  "cta_url": "#contacto",
+  "order": 1,
+  "seo_title": {
+    "es": ""
+  },
+  "seo_desc": {
+    "es": ""
+  },
+  "created": "2026-09-03",
+  "updated": "2026-09-03"
+}

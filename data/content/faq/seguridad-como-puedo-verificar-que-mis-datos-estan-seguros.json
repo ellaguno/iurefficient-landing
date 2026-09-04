@@ -1,0 +1,16 @@
+{
+  "slug": "seguridad-como-puedo-verificar-que-mis-datos-estan-seguros",
+  "status": "published",
+  "title": "¿Como puedo verificar que mis datos estan seguros?",
+  "section": "seguridad",
+  "answer": "<p>Puedes revisar los logs de auditoria en cualquier momento para ver quien ha accedido a que informacion. Tambien ofrecemos auditorias de seguridad independientes y reportes de cumplimiento bajo solicitud.</p>",
+  "order": 16,
+  "seo_title": {
+    "es": ""
+  },
+  "seo_desc": {
+    "es": ""
+  },
+  "created": "2026-09-03",
+  "updated": "2026-09-03"
+}

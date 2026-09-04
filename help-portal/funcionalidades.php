@@ -9,7 +9,7 @@ $current_help_page = 'funcionalidades';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Funcionalidades — Iurefficient</title>
   <meta name="description" content="Todas las funcionalidades de Iurefficient: gestion de proyectos, IA, RAG, investigacion, integraciones y mas.">
-  <link rel="icon" type="image/png" href="<?= $base_path ?>images/favicon.png">
+  <link rel="icon" type="image/png" href="<?= $base_path ?>site/assets/img/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>

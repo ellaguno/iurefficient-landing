@@ -1,0 +1,33 @@
+{
+  "slug": "derecho-profesional",
+  "status": "published",
+  "title": "Profesional",
+  "product": "derecho",
+  "description": "Despachos en crecimiento",
+  "price": "4,999",
+  "price_annual": "",
+  "period": "MXN/mes",
+  "badge": "Más popular",
+  "featured": true,
+  "features": [
+    "7 usuarios incluidos",
+    "200 casos/proyectos",
+    "2,000 consultas IA al mes",
+    "4 GB almacenamiento",
+    "Soporte prioritario",
+    "Integraciones"
+  ],
+  "overage": "",
+  "cta_text": "Comenzar prueba gratuita",
+  "cta_style": "primary",
+  "cta_url": "#contacto",
+  "order": 12,
+  "seo_title": {
+    "es": ""
+  },
+  "seo_desc": {
+    "es": ""
+  },
+  "created": "2026-09-03",
+  "updated": "2026-09-03"
+}

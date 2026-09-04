@@ -1,0 +1,418 @@
+{
+  "t_hero_title": {
+    "es": "El plan de proyecto <span class=\"gradient-text\">no se escribe</span>, se conversa",
+    "help": "Admite HTML: <span class=\"gradient-text\">…</span> para el degradado"
+  },
+  "t_hero_subtitle": {
+    "es": "Iurefficient Teams es la primera plataforma de gestion de proyectos donde el chat con IA genera automaticamente tus tareas, dependencias y cronograma. <em>Menos clicks, mas plan.</em>",
+    "help": "Admite HTML sencillo"
+  },
+  "t_hero_cta1": {
+    "es": "Probar gratis 14 dias",
+    "help": ""
+  },
+  "t_hero_cta2": {
+    "es": "Ver como funciona",
+    "help": ""
+  },
+  "t_problem_title": {
+    "es": "Tu equipo pierde mas tiempo <span class=\"gradient-text\">organizando el trabajo</span> que haciendolo?",
+    "help": "Admite HTML"
+  },
+  "t_problem_subtitle": {
+    "es": "Estos problemas son mas comunes de lo que crees.",
+    "help": ""
+  },
+  "t_solution_title": {
+    "es": "Del caos a un plan ejecutable <span class=\"gradient-text\">en minutos</span>",
+    "help": "Admite HTML"
+  },
+  "t_solution_subtitle": {
+    "es": "Iurefficient Teams reune en un solo lugar la vision de tu proyecto, las tareas de tu equipo, el calendario y la comunicacion. Pero lo que lo hace distinto es <strong>iure</strong>, la asistente de IA que entiende tu proyecto y te ayuda a armarlo conversando.",
+    "help": "Admite HTML sencillo"
+  },
+  "t_video_title": {
+    "es": "Mira Iurefficient <span class=\"gradient-text\">en acción</span>",
+    "help": "Admite HTML"
+  },
+  "t_video_subtitle": {
+    "es": "Descubre cómo puedes ahorrar hasta 70% de tu tiempo",
+    "help": ""
+  },
+  "t_gallery_title": {
+    "es": "Conoce la <span class=\"gradient-text\">plataforma</span>",
+    "help": "Admite HTML"
+  },
+  "t_gallery_subtitle": {
+    "es": "Una interfaz intuitiva diseñada para abogados",
+    "help": ""
+  },
+  "t_gallery_hint": {
+    "es": "Usa el scroll para explorar",
+    "help": ""
+  },
+  "t_audience_title": {
+    "es": "Hecho para equipos <span class=\"gradient-text\">que ejecutan</span>",
+    "help": "Admite HTML"
+  },
+  "t_audience_subtitle": {
+    "es": "No solo para despachos. Iurefficient Teams se adapta a cualquier equipo que gestione proyectos.",
+    "help": ""
+  },
+  "t_testimonial": {
+    "es": "\"En la constructora manejamos 12 obras simultaneas. Con Iurefficient levante la estructura de una obra nueva en lo que tomabamos el cafe.\"",
+    "help": "Vacío = se oculta el testimonio"
+  },
+  "t_testimonial_cite": {
+    "es": "-- Early adopter del programa de acceso anticipado",
+    "help": ""
+  },
+  "t_compare_title": {
+    "es": "Ellos le pegaron IA encima. <span class=\"gradient-text\">Nosotros nacimos con IA adentro.</span>",
+    "help": "Admite HTML"
+  },
+  "t_compare_subtitle": {
+    "es": "La diferencia entre un parche y una plataforma AI-native.",
+    "help": ""
+  },
+  "t_pricing_title": {
+    "es": "Planes para <span class=\"gradient-text\">equipos de cualquier tamano</span>",
+    "help": "Admite HTML"
+  },
+  "t_pricing_subtitle": {
+    "es": "Sin contratos forzosos. Cancela cuando quieras.",
+    "help": ""
+  },
+  "t_security_title": {
+    "es": "Tus datos de proyecto, <span class=\"gradient-text\">siempre protegidos</span>",
+    "help": "Admite HTML"
+  },
+  "t_security_subtitle": {
+    "es": "Utilizamos la misma infraestructura que ya usan cientos de despachos legales.",
+    "help": ""
+  },
+  "t_cta_title": {
+    "es": "Listo para que tu proximo plan de proyecto se haga en una conversacion?",
+    "help": ""
+  },
+  "t_cta_button": {
+    "es": "Quiero ser early adopter",
+    "help": ""
+  },
+  "t_cta_note": {
+    "es": "Sin compromiso - 14 dias gratis - Soporte incluido",
+    "help": ""
+  },
+  "t_footer_tagline": {
+    "es": "Gestion de proyectos potenciada con inteligencia artificial.",
+    "help": ""
+  },
+  "t_footer_beta_note": {
+    "es": "Ya usas Iurefficient para tu despacho? Tu cuenta actual incluye acceso a Teams sin costo adicional durante la fase beta.",
+    "help": "Vacío = se oculta"
+  },
+  "d_hero_title": {
+    "es": "El derecho <span class=\"gradient-text\">a un click</span> de distancia",
+    "help": "Admite HTML"
+  },
+  "d_hero_subtitle": {
+    "es": "Gestiona casos, analiza documentos y potencia tu práctica legal con inteligencia artificial. <strong>Ahorra hasta 70% de tu tiempo.</strong>",
+    "help": "Admite HTML sencillo"
+  },
+  "d_hero_cta1": {
+    "es": "Solicitar Demo Gratuita",
+    "help": ""
+  },
+  "d_hero_cta_youtube": {
+    "es": "¿Por qué usar Iurefficient?",
+    "help": ""
+  },
+  "d_hero_cta2": {
+    "es": "Ver cómo funciona",
+    "help": ""
+  },
+  "d_problem_title": {
+    "es": "Abogados modernos, <span class=\"gradient-text\">desafíos constantes</span>",
+    "help": "Admite HTML"
+  },
+  "d_problem_subtitle": {
+    "es": "Sabemos lo que enfrentas cada día. Por eso creamos Iurefficient.",
+    "help": ""
+  },
+  "d_features_title": {
+    "es": "Todo lo que necesitas para <span class=\"gradient-text\">potenciar tu práctica</span>",
+    "help": "Admite HTML"
+  },
+  "d_features_subtitle": {
+    "es": "Herramientas diseñadas específicamente para profesionales del derecho",
+    "help": ""
+  },
+  "d_video_title": {
+    "es": "Mira Iurefficient <span class=\"gradient-text\">en acción</span>",
+    "help": "Admite HTML"
+  },
+  "d_video_subtitle": {
+    "es": "Descubre cómo puedes ahorrar hasta 70% de tu tiempo",
+    "help": ""
+  },
+  "d_gallery_title": {
+    "es": "Conoce la <span class=\"gradient-text\">plataforma</span>",
+    "help": "Admite HTML"
+  },
+  "d_gallery_subtitle": {
+    "es": "Una interfaz intuitiva diseñada para abogados",
+    "help": ""
+  },
+  "d_gallery_hint": {
+    "es": "Usa el scroll para explorar",
+    "help": ""
+  },
+  "d_benefits_title": {
+    "es": "Resultados que <span class=\"gradient-text\">transforman</span>",
+    "help": "Admite HTML"
+  },
+  "d_security_title": {
+    "es": "Tu información, <span class=\"gradient-text\">siempre protegida</span>",
+    "help": "Admite HTML"
+  },
+  "d_security_subtitle": {
+    "es": "Seguridad de nivel empresarial para proteger los datos más sensibles de tu práctica",
+    "help": ""
+  },
+  "d_security_standards_title": {
+    "es": "Nuestros estándares de seguridad",
+    "help": ""
+  },
+  "d_security_more": {
+    "es": "Conoce más sobre nuestra seguridad",
+    "help": ""
+  },
+  "d_team_title": {
+    "es": "Creado por abogados, <span class=\"gradient-text\">para abogados</span>",
+    "help": "Admite HTML"
+  },
+  "d_team_subtitle": {
+    "es": "Conocemos tus desafíos porque los vivimos cada día",
+    "help": ""
+  },
+  "d_pricing_title": {
+    "es": "Planes que se adaptan a <span class=\"gradient-text\">tu práctica</span>",
+    "help": "Admite HTML"
+  },
+  "d_pricing_subtitle": {
+    "es": "Sin contratos forzosos. Cancela cuando quieras.",
+    "help": ""
+  },
+  "d_pricing_footer": {
+    "es": "Ver comparativa completa de planes",
+    "help": ""
+  },
+  "d_cta_title": {
+    "es": "¿Listo para transformar tu práctica legal?",
+    "help": ""
+  },
+  "d_cta_text": {
+    "es": "Únete a cientos de abogados que ya optimizaron su trabajo",
+    "help": ""
+  },
+  "d_cta_button": {
+    "es": "Solicitar Demo Gratuita",
+    "help": ""
+  },
+  "d_cta_note": {
+    "es": "Sin compromiso • Setup en 24 horas • Soporte incluido",
+    "help": ""
+  },
+  "d_footer_tagline": {
+    "es": "Transformando la práctica legal con inteligencia artificial.",
+    "help": ""
+  },
+  "p_hero_title": {
+    "es": "Planes transparentes, <span class=\"gradient-text\">sin sorpresas</span>",
+    "help": "Admite HTML"
+  },
+  "p_hero_text": {
+    "es": "Elige el plan que mejor se adapte a tu práctica. Sin contratos forzosos, cancela cuando quieras.",
+    "help": ""
+  },
+  "p_toggle_monthly": {
+    "es": "Mensual",
+    "help": ""
+  },
+  "p_toggle_annual": {
+    "es": "Anual",
+    "help": ""
+  },
+  "p_toggle_discount": {
+    "es": "Ahorra 20%",
+    "help": "Vacío = sin etiqueta verde"
+  },
+  "p_compare_title": {
+    "es": "Comparativa <span class=\"gradient-text\">detallada</span>",
+    "help": "Admite HTML"
+  },
+  "p_compare_subtitle": {
+    "es": "Todas las características lado a lado",
+    "help": ""
+  },
+  "p_faq_title": {
+    "es": "Preguntas <span class=\"gradient-text\">frecuentes</span>",
+    "help": "Admite HTML"
+  },
+  "p_guarantee_title": {
+    "es": "🛡️ Garantía de satisfacción de 30 días",
+    "help": "Vacío = se oculta la garantía"
+  },
+  "p_guarantee_text": {
+    "es": "Si no estás completamente satisfecho con Iurefficient en los primeros 30 días, te devolvemos el 100% de tu dinero. Sin preguntas.",
+    "help": ""
+  },
+  "p_cta_title": {
+    "es": "¿Listo para empezar?",
+    "help": ""
+  },
+  "p_cta_text": {
+    "es": "Prueba Iurefficient gratis por 14 días. Sin tarjeta de crédito.",
+    "help": ""
+  },
+  "p_cta_button": {
+    "es": "Comenzar prueba gratuita",
+    "help": ""
+  },
+  "s_hero_title": {
+    "es": "Seguridad, Confidencialidad y <span style=\"color: var(--accent-400)\">Privacidad</span>",
+    "help": "Admite HTML"
+  },
+  "s_hero_text": {
+    "es": "Informacion completa sobre como protegemos tu informacion y la de tus clientes. A diferencia de servicios de IA genericos, tu informacion nunca sale de tu control.",
+    "help": ""
+  },
+  "s_hero_update": {
+    "es": "Ultima actualizacion: Enero 2026 | Version del documento: 1.0",
+    "help": ""
+  },
+  "s_faq_title": {
+    "es": "Preguntas <span class=\"gradient-text\">Frecuentes</span>",
+    "help": "Admite HTML"
+  },
+  "s_contact_title": {
+    "es": "¿Tienes mas preguntas?",
+    "help": ""
+  },
+  "s_contact_text": {
+    "es": "Nuestro equipo de seguridad esta disponible para responder cualquier duda sobre como protegemos tu informacion.",
+    "help": ""
+  },
+  "s_contact_report": {
+    "es": "Para reportar vulnerabilidades:",
+    "help": ""
+  },
+  "s_cta_title": {
+    "es": "Tu informacion esta segura con nosotros",
+    "help": ""
+  },
+  "s_cta_text": {
+    "es": "Prueba Iurefficient con la confianza de que tus datos estan protegidos",
+    "help": ""
+  },
+  "s_cta_button": {
+    "es": "Comenzar prueba gratuita",
+    "help": ""
+  },
+  "s_footer_doc": {
+    "es": "Documento de Seguridad, Confidencialidad y Privacidad - Iurefficient v4.5.0",
+    "help": ""
+  },
+  "nav_btn_abogados": {
+    "es": "Abogados",
+    "help": ""
+  },
+  "nav_btn_demo_teams": {
+    "es": "Entrar al demo",
+    "help": ""
+  },
+  "nav_btn_demo_derecho": {
+    "es": "Usar Demo",
+    "help": ""
+  },
+  "footer_copy": {
+    "es": "© {year} Iurefficient. Todos los derechos reservados.",
+    "help": "{year} se sustituye por el año actual"
+  },
+  "footer_made": {
+    "es": "Hecho con ❤️ en México",
+    "help": ""
+  },
+  "crumb_home": {
+    "es": "Inicio",
+    "help": ""
+  },
+  "not_found_title": {
+    "es": "Página no encontrada",
+    "help": ""
+  },
+  "not_found_text": {
+    "es": "La página que buscas no existe o cambió de lugar.",
+    "help": ""
+  },
+  "go_home": {
+    "es": "Ir al inicio",
+    "help": ""
+  },
+  "f_name_ph": {
+    "es": "Tu nombre",
+    "help": ""
+  },
+  "f_email_ph": {
+    "es": "Tu email",
+    "help": ""
+  },
+  "f_email_ph_teams": {
+    "es": "Tu email corporativo",
+    "help": ""
+  },
+  "f_phone_ph": {
+    "es": "Tu teléfono (opcional)",
+    "help": ""
+  },
+  "f_size_teams": {
+    "es": "Tamano de tu equipo\n1-5|1-5 personas\n6-20|6-20 personas\n21-50|21-50 personas\n50+|Mas de 50",
+    "help": "Primera línea: texto del selector. Después: valor|etiqueta por línea"
+  },
+  "f_size_derecho": {
+    "es": "Tamaño de tu despacho\n1|Solo yo\n2-5|2-5 abogados\n6-20|6-20 abogados\n20+|Más de 20",
+    "help": "Primera línea: texto del selector. Después: valor|etiqueta por línea"
+  },
+  "home_meta_title": {
+    "es": "Iurefficient Teams - Gestion de proyectos con IA",
+    "help": "Título de la pestaña en la portada (sin sufijo)"
+  },
+  "home_meta_desc": {
+    "es": "Gestiona proyectos con IA. Iurefficient Teams genera tareas, dependencias y cronograma desde una conversacion con iure, tu asistente de IA.",
+    "help": ""
+  },
+  "derecho_meta_title": {
+    "es": "El derecho a un click de distancia",
+    "help": "Se le agrega \" · Iurefficient\""
+  },
+  "derecho_meta_desc": {
+    "es": "Iurefficient - Gestiona casos, analiza documentos y potencia tu práctica legal con inteligencia artificial. Ahorra hasta 70% de tu tiempo.",
+    "help": ""
+  },
+  "precios_meta_title": {
+    "es": "Precios y Planes",
+    "help": ""
+  },
+  "precios_meta_desc": {
+    "es": "Planes y precios de Iurefficient. Encuentra el plan perfecto para tu práctica legal. Sin contratos forzosos.",
+    "help": ""
+  },
+  "seguridad_meta_title": {
+    "es": "Seguridad, Confidencialidad y Privacidad",
+    "help": ""
+  },
+  "seguridad_meta_desc": {
+    "es": "Seguridad, Confidencialidad y Privacidad en Iurefficient. Conoce cómo protegemos tus datos y los de tus clientes con cifrado de nivel bancario.",
+    "help": ""
+  }
+}

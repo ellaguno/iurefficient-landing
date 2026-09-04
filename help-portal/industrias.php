@@ -9,7 +9,7 @@ $current_help_page = 'industrias';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soluciones por Industria — Iurefficient</title>
   <meta name="description" content="Descubre como Iurefficient se adapta a tu industria: legal, contabilidad, consultoria, ingenieria, RRHH y mas.">
-  <link rel="icon" type="image/png" href="<?= $base_path ?>images/favicon.png">
+  <link rel="icon" type="image/png" href="<?= $base_path ?>site/assets/img/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>

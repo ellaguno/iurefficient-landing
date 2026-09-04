@@ -1,0 +1,16 @@
+{
+  "slug": "seguridad-puedo-usar-iurefficient-para-informacion-clasificada",
+  "status": "published",
+  "title": "¿Puedo usar Iurefficient para informacion clasificada?",
+  "section": "seguridad",
+  "answer": "<p>Para informacion altamente sensible o clasificada, recomendamos un despliegue on-premise con modelos de IA locales (sin conexion a APIs externas). Esta configuracion esta disponible para organizaciones con requisitos especiales de seguridad.</p>",
+  "order": 14,
+  "seo_title": {
+    "es": ""
+  },
+  "seo_desc": {
+    "es": ""
+  },
+  "created": "2026-09-03",
+  "updated": "2026-09-03"
+}

@@ -32,8 +32,8 @@
     <div class="footer-col">
       <h4>Legal</h4>
       <ul>
-        <li><a href="<?= $base_path ?>legal/privacidad.php">Aviso de Privacidad</a></li>
-        <li><a href="<?= $base_path ?>legal/terminos.php">Terminos de Servicio</a></li>
+        <li><a href="<?= $base_path ?>legal/privacidad">Aviso de Privacidad</a></li>
+        <li><a href="<?= $base_path ?>legal/terminos">Terminos de Servicio</a></li>
         <li><a href="<?= $base_path ?>seguridad/">Seguridad</a></li>
       </ul>
     </div>

@@ -1,0 +1,16 @@
+{
+  "slug": "seguridad-la-ia-puede-inventar-informacion-sobre-mis-casos",
+  "status": "published",
+  "title": "¿La IA puede inventar informacion sobre mis casos?",
+  "section": "seguridad",
+  "answer": "<p>El sistema esta diseñado para minimizar este riesgo. La IA solo responde basandose en los documentos de tu caso, no en conocimiento general. Ademas, cada respuesta incluye citas verificables y un indicador de confianza. Si no hay informacion suficiente, el sistema lo indica claramente.</p>",
+  "order": 11,
+  "seo_title": {
+    "es": ""
+  },
+  "seo_desc": {
+    "es": ""
+  },
+  "created": "2026-09-03",
+  "updated": "2026-09-03"
+}

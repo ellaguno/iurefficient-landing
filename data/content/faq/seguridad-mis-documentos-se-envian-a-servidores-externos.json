@@ -1,0 +1,16 @@
+{
+  "slug": "seguridad-mis-documentos-se-envian-a-servidores-externos",
+  "status": "published",
+  "title": "¿Mis documentos se envian a servidores externos?",
+  "section": "seguridad",
+  "answer": "<p>No. Tus documentos completos nunca salen de tu infraestructura. Solo se envian a las APIs de IA fragmentos pequeños y descontextualizados cuando haces una consulta. Estos fragmentos no contienen identificadores de clientes ni informacion que permita relacionarlos con un caso especifico.</p>",
+  "order": 12,
+  "seo_title": {
+    "es": ""
+  },
+  "seo_desc": {
+    "es": ""
+  },
+  "created": "2026-09-03",
+  "updated": "2026-09-03"
+}

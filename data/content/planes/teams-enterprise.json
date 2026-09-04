@@ -1,0 +1,34 @@
+{
+  "slug": "teams-enterprise",
+  "status": "published",
+  "title": "Teams Enterprise",
+  "product": "teams",
+  "description": "Grandes organizaciones",
+  "price": "11,999",
+  "price_annual": "",
+  "period": "MXN/mes",
+  "badge": "",
+  "featured": false,
+  "features": [
+    "12 usuarios incluidos",
+    "Proyectos ilimitados",
+    "15,000 consultas IA al mes",
+    "10 GB almacenamiento",
+    "Soporte dedicado 24/7",
+    "Capacitacion incluida",
+    "Personalizacion"
+  ],
+  "overage": "",
+  "cta_text": "Contactar ventas",
+  "cta_style": "outline",
+  "cta_url": "#contacto",
+  "order": 3,
+  "seo_title": {
+    "es": ""
+  },
+  "seo_desc": {
+    "es": ""
+  },
+  "created": "2026-09-03",
+  "updated": "2026-09-03"
+}

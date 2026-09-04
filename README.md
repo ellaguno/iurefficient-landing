@@ -1,151 +1,78 @@
-# Iurefficient Landing Page
+# Sitio iurefficient.com (cms_simple)
 
-Landing page moderna y profesional para Iurefficient, creada con HTML5, CSS3 y JavaScript vanilla.
+Sitio público de Iurefficient sobre [cms_simple](https://github.com/ellaguno/cms_simple): PHP plano, sin base de datos,
+contenido en JSON y panel de administración en `/admin/`.
 
-## Estructura del Proyecto
+Migrado el 3 de septiembre de 2026 desde el sitio estático que estaba en producción. La versión anterior quedó en el
+tag `pre-cms-migration` de este repositorio y en `../backups/2026-09-03/`.
+
+## Rutas
+
+| URL | Qué es | De dónde sale |
+|---|---|---|
+| `/` | Portada Iurefficient Teams | `site/templates/home.php` + textos + planes (producto "teams") |
+| `/derecho` | Landing para abogados | `site/templates/derecho.php` + textos + planes ("derecho") + equipo |
+| `/precios` | Planes, comparativa y FAQ | `site/templates/precios.php` + planes ("precios") + FAQ ("precios") |
+| `/seguridad` | Seguridad, confidencialidad y privacidad | `site/templates/seguridad.php` + FAQ ("seguridad") |
+| `/legal/privacidad`, `/legal/terminos` | Páginas legales | tipo de contenido "Páginas legales" |
+| `/help-portal/` | Centro de ayuda | carpeta PHP independiente (fuera del CMS) |
+| `/presentacion/` | Presentación comercial | HTML estático (fuera del CMS) |
+| `/admin/` | Panel | núcleo `cms/` |
+
+Las URLs viejas (`/teams`, `/legal/privacidad.php`, `*.html`) redirigen con 301 (Admin → Redirecciones).
+
+## Qué se edita desde el panel
+
+- **Planes de precios**: nombre, precio mensual y anual, etiqueta, destacado, características, excedentes, botón y en
+  qué página se muestra (Teams, Abogados o Precios).
+- **Equipo**: nombre, cargo, semblanza y foto.
+- **Preguntas frecuentes**: pregunta y respuesta, para /precios o /seguridad.
+- **Páginas legales**: título, fecha, resumen y contenido con editor visual. El índice se genera de los subtítulos.
+- **Textos del sitio**: títulos, subtítulos, botones, textos del pie, SEO de cada página.
+- **Ajustes**: correo, redes, logotipos, capturas de la galería 3D, URLs de demos, blog, video de YouTube y menú de la
+  landing para abogados.
+- **Menú**: menú de la portada Teams.
+- **Código del tema**: plantillas, CSS y JS (con respaldo automático). Ahí viven los bloques que no están en datos:
+  tarjetas de características, tabla comparativa de /precios (arreglo `$comparativa` en `precios.php`), secciones
+  técnicas de /seguridad.
+
+## Estructura
 
 ```
-iurefficient-landing/
-├── index.html              # Página principal (landing)
-├── css/
-│   └── styles.css          # Estilos completos
-├── js/
-│   └── main.js             # JavaScript (animaciones, carrusel, formulario)
-├── precios/
-│   └── index.html          # Página de precios detallados
-├── seguridad/
-│   └── index.html          # Página de seguridad y privacidad
-├── legal/
-│   ├── privacidad.html     # Aviso de privacidad
-│   └── terminos.html       # Términos y condiciones
-├── images/                 # ⚠️ IMÁGENES PENDIENTES (ver abajo)
-└── README.md               # Este archivo
+index.php, admin/, cms/     núcleo de cms_simple (no se edita; se actualiza sustituyendo cms/)
+site/config.php             tipos de contenido, páginas, ajustes y grupos de textos
+site/inc/layout.php         cabecera y pie (marca Teams o Abogados según la página)
+site/inc/functions.php      helpers: tarjetas de plan, formulario, índice legal…
+site/templates/             home, derecho, precios, seguridad, legal, plan, miembro, pregunta, 404
+site/assets/css|js|img      styles.css, teams.css, precios.css, seguridad.css, legal.css, main.js, imágenes
+site/defaults/              ajustes, textos y menú iniciales (copia de data/)
+data/                       contenido real: settings, strings, menu, redirects, content/<tipo>/<slug>.json
+uploads/                    archivos subidos desde el panel (no se versionan)
+api/send-contact.php        receptor del formulario de contacto (correo HTML + confirmación al cliente)
+help-portal/, presentacion/ carpetas estáticas
 ```
 
-## Imágenes Requeridas
+## Desarrollo local
 
-Coloca las siguientes imágenes en la carpeta `images/`:
-
-### Logos (Requeridos)
-| Archivo | Dimensiones | Descripción |
-|---------|-------------|-------------|
-| `logo.svg` | ~200x50px | Logo principal (fondo transparente) |
-| `logo-white.svg` | ~200x50px | Logo versión blanca para footer |
-| `favicon.png` | 32x32px | Favicon del sitio |
-| `og-image.png` | 1200x630px | Imagen para compartir en redes sociales |
-
-### Equipo (Requeridos)
-| Archivo | Dimensiones | Descripción |
-|---------|-------------|-------------|
-| `eduardo.jpg` | 400x400px | Foto profesional de Eduardo Llaguno Velasco |
-| `frida.jpg` | 400x400px | Foto de Frida Velázquez Esquer (ya existe en servidor actual como `/images/abogada1.png`) |
-
-### Hero y Dashboard (Requeridos)
-| Archivo | Dimensiones | Descripción |
-|---------|-------------|-------------|
-| `dashboard-mockup.png` | 1200x800px | Screenshot o mockup del dashboard principal |
-
-### Screenshots del Carrusel (Requeridos)
-| Archivo | Dimensiones | Descripción |
-|---------|-------------|-------------|
-| `screenshot-1.png` | 1200x800px | Dashboard - Centro de comando |
-| `screenshot-2.png` | 1200x800px | Gestión de Casos |
-| `screenshot-3.png` | 1200x800px | Análisis de Documentos (IA) |
-| `screenshot-4.png` | 1200x800px | Asistente IA / Chat |
-| `screenshot-5.png` | 1200x800px | Calendario Legal |
-| `screenshot-6.png` | 1200x800px | Gestión de Clientes |
-| `screenshot-7.png` | 1200x800px | Reportes y Métricas |
-
-### Opcionales
-| Archivo | Dimensiones | Descripción |
-|---------|-------------|-------------|
-| `trust-logo-1.png` a `trust-logo-4.png` | 100x40px | Logos de clientes/empresas que confían en Iurefficient |
-
-## Cómo Subir al Servidor
-
-### Opción 1: FTP
-1. Conéctate a tu hosting HostGator vía FTP (FileZilla, etc.)
-2. Navega a `public_html`
-3. **Respalda** los archivos actuales (muévelos a una carpeta de backup)
-4. Sube todo el contenido de `iurefficient-landing/`
-
-### Opción 2: Administrador de Archivos (cPanel)
-1. Accede a cPanel de HostGator
-2. Abre "Administrador de Archivos"
-3. Navega a `public_html`
-4. Respalda archivos actuales
-5. Sube el archivo ZIP y extráelo
-
-## Configuración Post-Subida
-
-### 1. Formulario de Contacto
-El formulario actual simula el envío. Para que funcione de verdad, tienes dos opciones:
-
-**Opción A: Servicio externo (recomendado)**
-- Usar [Formspree](https://formspree.io/) (gratis hasta 50 envíos/mes)
-- Cambiar el action del formulario a tu endpoint de Formspree
-
-**Opción B: Script PHP propio**
-- Crear un archivo `send-form.php` que procese y envíe emails
-- Modificar el formulario para enviar a ese script
-
-### 2. Google Analytics
-Agregar antes de `</head>`:
-```html
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=TU-ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'TU-ID');
-</script>
+```bash
+php -S 127.0.0.1:8080 _router-dev.php
+# http://127.0.0.1:8080  y  http://127.0.0.1:8080/admin/
 ```
 
-### 3. SSL (HTTPS)
-HostGator incluye SSL gratuito. Verifica que esté activo en cPanel → SSL/TLS.
+La primera vez que abres `/admin/` te pide crear el usuario administrador (`data/users.json`, no se versiona).
 
-## Tecnologías Utilizadas
+## Despliegue (cPanel / HostGator)
 
-- **HTML5** - Estructura semántica
-- **CSS3** - Variables CSS, Flexbox, Grid, animaciones
-- **JavaScript Vanilla** - Sin frameworks
-- **AOS.js** - Animaciones al scroll (CDN)
-- **Swiper.js** - Carrusel de screenshots (CDN)
-- **Google Fonts** - Tipografía Inter
+1. Sube todo el repositorio a `public_html` (o clona y haz `git pull`). Excluye `land.zip`, `oimage.*` y `cache/`.
+2. Permisos de escritura (755 o 775) en `data/` y `uploads/`.
+3. Abre `https://iurefficient.com/admin/` y crea el usuario administrador.
+4. Revisa Ajustes → correo de contacto y Ajustes → Imágenes (opcional: botón "Generar WebP").
+5. Comprueba `/`, `/derecho`, `/precios`, `/seguridad`, `/legal/privacidad`, `/help-portal/`, `/presentacion/`
+   y `/sitemap.xml`.
 
-## Compatibilidad
+Requisitos: PHP 7.4+ con `json`, `mbstring`, `fileinfo`, `session` (y `gd` para WebP); Apache con `mod_rewrite`.
 
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-- iOS Safari 14+
-- Chrome Android 90+
+## Formulario de contacto
 
-## Personalización
-
-### Colores
-Modifica las variables CSS en `css/styles.css`:
-```css
-:root {
-    --primary-500: #4f46e5;  /* Color principal */
-    --accent-500: #06b6d4;   /* Color de acento */
-    --success-500: #10b981;  /* Color de éxito */
-    /* ... más variables */
-}
-```
-
-### Contenido
-- Textos: Edita directamente en los archivos HTML
-- Precios: Modifica en `index.html` y `precios/index.html`
-- Información legal: Actualiza con tus datos reales en `legal/`
-
-## Soporte
-
-Para problemas o preguntas:
-- Email: contacto@iurefficient.com
-
----
-
-Creado con ❤️ para Iurefficient
+`main.js` envía el formulario a `/api/send-contact.php`, que manda el aviso a `contacto@iurefficient.com` y una
+confirmación al cliente con `mail()`. El receptor genérico de cms_simple (`/_cms/form`) queda disponible pero no se usa.

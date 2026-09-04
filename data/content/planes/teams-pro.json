@@ -1,0 +1,33 @@
+{
+  "slug": "teams-pro",
+  "status": "published",
+  "title": "Teams Pro",
+  "product": "teams",
+  "description": "Equipos medianos",
+  "price": "5,999",
+  "price_annual": "",
+  "period": "MXN/mes",
+  "badge": "Mas popular",
+  "featured": true,
+  "features": [
+    "7 usuarios incluidos",
+    "100 proyectos activos",
+    "5,000 consultas IA al mes",
+    "4 GB almacenamiento",
+    "Soporte prioritario",
+    "Integraciones"
+  ],
+  "overage": "",
+  "cta_text": "Comenzar prueba gratuita",
+  "cta_style": "primary",
+  "cta_url": "#contacto",
+  "order": 2,
+  "seo_title": {
+    "es": ""
+  },
+  "seo_desc": {
+    "es": ""
+  },
+  "created": "2026-09-03",
+  "updated": "2026-09-03"
+}

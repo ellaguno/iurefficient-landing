@@ -1,0 +1,35 @@
+{
+  "slug": "precios-profesional",
+  "status": "published",
+  "title": "Profesional",
+  "product": "precios",
+  "description": "Despachos en crecimiento",
+  "price": "5,999",
+  "price_annual": "5,499",
+  "period": "MXN/mes",
+  "badge": "Más popular",
+  "featured": true,
+  "features": [
+    "7 usuarios incluidos",
+    "200 casos/proyectos",
+    "2,000 consultas IA al mes",
+    "4 GB almacenamiento",
+    "Soporte prioritario",
+    "Integraciones",
+    "Reportes avanzados",
+    "API access"
+  ],
+  "overage": "+$1,000/usuario, +$120.0/GB, +$50/caso, +$120/1000 IA",
+  "cta_text": "Comenzar prueba gratuita",
+  "cta_style": "primary",
+  "cta_url": "#contacto",
+  "order": 22,
+  "seo_title": {
+    "es": ""
+  },
+  "seo_desc": {
+    "es": ""
+  },
+  "created": "2026-09-03",
+  "updated": "2026-09-03"
+}

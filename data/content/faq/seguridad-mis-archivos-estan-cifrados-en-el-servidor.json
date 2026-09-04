@@ -1,0 +1,16 @@
+{
+  "slug": "seguridad-mis-archivos-estan-cifrados-en-el-servidor",
+  "status": "published",
+  "title": "¿Mis archivos estan cifrados en el servidor?",
+  "section": "seguridad",
+  "answer": "<p>Si. A partir de la version 4.5.0, todos los archivos subidos se cifran automaticamente con <strong>AES-256-GCM</strong>, el estandar de cifrado mas seguro disponible. Caracteristicas:</p><ul><li><strong>Cifrado transparente:</strong> Los archivos se cifran al subir y descifran al descargar automaticamente</li><li><strong>Claves por caso:</strong> Cada caso utiliza una clave derivada unica (HKDF)</li><li><strong>Autenticacion GCM:</strong> Detecta cualquier manipulacion del archivo</li><li><strong>Retrocompatible:</strong> Los archivos anteriores siguen funcionando normalmente</li></ul><p>Incluso si alguien obtuviera acceso fisico al servidor, los archivos serian completamente ilegibles sin la clave maestra de cifrado.</p>",
+  "order": 17,
+  "seo_title": {
+    "es": ""
+  },
+  "seo_desc": {
+    "es": ""
+  },
+  "created": "2026-09-03",
+  "updated": "2026-09-03"
+}

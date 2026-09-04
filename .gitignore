@@ -3,3 +3,15 @@ api/contact-log.txt
 land.zip
 oimage.jpg
 oimage.xcf
+# cms_simple: datos de cada instalación
+data/users.json
+data/login-attempts.json
+data/mensajes.log
+data/backups/
+data/*.tmp
+data/**/*.tmp
+uploads/*
+!uploads/.htaccess
+!uploads/index.html
+.DS_Store
+Thumbs.db
