@@ -14,11 +14,13 @@
  *   /help-portal/    Centro de ayuda (carpeta estática, fuera del CMS)
  *   /presentacion/   Presentación comercial (carpeta estática, fuera del CMS)
  *
+ * 'noindex' => true en un tipo: sus detalles llevan meta robots noindex y no entran al sitemap.
  * Los tipos con 'group' => 'Nombre' se agrupan bajo ese encabezado (plegable) en el menú del panel.
  * Tipos de campo: text, textarea, html, date, number, url, email, select, checkbox, image, images, lines, tags.
  */
 return [
     'name' => 'Iurefficient',
+    'site_url' => 'https://iurefficient.com',   // dominio canónico (canonical, sitemap, JSON-LD); Ajustes → URL canónica lo puede sobrescribir
     'langs' => ['es'],
     'default_lang' => 'es',
     'timezone' => 'America/Mexico_City',
@@ -144,6 +146,7 @@ return [
             'label_singular' => 'Plan',
             'routes' => ['es' => 'planes'],
             'no_list' => true,
+            'noindex' => true,   // páginas de detalle de relleno: fuera del índice y del sitemap
             'template_single' => 'plan',
             'schema' => 'Product',
             'sort' => ['field' => 'order', 'dir' => 'asc'],
@@ -173,6 +176,7 @@ return [
             'label_singular' => 'Integrante',
             'routes' => ['es' => 'equipo'],
             'no_list' => true,
+            'noindex' => true,   // páginas de detalle de relleno: fuera del índice y del sitemap
             'template_single' => 'miembro',
             'schema' => 'Person',
             'sort' => ['field' => 'order', 'dir' => 'asc'],
@@ -192,6 +196,7 @@ return [
             'label_singular' => 'Pregunta',
             'routes' => ['es' => 'preguntas'],
             'no_list' => true,
+            'noindex' => true,   // páginas de detalle de relleno: fuera del índice y del sitemap
             'template_single' => 'pregunta',
             'schema' => 'Question',
             'sort' => ['field' => 'order', 'dir' => 'asc'],

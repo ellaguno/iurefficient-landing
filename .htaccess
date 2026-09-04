@@ -5,6 +5,14 @@ AddDefaultCharset UTF-8
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  # Un solo dominio canónico: www → apex y http → https (respeta el proxy de Cloudflare para evitar bucles)
+  RewriteCond %{HTTP_HOST} ^www\.iurefficient\.com$ [NC]
+  RewriteRule ^ https://iurefficient.com%{REQUEST_URI} [R=301,L]
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteCond %{HTTP:CF-Visitor} !https
+  RewriteCond %{HTTP_HOST} ^iurefficient\.com$ [NC]
+  RewriteRule ^ https://iurefficient.com%{REQUEST_URI} [R=301,L]
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]

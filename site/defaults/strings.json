@@ -4,23 +4,23 @@
     "help": "Admite HTML: <span class=\"gradient-text\">…</span> para el degradado"
   },
   "t_hero_subtitle": {
-    "es": "Iurefficient Teams es la primera plataforma de gestion de proyectos donde el chat con IA genera automaticamente tus tareas, dependencias y cronograma. <em>Menos clicks, mas plan.</em>",
+    "es": "Iurefficient Teams es la primera plataforma de gestión de proyectos donde el chat con IA genera automáticamente tus tareas, dependencias y cronograma. <em>Menos clics, más plan.</em>",
     "help": "Admite HTML sencillo"
   },
   "t_hero_cta1": {
-    "es": "Probar gratis 14 dias",
+    "es": "Probar gratis 14 días",
     "help": ""
   },
   "t_hero_cta2": {
-    "es": "Ver como funciona",
+    "es": "Ver cómo funciona",
     "help": ""
   },
   "t_problem_title": {
-    "es": "Tu equipo pierde mas tiempo <span class=\"gradient-text\">organizando el trabajo</span> que haciendolo?",
+    "es": "¿Tu equipo pierde más tiempo <span class=\"gradient-text\">organizando el trabajo</span> que haciéndolo?",
     "help": "Admite HTML"
   },
   "t_problem_subtitle": {
-    "es": "Estos problemas son mas comunes de lo que crees.",
+    "es": "Estos problemas son más comunes de lo que crees.",
     "help": ""
   },
   "t_solution_title": {
@@ -28,7 +28,7 @@
     "help": "Admite HTML"
   },
   "t_solution_subtitle": {
-    "es": "Iurefficient Teams reune en un solo lugar la vision de tu proyecto, las tareas de tu equipo, el calendario y la comunicacion. Pero lo que lo hace distinto es <strong>iure</strong>, la asistente de IA que entiende tu proyecto y te ayuda a armarlo conversando.",
+    "es": "Iurefficient Teams reúne en un solo lugar la visión de tu proyecto, las tareas de tu equipo, el calendario y la comunicación. Pero lo que lo hace distinto es <strong>iure</strong>, la asistente de IA que entiende tu proyecto y te ayuda a armarlo conversando.",
     "help": "Admite HTML sencillo"
   },
   "t_video_title": {
@@ -60,11 +60,11 @@
     "help": ""
   },
   "t_testimonial": {
-    "es": "\"En la constructora manejamos 12 obras simultaneas. Con Iurefficient levante la estructura de una obra nueva en lo que tomabamos el cafe.\"",
+    "es": "\"En la constructora manejamos 12 obras simultáneas. Con Iurefficient levanté la estructura de una obra nueva en lo que tomábamos el café.\"",
     "help": "Vacío = se oculta el testimonio"
   },
   "t_testimonial_cite": {
-    "es": "-- Early adopter del programa de acceso anticipado",
+    "es": "— Early adopter del programa de acceso anticipado",
     "help": ""
   },
   "t_compare_title": {
@@ -76,7 +76,7 @@
     "help": ""
   },
   "t_pricing_title": {
-    "es": "Planes para <span class=\"gradient-text\">equipos de cualquier tamano</span>",
+    "es": "Planes para <span class=\"gradient-text\">equipos de cualquier tamaño</span>",
     "help": "Admite HTML"
   },
   "t_pricing_subtitle": {
@@ -92,7 +92,7 @@
     "help": ""
   },
   "t_cta_title": {
-    "es": "Listo para que tu proximo plan de proyecto se haga en una conversacion?",
+    "es": "¿Listo para que tu próximo plan de proyecto se haga en una conversación?",
     "help": ""
   },
   "t_cta_button": {
@@ -100,15 +100,15 @@
     "help": ""
   },
   "t_cta_note": {
-    "es": "Sin compromiso - 14 dias gratis - Soporte incluido",
+    "es": "Sin compromiso · 14 días gratis · Soporte incluido",
     "help": ""
   },
   "t_footer_tagline": {
-    "es": "Gestion de proyectos potenciada con inteligencia artificial.",
+    "es": "Gestión de proyectos potenciada con inteligencia artificial.",
     "help": ""
   },
   "t_footer_beta_note": {
-    "es": "Ya usas Iurefficient para tu despacho? Tu cuenta actual incluye acceso a Teams sin costo adicional durante la fase beta.",
+    "es": "¿Ya usas Iurefficient para tu despacho? Tu cuenta actual incluye acceso a Teams sin costo adicional durante la fase beta.",
     "help": "Vacío = se oculta"
   },
   "d_hero_title": {
@@ -284,11 +284,11 @@
     "help": "Admite HTML"
   },
   "s_hero_text": {
-    "es": "Informacion completa sobre como protegemos tu informacion y la de tus clientes. A diferencia de servicios de IA genericos, tu informacion nunca sale de tu control.",
+    "es": "Información completa sobre cómo protegemos tu información y la de tus clientes. A diferencia de servicios de IA genéricos, tu información nunca sale de tu control.",
     "help": ""
   },
   "s_hero_update": {
-    "es": "Ultima actualizacion: Enero 2026 | Version del documento: 1.0",
+    "es": "Última actualización: Enero 2026 | Versión del documento: 1.0",
     "help": ""
   },
   "s_faq_title": {
@@ -296,11 +296,11 @@
     "help": "Admite HTML"
   },
   "s_contact_title": {
-    "es": "¿Tienes mas preguntas?",
+    "es": "¿Tienes más preguntas?",
     "help": ""
   },
   "s_contact_text": {
-    "es": "Nuestro equipo de seguridad esta disponible para responder cualquier duda sobre como protegemos tu informacion.",
+    "es": "Nuestro equipo de seguridad está disponible para responder cualquier duda sobre cómo protegemos tu información.",
     "help": ""
   },
   "s_contact_report": {
@@ -308,11 +308,11 @@
     "help": ""
   },
   "s_cta_title": {
-    "es": "Tu informacion esta segura con nosotros",
+    "es": "Tu información está segura con nosotros",
     "help": ""
   },
   "s_cta_text": {
-    "es": "Prueba Iurefficient con la confianza de que tus datos estan protegidos",
+    "es": "Prueba Iurefficient con la confianza de que tus datos están protegidos",
     "help": ""
   },
   "s_cta_button": {
@@ -376,7 +376,7 @@
     "help": ""
   },
   "f_size_teams": {
-    "es": "Tamano de tu equipo\n1-5|1-5 personas\n6-20|6-20 personas\n21-50|21-50 personas\n50+|Mas de 50",
+    "es": "Tamaño de tu equipo\n1-5|1-5 personas\n6-20|6-20 personas\n21-50|21-50 personas\n50+|Más de 50",
     "help": "Primera línea: texto del selector. Después: valor|etiqueta por línea"
   },
   "f_size_derecho": {
@@ -384,35 +384,35 @@
     "help": "Primera línea: texto del selector. Después: valor|etiqueta por línea"
   },
   "home_meta_title": {
-    "es": "Iurefficient Teams - Gestion de proyectos con IA",
+    "es": "Iurefficient Teams: gestión de proyectos con IA para equipos",
     "help": "Título de la pestaña en la portada (sin sufijo)"
   },
   "home_meta_desc": {
-    "es": "Gestiona proyectos con IA. Iurefficient Teams genera tareas, dependencias y cronograma desde una conversacion con iure, tu asistente de IA.",
+    "es": "Iurefficient Teams es un software de gestión de proyectos con inteligencia artificial. Conversas con iure, tu asistente de IA, y genera tareas, dependencias y cronograma. Prueba gratis 14 días.",
     "help": ""
   },
   "derecho_meta_title": {
-    "es": "El derecho a un click de distancia",
+    "es": "Software de gestión de casos con IA para abogados y despachos",
     "help": "Se le agrega \" · Iurefficient\""
   },
   "derecho_meta_desc": {
-    "es": "Iurefficient - Gestiona casos, analiza documentos y potencia tu práctica legal con inteligencia artificial. Ahorra hasta 70% de tu tiempo.",
+    "es": "Iurefficient es un software legal con inteligencia artificial para abogados y despachos en México: gestión de casos, análisis de documentos y redacción asistida. Ahorra hasta 70% de tu tiempo. Demo gratis.",
     "help": ""
   },
   "precios_meta_title": {
-    "es": "Precios y Planes",
+    "es": "Precios y planes de Iurefficient para abogados y despachos",
     "help": ""
   },
   "precios_meta_desc": {
-    "es": "Planes y precios de Iurefficient. Encuentra el plan perfecto para tu práctica legal. Sin contratos forzosos.",
+    "es": "Planes y precios de Iurefficient, el software legal con IA para despachos. Básico, Profesional y Enterprise, sin contratos forzosos y con prueba gratuita.",
     "help": ""
   },
   "seguridad_meta_title": {
-    "es": "Seguridad, Confidencialidad y Privacidad",
+    "es": "Seguridad, confidencialidad y privacidad de tus datos legales",
     "help": ""
   },
   "seguridad_meta_desc": {
-    "es": "Seguridad, Confidencialidad y Privacidad en Iurefficient. Conoce cómo protegemos tus datos y los de tus clientes con cifrado de nivel bancario.",
+    "es": "Cómo Iurefficient protege la información de tu despacho y de tus clientes: cifrado, servidores propios, sin entrenamiento de IA con tus datos y cumplimiento de la LFPDPPP.",
     "help": ""
   },
   "pg_cta_title": {

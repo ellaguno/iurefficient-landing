@@ -52,9 +52,9 @@ En el panel todos los tipos de contenido cuelgan del grupo plegable **Páginas**
 ## Estructura
 
 ```
-index.php, admin/, cms/     núcleo de cms_simple 1.1.0 (se actualiza sustituyendo cms/). Cambio local pendiente de
-                            llevar al repo cms_simple: grupos plegables en el menú del panel ('group' en cada tipo;
-                            cms/admin/inc/layout.php, assets/admin.css, assets/admin.js)
+index.php, admin/, cms/     núcleo de cms_simple 1.3.0 (se actualiza sustituyendo cms/). Cambios locales pendientes de
+                            llevar al repo cms_simple: grupos en el menú del panel ('group'), textos por defecto
+                            completados desde site/defaults, 'noindex' por tipo, URL canónica (site_url), /llms.txt
 site/config.php             tipos de contenido, páginas, ajustes y grupos de textos
 site/inc/layout.php         cabecera y pie (marca Teams o Abogados según la página)
 site/inc/functions.php      helpers: tarjetas de plan, formulario, índice legal…
@@ -86,6 +86,21 @@ La primera vez que abres `/admin/` te pide crear el usuario administrador (`data
 4. Revisa Ajustes → correo de contacto y Ajustes → Imágenes (opcional: botón "Generar WebP").
 5. Comprueba `/`, `/derecho`, `/precios`, `/seguridad`, `/legal/privacidad`, `/help-portal/`, `/presentacion/`
    y `/sitemap.xml`.
+
+## SEO y GEO
+
+- **Dominio canónico**: `site_url` en `site/config.php` (o Ajustes → URL canónica) fija `https://iurefficient.com` en
+  canonical, sitemap y JSON-LD aunque entren por www. `.htaccess` redirige www → apex y http → https (compatible con
+  Cloudflare). Cloudflare debe tener además "Always Use HTTPS" y no bloquear los bots de IA en su robots.txt gestionado.
+- **Datos estructurados** (`iure_jsonld()` en `site/inc/functions.php`): SoftwareApplication con ofertas en `/` y
+  `/derecho`, FAQPage en `/precios` y `/seguridad` (a partir de las preguntas del CMS), más Organization, WebSite y
+  BreadcrumbList del núcleo.
+- **Índice limpio**: los detalles de planes, equipo y preguntas llevan `noindex` y no entran al sitemap
+  (`'noindex' => true` en el tipo).
+- **`/llms.txt`**: resumen del sitio para motores de IA; se edita en `site/llms.txt` (Código del tema). `{{site}}`
+  se sustituye por la URL canónica.
+- **Rendimiento**: scripts con `defer`; three.js (600 KB) se carga solo cuando la galería 3D se acerca al viewport.
+- **Textos**: títulos y descripciones SEO viven en Textos del sitio → SEO. Escribe siempre con acentos.
 
 ### Actualizar un sitio ya desplegado
 

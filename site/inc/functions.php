@@ -164,3 +164,51 @@ function iure_footer_social(): string
     return '<div class="footer-social"><a href="' . cms_e($li ?: '#') . '" aria-label="LinkedIn"' . $ext($li) . '>' . $svgLi . '</a>'
         . '<a href="' . cms_e($x ?: '#') . '" aria-label="Twitter"' . $ext($x) . '>' . $svgX . '</a></div>';
 }
+
+/** JSON-LD adicional del tema según la ruta: FAQPage en /precios y /seguridad, SoftwareApplication con ofertas en / y /derecho. */
+function iure_jsonld(array $page): ?array
+{
+    $route = $page['route'] ?? '';
+    $lang = $page['lang'] ?? cms_default_lang();
+    $S = cms_settings();
+    $site = $S['site_name'] ?? cms_config('name');
+    $org = ['@id' => cms_site_url() . '/#organization'];
+    if ($route === 'page:precios' || $route === 'page:seguridad') {
+        $faq = iure_faq($route === 'page:precios' ? 'precios' : 'seguridad');
+        if (!$faq) return null;
+        $q = [];
+        foreach ($faq as $f) {
+            $a = trim(preg_replace('/\s+/', ' ', strip_tags(cms_content((string) ($f['answer'] ?? '')))));
+            if ($a === '') continue;
+            $q[] = ['@type' => 'Question', 'name' => (string) ($f['title'] ?? ''), 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $a]];
+        }
+        return $q ? ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => $q] : null;
+    }
+    if ($route === 'home' || $route === 'page:derecho') {
+        $teams = $route === 'home';
+        $planes = iure_planes($teams ? 'teams' : 'derecho');
+        $url = cms_abs_url($teams ? cms_url('home', $lang) : cms_url('page:derecho', $lang));
+        $offers = [];
+        foreach ($planes as $p) {
+            $price = preg_replace('/[^\d.]/', '', (string) ($p['price'] ?? ''));
+            if ($price === '') continue;
+            $offers[] = ['@type' => 'Offer', 'name' => (string) ($p['title'] ?? ''), 'price' => $price, 'priceCurrency' => 'MXN',
+                'description' => trim(((string) ($p['description'] ?? '')) . ' ' . implode(', ', (array) ($p['features'] ?? []))),
+                'url' => cms_abs_url(cms_url('page:precios', $lang)), 'availability' => 'https://schema.org/InStock',
+                'priceSpecification' => ['@type' => 'UnitPriceSpecification', 'price' => $price, 'priceCurrency' => 'MXN', 'billingDuration' => 'P1M']];
+        }
+        $app = ['@context' => 'https://schema.org', '@type' => 'SoftwareApplication',
+            'name' => $teams ? $site . ' Teams' : $site,
+            'url' => $url,
+            'applicationCategory' => 'BusinessApplication',
+            'applicationSubCategory' => $teams ? 'Gestión de proyectos con IA' : 'Software de gestión de casos para abogados',
+            'operatingSystem' => 'Web',
+            'inLanguage' => 'es-MX',
+            'description' => (string) cms_t($teams ? 'home_meta_desc' : 'derecho_meta_desc', $lang),
+            'publisher' => $org, 'provider' => $org, 'areaServed' => 'MX'];
+        if ($offers) $app['offers'] = $offers;
+        if (!empty($S['dashboard_mockup']) || $teams) $app['screenshot'] = cms_abs_url(iure_img((string) ($S['dashboard_mockup'] ?? ''), 'dashboard-mockup.png'));
+        return $app;
+    }
+    return null;
+}

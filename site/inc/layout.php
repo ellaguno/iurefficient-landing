@@ -19,6 +19,7 @@ function site_header(array $page): void
     $landing = in_array($route, ['home', 'page:derecho'], true);   // hero con shader, galería 3D, video
     $pageCss = iure_page_css($route);
     $bodyClass = 'brand-' . $brand . ($pageCss ? ' page-' . $pageCss : '') . ($route === '404' ? ' page-404' : '');
+    if ($ld = iure_jsonld($page)) $page['jsonld'][] = $ld;
     ?><!DOCTYPE html>
 <html lang="<?= cms_e($lang) ?>"<?= $brand === 'teams' ? ' class="teams-page"' : '' ?>>
 <head>
@@ -184,13 +185,12 @@ function site_footer(array $page): void
     </button>
 
     <!-- Scripts -->
-<?php if ($landing): ?>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
+<?php if ($landing): // three.js (600 KB) lo carga main.js solo cuando la galería 3D se acerca al viewport ?>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
 <?php endif; ?>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="<?= cms_asset('js/main.js') ?>?v=<?= $v ?>"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="<?= cms_asset('js/main.js') ?>?v=<?= $v ?>" data-three="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </body>
 </html>
 <?php

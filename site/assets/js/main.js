@@ -17,8 +17,30 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeroShader();
     initCtaGradient();
     initSpotlightCards();
-    initGallery3D();
+    loadThreeThenGallery();
 });
+
+/* Carga three.js solo cuando la galería 3D está por entrar en pantalla (ahorra ~600 KB en la carga inicial) */
+function loadThreeThenGallery() {
+    var canvas = document.getElementById('gallery3d-canvas');
+    if (!canvas) return;
+    if (typeof THREE !== 'undefined') { initGallery3D(); return; }
+    var me = document.currentScript || document.querySelector('script[data-three]');
+    var src = me && me.getAttribute('data-three');
+    if (!src) return;
+    var started = false;
+    var load = function () {
+        if (started) return; started = true;
+        var sc = document.createElement('script');
+        sc.src = src; sc.onload = initGallery3D;
+        document.head.appendChild(sc);
+    };
+    if (!('IntersectionObserver' in window)) { load(); return; }
+    var io = new IntersectionObserver(function (entries) {
+        if (entries.some(function (e) { return e.isIntersecting; })) { io.disconnect(); load(); }
+    }, { rootMargin: '600px 0px' });
+    io.observe(canvas);
+}
 
 /* --------------------------------------------------------------------------
    AOS - Animate on Scroll

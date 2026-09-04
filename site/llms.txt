@@ -1,0 +1,24 @@
+# Iurefficient
+
+> Iurefficient es un software con inteligencia artificial para abogados, despachos y equipos de trabajo en México. Gestiona casos y proyectos, analiza documentos y redacta con IA, con los datos alojados en infraestructura propia y sin usarlos para entrenar modelos. Empresa mexicana; interfaz y soporte en español.
+
+Productos:
+- Iurefficient (abogados y despachos): gestión de casos, expedientes, análisis y redacción de documentos legales con IA.
+- Iurefficient Teams (equipos de cualquier sector): gestión de proyectos donde el chat con IA genera tareas, dependencias y cronograma.
+
+Precios: planes mensuales en pesos mexicanos desde $999 MXN, sin contratos forzosos y con prueba gratuita de 14 días. Detalle en {{site}}/precios
+
+## Páginas principales
+- [Iurefficient Teams: gestión de proyectos con IA]({{site}}/): portada del producto para equipos.
+- [Iurefficient para abogados]({{site}}/derecho): funciones, beneficios, equipo y planes para despachos.
+- [Precios y planes]({{site}}/precios): comparativa de planes y preguntas frecuentes sobre pago y cancelación.
+- [Seguridad, confidencialidad y privacidad]({{site}}/seguridad): cifrado, infraestructura, cumplimiento y preguntas frecuentes.
+- [Aviso de privacidad]({{site}}/legal/privacidad)
+- [Términos y condiciones]({{site}}/legal/terminos)
+- [Centro de ayuda]({{site}}/help-portal/): guías de inicio, funcionalidades y preguntas frecuentes.
+
+## Recursos
+- Blog: https://blog.iurefficient.com
+- Demo para abogados: https://demo.iurefficient.com
+- Contacto: contacto@iurefficient.com
+- Sitemap: {{site}}/sitemap.xml
