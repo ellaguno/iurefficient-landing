@@ -67,6 +67,7 @@ function site_header(array $page): void
     foreach (cms_menu($lang) as $it): ?>
                     <li><a href="<?= cms_e(cms_menu_url((string) ($it['url'] ?? '/'), $lang)) ?>"<?= !empty($it['new_tab']) ? ' target="_blank" rel="noopener"' : '' ?>><?= cms_e($it['label'] ?? '') ?></a></li>
 <?php endforeach; ?>
+                    <?= iure_search_form('teams') ?>
                     <li><a href="<?= cms_url('page:derecho', $lang) ?>/" class="btn btn-outline btn-sm"><?= cms_e($t('nav_btn_abogados', 'Abogados')) ?></a></li>
                     <li><a href="<?= cms_e(iure_link('demo_teams_url')) ?>" class="btn btn-primary btn-sm"><?= cms_e($t('nav_btn_demo_teams', 'Entrar al demo')) ?></a></li>
 <?php else:
@@ -75,6 +76,7 @@ function site_header(array $page): void
         if ($label === '') continue; ?>
                     <li><a href="<?= cms_e(cms_menu_url($url ?: '/', $lang)) ?>"<?= $nt !== '' ? ' target="_blank" rel="noopener"' : '' ?>><?= cms_e($label) ?></a></li>
 <?php endforeach; ?>
+                    <?= iure_search_form('derecho') ?>
                     <li><a href="<?= cms_e(iure_link('demo_derecho_url')) ?>" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><?= cms_e($t('nav_btn_demo_derecho', 'Usar Demo')) ?></a></li>
 <?php endif; ?>
                 </ul>

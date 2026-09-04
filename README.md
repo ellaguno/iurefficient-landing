@@ -18,6 +18,7 @@ tag `pre-cms-migration` de este repositorio y en `../backups/2026-09-03/`.
 | `/pages/{url}` | Páginas libres creadas desde el panel | tipo "Páginas" + `site/templates/pagina.php` |
 | `/articulos/`, `/articulos/{url}` | Artículos, tutoriales y novedades de versión (88 entradas migradas del blog el 2026-09-04) | tipo "Artículos" + `articulos.php` / `articulo.php` |
 | `/proyectos/{url}` | Proyectos / casos de éxito — declarado, sin uso aún | tipo "Proyectos" + `proyecto.php`; índice `/proyectos/` desactivado (`no_list`) |
+| `/buscar?q=` | Buscador del sitio (noindex) | `site/templates/buscar.php` + `iure_search()` en `site/inc/functions.php` |
 | `/help-portal/` | Centro de ayuda | carpeta PHP independiente (fuera del CMS) |
 | `/presentacion/` | Presentación comercial | HTML estático (fuera del CMS) |
 | `/admin/` | Panel | núcleo `cms/` |
@@ -43,6 +44,14 @@ En el panel todos los tipos de contenido cuelgan del grupo plegable **Páginas**
 - **Proyectos**: declarado con plantillas listas (`proyectos.php`/`proyecto.php`); el índice público se activa
   quitando `'no_list' => true` del tipo en `site/config.php`.
 
+### Buscador
+
+Icono de lupa en las dos cabeceras (despliega el campo; en móvil es un campo fijo del menú) que envía a `/buscar?q=`.
+Busca sin distinguir mayúsculas ni acentos en artículos, páginas libres, proyectos, legales, preguntas frecuentes y en
+los textos de las páginas fijas (portada, /derecho, /precios, /seguridad). Los resultados se ordenan por relevancia
+(coincidencia en el título pesa más) y muestran un fragmento con las palabras resaltadas. Textos en
+Textos del sitio → Buscador. Es búsqueda en memoria sobre los JSON: suficiente para algunos cientos de elementos.
+
 ### Migración del blog (WordPress → Artículos)
 
 `tools/import-wp.php` importa las entradas de blog.iurefficient.com por la API REST: omite la categoría
@@ -61,9 +70,10 @@ Genera además `tools/wp-redirects.txt` con las reglas 301 para el `.htaccess` d
 ## Estructura
 
 ```
-index.php, admin/, cms/     núcleo de cms_simple 1.3.0 (se actualiza sustituyendo cms/). Cambios locales pendientes de
+index.php, admin/, cms/     núcleo de cms_simple 1.3.1 (se actualiza sustituyendo cms/). Cambios locales pendientes de
                             llevar al repo cms_simple: grupos en el menú del panel ('group'), textos por defecto
-                            completados desde site/defaults, 'noindex' por tipo, URL canónica (site_url), /llms.txt
+                            completados desde site/defaults, 'noindex' por tipo, URL canónica (site_url), /llms.txt,
+                            cms_jsonld_graph() acepta null (páginas sin schema)
 site/config.php             tipos de contenido, páginas, ajustes y grupos de textos
 site/inc/layout.php         cabecera y pie (marca Teams o Abogados según la página)
 site/inc/functions.php      helpers: tarjetas de plan, formulario, índice legal…

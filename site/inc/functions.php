@@ -11,6 +11,7 @@ function iure_brand(array $page): string
     if ($r === 'item:planes' && !empty($item['product']) && $item['product'] !== 'derecho') return 'teams';
     // Páginas, artículos y proyectos eligen su cabecera y pie en el panel (campo "brand").
     if (in_array($r, ['item:paginas', 'item:articulos', 'item:proyectos'], true) && ($item['brand'] ?? '') === 'teams') return 'teams';
+    if ($r === 'page:buscar' && ($_GET['b'] ?? '') === 'teams') return 'teams';
     return 'derecho';
 }
 
@@ -20,7 +21,7 @@ function iure_page_css(string $route): string
     if ($route === 'page:precios') return 'precios';
     if ($route === 'page:seguridad') return 'seguridad';
     // Legales, páginas libres, artículos, proyectos, preguntas y 404 comparten la tipografía de legal.css
-    if ($route === '404' || preg_match('#^(item|list):(legal|paginas|articulos|proyectos|faq)$#', $route)) return 'legal';
+    if ($route === '404' || $route === 'page:buscar' || preg_match('#^(item|list):(legal|paginas|articulos|proyectos|faq)$#', $route)) return 'legal';
     return '';
 }
 
@@ -211,4 +212,113 @@ function iure_jsonld(array $page): ?array
         return $app;
     }
     return null;
+}
+
+/* ------------------------------------------------------------------ buscador del sitio (/buscar?q=) */
+
+/** Minúsculas sin acentos, para comparar. */
+function iure_norm(string $s): string
+{
+    $s = mb_strtolower(html_entity_decode(strip_tags($s), ENT_QUOTES | ENT_HTML5, 'UTF-8'));
+    return strtr($s, ['á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ü' => 'u', 'ñ' => 'n']);
+}
+
+/** Expresión regular que encuentra $word ignorando mayúsculas y acentos (para resaltar). */
+function iure_word_regex(string $word): string
+{
+    $map = ['a' => '[aáÁ]', 'e' => '[eéÉ]', 'i' => '[iíÍ]', 'o' => '[oóÓ]', 'u' => '[uúüÚÜ]', 'n' => '[nñÑ]'];
+    $re = '';
+    foreach (preg_split('//u', $word, -1, PREG_SPLIT_NO_EMPTY) as $ch) $re .= $map[$ch] ?? preg_quote($ch, '/');
+    return '/' . $re . '/iu';
+}
+
+/** Fuentes de la búsqueda: [etiqueta, título, url, texto largo, fecha]. */
+function iure_search_sources(string $lang): array
+{
+    $src = [];
+    $types = [
+        'articulos' => ['Artículo', ['excerpt', 'body']],
+        'paginas'   => ['Página', ['subtitle', 'summary', 'body']],
+        'proyectos' => ['Proyecto', ['excerpt', 'body', 'results']],
+        'legal'     => ['Legal', ['summary', 'body']],
+        'faq'       => ['Pregunta frecuente', ['answer']],
+    ];
+    foreach ($types as $type => [$label, $fields]) {
+        if (!cms_type($type)) continue;
+        foreach (cms_items($type) as $it) {
+            $text = '';
+            foreach ($fields as $f) { $v = $it[$f] ?? ''; $text .= ' ' . (is_array($v) ? implode(' ', $v) : (string) $v); }
+            $src[] = [$label, (string) ($it['title'] ?? ''), cms_url('item:' . $type, $lang, $it['slug']), cms_content($text), (string) ($it['date'] ?? $it['updated'] ?? '')];
+        }
+    }
+    // páginas fijas: título SEO, descripción y todos los textos de su grupo en Textos del sitio
+    $pages = [
+        'home'      => ['Portada Teams', 'home_meta_title', 'home_meta_desc', cms_url('home', $lang)],
+        'derecho'   => ['Landing Abogados (/derecho)', 'derecho_meta_title', 'derecho_meta_desc', cms_url('page:derecho', $lang)],
+        'precios'   => ['Precios (/precios)', 'precios_meta_title', 'precios_meta_desc', cms_url('page:precios', $lang)],
+        'seguridad' => ['Seguridad (/seguridad)', 'seguridad_meta_title', 'seguridad_meta_desc', cms_url('page:seguridad', $lang)],
+    ];
+    $groups = (array) cms_config('strings_groups');
+    foreach ($pages as $k => [$group, $tk, $dk, $url]) {
+        $text = (string) cms_t($dk, $lang);
+        foreach ((array) ($groups[$group] ?? []) as $key) { $v = cms_t($key, $lang); $text .= ' ' . (is_array($v) ? implode(' ', $v) : (string) $v); }
+        $src[] = ['Página', (string) cms_t($tk, $lang, ucfirst($k)), $url, $text, ''];
+    }
+    return $src;
+}
+
+/** Busca $q en todo el sitio. Devuelve [['label','title','url','snippet','score'], …] ordenado por relevancia. */
+function iure_search(string $q, string $lang, int $max = 50): array
+{
+    $words = array_values(array_filter(preg_split('/\s+/', iure_norm($q)), fn($w) => mb_strlen($w) >= 2));
+    if (!$words) return [];
+    $out = [];
+    foreach (iure_search_sources($lang) as [$label, $title, $url, $text, $date]) {
+        $nt = iure_norm($title);
+        $plain = trim(preg_replace('/\s+/', ' ', html_entity_decode(strip_tags($text), ENT_QUOTES | ENT_HTML5, 'UTF-8')));
+        $nb = iure_norm($plain);
+        $score = 0;
+        foreach ($words as $w) {
+            $inT = mb_strpos($nt, $w) !== false;
+            $inB = mb_strpos($nb, $w) !== false;
+            if (!$inT && !$inB) { $score = 0; break; }
+            $score += ($inT ? 5 : 0) + ($inB ? 1 : 0);
+        }
+        if ($score === 0) continue;
+        if (mb_strpos($nt, implode(' ', $words)) !== false) $score += 5;
+        // fragmento alrededor de la primera coincidencia
+        $pos = false;
+        foreach ($words as $w) if (($pos = mb_strpos($nb, $w)) !== false) break;
+        $start = $pos === false ? 0 : max(0, $pos - 80);
+        $snippet = mb_substr($plain, $start, 240);
+        if ($start > 0) $snippet = '…' . preg_replace('/^\S*\s/', '', $snippet);
+        if (mb_strlen($plain) > $start + 240) $snippet = preg_replace('/\s\S*$/', '', $snippet) . '…';
+        $snippet = cms_e($snippet);
+        $titleH = cms_e($title);
+        foreach ($words as $w) { $re = iure_word_regex($w); $snippet = preg_replace($re, '<mark>$0</mark>', $snippet); $titleH = preg_replace($re, '<mark>$0</mark>', $titleH); }
+        $out[] = ['label' => $label, 'title' => $titleH, 'url' => $url, 'snippet' => $snippet, 'score' => $score, 'date' => $date];
+    }
+    usort($out, fn($a, $b) => [$b['score'], $b['date']] <=> [$a['score'], $a['date']]);
+    return array_slice($out, 0, $max);
+}
+
+/** Formulario de búsqueda (cabecera: icono que despliega el campo; página: campo grande). */
+function iure_search_form(string $brand, string $q = '', bool $inline = true): string
+{
+    $lang = cms_default_lang();
+    $t = fn(string $k, string $d) => (string) cms_t($k, $lang, $d);
+    $action = cms_url('page:buscar', $lang);
+    $ph = $t('search_placeholder', 'Buscar en el sitio…');
+    $btn = $t('search_button', 'Buscar');
+    $icon = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>';
+    $hidden = $brand === 'teams' ? '<input type="hidden" name="b" value="teams">' : '';
+    if ($inline) {
+        return '<li class="nav-search"><button type="button" class="nav-search-btn" aria-label="' . cms_e($btn) . '" aria-expanded="false">' . $icon . '</button>'
+            . '<form class="nav-search-form" action="' . cms_e($action) . '" method="get" role="search">' . $hidden
+            . '<input type="search" name="q" placeholder="' . cms_e($ph) . '" aria-label="' . cms_e($ph) . '" autocomplete="off">'
+            . '<button type="submit" aria-label="' . cms_e($btn) . '">' . $icon . '</button></form></li>';
+    }
+    return '<form class="search-form" action="' . cms_e($action) . '" method="get" role="search">' . $hidden
+        . '<input type="search" name="q" value="' . cms_e($q) . '" placeholder="' . cms_e($ph) . '" aria-label="' . cms_e($ph) . '" autofocus>'
+        . '<button type="submit" class="btn btn-primary">' . $icon . ' ' . cms_e($btn) . '</button></form>';
 }

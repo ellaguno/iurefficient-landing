@@ -25,7 +25,7 @@ function cms_jsonld_breadcrumbs(array $items): array
     return ['@type' => 'BreadcrumbList', 'itemListElement' => $list];
 }
 
-function cms_jsonld_graph(array ...$nodes): array
+function cms_jsonld_graph(?array ...$nodes): array
 {
     return ['@context' => 'https://schema.org', '@graph' => array_values(array_filter($nodes))];
 }

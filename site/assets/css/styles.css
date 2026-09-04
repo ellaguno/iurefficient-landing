@@ -296,6 +296,16 @@ textarea {
     color: var(--primary-500);
 }
 
+/* Buscador en la cabecera: icono que despliega el campo */
+.nav-search { position: relative; display: flex; align-items: center; }
+.nav-search-btn { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border: 0; background: transparent; color: var(--gray-600); border-radius: 50%; cursor: pointer; transition: background var(--transition-fast), color var(--transition-fast); }
+.nav-search-btn:hover, .nav-search.open .nav-search-btn { background: var(--gray-100); color: var(--gray-900); }
+.nav-search-form { position: absolute; right: 0; top: calc(100% + 10px); display: none; align-items: center; gap: 4px; width: 320px; padding: 6px; background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-lg); box-shadow: var(--shadow-xl, 0 12px 30px rgba(0,0,0,.12)); z-index: 60; }
+.nav-search.open .nav-search-form { display: flex; }
+.nav-search-form input { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; font-size: .9375rem; padding: 8px 10px; color: var(--gray-900); outline: none; }
+.nav-search-form button { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 0; border-radius: var(--radius-md); background: var(--primary-500); color: #fff; cursor: pointer; }
+.nav-search-form button:hover { background: var(--primary-600, #4338ca); }
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -347,6 +357,11 @@ textarea {
         font-size: 1.125rem;
         padding: var(--spacing-sm) 0;
     }
+
+    /* en el menú móvil el buscador es un campo siempre visible */
+    .nav-search { width: 100%; }
+    .nav-search-btn { display: none; }
+    .nav-search-form { display: flex; position: static; width: 100%; padding: 0; border: 1px solid var(--gray-200); box-shadow: none; }
 
     .nav-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);

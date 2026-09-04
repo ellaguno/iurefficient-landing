@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initAOS();
     initHeader();
     initMobileNav();
+    initNavSearch();
     initSwiper();
     initGLightbox();
     initSmoothScroll();
@@ -1106,3 +1107,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
  
+
+/* --------------------------------------------------------------------------
+   Buscador de la cabecera: el icono despliega el campo; Esc o clic fuera lo cierra
+   -------------------------------------------------------------------------- */
+function initNavSearch() {
+    document.querySelectorAll('.nav-search').forEach(function (box) {
+        var btn = box.querySelector('.nav-search-btn');
+        var input = box.querySelector('input[type="search"]');
+        if (!btn || !input) return;
+        var close = function () { box.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); };
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var open = box.classList.toggle('open');
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            if (open) setTimeout(function () { input.focus(); }, 30);
+        });
+        document.addEventListener('click', function (e) { if (!box.contains(e.target)) close(); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+        box.querySelector('form').addEventListener('submit', function (e) { if (input.value.trim().length < 2) { e.preventDefault(); input.focus(); } });
+    });
+}

@@ -7,6 +7,7 @@
  *   /derecho         Landing para abogados (derecho.php)
  *   /precios         Planes y comparativa (precios.php)
  *   /seguridad       Seguridad, confidencialidad y privacidad (seguridad.php)
+ *   /buscar?q=       Buscador del sitio (buscar.php, noindex)
  *   /legal/{slug}    Aviso de privacidad, términos… (tipo "legal", legal.php)
  *   /pages/{slug}    Páginas libres creadas desde el panel (tipo "paginas", pagina.php)
  *   /articulos/      Artículos, tutoriales y novedades (tipo "articulos", articulos.php + articulo.php)
@@ -214,6 +215,7 @@ return [
         'derecho'   => ['label' => 'Abogados', 'routes' => ['es' => 'derecho'], 'template' => 'derecho', 'schema' => 'WebPage'],
         'precios'   => ['label' => 'Precios', 'routes' => ['es' => 'precios'], 'template' => 'precios', 'schema' => 'WebPage'],
         'seguridad' => ['label' => 'Seguridad', 'routes' => ['es' => 'seguridad'], 'template' => 'seguridad', 'schema' => 'WebPage'],
+        'buscar'    => ['label' => 'Buscar', 'routes' => ['es' => 'buscar'], 'template' => 'buscar', 'noindex' => true],
     ],
 
     'settings' => [
@@ -252,6 +254,7 @@ return [
         'Seguridad (/seguridad)' => ['s_hero_title', 's_hero_text', 's_hero_update', 's_faq_title', 's_contact_title', 's_contact_text', 's_contact_report', 's_cta_title', 's_cta_text', 's_cta_button', 's_footer_doc'],
         'Páginas, artículos y proyectos' => ['pg_cta_title', 'pg_cta_text', 'pg_cta_button', 'articulos_title', 'articulos_intro', 'articulos_empty', 'articulos_meta_title', 'articulos_meta_desc',
                             'proyectos_title', 'proyectos_intro', 'proyectos_empty', 'proyectos_meta_title', 'proyectos_meta_desc', 'read_more', 'back_to_list', 'toc_title', 'published_on', 'by_author'],
+        'Buscador' => ['search_placeholder', 'search_button', 'search_title', 'search_results', 'search_one', 'search_empty', 'search_hint', 'buscar_meta_title'],
         'Navegación y pie' => ['nav_btn_abogados', 'nav_btn_demo_teams', 'nav_btn_demo_derecho', 'footer_copy', 'footer_made', 'crumb_home', 'not_found_title', 'not_found_text', 'go_home'],
         'Formulario de contacto' => ['f_name_ph', 'f_email_ph', 'f_email_ph_teams', 'f_phone_ph', 'f_size_teams', 'f_size_derecho'],
         'SEO (título y descripción de cada página)' => ['home_meta_title', 'home_meta_desc', 'derecho_meta_title', 'derecho_meta_desc', 'precios_meta_title', 'precios_meta_desc',

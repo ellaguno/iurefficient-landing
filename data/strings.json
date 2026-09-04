@@ -486,5 +486,37 @@
   "back_to_list": {
     "es": "Volver al índice",
     "help": ""
+  },
+  "search_placeholder": {
+    "es": "Buscar en el sitio…",
+    "help": "Texto del campo de búsqueda"
+  },
+  "search_button": {
+    "es": "Buscar",
+    "help": ""
+  },
+  "search_title": {
+    "es": "Buscar",
+    "help": "Título de la página /buscar"
+  },
+  "search_results": {
+    "es": "{n} resultados para «{q}»",
+    "help": "{n} y {q} se sustituyen"
+  },
+  "search_one": {
+    "es": "1 resultado para «{q}»",
+    "help": ""
+  },
+  "search_empty": {
+    "es": "No encontramos nada para «{q}». Prueba con otras palabras.",
+    "help": ""
+  },
+  "search_hint": {
+    "es": "Busca en artículos, novedades de versión, tutoriales, preguntas frecuentes y páginas del sitio.",
+    "help": "Texto bajo el campo cuando aún no hay búsqueda"
+  },
+  "buscar_meta_title": {
+    "es": "Buscar",
+    "help": "SEO: título de /buscar"
   }
 }
