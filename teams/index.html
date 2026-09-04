@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es" class="teams-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestiona proyectos con IA. Iurefficient Teams genera tareas, dependencias y cronograma desde una conversacion con Frida, tu asistente de IA.">
+    <meta name="keywords" content="gestion de proyectos, IA, PMO, kanban, gantt, inteligencia artificial, equipos, productividad">
+    <meta name="author" content="Iurefficient">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Iurefficient Teams - Gestion de proyectos con IA">
+    <meta property="og:description" content="El plan de proyecto no se escribe, se conversa. Chatea con Frida y genera tareas, dependencias y cronograma en minutos.">
+    <meta property="og:image" content="https://iurefficient.com/images/og-image.png">
+    <meta property="og:url" content="https://iurefficient.com/teams">
+    <meta property="og:type" content="website">
+
+    <title>Iurefficient Teams - Gestion de proyectos con IA</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS - Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Main CSS (inherited from landing) -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Teams-specific overrides -->
+    <link rel="stylesheet" href="css/teams.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/teams" class="logo">
+                    <img src="../images/logo.svg" alt="Iurefficient" class="logo-img">
+                    <span class="logo-teams-badge">Teams</span>
+                </a>
+
+                <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#solucion">Solucion</a></li>
+                    <li><a href="#equipos">Para quien</a></li>
+                    <li><a href="#comparativa">Comparativa</a></li>
+                    <li><a href="#precios">Precios</a></li>
+                    <li><a href="#seguridad">Seguridad</a></li>
+                    <li><a href="/" class="btn btn-outline btn-sm">Para Abogados</a></li>
+                    <li><a href="#contacto" class="btn btn-primary btn-sm">Probar gratis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <canvas id="hero-shader"></canvas>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">
+                    El plan de proyecto <span class="gradient-text">no se escribe</span>, se conversa
+                </h1>
+                <p class="hero-subtitle">
+                    Iurefficient Teams es la primera plataforma de gestion de proyectos donde el chat con IA genera automaticamente tus tareas, dependencias y cronograma. <em>Menos clicks, mas plan.</em>
+                </p>
+                <div class="hero-ctas">
+                    <a href="#contacto" class="btn btn-primary btn-lg">
+                        Probar gratis 14 dias
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#solucion" class="btn btn-secondary btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                        Ver como funciona
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image" data-aos="fade-up" data-aos-delay="200">
+                <div class="hero-mockup">
+                    <img src="../images/dashboard-mockup.png" alt="Dashboard de Iurefficient Teams">
+                </div>
+            </div>
+
+            <div class="hero-social-proof" data-aos="fade-up" data-aos-delay="400">
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <span class="trust-icon">🤖</span>
+                        <span>IA Nativa</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-icon">📊</span>
+                        <span>Kanban + Gantt</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-icon">⚡</span>
+                        <span>Plan en minutos</span>
+                    </div>
+                    <div class="trust-badge">
+                        <span class="trust-icon">🔒</span>
+                        <span>Seguridad Enterprise</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="problem-solution" id="problema">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Tu equipo pierde mas tiempo <span class="gradient-text">organizando el trabajo</span> que haciendolo?</h2>
+                <p class="section-subtitle">Estos problemas son mas comunes de lo que crees.</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-card comparison-before" data-aos="fade-right">
+                    <div class="comparison-header">
+                        <span class="comparison-icon">😫</span>
+                        <h3>Sin Iurefficient Teams</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li>
+                            <svg class="icon-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                            Hojas de Excel interminables que nadie actualiza
+                        </li>
+                        <li>
+                            <svg class="icon-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                            Reuniones de 40 minutos para definir quien hace que
+                        </li>
+                        <li>
+                            <svg class="icon-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                            Fechas limite que se cruzan sin aviso
+                        </li>
+                        <li>
+                            <svg class="icon-x" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                            Dependencias invisibles hasta que algo se atrasa
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="comparison-arrow" data-aos="zoom-in">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+
+                <div class="comparison-card comparison-after" data-aos="fade-left">
+                    <div class="comparison-header">
+                        <span class="comparison-icon">😊</span>
+                        <h3>Con Iurefficient Teams</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li>
+                            <svg class="icon-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Un plan ejecutable generado por IA en minutos
+                        </li>
+                        <li>
+                            <svg class="icon-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Tareas y responsables asignados automaticamente
+                        </li>
+                        <li>
+                            <svg class="icon-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Calendario que se ajusta cuando algo cambia
+                        </li>
+                        <li>
+                            <svg class="icon-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                            Dependencias visibles y alertas en tiempo real
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="features" id="solucion">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Del caos a un plan ejecutable <span class="gradient-text">en minutos</span></h2>
+                <p class="section-subtitle">Iurefficient Teams reune en un solo lugar la vision de tu proyecto, las tareas de tu equipo, el calendario y la comunicacion. Pero lo que lo hace distinto es <strong>Frida</strong>, la asistente de IA que entiende tu proyecto y te ayuda a armarlo conversando.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Chatea con Frida</h3>
+                    <p>Dile que necesitas. La IA te devuelve tareas, subtareas y dependencias listas para ejecutar.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                            <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+                        </svg>
+                    </div>
+                    <h3>Calendario inteligente</h3>
+                    <p>Arrastra automaticamente las fechas cuando algo cambia. Sin sorpresas ni cruces de agenda.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="7" height="7" rx="1"/>
+                            <rect x="14" y="3" width="7" height="7" rx="1"/>
+                            <rect x="3" y="14" width="7" height="7" rx="1"/>
+                            <rect x="14" y="14" width="7" height="7" rx="1"/>
+                        </svg>
+                    </div>
+                    <h3>Kanban y Gantt vivos</h3>
+                    <p>Visualiza el proyecto como quieras. Ambas vistas siempre sincronizadas en tiempo real.</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/>
+                        </svg>
+                    </div>
+                    <h3>Adjuntos y comentarios</h3>
+                    <p>Todo el contexto de la tarea en un solo lugar. Sin buscar en correos ni carpetas compartidas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience Section -->
+    <section class="benefits" id="equipos">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Hecho para equipos <span class="gradient-text">que ejecutan</span></h2>
+                <p class="section-subtitle">No solo para despachos. Iurefficient Teams se adapta a cualquier equipo que gestione proyectos.</p>
+            </div>
+
+            <div class="audience-grid" data-aos="fade-up">
+                <div class="audience-card">
+                    <div class="audience-icon">🏗️</div>
+                    <h4>Constructoras e ingenieria</h4>
+                    <p>Oficinas de proyectos (PMO) que coordinan multiples obras o iniciativas simultaneas.</p>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">📈</div>
+                    <h4>Marketing y producto</h4>
+                    <p>Equipos que lanzan campanas, productos y necesitan visibilidad del progreso en tiempo real.</p>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">🏢</div>
+                    <h4>Consultoras</h4>
+                    <p>Firmas que gestionan multiples iniciativas con clientes y necesitan orden sin burocracia.</p>
+                </div>
+
+                <div class="audience-card">
+                    <div class="audience-icon">🎓</div>
+                    <h4>Coordinadores academicos</h4>
+                    <p>Equipos de investigacion y coordinacion academica con plazos y entregables complejos.</p>
+                </div>
+            </div>
+
+            <blockquote class="teams-testimonial" data-aos="fade-up">
+                "En la constructora manejamos 12 obras simultaneas. Con Iurefficient levante la estructura de una obra nueva en lo que tomabamos el cafe."
+                <cite>-- Early adopter del programa de acceso anticipado</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="security" id="comparativa">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Ellos le pegaron IA encima. <span class="gradient-text">Nosotros nacimos con IA adentro.</span></h2>
+                <p class="section-subtitle">La diferencia entre un parche y una plataforma AI-native.</p>
+            </div>
+
+            <div class="comparison-table-wrapper" data-aos="fade-up">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Caracteristica</th>
+                            <th>Monday / Asana / Jira</th>
+                            <th>Iurefficient Teams</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Creacion del plan</td>
+                            <td>Manual, tarea por tarea</td>
+                            <td>Conversacional, en minutos</td>
+                        </tr>
+                        <tr>
+                            <td>IA integrada</td>
+                            <td>Parche sobre producto anterior</td>
+                            <td>Nativa, entiende dependencias y fechas</td>
+                        </tr>
+                        <tr>
+                            <td>Precio (equipo de 8)</td>
+                            <td>~$10,000-15,000 MXN/mes</td>
+                            <td>Desde $1,499 MXN/mes</td>
+                        </tr>
+                        <tr>
+                            <td>Enfoque real</td>
+                            <td>Generalista, requiere configuracion</td>
+                            <td>Listo para PMO sin curva de aprendizaje</td>
+                        </tr>
+                        <tr>
+                            <td>Asistente de IA</td>
+                            <td>Funciones basicas, limitadas</td>
+                            <td>Frida: genera planes completos desde chat</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="precios">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Planes para <span class="gradient-text">equipos de cualquier tamano</span></h2>
+                <p class="section-subtitle">Sin contratos forzosos. Cancela cuando quieras.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="pricing-header">
+                        <h3>Teams Starter</h3>
+                        <p class="pricing-description">Equipos pequenos</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">1,499</span>
+                        <span class="period">MXN/mes</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 5 usuarios incluidos</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 30 proyectos activos</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 2,000 consultas IA al mes</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 50 GB almacenamiento</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Soporte por email</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-outline btn-block">Comenzar prueba gratuita</a>
+                </div>
+
+                <div class="pricing-card pricing-featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-badge">Mas popular</div>
+                    <div class="pricing-header">
+                        <h3>Teams Pro</h3>
+                        <p class="pricing-description">Equipos medianos</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">5,999</span>
+                        <span class="period">MXN/mes</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 20 usuarios incluidos</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 100 proyectos activos</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 5,000 consultas IA al mes</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 200 GB almacenamiento</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Soporte prioritario</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Integraciones</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-primary btn-block">Comenzar prueba gratuita</a>
+                </div>
+
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-header">
+                        <h3>Teams Enterprise</h3>
+                        <p class="pricing-description">Grandes organizaciones</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">11,999</span>
+                        <span class="period">MXN/mes</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 100 usuarios incluidos</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Proyectos ilimitados</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 15,000 consultas IA al mes</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> 1 TB almacenamiento</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Soporte dedicado 24/7</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Capacitacion incluida</li>
+                        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> Personalizacion</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-outline btn-block">Contactar ventas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security" id="seguridad">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Tus datos de proyecto, <span class="gradient-text">siempre protegidos</span></h2>
+                <p class="section-subtitle">Utilizamos la misma infraestructura que ya usan cientos de despachos legales.</p>
+            </div>
+
+            <div class="security-grid">
+                <div class="security-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0110 0v4"/>
+                        </svg>
+                    </div>
+                    <h4>Cifrado AES-256</h4>
+                    <p>Todos tus documentos y datos de proyecto cifrados en reposo y en transito</p>
+                </div>
+
+                <div class="security-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>Google Cloud Platform</h4>
+                    <p>Infraestructura alojada en Google Cloud con controles de seguridad empresarial</p>
+                </div>
+
+                <div class="security-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h4>Backups Automaticos</h4>
+                    <p>Respaldos diarios con retencion de 30 dias para tu tranquilidad</p>
+                </div>
+
+                <div class="security-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="security-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h4>Privacidad de IA</h4>
+                    <p>Tus documentos nunca se usan para entrenar modelos externos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contacto">
+        <div class="cta-gradient-bg">
+            <div class="cta-blob cta-blob--1"></div>
+            <div class="cta-blob cta-blob--2"></div>
+            <div class="cta-blob cta-blob--pointer"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Listo para que tu proximo plan de proyecto se haga en una conversacion?</h2>
+                <p>Los primeros 10 equipos que se inscriban obtienen 3 meses con 50% de descuento a cambio de feedback mensual.</p>
+
+                <form class="cta-form" id="contactForm">
+                    <input type="hidden" name="origen" value="teams">
+                    <div class="form-row">
+                        <input type="text" name="nombre" placeholder="Tu nombre" required>
+                        <input type="email" name="email" placeholder="Tu email corporativo" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" name="telefono" placeholder="Tu telefono (opcional)">
+                        <select name="tamano">
+                            <option value="">Tamano de tu equipo</option>
+                            <option value="1-5">1-5 personas</option>
+                            <option value="6-20">6-20 personas</option>
+                            <option value="21-50">21-50 personas</option>
+                            <option value="50+">Mas de 50</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                        Quiero ser early adopter
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </form>
+
+                <p class="cta-note">Sin compromiso - 14 dias gratis - Soporte incluido</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../images/logo-white.svg" alt="Iurefficient" class="footer-logo">
+                    <p>Gestion de proyectos potenciada con inteligencia artificial.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Producto</h4>
+                    <ul>
+                        <li><a href="#solucion">Solucion</a></li>
+                        <li><a href="#precios">Precios</a></li>
+                        <li><a href="#seguridad">Seguridad</a></li>
+                        <li><a href="#contacto">Prueba gratuita</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Iurefficient</h4>
+                    <ul>
+                        <li><a href="/">Para Abogados</a></li>
+                        <li><a href="https://blog.iurefficient.com" target="_blank">Blog</a></li>
+                        <li><a href="https://ayuda.iurefficient.com" target="_blank">Centro de Ayuda</a></li>
+                        <li><a href="mailto:contacto@iurefficient.com">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="../legal/privacidad.html">Aviso de Privacidad</a></li>
+                        <li><a href="../legal/terminos.html">Terminos y Condiciones</a></li>
+                        <li><a href="../seguridad/">Seguridad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Iurefficient. Todos los derechos reservados.</p>
+                <p class="beta-note">Ya usas Iurefficient para tu despacho? Tu cuenta actual incluye acceso a Teams sin costo adicional durante la fase beta.</p>
+                <p>Hecho con ❤️ en Mexico</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top/Bottom Button -->
+    <button class="scroll-btn" id="scrollBtn" aria-label="Scroll">
+        <svg class="scroll-icon-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+        </svg>
+        <svg class="scroll-icon-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 11l-5-5-5 5M17 18l-5-5-5 5"/>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

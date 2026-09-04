@@ -1,0 +1,62 @@
+ {                                                                                                                                    
+    "tagline": {                                                                                                                       
+      "es": "Tu experto, a un click de distancia",                                                                                     
+      "en": "Your expert, one click away"                                                                                              
+    },                                                  
+    "es": [                                                                                                                            
+      {
+        "title": "Análisis de Documentos con IA",
+        "description": "Sube documentos y haz preguntas en lenguaje natural. Nuestro sistema RAG encuentra respuestas relevantes en todos tus archivos.",
+        "image": "https://iurefficient.com/images/tips/rag-demo.png"                                                                   
+      },                                                                                                                               
+      {                                  
+        "title": "Investigación Automatizada",                                                                                         
+        "description": "El sistema busca en la web, resume hallazgos y construye bases de conocimiento automáticamente para tus casos.",                                                                                                                             
+        "image": "https://iurefficient.com/images/tips/research-demo.png"
+      },                                                                                                                               
+      {                                                 
+        "title": "Colaboración Inteligente",
+        "description": "Notificaciones en tiempo real, asignación de tareas y feeds de actividad mantienen al equipo sincronizado."
+      },                                                                                                                               
+      {
+        "title": "Integraciones Sin Fricciones",                                                                                       
+        "description": "Conecta Google Workspace, Microsoft 365 y tu sistema ERP para un flujo de trabajo unificado."
+      },                                                                                                                               
+      {
+        "title": "Seguridad Multi-Tenant",                                                                                             
+        "description": "Tus datos están aislados y cifrados. Control de acceso por roles, logs de auditoría y 2FA protegen tu práctica."                                                                                                                           
+      },
+      {                                                                                                                                
+        "title": "Plataforma Versátil",                 
+        "description": "Diseñada para firmas legales, contables, ingeniería, salud y cualquier práctica profesional especializada."
+      }                                                                                                                                
+    ],
+    "en": [                                                                                                                            
+      {                                                 
+        "title": "AI-Powered Document Analysis",
+        "description": "Upload documents and ask questions in natural language. Our RAG system finds relevant answers across all your project files.",                                                                                                                     
+        "image": "https://iurefficient.com/images/tips/rag-demo.png"
+      },                                                                                                                               
+      {                                                 
+        "title": "Automated Research",   
+        "description": "Let the system search the web, summarize findings, and build knowledge bases automatically for your cases.",
+        "image": "https://iurefficient.com/images/tips/research-demo.png"                                                              
+      },
+      {                                                                                                                                
+        "title": "Smart Collaboration",                 
+        "description": "Real-time notifications, task assignments, and team activity feeds keep everyone in sync."                     
+      },
+      {                                                                                                                                
+        "title": "Seamless Integrations",               
+        "description": "Connect Google Workspace, Microsoft 365, and your ERP system for a unified workflow."                          
+      },
+      {                                                                                                                                
+        "title": "Multi-Tenant Security",               
+        "description": "Your data is isolated and encrypted. Role-based access, audit logs, and 2FA keep your practice secure."        
+      },
+      {                                                                                                                                
+        "title": "Industry-Agnostic Platform",          
+        "description": "Designed for legal, accounting, engineering, healthcare, and any specialized professional practice."           
+      }
+    ]                                                                                                                                  
+  }  
