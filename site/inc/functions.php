@@ -6,9 +6,33 @@ declare(strict_types=1);
 function iure_brand(array $page): string
 {
     $r = $page['route'] ?? '';
+    $item = $GLOBALS['item'] ?? null;
     if ($r === 'home' || $r === 'page:precios') return 'teams';
-    if ($r === 'item:planes' && !empty($GLOBALS['item']['product']) && $GLOBALS['item']['product'] !== 'derecho') return 'teams';
+    if ($r === 'item:planes' && !empty($item['product']) && $item['product'] !== 'derecho') return 'teams';
+    // Páginas, artículos y proyectos eligen su cabecera y pie en el panel (campo "brand").
+    if (in_array($r, ['item:paginas', 'item:articulos', 'item:proyectos'], true) && ($item['brand'] ?? '') === 'teams') return 'teams';
     return 'derecho';
+}
+
+/** Hoja de estilo extra de una ruta (site/assets/css/<nombre>.css) y clase page-<nombre> del body. */
+function iure_page_css(string $route): string
+{
+    if ($route === 'page:precios') return 'precios';
+    if ($route === 'page:seguridad') return 'seguridad';
+    // Legales, páginas libres, artículos, proyectos, preguntas y 404 comparten la tipografía de legal.css
+    if ($route === '404' || preg_match('#^(item|list):(legal|paginas|articulos|proyectos|faq)$#', $route)) return 'legal';
+    return '';
+}
+
+/** Bloque final de contacto para páginas libres, artículos y proyectos (textos pg_cta_*). */
+function iure_page_cta(string $brand): string
+{
+    $lang = cms_default_lang();
+    $t = fn(string $k, string $d) => (string) cms_t($k, $lang, $d);
+    $dest = ($brand === 'teams' ? cms_url('home', $lang) : cms_url('page:derecho', $lang) . '/') . '#contacto';
+    return '<div class="page-cta"><h2>' . cms_e($t('pg_cta_title', '¿Quieres ver Iurefficient en acción?')) . '</h2>'
+        . '<p>' . cms_e($t('pg_cta_text', 'Agenda una demostración o empieza tu prueba gratuita hoy mismo.')) . '</p>'
+        . '<a class="btn btn-primary btn-lg" href="' . cms_e($dest) . '">' . cms_e($t('pg_cta_button', 'Solicitar demo')) . '</a></div>';
 }
 
 /** Texto fijo que puede contener HTML sencillo (spans de color, negritas). Sin escapar. */
@@ -114,7 +138,7 @@ function iure_contact_form(string $origin, string $buttonText): string
     return $h . '</form>';
 }
 
-/** Añade id a los <h2> del contenido legal y devuelve [html, [[id, texto], …]] para el índice. */
+/** Añade id a los <h2> del contenido (legales y páginas libres) y devuelve [html, [[id, texto], …]] para el índice. */
 function iure_legal_body(string $html): array
 {
     $toc = [];

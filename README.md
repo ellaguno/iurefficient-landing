@@ -15,6 +15,9 @@ tag `pre-cms-migration` de este repositorio y en `../backups/2026-09-03/`.
 | `/precios` | Planes, comparativa y FAQ | `site/templates/precios.php` + planes ("precios") + FAQ ("precios") |
 | `/seguridad` | Seguridad, confidencialidad y privacidad | `site/templates/seguridad.php` + FAQ ("seguridad") |
 | `/legal/privacidad`, `/legal/terminos` | Páginas legales | tipo de contenido "Páginas legales" |
+| `/pages/{url}` | Páginas libres creadas desde el panel | tipo "Páginas" + `site/templates/pagina.php` |
+| `/articulos/{url}` | Artículos (blog) — declarado, sin uso aún | tipo "Artículos" + `articulo.php`; índice `/articulos/` desactivado (`no_list`) |
+| `/proyectos/{url}` | Proyectos / casos de éxito — declarado, sin uso aún | tipo "Proyectos" + `proyecto.php`; índice `/proyectos/` desactivado (`no_list`) |
 | `/help-portal/` | Centro de ayuda | carpeta PHP independiente (fuera del CMS) |
 | `/presentacion/` | Presentación comercial | HTML estático (fuera del CMS) |
 | `/admin/` | Panel | núcleo `cms/` |
@@ -27,7 +30,17 @@ Las URLs viejas (`/teams`, `/legal/privacidad.php`, `*.html`) redirigen con 301 
   qué página se muestra (Teams, Abogados o Precios).
 - **Equipo**: nombre, cargo, semblanza y foto.
 - **Preguntas frecuentes**: pregunta y respuesta, para /precios o /seguridad.
+En el panel todos los tipos de contenido cuelgan del grupo plegable **Páginas** (campo `group` de cada tipo en
+`site/config.php`).
+
+- **Páginas libres**: páginas de contenido libre en `/pages/{url}`. Título, subtítulo, resumen, contenido con editor visual,
+  imagen de cabecera, índice opcional de subtítulos, bloque de contacto opcional y elección de cabecera/pie
+  (Iurefficient o Teams). Para enlazarlas: Menú (portada) o Ajustes → Menú de la landing para abogados.
 - **Páginas legales**: título, fecha, resumen y contenido con editor visual. El índice se genera de los subtítulos.
+- **Artículos** y **Proyectos**: declarados para el futuro con plantillas de detalle e índice listas
+  (`articulos.php`/`articulo.php`, `proyectos.php`/`proyecto.php`). Los elementos publicados ya se ven en
+  `/articulos/{url}` y `/proyectos/{url}`; el índice público y su entrada en el sitemap se activan quitando
+  `'no_list' => true` del tipo en `site/config.php`. El menú sigue apuntando al blog externo (Ajustes → Blog).
 - **Textos del sitio**: títulos, subtítulos, botones, textos del pie, SEO de cada página.
 - **Ajustes**: correo, redes, logotipos, capturas de la galería 3D, URLs de demos, blog, video de YouTube y menú de la
   landing para abogados.
@@ -39,12 +52,16 @@ Las URLs viejas (`/teams`, `/legal/privacidad.php`, `*.html`) redirigen con 301 
 ## Estructura
 
 ```
-index.php, admin/, cms/     núcleo de cms_simple (no se edita; se actualiza sustituyendo cms/)
+index.php, admin/, cms/     núcleo de cms_simple 1.1.0 (se actualiza sustituyendo cms/). Cambio local pendiente de
+                            llevar al repo cms_simple: grupos plegables en el menú del panel ('group' en cada tipo;
+                            cms/admin/inc/layout.php, assets/admin.css, assets/admin.js)
 site/config.php             tipos de contenido, páginas, ajustes y grupos de textos
 site/inc/layout.php         cabecera y pie (marca Teams o Abogados según la página)
 site/inc/functions.php      helpers: tarjetas de plan, formulario, índice legal…
-site/templates/             home, derecho, precios, seguridad, legal, plan, miembro, pregunta, 404
-site/assets/css|js|img      styles.css, teams.css, precios.css, seguridad.css, legal.css, main.js, imágenes
+site/templates/             home, derecho, precios, seguridad, legal, pagina, articulos/articulo, proyectos/proyecto,
+                            plan, miembro, pregunta, 404
+site/assets/css|js|img      styles.css, teams.css, precios.css, seguridad.css, legal.css (legales, páginas libres,
+                            artículos, proyectos, preguntas y 404), main.js, imágenes
 site/defaults/              ajustes, textos y menú iniciales (copia de data/)
 data/                       contenido real: settings, strings, menu, redirects, content/<tipo>/<slug>.json
 uploads/                    archivos subidos desde el panel (no se versionan)
@@ -69,6 +86,16 @@ La primera vez que abres `/admin/` te pide crear el usuario administrador (`data
 4. Revisa Ajustes → correo de contacto y Ajustes → Imágenes (opcional: botón "Generar WebP").
 5. Comprueba `/`, `/derecho`, `/precios`, `/seguridad`, `/legal/privacidad`, `/help-portal/`, `/presentacion/`
    y `/sitemap.xml`.
+
+### Actualizar un sitio ya desplegado
+
+Sube solo el código: todo **excepto** `data/` y `uploads/` (ahí viven el contenido, los ajustes, los usuarios y los
+archivos subidos en producción). Los textos nuevos que traiga el tema se completan solos desde
+`site/defaults/strings.json` y aparecen en Textos del sitio. Para generar el zip:
+
+```bash
+zip -r ../iurefficient-landing-subir.zip . -x '.git/*' '.claude/*' 'data/*' 'uploads/*' 'land.zip' 'oimage.*' 'cache/*' '_router-dev.php'
+```
 
 Requisitos: PHP 7.4+ con `json`, `mbstring`, `fileinfo`, `session` (y `gd` para WebP); Apache con `mod_rewrite`.
 

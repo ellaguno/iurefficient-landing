@@ -414,5 +414,77 @@
   "seguridad_meta_desc": {
     "es": "Seguridad, Confidencialidad y Privacidad en Iurefficient. Conoce cómo protegemos tus datos y los de tus clientes con cifrado de nivel bancario.",
     "help": ""
+  },
+  "pg_cta_title": {
+    "es": "¿Quieres ver Iurefficient en acción?",
+    "help": "Título del bloque de contacto al final de páginas, artículos y proyectos"
+  },
+  "pg_cta_text": {
+    "es": "Agenda una demostración o empieza tu prueba gratuita hoy mismo.",
+    "help": ""
+  },
+  "pg_cta_button": {
+    "es": "Solicitar demo",
+    "help": ""
+  },
+  "toc_title": {
+    "es": "Contenido",
+    "help": "Título del índice de una página libre"
+  },
+  "articulos_title": {
+    "es": "Artículos",
+    "help": "Título del índice /articulos/"
+  },
+  "articulos_intro": {
+    "es": "",
+    "help": "Texto bajo el título del índice de artículos (opcional)"
+  },
+  "articulos_empty": {
+    "es": "Aún no hay artículos publicados.",
+    "help": ""
+  },
+  "articulos_meta_title": {
+    "es": "Artículos",
+    "help": "SEO: título de /articulos/"
+  },
+  "articulos_meta_desc": {
+    "es": "Artículos y guías de Iurefficient sobre inteligencia artificial para despachos y equipos.",
+    "help": "SEO: descripción de /articulos/"
+  },
+  "proyectos_title": {
+    "es": "Proyectos",
+    "help": "Título del índice /proyectos/"
+  },
+  "proyectos_intro": {
+    "es": "",
+    "help": "Texto bajo el título del índice de proyectos (opcional)"
+  },
+  "proyectos_empty": {
+    "es": "Aún no hay proyectos publicados.",
+    "help": ""
+  },
+  "proyectos_meta_title": {
+    "es": "Proyectos",
+    "help": "SEO: título de /proyectos/"
+  },
+  "proyectos_meta_desc": {
+    "es": "Casos de éxito y proyectos realizados con Iurefficient.",
+    "help": "SEO: descripción de /proyectos/"
+  },
+  "published_on": {
+    "es": "Publicado el",
+    "help": "Antes de la fecha en un artículo"
+  },
+  "by_author": {
+    "es": "por",
+    "help": "Antes del autor en un artículo"
+  },
+  "read_more": {
+    "es": "Leer más",
+    "help": ""
+  },
+  "back_to_list": {
+    "es": "Volver al índice",
+    "help": ""
   }
 }

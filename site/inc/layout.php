@@ -2,6 +2,7 @@
 /**
  * Iurefficient — layout del tema: site_header($page) y site_footer($page).
  * Dos "marcas" visuales: Teams (portada y /precios) y Abogados (/derecho, /seguridad, /legal/…).
+ * Las páginas libres, artículos y proyectos eligen la marca en el panel (ver iure_brand()).
  * $page trae: lang, route, path, title, desc, canonical, alt, jsonld, og_image, noindex.
  */
 declare(strict_types=1);
@@ -16,7 +17,7 @@ function site_header(array $page): void
     $route = $page['route'] ?? '';
     $v = CMS_VERSION . '.' . (string) @filemtime(CMS_SITE . '/assets/css/styles.css');
     $landing = in_array($route, ['home', 'page:derecho'], true);   // hero con shader, galería 3D, video
-    $pageCss = ['page:precios' => 'precios', 'page:seguridad' => 'seguridad', 'item:legal' => 'legal'][$route] ?? '';
+    $pageCss = iure_page_css($route);
     $bodyClass = 'brand-' . $brand . ($pageCss ? ' page-' . $pageCss : '') . ($route === '404' ? ' page-404' : '');
     ?><!DOCTYPE html>
 <html lang="<?= cms_e($lang) ?>"<?= $brand === 'teams' ? ' class="teams-page"' : '' ?>>
