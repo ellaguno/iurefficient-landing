@@ -32,7 +32,7 @@ function site_header(array $page): void
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
 <?php endif; ?>
     <link rel="stylesheet" href="<?= cms_asset('css/styles.css') ?>?v=<?= $v ?>">
-<?php if ($brand === 'teams'): ?>
+<?php if ($route === 'home'): // teams.css restyla .comparison-table; solo en la portada ?>
     <link rel="stylesheet" href="<?= cms_asset('css/teams.css') ?>?v=<?= $v ?>">
 <?php endif; ?>
 <?php if ($pageCss): ?>

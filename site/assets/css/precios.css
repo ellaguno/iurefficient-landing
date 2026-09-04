@@ -202,3 +202,22 @@
     font-weight: 500;
     opacity: 0.7;
 }
+
+/* Insignia "Teams" de la cabecera (copiada de teams.css, que no se carga aquí) */
+:root { --teams-gradient: linear-gradient(135deg, #4f46e5 0%, #0891b2 100%); }
+.logo-teams-badge {
+    display: inline-flex;
+    align-items: center;
+    background: var(--teams-gradient);
+    color: var(--white);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.45rem;
+    border-radius: var(--radius-sm);
+    margin-left: 0.35rem;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
