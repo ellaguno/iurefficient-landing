@@ -78,6 +78,19 @@ Paquete **motion** (reescrito en limpio a partir de katapolt.mx, sobre GSAP 3.13
 animadas, titular grande, galería con parallax; efectos texto revelado, aparición escalonada, parallax de fondo y
 cursor magnético de sitio. Cada paquete lleva su `LICENSES.md`.
 
+### Vistas previas de bloques y efectos
+
+Cada bloque y efecto tiene una imagen o GIF que se muestra en el manual (catálogo) y en el selector del constructor al
+pasar el ratón; el efecto elegido en Estilo también muestra la suya. Convención de archivos: `site/assets/previews/
+<clave>.(gif|png)` para bloques del tema y `cms/packs/<paquete>/assets/previews/<bloque>.*` y `efecto-<efecto>.*`
+para paquetes. Se generan solas: `tools/make-previews.sh http://127.0.0.1:8080` (Chrome sin interfaz sobre páginas
+de demostración con `?cmsbare=1`; `CMS_ROOT=/otro/sitio … --solo-tema` para otro sitio, `--solo=clave` para una).
+
+### Respaldos
+
+Admin → Respaldos: zip de `data/` y `uploads/` (opcionalmente `site/`) en `/backups`, con nota; descargar, restaurar
+(con respaldo automático previo y conservando usuarios) y eliminar. Requiere la extensión zip de PHP.
+
 ### Manual embebido
 
 Admin → Manual: diez capítulos en `cms/manual/*.md` (Markdown con capturas en `cms/manual/img/`), desde instalar y
@@ -119,7 +132,7 @@ Genera además `tools/wp-redirects.txt` con las reglas 301 para el `.htaccess` d
 ## Estructura
 
 ```
-index.php, admin/, cms/     núcleo de cms_simple 1.6.0 (cms/packs: paquetes compartidos; cms/assets/cms.js: cargador) (se actualiza sustituyendo cms/). Cambios locales pendientes de
+index.php, admin/, cms/     núcleo de cms_simple 1.8.0 (cms/packs: paquetes compartidos; cms/assets/cms.js: cargador; cms/manual) (se actualiza sustituyendo cms/). Cambios locales pendientes de
                             llevar al repo cms_simple: grupos en el menú del panel ('group'), textos por defecto
                             completados desde site/defaults, 'noindex' por tipo, URL canónica (site_url), /llms.txt,
                             cms_jsonld_graph() acepta null (páginas sin schema)

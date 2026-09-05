@@ -1897,3 +1897,8 @@ section {
         padding: 0 var(--container-padding);
     }
 }
+
+/* vistas previas de bloques (?cmsbare=1): sin cabecera, sin desplazamiento del hero */
+body.cms-bare { padding-top: 0; }
+body.cms-bare .sec-hero.hero { padding-top: 60px; min-height: auto; }
+body.cms-bare .legal-page { padding-top: var(--spacing-3xl); }

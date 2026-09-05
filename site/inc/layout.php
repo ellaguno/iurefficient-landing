@@ -40,7 +40,8 @@ function site_header(array $page): void
     <link rel="stylesheet" href="<?= cms_asset('css/sections.css') ?>?v=<?= $v ?>">
 <?php endif; ?>
 </head>
-<body class="<?= $bodyClass ?>">
+<body class="<?= $bodyClass ?><?= !empty($_GET['cmsbare']) ? ' cms-bare' : '' ?>">
+<?php if (!empty($_GET['cmsbare'])) return; // solo el contenido: vistas previas de bloques ?>
     <header class="header" id="header">
         <div class="container">
             <nav class="nav">
@@ -87,6 +88,7 @@ function site_header(array $page): void
 
 function site_footer(array $page): void
 {
+    if (!empty($_GET['cmsbare'])) { $v = CMS_VERSION . '.' . (string) @filemtime(CMS_SITE . '/assets/js/main.js'); echo '<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script defer src="' . cms_asset('js/main.js') . '?v=' . $v . '"></script></body></html>'; return; }
     $lang = $page['lang'];
     $S = cms_settings();
     $t = fn(string $k, $d = '') => cms_t($k, $lang, $d);
