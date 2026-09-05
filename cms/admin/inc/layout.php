@@ -102,6 +102,7 @@ function admin_footer(): void
 <script src="<?= $cm . '/' . $f ?>"></script>
 <?php endforeach; endif; ?>
 <script src="<?= $assets ?>/admin.js?v=<?= CMS_VERSION ?>"></script>
+<script src="<?= $assets ?>/builder.js?v=<?= CMS_VERSION ?>"></script>
 </body>
 </html>
 <?php

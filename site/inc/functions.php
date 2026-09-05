@@ -30,10 +30,16 @@ function iure_page_cta(string $brand): string
 {
     $lang = cms_default_lang();
     $t = fn(string $k, string $d) => (string) cms_t($k, $lang, $d);
-    $dest = ($brand === 'teams' ? cms_url('home', $lang) : cms_url('page:derecho', $lang) . '/') . '#contacto';
+    $dest = ($brand === 'teams' ? cms_url('home', $lang) : iure_url_derecho($lang)) . '#contacto';
     return '<div class="page-cta"><h2>' . cms_e($t('pg_cta_title', '¿Quieres ver Iurefficient en acción?')) . '</h2>'
         . '<p>' . cms_e($t('pg_cta_text', 'Agenda una demostración o empieza tu prueba gratuita hoy mismo.')) . '</p>'
         . '<a class="btn btn-primary btn-lg" href="' . cms_e($dest) . '">' . cms_e($t('pg_cta_button', 'Solicitar demo')) . '</a></div>';
+}
+
+/** URL de la landing de abogados (página "derecho" del constructor). */
+function iure_url_derecho(string $lang): string
+{
+    return cms_url('item:paginas', $lang, 'derecho');
 }
 
 /** Texto fijo que puede contener HTML sencillo (spans de color, negritas). Sin escapar. */
@@ -185,10 +191,11 @@ function iure_jsonld(array $page): ?array
         }
         return $q ? ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => $q] : null;
     }
-    if ($route === 'home' || $route === 'page:derecho') {
+    $isDerecho = $route === 'page:derecho' || ($route === 'item:paginas' && (($GLOBALS['item']['slug'] ?? '') === 'derecho'));
+    if ($route === 'home' || $isDerecho) {
         $teams = $route === 'home';
         $planes = iure_planes($teams ? 'teams' : 'derecho');
-        $url = cms_abs_url($teams ? cms_url('home', $lang) : cms_url('page:derecho', $lang));
+        $url = cms_abs_url($teams ? cms_url('home', $lang) : iure_url_derecho($lang));
         $offers = [];
         foreach ($planes as $p) {
             $price = preg_replace('/[^\d.]/', '', (string) ($p['price'] ?? ''));
@@ -254,7 +261,7 @@ function iure_search_sources(string $lang): array
     // páginas fijas: título SEO, descripción y todos los textos de su grupo en Textos del sitio
     $pages = [
         'home'      => ['Portada Teams', 'home_meta_title', 'home_meta_desc', cms_url('home', $lang)],
-        'derecho'   => ['Landing Abogados (/derecho)', 'derecho_meta_title', 'derecho_meta_desc', cms_url('page:derecho', $lang)],
+        'derecho'   => ['Landing Abogados (/derecho)', 'derecho_meta_title', 'derecho_meta_desc', iure_url_derecho($lang)],
         'precios'   => ['Precios (/precios)', 'precios_meta_title', 'precios_meta_desc', cms_url('page:precios', $lang)],
         'seguridad' => ['Seguridad (/seguridad)', 'seguridad_meta_title', 'seguridad_meta_desc', cms_url('page:seguridad', $lang)],
     ];
@@ -321,4 +328,69 @@ function iure_search_form(string $brand, string $q = '', bool $inline = true): s
     return '<form class="search-form" action="' . cms_e($action) . '" method="get" role="search">' . $hidden
         . '<input type="search" name="q" value="' . cms_e($q) . '" placeholder="' . cms_e($ph) . '" aria-label="' . cms_e($ph) . '" autofocus>'
         . '<button type="submit" class="btn btn-primary">' . $icon . ' ' . cms_e($btn) . '</button></form>';
+}
+
+/* ------------------------------------------------------------------ bloques del constructor */
+
+/** Cabecera estándar de una sección (título con HTML permitido + subtítulo). */
+function iure_section_header(string $title, string $subtitle = '', string $class = 'section-header'): string
+{
+    if (trim($title) === '' && trim($subtitle) === '') return '';
+    $h = '<div class="' . cms_e($class) . '" data-aos="fade-up">';
+    if (trim($title) !== '') $h .= '<h2 class="section-title">' . iure_inline_html($title) . '</h2>';
+    if (trim($subtitle) !== '') $h .= '<p class="section-subtitle">' . iure_inline_html($subtitle) . '</p>';
+    return $h . '</div>';
+}
+
+/** Texto corto con HTML sencillo permitido (span, strong, em, br, a); todo lo demás se escapa. */
+function iure_inline_html(string $s): string
+{
+    $s = strip_tags($s, '<span><strong><em><b><i><br><a><u><small>');
+    return preg_replace('/\s+on[a-z]+\s*=\s*("[^"]*"|\'[^\']*\'|[^\s>]+)/i', '', $s) ?? $s;
+}
+
+/** "Texto | URL | estilo" → [texto, url, estilo]. */
+function iure_split(string $line, int $parts = 3): array
+{
+    return array_pad(array_map('trim', explode('|', $line, $parts)), $parts, '');
+}
+
+/** URL relativa al sitio ("/precios/") o absoluta. */
+function iure_href(string $u): string
+{
+    $u = trim($u);
+    if ($u === '') return '#';
+    return preg_match('#^(https?:)?//|^mailto:|^tel:|^\#|^\{\{base\}\}#i', $u) ? str_replace('{{base}}', CMS_BASE, $u) : CMS_BASE . '/' . ltrim($u, '/');
+}
+
+/** Icono de tarjeta: emoji tal cual, o SVG por nombre. */
+function iure_card_icon(string $icon): string
+{
+    $svg = [
+        'doc'      => '<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>',
+        'users'    => '<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>',
+        'bot'      => '<path d="M12 2a2 2 0 012 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 017 7h1a1 1 0 011 1v3a1 1 0 01-1 1h-1v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1H2a1 1 0 01-1-1v-3a1 1 0 011-1h1a7 7 0 017-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 012-2z"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/>',
+        'calendar' => '<rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>',
+        'lock'     => '<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/>',
+        'shield'   => '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+        'check'    => '<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path d="M9 12l2 2 4-4"/>',
+        'cloud'    => '<path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/>',
+        'chart'    => '<path d="M3 3v18h18"/><path d="M7 15l4-4 4 4 5-6"/>',
+        'clock'    => '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>',
+        'search'   => '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+        'star'     => '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/>',
+    ];
+    $k = strtolower(trim($icon));
+    if (isset($svg[$k])) return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">' . $svg[$k] . '</svg>';
+    return cms_e($icon);
+}
+
+/** Id de YouTube o URL de embed (YouTube/Vimeo) a partir de una URL o id. */
+function iure_video_embed(string $url): string
+{
+    $url = trim($url);
+    if (preg_match('#(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?(?:.*&)?v=|shorts/)|youtu\.be/)([A-Za-z0-9_-]{6,})#', $url, $m)) return 'https://www.youtube-nocookie.com/embed/' . $m[1];
+    if (preg_match('#vimeo\.com/(?:video/)?(\d+)#', $url, $m)) return 'https://player.vimeo.com/video/' . $m[1];
+    if (preg_match('/^[A-Za-z0-9_-]{6,}$/', $url)) return 'https://www.youtube-nocookie.com/embed/' . $url;
+    return $url;
 }

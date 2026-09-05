@@ -76,7 +76,8 @@ function cms_content_dir(string $type): string
 /** Todos los elementos de un tipo (publicados por defecto), ordenados según el esquema. */
 function cms_items(string $type, bool $published_only = true): array
 {
-    static $cache = [];
+    $cache = &$GLOBALS['cms_items_cache'];
+    if (!is_array($cache)) $cache = [];
     $k = $type . ($published_only ? ':pub' : ':all');
     if (isset($cache[$k])) return $cache[$k];
     $def = cms_type($type);
@@ -85,6 +86,8 @@ function cms_items(string $type, bool $published_only = true): array
         $it = cms_json_read($f, null);
         if (is_array($it) && !empty($it['slug'])) $items[$it['slug']] = $it;
     }
+    // elementos en memoria (vista previa del constructor, sin guardar)
+    foreach ((array) ($GLOBALS['cms_item_override'][$type] ?? []) as $sl => $it) $items[$sl] = $it;
     if ($published_only) $items = array_filter($items, 'cms_item_is_live');
     $sort = $def['sort'] ?? ['field' => 'date', 'dir' => 'desc'];
     $field = $sort['field'] ?? 'date';
@@ -95,6 +98,12 @@ function cms_items(string $type, bool $published_only = true): array
         return strcmp((string) $va, (string) $vb) * $dir;
     });
     return $cache[$k] = $items;
+}
+
+/** Vacía la caché de elementos (tras guardar o al inyectar un elemento en memoria). */
+function cms_items_flush(): void
+{
+    $GLOBALS['cms_items_cache'] = [];
 }
 
 function cms_item(string $type, string $slug, bool $published_only = true): ?array
@@ -129,7 +138,9 @@ function cms_item_save(string $type, array $item): bool
             }
         }
     }
-    return cms_json_write($file, $item);
+    $ok = cms_json_write($file, $item);
+    cms_items_flush();
+    return $ok;
 }
 
 function cms_versions_dir(string $type, string $slug): string

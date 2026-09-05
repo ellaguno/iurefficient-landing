@@ -2,7 +2,7 @@
 $h = fn(string $k, string $d = '') => iure_h($k, $d);
 $planes = iure_planes('precios');
 $faq = iure_faq('precios');
-$contact = cms_url('page:derecho', $lang) . '/#contacto';
+$contact = iure_url_derecho($lang) . '/#contacto';
 $check = '<span class="check-icon">✓</span>';
 $no = '<span class="x-icon">—</span>';
 // Tabla comparativa: [categoría => [característica => [valor por plan…]]]. Se edita aquí (Código del tema → precios.php).

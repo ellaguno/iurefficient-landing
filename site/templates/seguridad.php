@@ -1,7 +1,7 @@
 <?php /** Seguridad, confidencialidad y privacidad (/seguridad). Variables: $lang, $S, $t, $page */ declare(strict_types=1);
 $h = fn(string $k, string $d = '') => iure_h($k, $d);
 $faq = iure_faq('seguridad');
-$contact = cms_url('page:derecho', $lang) . '/#contacto';
+$contact = iure_url_derecho($lang) . '/#contacto';
 $privacidad = cms_url('item:legal', $lang, 'privacidad');
 $emailSec = 'seguridad@iurefficient.com';
 $emailReport = 'security@iurefficient.com';

@@ -47,28 +47,8 @@ if (admin_is_post() && admin_post('action') === 'restore' && !$is_new) {
 }
 if (admin_is_post()) {
     admin_csrf_check();
-    $new = ['slug' => '', 'status' => admin_post('status') === 'published' ? 'published' : 'draft'];
-    $new['publish_at'] = preg_match('/^\d{4}-\d{2}-\d{2}$/', admin_post('publish_at')) && admin_post('publish_at') > date('Y-m-d') ? admin_post('publish_at') : '';
-    foreach ($fields as $name => $fd) $new[$name] = admin_read_field($name, $fd);
-    $titleVal = $new[$titleField] ?? '';
-    $titleMain = is_array($titleVal) ? ($titleVal[$dl] ?? '') : (string) $titleVal;
-    $slug = cms_slugify(admin_post('slug') ?: $titleMain);
-    if ($titleMain === '') $errors[] = 'El campo "' . admin_field_label($titleField, $fields[$titleField] ?? []) . '" es obligatorio' . (count(cms_langs()) > 1 ? ' en ' . strtoupper($dl) : '') . '.';
-    foreach ($fields as $name => $fd) {
-        if (empty($fd['required']) || $name === $titleField) continue;
-        $v = $new[$name]; $v = is_array($v) && !isset($v[0]) ? ($v[$dl] ?? '') : $v;
-        if ($v === '' || $v === []) $errors[] = 'El campo "' . admin_field_label($name, $fd) . '" es obligatorio.';
-    }
-    if ($slug === '') $errors[] = 'No se pudo generar la URL (slug).';
-    if ($tree && ($new['parent'] ?? '') === '' && in_array($slug, cms_reserved_segments(), true)) $errors[] = 'La URL "' . $slug . '" está reservada por otra sección del sitio; elige otra o ponla bajo una página padre.';
-    if ($tree && ($new['parent'] ?? '') === $slug) $new['parent'] = '';
-    if ($slug && $slug !== $orig && is_file(cms_content_dir($type) . '/' . $slug . '.json')) $errors[] = 'Ya existe un elemento con la URL "' . $slug . '".';
-    $new['slug'] = $slug;
-    $new['seo_title'] = admin_read_field('seo_title', ['type' => 'text', 'i18n' => true]);
-    $new['seo_desc'] = admin_read_field('seo_desc', ['type' => 'textarea', 'i18n' => true]);
-    $new['created'] = $item['created'] ?? date('Y-m-d');
-    $new['updated'] = date('Y-m-d');
-    $item = $new + $item;
+    [$item, $errors] = admin_read_item($type, $def, $fields, $item, $orig);
+    $slug = $item['slug'];
     if (!$errors) {
         if ($tree) { $all2 = cms_items($type, false); $all2[$slug] = $item; $item['path'] = cms_tree_path($type, $all2, $slug); }
         if (cms_item_save($type, $item)) {
@@ -87,18 +67,30 @@ if (admin_is_post()) {
 
 $main = array_filter($fields, fn($f) => empty($f['sidebar']));
 $side = array_filter($fields, fn($f) => !empty($f['sidebar']));
+$builder = (bool) array_filter($fields, fn($f) => ($f['type'] ?? '') === 'sections');
 $singular = $def['label_singular'] ?? 'Elemento';
 admin_header(($is_new ? 'Nuevo: ' : 'Editar: ') . $singular, 'content:' . $type);
 foreach ($errors as $e) echo '<div class="ad-flash err">' . cms_e($e) . '</div>';
 $titleInputName = !empty($fields[$titleField]['i18n']) ? $titleField . '[' . $dl . ']' : $titleField;
 ?>
-<form method="post" class="ad-form ad-form-wide" data-slug-source="<?= cms_e($titleInputName) ?>">
+<form method="post" class="ad-form ad-form-wide<?= $builder ? ' ad-builder' : '' ?>" data-slug-source="<?= cms_e($titleInputName) ?>"<?= $builder ? ' data-builder' : '' ?>>
   <?= admin_csrf_field() ?>
   <?php admin_lang_switch(); ?>
+<?php if ($builder): ?>
+  <div class="ad-builder-bar">
+    <span class="ad-help">Vista previa en vivo: se actualiza sola al editar. Clic en una sección de la vista previa para abrirla aquí.</span>
+    <span class="ad-builder-devices"><button type="button" class="on" data-device="desktop" title="Escritorio">▭</button><button type="button" data-device="tablet" title="Tableta">▯</button><button type="button" data-device="mobile" title="Móvil">▮</button></span>
+    <button type="button" class="ad-btn ad-btn-sm ad-btn-light" data-preview-refresh>Actualizar vista previa</button>
+    <button type="submit" class="ad-btn ad-btn-sm" formaction="<?= admin_url('preview', ['type' => $type, 'slug' => $orig]) ?>" formtarget="cms-preview" formnovalidate hidden data-preview-submit>Vista previa</button>
+  </div>
+<?php endif; ?>
   <div class="ad-grid-main">
-    <div>
+    <div class="ad-form-main">
 <?php foreach ($main as $name => $fd) admin_field($name, $fd, $item[$name] ?? ''); ?>
     </div>
+<?php if ($builder): ?>
+    <div class="ad-builder-preview"><iframe name="cms-preview" class="ad-preview-frame" title="Vista previa" data-preview-frame src="about:blank"></iframe></div>
+<?php endif; ?>
     <aside class="ad-sidebar">
       <?php admin_seo_fields($item); ?>
       <div class="ad-field"><label>Estado</label>

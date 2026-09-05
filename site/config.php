@@ -4,7 +4,7 @@
  *
  * Rutas públicas:
  *   /                Portada Teams (home.php)
- *   /derecho         Landing para abogados (derecho.php)
+ *   /derecho         Landing para abogados: página por secciones del constructor (paginas/derecho.json)
  *   /precios         Planes y comparativa (precios.php)
  *   /seguridad       Seguridad, confidencialidad y privacidad (seguridad.php)
  *   /buscar?q=       Buscador del sitio (buscar.php, noindex)
@@ -45,15 +45,12 @@ return [
             'title_field' => 'title', 'excerpt_field' => 'summary', 'image_field' => 'image',
             'fields' => [
                 'title'    => ['type' => 'text', 'label' => 'Título', 'required' => true],
-                'subtitle' => ['type' => 'text', 'label' => 'Subtítulo (bajo el título; opcional)'],
-                'summary'  => ['type' => 'textarea', 'label' => 'Resumen (recuadro destacado al inicio y descripción para buscadores; opcional)', 'rows' => 3],
-                'body'     => ['type' => 'html', 'label' => 'Contenido', 'size' => 'lg',
-                               'help' => 'Escribe como en Word. La barra permite subir imágenes, insertar de la Biblioteca y videos de YouTube. Las citas se muestran como recuadros destacados.'],
+                'sections' => ['type' => 'sections', 'label' => 'Secciones de la página',
+                               'help' => 'La página se arma con secciones: hero, texto, tarjetas, video, planes, preguntas, llamado a la acción… Cada una tiene su contenido y su estilo.'],
+                'summary'  => ['type' => 'textarea', 'label' => 'Descripción para buscadores y tarjetas (opcional)', 'rows' => 2, 'sidebar' => true],
                 'brand'    => ['type' => 'select', 'label' => 'Cabecera y pie', 'sidebar' => true,
                                'options' => ['derecho' => 'Iurefficient (Abogados)', 'teams' => 'Iurefficient Teams']],
-                'image'    => ['type' => 'image', 'label' => 'Imagen de cabecera (ancha; opcional)', 'sidebar' => true],
-                'toc'      => ['type' => 'checkbox', 'label' => 'Índice', 'text' => 'Generar índice con los subtítulos (Título 2)', 'sidebar' => true],
-                'cta'      => ['type' => 'checkbox', 'label' => 'Llamado a la acción', 'text' => 'Mostrar el bloque de contacto al final', 'sidebar' => true],
+                'image'    => ['type' => 'image', 'label' => 'Imagen para redes y tarjetas (opcional)', 'sidebar' => true],
                 'order'    => ['type' => 'number', 'label' => 'Orden', 'sidebar' => true],
             ],
         ],
@@ -213,8 +210,11 @@ return [
         ],
     ],
 
+    // Constructor de páginas: paleta de fondos que ofrece la pestaña "Estilo" de cada sección (clases sec-bg-* en sections.css)
+    'sections' => ['palette' => ['white' => 'Blanco', 'light' => 'Gris claro', 'dark' => 'Oscuro', 'primary' => 'Índigo', 'gradient' => 'Degradado de marca']],
+
     'pages' => [
-        'derecho'   => ['label' => 'Abogados', 'routes' => ['es' => 'derecho'], 'template' => 'derecho', 'schema' => 'WebPage'],
+        // 'derecho' ya no es plantilla fija: es la página "Abogados" del constructor (data/content/paginas/derecho.json)
         'precios'   => ['label' => 'Precios', 'routes' => ['es' => 'precios'], 'template' => 'precios', 'schema' => 'WebPage'],
         'seguridad' => ['label' => 'Seguridad', 'routes' => ['es' => 'seguridad'], 'template' => 'seguridad', 'schema' => 'WebPage'],
         'buscar'    => ['label' => 'Buscar', 'routes' => ['es' => 'buscar'], 'template' => 'buscar', 'noindex' => true],
@@ -247,10 +247,6 @@ return [
                             't_video_title', 't_video_subtitle', 't_gallery_title', 't_gallery_subtitle', 't_gallery_hint', 't_audience_title', 't_audience_subtitle',
                             't_testimonial', 't_testimonial_cite', 't_compare_title', 't_compare_subtitle', 't_pricing_title', 't_pricing_subtitle',
                             't_security_title', 't_security_subtitle', 't_cta_title', 't_cta_button', 't_cta_note', 't_footer_tagline', 't_footer_beta_note'],
-        'Landing Abogados (/derecho)' => ['d_hero_title', 'd_hero_subtitle', 'd_hero_cta1', 'd_hero_cta_youtube', 'd_hero_cta2', 'd_problem_title', 'd_problem_subtitle',
-                            'd_features_title', 'd_features_subtitle', 'd_video_title', 'd_video_subtitle', 'd_gallery_title', 'd_gallery_subtitle', 'd_gallery_hint', 'd_benefits_title',
-                            'd_security_title', 'd_security_subtitle', 'd_security_standards_title', 'd_security_more', 'd_team_title', 'd_team_subtitle',
-                            'd_pricing_title', 'd_pricing_subtitle', 'd_pricing_footer', 'd_cta_title', 'd_cta_text', 'd_cta_button', 'd_cta_note', 'd_footer_tagline'],
         'Precios (/precios)' => ['p_hero_title', 'p_hero_text', 'p_toggle_monthly', 'p_toggle_annual', 'p_toggle_discount', 'p_compare_title', 'p_compare_subtitle',
                             'p_faq_title', 'p_guarantee_title', 'p_guarantee_text', 'p_cta_title', 'p_cta_text', 'p_cta_button'],
         'Seguridad (/seguridad)' => ['s_hero_title', 's_hero_text', 's_hero_update', 's_faq_title', 's_contact_title', 's_contact_text', 's_contact_report', 's_cta_title', 's_cta_text', 's_cta_button', 's_footer_doc'],
@@ -259,7 +255,7 @@ return [
         'Buscador' => ['search_placeholder', 'search_button', 'search_title', 'search_results', 'search_one', 'search_empty', 'search_hint', 'buscar_meta_title'],
         'Navegación y pie' => ['nav_btn_abogados', 'nav_btn_demo_teams', 'nav_btn_demo_derecho', 'footer_copy', 'footer_made', 'crumb_home', 'not_found_title', 'not_found_text', 'go_home'],
         'Formulario de contacto' => ['f_name_ph', 'f_email_ph', 'f_email_ph_teams', 'f_phone_ph', 'f_size_teams', 'f_size_derecho'],
-        'SEO (título y descripción de cada página)' => ['home_meta_title', 'home_meta_desc', 'derecho_meta_title', 'derecho_meta_desc', 'precios_meta_title', 'precios_meta_desc',
+        'SEO (título y descripción de cada página)' => ['home_meta_title', 'home_meta_desc', 'precios_meta_title', 'precios_meta_desc',
                             'seguridad_meta_title', 'seguridad_meta_desc'],
     ],
 

@@ -111,122 +111,6 @@
     "es": "¿Ya usas Iurefficient para tu despacho? Tu cuenta actual incluye acceso a Teams sin costo adicional durante la fase beta.",
     "help": "Vacío = se oculta"
   },
-  "d_hero_title": {
-    "es": "El derecho <span class=\"gradient-text\">a un click</span> de distancia",
-    "help": "Admite HTML"
-  },
-  "d_hero_subtitle": {
-    "es": "Gestiona casos, analiza documentos y potencia tu práctica legal con inteligencia artificial. <strong>Ahorra hasta 70% de tu tiempo.</strong>",
-    "help": "Admite HTML sencillo"
-  },
-  "d_hero_cta1": {
-    "es": "Solicitar Demo Gratuita",
-    "help": ""
-  },
-  "d_hero_cta_youtube": {
-    "es": "¿Por qué usar Iurefficient?",
-    "help": ""
-  },
-  "d_hero_cta2": {
-    "es": "Ver cómo funciona",
-    "help": ""
-  },
-  "d_problem_title": {
-    "es": "Abogados modernos, <span class=\"gradient-text\">desafíos constantes</span>",
-    "help": "Admite HTML"
-  },
-  "d_problem_subtitle": {
-    "es": "Sabemos lo que enfrentas cada día. Por eso creamos Iurefficient.",
-    "help": ""
-  },
-  "d_features_title": {
-    "es": "Todo lo que necesitas para <span class=\"gradient-text\">potenciar tu práctica</span>",
-    "help": "Admite HTML"
-  },
-  "d_features_subtitle": {
-    "es": "Herramientas diseñadas específicamente para profesionales del derecho",
-    "help": ""
-  },
-  "d_video_title": {
-    "es": "Mira Iurefficient <span class=\"gradient-text\">en acción</span>",
-    "help": "Admite HTML"
-  },
-  "d_video_subtitle": {
-    "es": "Descubre cómo puedes ahorrar hasta 70% de tu tiempo",
-    "help": ""
-  },
-  "d_gallery_title": {
-    "es": "Conoce la <span class=\"gradient-text\">plataforma</span>",
-    "help": "Admite HTML"
-  },
-  "d_gallery_subtitle": {
-    "es": "Una interfaz intuitiva diseñada para abogados",
-    "help": ""
-  },
-  "d_gallery_hint": {
-    "es": "Usa el scroll para explorar",
-    "help": ""
-  },
-  "d_benefits_title": {
-    "es": "Resultados que <span class=\"gradient-text\">transforman</span>",
-    "help": "Admite HTML"
-  },
-  "d_security_title": {
-    "es": "Tu información, <span class=\"gradient-text\">siempre protegida</span>",
-    "help": "Admite HTML"
-  },
-  "d_security_subtitle": {
-    "es": "Seguridad de nivel empresarial para proteger los datos más sensibles de tu práctica",
-    "help": ""
-  },
-  "d_security_standards_title": {
-    "es": "Nuestros estándares de seguridad",
-    "help": ""
-  },
-  "d_security_more": {
-    "es": "Conoce más sobre nuestra seguridad",
-    "help": ""
-  },
-  "d_team_title": {
-    "es": "Creado por abogados, <span class=\"gradient-text\">para abogados</span>",
-    "help": "Admite HTML"
-  },
-  "d_team_subtitle": {
-    "es": "Conocemos tus desafíos porque los vivimos cada día",
-    "help": ""
-  },
-  "d_pricing_title": {
-    "es": "Planes que se adaptan a <span class=\"gradient-text\">tu práctica</span>",
-    "help": "Admite HTML"
-  },
-  "d_pricing_subtitle": {
-    "es": "Sin contratos forzosos. Cancela cuando quieras.",
-    "help": ""
-  },
-  "d_pricing_footer": {
-    "es": "Ver comparativa completa de planes",
-    "help": ""
-  },
-  "d_cta_title": {
-    "es": "¿Listo para transformar tu práctica legal?",
-    "help": ""
-  },
-  "d_cta_text": {
-    "es": "Únete a cientos de abogados que ya optimizaron su trabajo",
-    "help": ""
-  },
-  "d_cta_button": {
-    "es": "Solicitar Demo Gratuita",
-    "help": ""
-  },
-  "d_cta_note": {
-    "es": "Sin compromiso • Setup en 24 horas • Soporte incluido",
-    "help": ""
-  },
-  "d_footer_tagline": {
-    "es": "Transformando la práctica legal con inteligencia artificial.",
-    "help": ""
-  },
   "p_hero_title": {
     "es": "Planes transparentes, <span class=\"gradient-text\">sin sorpresas</span>",
     "help": "Admite HTML"
@@ -389,14 +273,6 @@
   },
   "home_meta_desc": {
     "es": "Iurefficient Teams es un software de gestión de proyectos con inteligencia artificial. Conversas con iure, tu asistente de IA, y genera tareas, dependencias y cronograma. Prueba gratis 14 días.",
-    "help": ""
-  },
-  "derecho_meta_title": {
-    "es": "Software de gestión de casos con IA para abogados y despachos",
-    "help": "Se le agrega \" · Iurefficient\""
-  },
-  "derecho_meta_desc": {
-    "es": "Iurefficient es un software legal con inteligencia artificial para abogados y despachos en México: gestión de casos, análisis de documentos y redacción asistida. Ahorra hasta 70% de tu tiempo. Demo gratis.",
     "help": ""
   },
   "precios_meta_title": {

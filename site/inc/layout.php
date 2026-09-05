@@ -16,7 +16,7 @@ function site_header(array $page): void
     $brand = iure_brand($page);
     $route = $page['route'] ?? '';
     $v = CMS_VERSION . '.' . (string) @filemtime(CMS_SITE . '/assets/css/styles.css');
-    $landing = in_array($route, ['home', 'page:derecho'], true);   // hero con shader, galería 3D, video
+    $landing = in_array($route, ['home', 'page:derecho', 'item:paginas'], true);   // hero con shader, galería 3D, video (las páginas libres pueden usar esos bloques)
     $pageCss = iure_page_css($route);
     $bodyClass = 'brand-' . $brand . ($pageCss ? ' page-' . $pageCss : '') . ($route === '404' ? ' page-404' : '');
     if ($ld = iure_jsonld($page)) $page['jsonld'][] = $ld;
@@ -40,6 +40,10 @@ function site_header(array $page): void
 <?php if ($pageCss): ?>
     <link rel="stylesheet" href="<?= cms_asset('css/' . $pageCss . '.css') ?>?v=<?= $v ?>">
 <?php endif; ?>
+<?php if ($route === 'item:paginas'): // páginas por secciones: estilos de precios/seguridad (tablas, FAQ) y de las secciones ?>
+    <link rel="stylesheet" href="<?= cms_asset('css/precios.css') ?>?v=<?= $v ?>">
+    <link rel="stylesheet" href="<?= cms_asset('css/sections.css') ?>?v=<?= $v ?>">
+<?php endif; ?>
 </head>
 <body class="<?= $bodyClass ?>">
     <header class="header" id="header">
@@ -51,7 +55,7 @@ function site_header(array $page): void
                     <span class="logo-teams-badge">Teams</span>
                 </a>
 <?php else: ?>
-                <a href="<?= cms_url('page:derecho', $lang) ?>/" class="logo">
+                <a href="<?= iure_url_derecho($lang) ?>/" class="logo">
                     <img src="<?= cms_e(iure_img((string) ($S['logo'] ?? ''), 'logo.svg')) ?>" alt="<?= cms_e($site) ?>" class="logo-img">
                 </a>
 <?php endif; ?>
@@ -68,7 +72,7 @@ function site_header(array $page): void
                     <li><a href="<?= cms_e(cms_menu_url((string) ($it['url'] ?? '/'), $lang)) ?>"<?= !empty($it['new_tab']) ? ' target="_blank" rel="noopener"' : '' ?>><?= cms_e($it['label'] ?? '') ?></a></li>
 <?php endforeach; ?>
                     <?= iure_search_form('teams') ?>
-                    <li><a href="<?= cms_url('page:derecho', $lang) ?>/" class="btn btn-outline btn-sm"><?= cms_e($t('nav_btn_abogados', 'Abogados')) ?></a></li>
+                    <li><a href="<?= iure_url_derecho($lang) ?>/" class="btn btn-outline btn-sm"><?= cms_e($t('nav_btn_abogados', 'Abogados')) ?></a></li>
                     <li><a href="<?= cms_e(iure_link('demo_teams_url')) ?>" class="btn btn-primary btn-sm"><?= cms_e($t('nav_btn_demo_teams', 'Entrar al demo')) ?></a></li>
 <?php else:
     foreach ((array) ($S['menu_derecho'] ?? []) as $line):
@@ -93,10 +97,10 @@ function site_footer(array $page): void
     $t = fn(string $k, $d = '') => cms_t($k, $lang, $d);
     $brand = iure_brand($page);
     $route = $page['route'] ?? '';
-    $landing = in_array($route, ['home', 'page:derecho'], true);
+    $landing = in_array($route, ['home', 'page:derecho', 'item:paginas'], true);
     $v = CMS_VERSION . '.' . (string) @filemtime(CMS_SITE . '/assets/js/main.js');
     $home = cms_url('home', $lang);
-    $derecho = cms_url('page:derecho', $lang) . '/';
+    $derecho = iure_url_derecho($lang);
     $precios = cms_url('page:precios', $lang) . '/';
     $seguridad = cms_url('page:seguridad', $lang) . '/';
     $legal = fn(string $slug) => cms_url('item:legal', $lang, $slug);

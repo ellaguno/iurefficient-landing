@@ -11,7 +11,7 @@ tag `pre-cms-migration` de este repositorio y en `../backups/2026-09-03/`.
 | URL | Qué es | De dónde sale |
 |---|---|---|
 | `/` | Portada Iurefficient Teams | `site/templates/home.php` + textos + planes (producto "teams") |
-| `/derecho` | Landing para abogados | `site/templates/derecho.php` + textos + planes ("derecho") + equipo |
+| `/derecho` | Landing para abogados | página "Abogados" del **constructor** (`data/content/paginas/derecho.json`, 11 secciones) |
 | `/precios` | Planes, comparativa y FAQ | `site/templates/precios.php` + planes ("precios") + FAQ ("precios") |
 | `/seguridad` | Seguridad, confidencialidad y privacidad | `site/templates/seguridad.php` + FAQ ("seguridad") |
 | `/legal/privacidad`, `/legal/terminos` | Páginas legales | tipo de contenido "Páginas legales" |
@@ -34,15 +34,31 @@ Las URLs viejas (`/teams`, `/legal/privacidad.php`, `*.html`) redirigen con 301 
 En el panel todos los tipos de contenido cuelgan del grupo plegable **Páginas** (campo `group` de cada tipo en
 `site/config.php`).
 
-- **Páginas libres**: páginas de contenido libre en `/pages/{url}`. Título, subtítulo, resumen, contenido con editor visual,
-  imagen de cabecera, índice opcional de subtítulos, bloque de contacto opcional y elección de cabecera/pie
-  (Iurefficient o Teams). Para enlazarlas: Menú (portada) o Ajustes → Menú de la landing para abogados.
+- **Páginas libres**: páginas del **constructor**, en cualquier ruta (`/mi-pagina` o `/padre/hija`, con página padre).
+  Cada página es una lista de secciones (hero, texto, texto e imagen, imagen, video, galería 3D, HTML, espacio,
+  tarjetas, antes y después, tabla comparativa, testimonio, planes, preguntas frecuentes, equipo, últimos artículos,
+  páginas hijas, insignias, llamado a la acción) con pestañas Contenido y Estilo (fondo de la paleta, color de texto,
+  espacio, ancho, alineación, animación, imagen de fondo, ancla, clases, ocultar en móvil). Vista previa en vivo a
+  la derecha: se actualiza al editar y al hacer clic en una sección de la vista previa se abre su tarjeta.
 - **Páginas legales**: título, fecha, resumen y contenido con editor visual. El índice se genera de los subtítulos.
 - **Artículos**: título, resumen, contenido, fecha, autor, categoría, etiquetas, imagen destacada y marca. El índice
   `/articulos/` filtra por categoría, etiqueta y búsqueda, con paginación de 12. Los videos de YouTube se insertan
   como `<div class="video-embed"><iframe …></div>`.
 - **Proyectos**: declarado con plantillas listas (`proyectos.php`/`proyecto.php`); el índice público se activa
   quitando `'no_list' => true` del tipo en `site/config.php`.
+
+### Constructor de páginas (secciones)
+
+- El tema declara los bloques en `site/blocks.php` (campos como en `config.php`, `wrap_class`, `styles` permitidos)
+  y dibuja cada uno en `site/blocks/<clave>.php` con `$b` (datos), `$st` (estilo), `$sec`, `$lang`, `$S`, `$t`,
+  `$page`, `$item`. El núcleo (`cms/lib/sections.php`) envuelve cada bloque en `<section class="sec sec-<clave>
+  sec-bg-* sec-pad-* sec-w-* sec-align-* …">`; las clases de estilo viven en `site/assets/css/sections.css`.
+- Un tipo usa el constructor con un campo `'type' => 'sections'`. Se guarda como lista de
+  `{id, type, data, style, hidden}` dentro del JSON del elemento.
+- Vista previa en vivo: el formulario se envía sin guardar a `admin/?p=preview`, que inyecta el elemento en memoria
+  y deja que el enrutador público lo dibuje con el tema dentro del iframe. Clic en la vista previa ⇄ tarjeta.
+- Panel: Mapa del sitio (árbol de todo lo que responde), vista previa de borradores con token, publicación
+  programada, versiones (últimas 10, restaurables), duplicar.
 
 ### Editor visual
 
@@ -79,14 +95,15 @@ Genera además `tools/wp-redirects.txt` con las reglas 301 para el `.htaccess` d
 ## Estructura
 
 ```
-index.php, admin/, cms/     núcleo de cms_simple 1.4.0 (se actualiza sustituyendo cms/). Cambios locales pendientes de
+index.php, admin/, cms/     núcleo de cms_simple 1.5.0 (se actualiza sustituyendo cms/). Cambios locales pendientes de
                             llevar al repo cms_simple: grupos en el menú del panel ('group'), textos por defecto
                             completados desde site/defaults, 'noindex' por tipo, URL canónica (site_url), /llms.txt,
                             cms_jsonld_graph() acepta null (páginas sin schema)
-site/config.php             tipos de contenido, páginas, ajustes y grupos de textos
+site/config.php             tipos de contenido, páginas, ajustes, grupos de textos y paleta del constructor
+site/blocks.php, blocks/    catálogo y vistas de las secciones del constructor
 site/inc/layout.php         cabecera y pie (marca Teams o Abogados según la página)
 site/inc/functions.php      helpers: tarjetas de plan, formulario, índice legal…
-site/templates/             home, derecho, precios, seguridad, legal, pagina, articulos/articulo, proyectos/proyecto,
+site/templates/             home, precios, seguridad, legal, pagina (constructor), articulos/articulo, proyectos/proyecto,
                             plan, miembro, pregunta, 404
 site/assets/css|js|img      styles.css, teams.css, precios.css, seguridad.css, legal.css (legales, páginas libres,
                             artículos, proyectos, preguntas y 404), main.js, imágenes
@@ -132,8 +149,9 @@ La primera vez que abres `/admin/` te pide crear el usuario administrador (`data
 
 ### Actualizar un sitio ya desplegado
 
-Contenido nuevo generado en local (por ejemplo `data/content/articulos/` y `uploads/blog/` de la migración) se sube
-aparte, como carpetas nuevas, sin tocar el resto de `data/`.
+Contenido nuevo generado en local (por ejemplo `data/content/articulos/` y `uploads/blog/` de la migración, o
+`data/content/paginas/derecho.json`, que desde el 5 de septiembre de 2026 **es** la landing /derecho) se sube aparte,
+como archivos nuevos, sin tocar el resto de `data/`. Sin ese JSON, `/derecho` responde 404.
 
 Sube solo el código: todo **excepto** `data/` y `uploads/` (ahí viven el contenido, los ajustes, los usuarios y los
 archivos subidos en producción). Los textos nuevos que traiga el tema se completan solos desde

@@ -1,0 +1,57 @@
+/* Iurefficient — secciones del constructor de páginas (clases sec-* del núcleo + bloques genéricos) */
+.sec { position: relative; }
+.sec-generic { padding: var(--spacing-3xl) 0; }
+.sec.sec-pad-none { padding-top: 0 !important; padding-bottom: 0 !important; }
+.sec.sec-pad-s { padding-top: var(--spacing-xl) !important; padding-bottom: var(--spacing-xl) !important; }
+.sec.sec-pad-m { padding-top: var(--spacing-2xl) !important; padding-bottom: var(--spacing-2xl) !important; }
+.sec.sec-pad-l { padding-top: var(--spacing-4xl) !important; padding-bottom: var(--spacing-4xl) !important; }
+.sec.sec-pad-xl { padding-top: calc(var(--spacing-4xl) * 1.5) !important; padding-bottom: calc(var(--spacing-4xl) * 1.5) !important; }
+
+/* fondos (paleta) */
+.sec.sec-bg-white { background: var(--white, #fff) !important; }
+.sec.sec-bg-light { background: var(--gray-50) !important; }
+.sec.sec-bg-dark { background: var(--gray-900) !important; }
+.sec.sec-bg-primary { background: var(--primary-500) !important; }
+.sec.sec-bg-gradient { background: var(--gradient-primary) !important; }
+.sec.sec-bg-dark, .sec.sec-bg-primary, .sec.sec-bg-gradient, .sec.sec-text-light { color: #fff; }
+.sec.sec-bg-dark .section-title, .sec.sec-bg-primary .section-title, .sec.sec-bg-gradient .section-title, .sec.sec-text-light .section-title,
+.sec.sec-bg-dark .section-subtitle, .sec.sec-bg-primary .section-subtitle, .sec.sec-bg-gradient .section-subtitle, .sec.sec-text-light .section-subtitle,
+.sec.sec-bg-dark .legal-content, .sec.sec-bg-primary .legal-content, .sec.sec-bg-gradient .legal-content, .sec.sec-text-light .legal-content,
+.sec.sec-bg-dark .legal-content :is(h1,h2,h3,h4,p,li), .sec.sec-bg-primary .legal-content :is(h1,h2,h3,h4,p,li), .sec.sec-bg-gradient .legal-content :is(h1,h2,h3,h4,p,li), .sec.sec-text-light .legal-content :is(h1,h2,h3,h4,p,li) { color: #fff; }
+.sec.sec-text-dark, .sec.sec-text-dark .section-title, .sec.sec-text-dark .legal-content :is(h1,h2,h3,h4,p,li) { color: var(--gray-900); }
+.sec.sec-text-dark .section-subtitle, .sec.sec-text-dark .legal-content p { color: var(--gray-600); }
+
+/* imagen de fondo con oscurecido */
+.sec.sec-has-bg { background-image: var(--sec-bg); background-size: cover; background-position: center; }
+.sec.sec-has-bg::before { content: ""; position: absolute; inset: 0; background: rgba(0, 0, 0, var(--sec-overlay, 0)); pointer-events: none; }
+.sec.sec-has-bg > * { position: relative; }
+
+/* ancho y alineación */
+.sec.sec-w-narrow .container { max-width: 820px; }
+.sec.sec-w-wide .container { max-width: 1400px; }
+.sec.sec-w-full .container { max-width: none; padding-left: 0; padding-right: 0; }
+.sec.sec-align-center { text-align: center; }
+.sec.sec-align-center .section-header, .sec.sec-align-center .legal-content { margin-left: auto; margin-right: auto; }
+.sec.sec-align-left { text-align: left; }
+.sec.sec-align-left .section-header { text-align: left; margin-left: 0; }
+.sec.sec-align-right { text-align: right; }
+@media (max-width: 768px) { .sec.sec-hide-mobile { display: none !important; } }
+
+/* bloques genéricos */
+.sec-text { max-width: 800px; margin: 0 auto; }
+.sec-cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-3xl); align-items: center; }
+.sec-cols-left .sec-cols-text { order: 2; }
+.sec-cols-img img { width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-xl, 0 20px 40px rgba(0,0,0,.1)); }
+.sec-cols-text.legal-content { max-width: none; }
+.sec-cols-text .section-title { text-align: left; margin-top: 0; }
+@media (max-width: 768px) { .sec-cols { grid-template-columns: 1fr; } .sec-cols-left .sec-cols-text { order: 0; } }
+.sec-figure { margin: 0 auto; max-width: 1000px; text-align: center; }
+.sec-figure img { width: 100%; height: auto; border-radius: var(--radius-lg); }
+.sec-figure figcaption { margin-top: var(--spacing-sm); color: var(--gray-500); font-size: .875rem; }
+.sec-spacer-s { height: var(--spacing-xl); } .sec-spacer-m { height: var(--spacing-3xl); } .sec-spacer-l { height: var(--spacing-4xl); }
+.sec-spacer { display: flex; align-items: center; } .sec-spacer hr { width: 100%; border: 0; border-top: 1px solid var(--gray-200); }
+.sec-more { text-align: center; margin-top: var(--spacing-2xl); }
+.sec-testimonio .teams-testimonial { max-width: 900px; margin: 0 auto; }
+.sec-tabla.security { background: var(--gray-50); }
+.sec-video.video-section .section-header { margin-bottom: var(--spacing-2xl); }
+.sec-hero.hero { min-height: auto; }

@@ -1,0 +1,219 @@
+{
+  "slug": "derecho",
+  "status": "published",
+  "title": "Abogados",
+  "sections": [
+    {
+      "id": "870ce9",
+      "type": "hero",
+      "data": {
+        "title": "El derecho <span class=\"gradient-text\">a un click</span> de distancia",
+        "subtitle": "Gestiona casos, analiza documentos y potencia tu práctica legal con inteligencia artificial. <strong>Ahorra hasta 70% de tu tiempo.</strong>",
+        "buttons": [
+          "Solicitar Demo Gratuita | #contacto | primary",
+          "¿Por qué usar Iurefficient? | https://www.youtube.com/watch?v=2RqRNHPVC9U | youtube",
+          "Ver cómo funciona | #video | secondary"
+        ],
+        "image": "",
+        "badges": [
+          "🔒 | Cifrado AES-256",
+          "🔐 | Servidores Privados",
+          "⚡ | 99.9% Uptime",
+          "🛡️ | Seguridad Enterprise"
+        ],
+        "shader": true
+      },
+      "style": [],
+      "hidden": false
+    },
+    {
+      "id": "3e57c6",
+      "type": "comparacion",
+      "data": {
+        "title": "Abogados modernos, <span class=\"gradient-text\">desafíos constantes</span>",
+        "subtitle": "Sabemos lo que enfrentas cada día. Por eso creamos Iurefficient.",
+        "before_title": "Sin Iurefficient",
+        "before_icon": "😫",
+        "before_items": [
+          "Documentos dispersos en carpetas y mails",
+          "Plazos que se olvidan hasta el último momento",
+          "Horas buscando información en expedientes",
+          "Trabajo repetitivo que consume tu tiempo"
+        ],
+        "after_title": "Con Iurefficient",
+        "after_icon": "😊",
+        "after_items": [
+          "Todo centralizado en una plataforma segura",
+          "Alertas automáticas de fechas importantes",
+          "IA que encuentra lo que necesitas en segundos",
+          "Automatización que te libera para lo importante"
+        ]
+      },
+      "style": {
+        "anchor": "problema"
+      },
+      "hidden": false
+    },
+    {
+      "id": "156fdc",
+      "type": "tarjetas",
+      "data": {
+        "title": "Todo lo que necesitas para <span class=\"gradient-text\">potenciar tu práctica</span>",
+        "subtitle": "Herramientas diseñadas específicamente para profesionales del derecho",
+        "variant": "feature",
+        "items": [
+          "Gestión Inteligente de Documentos | Organiza, busca y analiza documentos legales con IA. Extrae cláusulas clave automáticamente. | doc",
+          "Control Total de Clientes y Casos | Centraliza expedientes, seguimiento de casos y comunicación con clientes en un solo lugar. | users",
+          "Asistente de IA Legal | Pregunta en lenguaje natural sobre tus casos. Obtén respuestas basadas en tus documentos. | bot",
+          "Calendario Legal Inteligente | Nunca pierdas un término. Alertas automáticas de audiencias, vencimientos y fechas clave. | calendar"
+        ]
+      },
+      "style": {
+        "anchor": "caracteristicas"
+      },
+      "hidden": false
+    },
+    {
+      "id": "cb4137",
+      "type": "video",
+      "data": {
+        "title": "Mira Iurefficient <span class=\"gradient-text\">en acción</span>",
+        "subtitle": "Descubre cómo puedes ahorrar hasta 70% de tu tiempo",
+        "url": "https://www.youtube.com/watch?v=SAdlFVYjVI0"
+      },
+      "style": {
+        "anchor": "video"
+      },
+      "hidden": false
+    },
+    {
+      "id": "442e66",
+      "type": "galeria3d",
+      "data": {
+        "title": "Conoce la <span class=\"gradient-text\">plataforma</span>",
+        "subtitle": "Una interfaz intuitiva diseñada para abogados",
+        "hint": "Usa el scroll para explorar",
+        "images": []
+      },
+      "style": {
+        "anchor": "plataforma"
+      },
+      "hidden": false
+    },
+    {
+      "id": "3608c3",
+      "type": "tarjetas",
+      "data": {
+        "title": "Resultados que <span class=\"gradient-text\">transforman</span>",
+        "subtitle": "",
+        "variant": "benefit",
+        "items": [
+          "Ahorra hasta 70% de tu tiempo | En tareas administrativas y búsqueda de información | ⏱️",
+          "Aumenta tu productividad 3x | Más casos atendidos con la misma calidad y en menos tiempo | 📈",
+          "Seguridad de nivel bancario | Tus datos y los de tus clientes siempre protegidos | 🔒",
+          "Decisiones informadas | Datos y métricas de tu práctica en tiempo real | 💡",
+          "Enfócate en tus clientes | Dedica tu tiempo a lo que realmente importa | 🎯"
+        ]
+      },
+      "style": {},
+      "hidden": false
+    },
+    {
+      "id": "a41a1c",
+      "type": "tarjetas",
+      "data": {
+        "title": "Tu información, <span class=\"gradient-text\">siempre protegida</span>",
+        "subtitle": "Seguridad de nivel empresarial para proteger los datos más sensibles de tu práctica",
+        "variant": "security",
+        "items": [
+          "Cifrado AES-256 | Todos tus documentos y conversaciones cifrados en reposo y en tránsito | lock",
+          "Google Cloud Platform | Infraestructura alojada en Google Cloud con controles de seguridad empresarial | shield",
+          "Backups Automáticos | Respaldos diarios con retención de 30 días para tu tranquilidad | check",
+          "Privacidad de IA | Tus documentos nunca se usan para entrenar modelos externos | shield"
+        ]
+      },
+      "style": {
+        "anchor": "seguridad"
+      },
+      "hidden": false
+    },
+    {
+      "id": "09b44f",
+      "type": "insignias",
+      "data": {
+        "title": "Nuestros estándares de seguridad",
+        "items": [
+          "🔐 | SSL/TLS",
+          "🛡️ | Controles Enterprise",
+          "🌐 | GDPR Ready",
+          "☁️ | Basado en ISO 27001"
+        ],
+        "button_text": "Conoce más sobre nuestra seguridad",
+        "button_url": "/seguridad/"
+      },
+      "style": {
+        "pad": "none",
+        "class": "security"
+      },
+      "hidden": false
+    },
+    {
+      "id": "6e2f51",
+      "type": "equipo",
+      "data": {
+        "title": "Creado por abogados, <span class=\"gradient-text\">para abogados</span>",
+        "subtitle": "Conocemos tus desafíos porque los vivimos cada día"
+      },
+      "style": {
+        "anchor": "equipo"
+      },
+      "hidden": false
+    },
+    {
+      "id": "518d54",
+      "type": "planes",
+      "data": {
+        "title": "Planes que se adaptan a <span class=\"gradient-text\">tu práctica</span>",
+        "subtitle": "Sin contratos forzosos. Cancela cuando quieras.",
+        "product": "derecho",
+        "footer_text": "Ver comparativa completa de planes",
+        "footer_url": "/precios/"
+      },
+      "style": {
+        "anchor": "precios"
+      },
+      "hidden": false
+    },
+    {
+      "id": "72b84e",
+      "type": "cta",
+      "data": {
+        "title": "¿Listo para transformar tu práctica legal?",
+        "text": "Únete a cientos de abogados que ya optimizaron su trabajo",
+        "form": true,
+        "origin": "derecho",
+        "button_text": "Solicitar Demo Gratuita",
+        "button_url": "",
+        "note": "Sin compromiso • Setup en 24 horas • Soporte incluido"
+      },
+      "style": {
+        "anchor": "contacto"
+      },
+      "hidden": false
+    }
+  ],
+  "summary": "Iurefficient es un software legal con inteligencia artificial para abogados y despachos en México: gestión de casos, análisis de documentos y redacción asistida. Ahorra hasta 70% de tu tiempo. Demo gratis.",
+  "brand": "derecho",
+  "image": "",
+  "order": 1,
+  "parent": "",
+  "path": "derecho",
+  "seo_title": {
+    "es": "Software de gestión de casos con IA para abogados y despachos"
+  },
+  "seo_desc": {
+    "es": "Iurefficient es un software legal con inteligencia artificial para abogados y despachos en México: gestión de casos, análisis de documentos y redacción asistida. Ahorra hasta 70% de tu tiempo. Demo gratis."
+  },
+  "created": "2026-09-05",
+  "updated": "2026-09-05"
+}

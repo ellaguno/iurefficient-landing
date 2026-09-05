@@ -149,7 +149,9 @@
         .replace(/\n{2,}/g, "\n").trim();
     }
 
-    document.querySelectorAll("textarea[data-html]").forEach(function (ta) {
+    function initEditor(ta) {
+      if (ta.hasAttribute("data-editor-ready")) return;
+      ta.setAttribute("data-editor-ready", "1");
       var wrap = document.createElement("div");
       wrap.className = "ad-editor" + (ta.name.indexOf("body") === 0 || ta.getAttribute("data-size") === "lg" ? " ad-editor-lg" : "");
       var box = document.createElement("div");
@@ -243,7 +245,7 @@
         if (mode === "html") { if (cm) cm.save(); ta.value = src.value.trim(); }
         else ta.value = visualHtml();
       };
-      quill.on("text-change", sync);
+      quill.on("text-change", function (d, o, source) { sync(); if (source === "user") ta.dispatchEvent(new Event("input", { bubbles: true })); });
       sync();
       var form = ta.closest("form");
       if (form) form.addEventListener("submit", sync);
@@ -276,7 +278,9 @@
           sync();
         }
       }
-    });
+    }
+    window.cmsInitEditor = initEditor;
+    document.querySelectorAll("textarea[data-html]").forEach(initEditor);
   }
 
   /* ---------------- conmutador Español / English ---------------- */
@@ -320,17 +324,20 @@
   });
 
   /* ---------------- campos de imagen: subir / biblioteca / vista previa ---------------- */
-  document.querySelectorAll("[data-upload]").forEach(function (btn) {
+  function bindWidgets(root) {
+  root.querySelectorAll("[data-upload]").forEach(function (btn) {
+    if (btn.hasAttribute("data-bound")) return; btn.setAttribute("data-bound", "1");
     btn.addEventListener("click", function () {
       var row = btn.closest(".ad-image-row"), input = row.querySelector("[data-image-input]"), img = row.querySelector("[data-preview]");
       pickFile(function (file) {
         btn.disabled = true; btn.textContent = "Subiendo…";
-        upload(file).then(function (j) { input.value = j.path; img.src = j.url; img.hidden = false; })
+        upload(file).then(function (j) { input.value = j.path; img.src = j.url; img.hidden = false; input.dispatchEvent(new Event("input", { bubbles: true })); })
           .catch(function (e) { alert(e.message); }).finally(function () { btn.disabled = false; btn.textContent = "Subir imagen"; });
       });
     });
   });
-  document.querySelectorAll("[data-image-input]").forEach(function (input) {
+  root.querySelectorAll("[data-image-input]").forEach(function (input) {
+    if (input.hasAttribute("data-bound")) return; input.setAttribute("data-bound", "1");
     input.addEventListener("change", function () {
       var img = input.closest(".ad-image-row").querySelector("[data-preview]");
       var v = imgUrl(input.value);
@@ -338,13 +345,15 @@
       img.src = v; img.hidden = false;
     });
   });
-  document.querySelectorAll("[data-pick]").forEach(function (btn) {
+  root.querySelectorAll("[data-pick]").forEach(function (btn) {
+    if (btn.hasAttribute("data-bound")) return; btn.setAttribute("data-bound", "1");
     btn.addEventListener("click", function () {
       var input = btn.closest(".ad-image-row").querySelector("[data-image-input]");
-      openPicker(btn.getAttribute("data-pick"), function (it) { input.value = it.path; input.dispatchEvent(new Event("change")); });
+      openPicker(btn.getAttribute("data-pick"), function (it) { input.value = it.path; input.dispatchEvent(new Event("change")); input.dispatchEvent(new Event("input", { bubbles: true })); });
     });
   });
-  document.querySelectorAll("[data-upload-append]").forEach(function (btn) {
+  root.querySelectorAll("[data-upload-append]").forEach(function (btn) {
+    if (btn.hasAttribute("data-bound")) return; btn.setAttribute("data-bound", "1");
     btn.addEventListener("click", function () {
       var ta = btn.closest(".ad-field").querySelector("textarea[data-image-list]"), suffix = ta.getAttribute("data-image-suffix") || "";
       pickFile(function (file) {
@@ -354,12 +363,16 @@
       });
     });
   });
-  document.querySelectorAll("[data-pick-append]").forEach(function (btn) {
+  root.querySelectorAll("[data-pick-append]").forEach(function (btn) {
+    if (btn.hasAttribute("data-bound")) return; btn.setAttribute("data-bound", "1");
     btn.addEventListener("click", function () {
       var ta = btn.closest(".ad-field").querySelector("textarea[data-image-list]"), suffix = ta.getAttribute("data-image-suffix") || "";
-      openPicker(btn.getAttribute("data-pick-append"), function (it) { ta.value = (ta.value.trim() ? ta.value.replace(/\s+$/, "") + "\n" : "") + it.path + suffix; });
+      openPicker(btn.getAttribute("data-pick-append"), function (it) { ta.value = (ta.value.trim() ? ta.value.replace(/\s+$/, "") + "\n" : "") + it.path + suffix; ta.dispatchEvent(new Event("input", { bubbles: true })); });
     });
   });
+  }
+  window.cmsBindWidgets = bindWidgets;
+  bindWidgets(document);
 
   /* ---------------- slug automático ---------------- */
   var form = document.querySelector("form[data-slug-source]");
