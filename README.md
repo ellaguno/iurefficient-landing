@@ -78,6 +78,12 @@ Paquete **motion** (reescrito en limpio a partir de katapolt.mx, sobre GSAP 3.13
 animadas, titular grande, galería con parallax; efectos texto revelado, aparición escalonada, parallax de fondo y
 cursor magnético de sitio. Cada paquete lleva su `LICENSES.md`.
 
+### Manual embebido
+
+Admin → Manual: diez capítulos en `cms/manual/*.md` (Markdown con capturas en `cms/manual/img/`), desde instalar y
+armar el primer portal hasta el constructor, el editor, SEO, GEO y mantenimiento. El capítulo de bloques lista el
+catálogo real del sitio. Un sitio puede añadir capítulos propios en `site/manual/*.md`.
+
 ### Editor visual
 
 Barra completa (títulos 1 a 4, negritas, cursivas, subrayado, tachado, listas con sangría, cita, bloque de código,
