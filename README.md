@@ -44,6 +44,15 @@ En el panel todos los tipos de contenido cuelgan del grupo plegable **Páginas**
 - **Proyectos**: declarado con plantillas listas (`proyectos.php`/`proyecto.php`); el índice público se activa
   quitando `'no_list' => true` del tipo en `site/config.php`.
 
+### Editor visual
+
+Barra completa (títulos 1 a 4, negritas, cursivas, subrayado, tachado, listas con sangría, cita, bloque de código,
+línea horizontal, alineación, enlace, video, subir imagen, biblioteca, quitar formato) y botón **HTML** que cambia a
+un editor de código (CodeMirror, cargado bajo demanda) para editar el HTML tal cual; lo escrito ahí se guarda sin
+pasar por el editor visual. Los videos de YouTube o Vimeo se insertan como `<div class="video-embed"><iframe
+class="ql-video" …></div>`, al 100 % del ancho tanto en el panel como en el sitio (`legal.css`); en el editor el
+video no recibe clics, se selecciona el bloque y se quita con Supr.
+
 ### Buscador
 
 Icono de lupa en las dos cabeceras (despliega el campo; en móvil es un campo fijo del menú) que envía a `/buscar?q=`.
@@ -70,7 +79,7 @@ Genera además `tools/wp-redirects.txt` con las reglas 301 para el `.htaccess` d
 ## Estructura
 
 ```
-index.php, admin/, cms/     núcleo de cms_simple 1.3.1 (se actualiza sustituyendo cms/). Cambios locales pendientes de
+index.php, admin/, cms/     núcleo de cms_simple 1.4.0 (se actualiza sustituyendo cms/). Cambios locales pendientes de
                             llevar al repo cms_simple: grupos en el menú del panel ('group'), textos por defecto
                             completados desde site/defaults, 'noindex' por tipo, URL canónica (site_url), /llms.txt,
                             cms_jsonld_graph() acepta null (páginas sin schema)
