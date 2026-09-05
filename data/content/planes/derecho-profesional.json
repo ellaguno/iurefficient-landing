@@ -10,8 +10,8 @@
     "es": "Despachos en crecimiento",
     "en": "Growing firms"
   },
-  "price": "4,999",
-  "price_annual": "",
+  "price": "5,999",
+  "price_annual": "5,499",
   "period": {
     "es": "MXN/mes",
     "en": "MXN/mo"
@@ -25,23 +25,27 @@
     "es": [
       "7 usuarios incluidos",
       "200 casos/proyectos",
-      "2,000 consultas IA al mes",
+      "5,000 consultas IA al mes",
       "4 GB almacenamiento",
       "Soporte prioritario",
-      "Integraciones"
+      "Integraciones",
+      "Reportes avanzados",
+      "Acceso a la API"
     ],
     "en": [
       "7 users included",
       "200 cases/projects",
-      "2,000 AI queries per month",
+      "5,000 AI queries per month",
       "4 GB storage",
       "Priority support",
-      "Integrations"
+      "Integrations",
+      "Advanced reports",
+      "API access"
     ]
   },
   "overage": {
-    "es": "",
-    "en": ""
+    "es": "+$1,000 por usuario, +$120 por GB, +$50 por caso, +$120 por cada 1,000 consultas IA",
+    "en": "+$1,000 per user, +$120 per GB, +$50 per case, +$120 per 1,000 AI queries"
   },
   "cta_text": {
     "es": "Comenzar prueba gratuita",
@@ -57,5 +61,5 @@
     "es": ""
   },
   "created": "2026-09-03",
-  "updated": "2026-09-03"
+  "updated": "2026-09-05"
 }

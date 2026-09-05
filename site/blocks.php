@@ -128,7 +128,7 @@ return [
             'title'    => ['type' => 'text', 'i18n' => true, 'label' => 'Título'],
             'subtitle' => ['type' => 'text', 'i18n' => true, 'label' => 'Subtítulo'],
             'head'     => ['type' => 'text', 'i18n' => true, 'label' => 'Encabezados separados por | (se ignora si eliges planes)', 'default' => 'Característica | Otros | Iurefficient'],
-            'product'  => ['type' => 'select', 'label' => 'Encabezados desde los planes de', 'options' => ['' => 'No, usar los encabezados de arriba', 'precios' => 'Página de precios', 'derecho' => 'Abogados', 'teams' => 'Teams']],
+            'product'  => ['type' => 'select', 'label' => 'Encabezados desde los planes de', 'options' => ['' => 'No, usar los encabezados de arriba', 'derecho' => 'Abogados', 'teams' => 'Teams']],
             'rows'     => ['type' => 'lines', 'i18n' => true, 'label' => 'Filas, una por línea, celdas separadas por | ("si"/"no" = ✓/—; una línea que termina en ":" es un título de categoría)', 'rows' => 10, 'required' => true],
         ],
     ],
@@ -148,7 +148,7 @@ return [
         'fields' => [
             'title'       => ['type' => 'text', 'i18n' => true, 'label' => 'Título', 'default' => 'Planes que se adaptan a <span class="gradient-text">tu práctica</span>'],
             'subtitle'    => ['type' => 'text', 'i18n' => true, 'label' => 'Subtítulo', 'default' => 'Sin contratos forzosos. Cancela cuando quieras.'],
-            'product'     => ['type' => 'select', 'label' => 'Planes de', 'options' => ['derecho' => 'Abogados', 'teams' => 'Teams', 'precios' => 'Página de precios'], 'default' => 'derecho'],
+            'product'     => ['type' => 'select', 'label' => 'Planes de', 'options' => ['derecho' => 'Abogados', 'teams' => 'Teams'], 'default' => 'derecho'],
             'toggle'      => ['type' => 'checkbox', 'label' => 'Anual', 'text' => 'Conmutador mensual / anual (usa el precio anual de cada plan)'],
             'footer_text' => ['type' => 'text', 'i18n' => true, 'label' => 'Enlace al pie (texto)', 'default' => 'Ver comparativa completa de planes'],
             'footer_url'  => ['type' => 'text', 'label' => 'Enlace al pie (URL)', 'default' => '/precios/'],

@@ -11,7 +11,7 @@
     "en": "Mid-sized teams"
   },
   "price": "5,999",
-  "price_annual": "",
+  "price_annual": "5,499",
   "period": {
     "es": "MXN/mes",
     "en": "MXN/mo"
@@ -57,5 +57,5 @@
     "es": ""
   },
   "created": "2026-09-03",
-  "updated": "2026-09-03"
+  "updated": "2026-09-05"
 }

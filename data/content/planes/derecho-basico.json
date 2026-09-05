@@ -10,8 +10,8 @@
     "es": "Pequeños despachos e independientes",
     "en": "Small firms and solo practitioners"
   },
-  "price": "999",
-  "price_annual": "",
+  "price": "1,499",
+  "price_annual": "1,375",
   "period": {
     "es": "MXN/mes",
     "en": "MXN/mo"
@@ -25,21 +25,23 @@
     "es": [
       "2 usuarios incluidos",
       "50 casos/proyectos",
-      "500 consultas IA al mes",
+      "2,000 consultas IA al mes",
       "2 GB almacenamiento",
-      "Soporte por email"
+      "Soporte por email",
+      "Exportación de datos"
     ],
     "en": [
       "2 users included",
       "50 cases/projects",
-      "500 AI queries per month",
+      "2,000 AI queries per month",
       "2 GB storage",
-      "Email support"
+      "Email support",
+      "Data export"
     ]
   },
   "overage": {
-    "es": "",
-    "en": ""
+    "es": "+$1,000 por usuario, +$120 por GB, +$50 por caso, +$120 por cada 1,000 consultas IA",
+    "en": "+$1,000 per user, +$120 per GB, +$50 per case, +$120 per 1,000 AI queries"
   },
   "cta_text": {
     "es": "Comenzar prueba gratuita",
@@ -55,5 +57,5 @@
     "es": ""
   },
   "created": "2026-09-03",
-  "updated": "2026-09-03"
+  "updated": "2026-09-05"
 }

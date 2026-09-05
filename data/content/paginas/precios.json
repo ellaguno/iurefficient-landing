@@ -58,7 +58,7 @@
           "es": "Todos incluyen 14 días de prueba gratuita.",
           "en": "All plans include a 14-day free trial."
         },
-        "product": "precios",
+        "product": "derecho",
         "toggle": true,
         "footer_text": {
           "es": "",
@@ -88,7 +88,7 @@
           "es": "Característica",
           "en": "Feature"
         },
-        "product": "precios",
+        "product": "derecho",
         "rows": {
           "es": [
             "Gestión de Casos:",
@@ -97,7 +97,7 @@
             "Calendario legal | si | si | si",
             "Alertas de plazos | si | si | si",
             "Inteligencia Artificial:",
-            "Consultas IA mensuales | 500 | 2,000 | 10,000",
+            "Consultas IA mensuales | 2,000 | 5,000 | 15,000",
             "Análisis de documentos | si | si | si",
             "Extracción de cláusulas | si | si | si",
             "Resumen automático | si | si | si",
@@ -129,7 +129,7 @@
             "Legal calendar | yes | yes | yes",
             "Deadline alerts | yes | yes | yes",
             "Artificial Intelligence:",
-            "Monthly AI queries | 500 | 2,000 | 10,000",
+            "Monthly AI queries | 2,000 | 5,000 | 15,000",
             "Document analysis | yes | yes | yes",
             "Clause extraction | yes | yes | yes",
             "Automatic summaries | yes | yes | yes",

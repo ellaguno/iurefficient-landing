@@ -6,7 +6,7 @@ Productos:
 - Iurefficient (abogados y despachos): gestión de casos, expedientes, análisis y redacción de documentos legales con IA.
 - Iurefficient Teams (equipos de cualquier sector): gestión de proyectos donde el chat con IA genera tareas, dependencias y cronograma.
 
-Precios: planes mensuales en pesos mexicanos desde $999 MXN, sin contratos forzosos y con prueba gratuita de 14 días. Detalle en {{site}}/precios
+Precios: planes mensuales en pesos mexicanos desde $1,499 MXN, sin contratos forzosos y con prueba gratuita de 14 días. Detalle en {{site}}/precios
 
 ## Páginas principales
 - [Iurefficient Teams: gestión de proyectos con IA]({{site}}/): portada del producto para equipos.
