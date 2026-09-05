@@ -7,7 +7,7 @@ function iure_brand(array $page): string
 {
     $r = $page['route'] ?? '';
     $item = $GLOBALS['item'] ?? null;
-    if ($r === 'home' || $r === 'page:precios') return 'teams';
+    if ($r === 'home' || ($r === 'item:paginas' && (($item['slug'] ?? '') === 'precios'))) return 'teams';
     if ($r === 'item:planes' && !empty($item['product']) && $item['product'] !== 'derecho') return 'teams';
     // Páginas, artículos y proyectos eligen su cabecera y pie en el panel (campo "brand").
     if (in_array($r, ['item:paginas', 'item:articulos', 'item:proyectos'], true) && ($item['brand'] ?? '') === 'teams') return 'teams';
@@ -18,8 +18,8 @@ function iure_brand(array $page): string
 /** Hoja de estilo extra de una ruta (site/assets/css/<nombre>.css) y clase page-<nombre> del body. */
 function iure_page_css(string $route): string
 {
-    if ($route === 'page:precios') return 'precios';
-    if ($route === 'page:seguridad') return 'seguridad';
+    if ($route === 'item:paginas' && (($GLOBALS['item']['slug'] ?? '') === 'precios')) return 'precios';
+    if ($route === 'item:paginas' && (($GLOBALS['item']['slug'] ?? '') === 'seguridad')) return 'seguridad';
     // Legales, páginas libres, artículos, proyectos, preguntas y 404 comparten la tipografía de legal.css
     if ($route === '404' || $route === 'page:buscar' || preg_match('#^(item|list):(legal|paginas|articulos|proyectos|faq)$#', $route)) return 'legal';
     return '';
@@ -34,6 +34,18 @@ function iure_page_cta(string $brand): string
     return '<div class="page-cta"><h2>' . cms_e($t('pg_cta_title', '¿Quieres ver Iurefficient en acción?')) . '</h2>'
         . '<p>' . cms_e($t('pg_cta_text', 'Agenda una demostración o empieza tu prueba gratuita hoy mismo.')) . '</p>'
         . '<a class="btn btn-primary btn-lg" href="' . cms_e($dest) . '">' . cms_e($t('pg_cta_button', 'Solicitar demo')) . '</a></div>';
+}
+
+/** Texto fijo del tema según el idioma que se dibuja: iure_l('Español', 'English'). */
+function iure_l(string $es, string $en): string
+{
+    return cms_render_lang() === 'en' ? $en : $es;
+}
+
+/** URL de una página del constructor por su slug (precios, seguridad, derecho…). */
+function iure_url_page(string $slug, string $lang): string
+{
+    return cms_url('item:paginas', $lang, $slug);
 }
 
 /** URL de la landing de abogados (página "derecho" del constructor). */
@@ -114,15 +126,15 @@ function iure_plan_card(array $p, int $delay = 0, bool $withAnnual = false): str
         $h .= '<li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg> ' . cms_e($f) . '</li>';
     }
     $h .= '</ul>';
-    if ($withAnnual && !empty($p['overage'])) $h .= '<p class="pricing-overage">Excedentes: ' . cms_e($p['overage']) . '</p>';
-    $h .= '<a href="' . cms_e($p['cta_url'] ?: '#contacto') . '" class="btn ' . $style . ' btn-block">' . cms_e($p['cta_text'] ?: 'Comenzar prueba gratuita') . '</a>';
+    if ($withAnnual && !empty($p['overage'])) $h .= '<p class="pricing-overage">' . iure_l('Excedentes', 'Overages') . ': ' . cms_e($p['overage']) . '</p>';
+    $h .= '<a href="' . cms_e($p['cta_url'] ?: '#contacto') . '" class="btn ' . $style . ' btn-block">' . cms_e($p['cta_text'] ?: iure_l('Comenzar prueba gratuita', 'Start free trial')) . '</a>';
     return $h . '</div>';
 }
 
 /** Formulario de contacto de las landings (envía a /api/send-contact.php vía main.js). */
 function iure_contact_form(string $origin, string $buttonText): string
 {
-    $lang = cms_default_lang();
+    $lang = cms_render_lang();
     $t = fn(string $k, string $d) => (string) cms_t($k, $lang, $d);
     $sizes = $origin === 'teams'
         ? $t('f_size_teams', "Tamano de tu equipo\n1-5|1-5 personas\n6-20|6-20 personas\n21-50|21-50 personas\n50+|Mas de 50")
@@ -180,8 +192,9 @@ function iure_jsonld(array $page): ?array
     $S = cms_settings();
     $site = $S['site_name'] ?? cms_config('name');
     $org = ['@id' => cms_site_url() . '/#organization'];
-    if ($route === 'page:precios' || $route === 'page:seguridad') {
-        $faq = iure_faq($route === 'page:precios' ? 'precios' : 'seguridad');
+    $slug = (string) ($GLOBALS['item']['slug'] ?? '');
+    if ($route === 'item:paginas' && in_array($slug, ['precios', 'seguridad'], true)) {
+        $faq = iure_faq($slug);
         if (!$faq) return null;
         $q = [];
         foreach ($faq as $f) {
@@ -202,14 +215,14 @@ function iure_jsonld(array $page): ?array
             if ($price === '') continue;
             $offers[] = ['@type' => 'Offer', 'name' => (string) ($p['title'] ?? ''), 'price' => $price, 'priceCurrency' => 'MXN',
                 'description' => trim(((string) ($p['description'] ?? '')) . ' ' . implode(', ', (array) ($p['features'] ?? []))),
-                'url' => cms_abs_url(cms_url('page:precios', $lang)), 'availability' => 'https://schema.org/InStock',
+                'url' => cms_abs_url(iure_url_page('precios', $lang)), 'availability' => 'https://schema.org/InStock',
                 'priceSpecification' => ['@type' => 'UnitPriceSpecification', 'price' => $price, 'priceCurrency' => 'MXN', 'billingDuration' => 'P1M']];
         }
         $app = ['@context' => 'https://schema.org', '@type' => 'SoftwareApplication',
             'name' => $teams ? $site . ' Teams' : $site,
             'url' => $url,
             'applicationCategory' => 'BusinessApplication',
-            'applicationSubCategory' => $teams ? 'Gestión de proyectos con IA' : 'Software de gestión de casos para abogados',
+            'applicationSubCategory' => $teams ? iure_l('Gestión de proyectos con IA', 'AI project management') : iure_l('Software de gestión de casos para abogados', 'Case management software for law firms'),
             'operatingSystem' => 'Web',
             'inLanguage' => 'es-MX',
             'description' => (string) cms_t($teams ? 'home_meta_desc' : 'derecho_meta_desc', $lang),
@@ -244,11 +257,11 @@ function iure_search_sources(string $lang): array
 {
     $src = [];
     $types = [
-        'articulos' => ['Artículo', ['excerpt', 'body']],
-        'paginas'   => ['Página', ['subtitle', 'summary', 'body']],
-        'proyectos' => ['Proyecto', ['excerpt', 'body', 'results']],
+        'articulos' => [iure_l('Artículo', 'Article'), ['excerpt', 'body']],
+        'paginas'   => [iure_l('Página', 'Page'), ['subtitle', 'summary', 'body']],
+        'proyectos' => [iure_l('Proyecto', 'Project'), ['excerpt', 'body', 'results']],
         'legal'     => ['Legal', ['summary', 'body']],
-        'faq'       => ['Pregunta frecuente', ['answer']],
+        'faq'       => [iure_l('Pregunta frecuente', 'FAQ'), ['answer']],
     ];
     foreach ($types as $type => [$label, $fields]) {
         if (!cms_type($type)) continue;
@@ -256,19 +269,8 @@ function iure_search_sources(string $lang): array
             $text = '';
             foreach ($fields as $f) { $v = $it[$f] ?? ''; $text .= ' ' . (is_array($v) ? implode(' ', $v) : (string) $v); }
             foreach ((array) ($it['sections'] ?? []) as $sc) if (empty($sc['hidden'])) foreach ((array) ($sc['data'] ?? []) as $v) $text .= ' ' . (is_array($v) ? implode(' ', $v) : (string) $v);
-            $src[] = [cms_is_home_item($type, $it['slug']) ? 'Portada' : $label, (string) ($it['title'] ?? ''), cms_url('item:' . $type, $lang, $it['slug']), cms_content($text), (string) ($it['date'] ?? $it['updated'] ?? '')];
+            $src[] = [cms_is_home_item($type, $it['slug']) ? iure_l('Portada', 'Home') : $label, (string) ($it['title'] ?? ''), cms_url('item:' . $type, $lang, $it['slug']), cms_content($text), (string) ($it['date'] ?? $it['updated'] ?? '')];
         }
-    }
-    // páginas fijas: título SEO, descripción y todos los textos de su grupo en Textos del sitio
-    $pages = [
-        'precios'   => ['Precios (/precios)', 'precios_meta_title', 'precios_meta_desc', cms_url('page:precios', $lang)],
-        'seguridad' => ['Seguridad (/seguridad)', 'seguridad_meta_title', 'seguridad_meta_desc', cms_url('page:seguridad', $lang)],
-    ];
-    $groups = (array) cms_config('strings_groups');
-    foreach ($pages as $k => [$group, $tk, $dk, $url]) {
-        $text = (string) cms_t($dk, $lang);
-        foreach ((array) ($groups[$group] ?? []) as $key) { $v = cms_t($key, $lang); $text .= ' ' . (is_array($v) ? implode(' ', $v) : (string) $v); }
-        $src[] = ['Página', (string) cms_t($tk, $lang, ucfirst($k)), $url, $text, ''];
     }
     return $src;
 }
@@ -311,11 +313,11 @@ function iure_search(string $q, string $lang, int $max = 50): array
 /** Formulario de búsqueda (cabecera: icono que despliega el campo; página: campo grande). */
 function iure_search_form(string $brand, string $q = '', bool $inline = true): string
 {
-    $lang = cms_default_lang();
+    $lang = cms_render_lang();
     $t = fn(string $k, string $d) => (string) cms_t($k, $lang, $d);
     $action = cms_url('page:buscar', $lang);
-    $ph = $t('search_placeholder', 'Buscar en el sitio…');
-    $btn = $t('search_button', 'Buscar');
+    $ph = $t('search_placeholder', iure_l('Buscar en el sitio…', 'Search the site…'));
+    $btn = $t('search_button', iure_l('Buscar', 'Search'));
     $icon = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>';
     $hidden = $brand === 'teams' ? '<input type="hidden" name="b" value="teams">' : '';
     if ($inline) {
@@ -359,7 +361,8 @@ function iure_href(string $u): string
 {
     $u = trim($u);
     if ($u === '') return '#';
-    return preg_match('#^(https?:)?//|^mailto:|^tel:|^\#|^\{\{base\}\}#i', $u) ? str_replace('{{base}}', CMS_BASE, $u) : CMS_BASE . '/' . ltrim($u, '/');
+    if (preg_match('#^(https?:)?//|^mailto:|^tel:|^\#|^\{\{base\}\}#i', $u)) return str_replace('{{base}}', CMS_BASE, $u);
+    return cms_menu_url($u, cms_render_lang());   // /precios → /en/precios cuando se dibuja en inglés
 }
 
 /** Icono de tarjeta: emoji tal cual, o SVG por nombre. */
@@ -395,4 +398,20 @@ function iure_video_embed(string $url): string
     if (preg_match('#vimeo\.com/(?:video/)?(\d+)#', $url, $m)) return 'https://player.vimeo.com/video/' . $m[1];
     if (preg_match('/^[A-Za-z0-9_-]{6,}$/', $url)) return 'https://www.youtube-nocookie.com/embed/' . $url;
     return $url;
+}
+
+/** Enlace al otro idioma activo (ES ⇄ EN) como elemento del menú; vacío si solo hay un idioma. */
+function iure_lang_switch(array $page): string
+{
+    $langs = cms_active_langs();
+    if (count($langs) < 2) return '';
+    $cur = (string) ($page['lang'] ?? cms_default_lang());
+    $alt = (array) ($page['alt'] ?? []);
+    $h = '';
+    foreach ($langs as $l) {
+        if ($l === $cur) continue;
+        $u = $alt[$l] ?? cms_url('home', $l);
+        $h .= '<li class="nav-lang"><a href="' . cms_e($u) . '" hreflang="' . cms_e($l) . '" lang="' . cms_e($l) . '" title="' . ($l === 'en' ? 'English' : 'Español') . '">' . strtoupper($l) . '</a></li>';
+    }
+    return $h;
 }

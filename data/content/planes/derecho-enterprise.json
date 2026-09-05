@@ -1,25 +1,54 @@
 {
   "slug": "derecho-enterprise",
   "status": "published",
-  "title": "Enterprise",
+  "title": {
+    "es": "Enterprise",
+    "en": "Enterprise"
+  },
   "product": "derecho",
-  "description": "Grandes organizaciones",
+  "description": {
+    "es": "Grandes organizaciones",
+    "en": "Large organizations"
+  },
   "price": "9,999",
   "price_annual": "",
-  "period": "MXN/mes",
-  "badge": "",
+  "period": {
+    "es": "MXN/mes",
+    "en": "MXN/mo"
+  },
+  "badge": {
+    "es": "",
+    "en": ""
+  },
   "featured": false,
-  "features": [
-    "12 usuarios incluidos",
-    "Casos ilimitados",
-    "10,000 consultas IA al mes",
-    "10 GB almacenamiento",
-    "Soporte dedicado 24/7",
-    "Personalización",
-    "Capacitación incluida"
-  ],
-  "overage": "",
-  "cta_text": "Contactar ventas",
+  "features": {
+    "es": [
+      "12 usuarios incluidos",
+      "Casos ilimitados",
+      "10,000 consultas IA al mes",
+      "10 GB almacenamiento",
+      "Soporte dedicado 24/7",
+      "Personalización",
+      "Capacitación incluida"
+    ],
+    "en": [
+      "12 users included",
+      "Unlimited cases",
+      "10,000 AI queries per month",
+      "10 GB storage",
+      "Dedicated 24/7 support",
+      "Customization",
+      "Training included"
+    ]
+  },
+  "overage": {
+    "es": "",
+    "en": ""
+  },
+  "cta_text": {
+    "es": "Contactar ventas",
+    "en": "Contact sales"
+  },
   "cta_style": "outline",
   "cta_url": "#contacto",
   "order": 13,

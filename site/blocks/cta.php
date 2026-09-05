@@ -7,7 +7,7 @@
                 <p><?= iure_inline_html((string) $b['text']) ?></p>
 <?php endif; ?>
 <?php if (!empty($b['form'])): ?>
-                <?= iure_contact_form((string) $b['origin'], (string) ($b['button_text'] ?: 'Solicitar demo')) ?>
+                <?= iure_contact_form((string) $b['origin'], (string) ($b['button_text'] ?: iure_l('Solicitar demo', 'Request a demo'))) ?>
 <?php elseif (trim((string) $b['button_text']) !== ''): ?>
                 <p><a href="<?= cms_e(iure_href((string) $b['button_url'])) ?>" class="btn btn-primary btn-lg"><?= cms_e($b['button_text']) ?></a></p>
 <?php endif; ?>

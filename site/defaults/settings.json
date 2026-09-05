@@ -7,7 +7,9 @@
   "whatsapp": "",
   "author_name": "Iurefficient",
   "country": "MX",
-  "languages": {},
+  "languages": {
+    "en": true
+  },
   "social": {
     "linkedin": "",
     "facebook": "",
@@ -53,5 +55,13 @@
     "Blog | https://blog.iurefficient.com | 1",
     "Precios | /precios/",
     "Ayuda | /help-portal/ | 1"
+  ],
+  "menu_derecho_en": [
+    "Features | /derecho#caracteristicas",
+    "Security | /derecho#seguridad",
+    "Team | /derecho#equipo",
+    "Blog | https://blog.iurefficient.com | 1",
+    "Pricing | /precios",
+    "Help | /help-portal/ | 1"
   ]
 }

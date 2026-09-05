@@ -1,9 +1,15 @@
 {
   "slug": "precios-que-metodos-de-pago-aceptan",
   "status": "published",
-  "title": "¿Qué métodos de pago aceptan?",
+  "title": {
+    "es": "¿Qué métodos de pago aceptan?",
+    "en": "Which payment methods do you accept?"
+  },
   "section": "precios",
-  "answer": "<p>Aceptamos tarjetas de crédito y débito (Visa, Mastercard, American Express), transferencia bancaria y PayPal. Para planes empresariales ofrecemos facturación.</p>",
+  "answer": {
+    "es": "<p>Aceptamos tarjetas de crédito y débito (Visa, Mastercard, American Express), transferencia bancaria y PayPal. Para planes empresariales ofrecemos facturación.</p>",
+    "en": "<p>We accept credit and debit cards (Visa, Mastercard, American Express), bank transfer and PayPal. Invoicing is available for enterprise plans.</p>"
+  },
   "order": 3,
   "seo_title": {
     "es": ""

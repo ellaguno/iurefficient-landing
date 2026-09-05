@@ -8,7 +8,7 @@
                 </div>
                 <p>
                     <a class="btn btn-primary" href="<?= cms_url('home', $lang) ?>"><?= cms_e($t('go_home', 'Ir al inicio')) ?></a>
-                    <a class="btn btn-outline" href="<?= iure_url_derecho($lang) ?>">Para abogados</a>
+                    <a class="btn btn-outline" href="<?= iure_url_derecho($lang) ?>"><?= iure_l('Para abogados', 'For law firms') ?></a>
                 </p>
             </div>
         </div>

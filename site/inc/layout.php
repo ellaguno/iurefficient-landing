@@ -37,6 +37,7 @@ function site_header(array $page): void
 <?php endif; ?>
 <?php if ($route === 'item:paginas'): // páginas por secciones: estilos de precios/seguridad (tablas, FAQ) y de las secciones ?>
     <link rel="stylesheet" href="<?= cms_asset('css/precios.css') ?>?v=<?= $v ?>">
+    <link rel="stylesheet" href="<?= cms_asset('css/seguridad.css') ?>?v=<?= $v ?>">
     <link rel="stylesheet" href="<?= cms_asset('css/sections.css') ?>?v=<?= $v ?>">
 <?php endif; ?>
 </head>
@@ -67,15 +68,17 @@ function site_header(array $page): void
     foreach (cms_menu($lang) as $it): ?>
                     <li><a href="<?= cms_e(cms_menu_url((string) ($it['url'] ?? '/'), $lang)) ?>"<?= !empty($it['new_tab']) ? ' target="_blank" rel="noopener"' : '' ?>><?= cms_e($it['label'] ?? '') ?></a></li>
 <?php endforeach; ?>
+                    <?= iure_lang_switch($page) ?>
                     <?= iure_search_form('teams') ?>
                     <li><a href="<?= iure_url_derecho($lang) ?>" class="btn btn-outline btn-sm"><?= cms_e($t('nav_btn_abogados', 'Abogados')) ?></a></li>
                     <li><a href="<?= cms_e(iure_link('demo_teams_url')) ?>" class="btn btn-primary btn-sm"><?= cms_e($t('nav_btn_demo_teams', 'Entrar al demo')) ?></a></li>
 <?php else:
-    foreach ((array) ($S['menu_derecho'] ?? []) as $line):
+    foreach ((array) (($lang === 'en' && !empty($S['menu_derecho_en'])) ? $S['menu_derecho_en'] : ($S['menu_derecho'] ?? [])) as $line):
         [$label, $url, $nt] = array_pad(array_map('trim', explode('|', (string) $line, 3)), 3, '');
         if ($label === '') continue; ?>
                     <li><a href="<?= cms_e(cms_menu_url($url ?: '/', $lang)) ?>"<?= $nt !== '' ? ' target="_blank" rel="noopener"' : '' ?>><?= cms_e($label) ?></a></li>
 <?php endforeach; ?>
+                    <?= iure_lang_switch($page) ?>
                     <?= iure_search_form('derecho') ?>
                     <li><a href="<?= cms_e(iure_link('demo_derecho_url')) ?>" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><?= cms_e($t('nav_btn_demo_derecho', 'Usar Demo')) ?></a></li>
 <?php endif; ?>
@@ -97,8 +100,8 @@ function site_footer(array $page): void
     $v = CMS_VERSION . '.' . (string) @filemtime(CMS_SITE . '/assets/js/main.js');
     $home = cms_url('home', $lang);
     $derecho = iure_url_derecho($lang);
-    $precios = cms_url('page:precios', $lang) . '/';
-    $seguridad = cms_url('page:seguridad', $lang) . '/';
+    $precios = iure_url_page('precios', $lang);
+    $seguridad = iure_url_page('seguridad', $lang);
     $legal = fn(string $slug) => cms_url('item:legal', $lang, $slug);
     $articulos = cms_url('list:articulos', $lang);
     $email = (string) ($S['email'] ?? 'contacto@iurefficient.com');
@@ -114,58 +117,58 @@ function site_footer(array $page): void
                 </div>
 <?php if ($brand === 'teams'): ?>
                 <div class="footer-links">
-                    <h4>Producto</h4>
+                    <h4><?= iure_l('Producto', 'Product') ?></h4>
                     <ul>
-                        <li><a href="<?= cms_e(iure_link('presentacion_url')) ?>">Presentación</a></li>
-                        <li><a href="<?= $precios ?>">Precios</a></li>
-                        <li><a href="<?= $home ?>#seguridad">Seguridad</a></li>
-                        <li><a href="<?= $home ?>#contacto">Prueba gratuita</a></li>
+                        <li><a href="<?= cms_e(iure_link('presentacion_url')) ?>"><?= iure_l('Presentación', 'Presentation') ?></a></li>
+                        <li><a href="<?= $precios ?>"><?= iure_l('Precios', 'Pricing') ?></a></li>
+                        <li><a href="<?= $home ?>#seguridad"><?= iure_l('Seguridad', 'Security') ?></a></li>
+                        <li><a href="<?= $home ?>#contacto"><?= iure_l('Prueba gratuita', 'Free trial') ?></a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Iurefficient</h4>
                     <ul>
-                        <li><a href="<?= $derecho ?>">Para Abogados</a></li>
-                        <li><a href="<?= $articulos ?>">Artículos y novedades</a></li>
-                        <li><a href="<?= cms_e(iure_link('blog_url')) ?>" target="_blank" rel="noopener">Noticias (blog)</a></li>
-                        <li><a href="<?= cms_e(iure_link('help_url')) ?>" target="_blank" rel="noopener">Centro de Ayuda</a></li>
-                        <li><a href="mailto:<?= cms_e($email) ?>">Contacto</a></li>
+                        <li><a href="<?= $derecho ?>"><?= iure_l('Para Abogados', 'For law firms') ?></a></li>
+                        <li><a href="<?= $articulos ?>"><?= iure_l('Artículos y novedades', 'Articles and updates') ?></a></li>
+                        <li><a href="<?= cms_e(iure_link('blog_url')) ?>" target="_blank" rel="noopener"><?= iure_l('Noticias (blog)', 'News (blog)') ?></a></li>
+                        <li><a href="<?= cms_e(iure_link('help_url')) ?>" target="_blank" rel="noopener"><?= iure_l('Centro de Ayuda', 'Help Center') ?></a></li>
+                        <li><a href="mailto:<?= cms_e($email) ?>"><?= iure_l('Contacto', 'Contact') ?></a></li>
                     </ul>
                 </div>
 <?php else: ?>
                 <div class="footer-links">
-                    <h4>Producto</h4>
+                    <h4><?= iure_l('Producto', 'Product') ?></h4>
                     <ul>
-                        <li><a href="<?= $derecho ?>#caracteristicas">Características</a></li>
-                        <li><a href="<?= $precios ?>">Precios</a></li>
-                        <li><a href="<?= $derecho ?>#seguridad">Seguridad</a></li>
-                        <li><a href="<?= cms_e(iure_link('help_url')) ?>" target="_blank" rel="noopener">Centro de Ayuda</a></li>
-                        <li><a href="<?= $derecho ?>#contacto">Demo</a></li>
+                        <li><a href="<?= $derecho ?>#caracteristicas"><?= iure_l('Características', 'Features') ?></a></li>
+                        <li><a href="<?= $precios ?>"><?= iure_l('Precios', 'Pricing') ?></a></li>
+                        <li><a href="<?= $derecho ?>#seguridad"><?= iure_l('Seguridad', 'Security') ?></a></li>
+                        <li><a href="<?= cms_e(iure_link('help_url')) ?>" target="_blank" rel="noopener"><?= iure_l('Centro de Ayuda', 'Help Center') ?></a></li>
+                        <li><a href="<?= $derecho ?>#contacto"><?= iure_l('Demo', 'Demo') ?></a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Empresa</h4>
+                    <h4><?= iure_l('Empresa', 'Company') ?></h4>
                     <ul>
-                        <li><a href="<?= $derecho ?>#equipo">Equipo</a></li>
-                        <li><a href="<?= $articulos ?>">Artículos y novedades</a></li>
-                        <li><a href="<?= cms_e(iure_link('blog_url')) ?>" target="_blank" rel="noopener">Noticias (blog)</a></li>
+                        <li><a href="<?= $derecho ?>#equipo"><?= iure_l('Equipo', 'Team') ?></a></li>
+                        <li><a href="<?= $articulos ?>"><?= iure_l('Artículos y novedades', 'Articles and updates') ?></a></li>
+                        <li><a href="<?= cms_e(iure_link('blog_url')) ?>" target="_blank" rel="noopener"><?= iure_l('Noticias (blog)', 'News (blog)') ?></a></li>
                         <li><a href="<?= $home ?>">Iurefficient Teams</a></li>
-                        <li><a href="mailto:<?= cms_e($email) ?>">Contacto</a></li>
+                        <li><a href="mailto:<?= cms_e($email) ?>"><?= iure_l('Contacto', 'Contact') ?></a></li>
                     </ul>
                 </div>
 <?php endif; ?>
                 <div class="footer-links">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="<?= $legal('privacidad') ?>">Aviso de Privacidad</a></li>
-                        <li><a href="<?= $legal('terminos') ?>">Términos y Condiciones</a></li>
-                        <li><a href="<?= $seguridad ?>">Seguridad</a></li>
+                        <li><a href="<?= $legal('privacidad') ?>"><?= iure_l('Aviso de Privacidad', 'Privacy Notice') ?></a></li>
+                        <li><a href="<?= $legal('terminos') ?>"><?= iure_l('Términos y Condiciones', 'Terms and Conditions') ?></a></li>
+                        <li><a href="<?= $seguridad ?>"><?= iure_l('Seguridad', 'Security') ?></a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-<?php if ($route === 'page:seguridad' && $t('s_footer_doc')): ?>
+<?php if ($route === 'item:paginas' && (($GLOBALS['item']['slug'] ?? '') === 'seguridad') && $t('s_footer_doc')): ?>
                 <p><?= cms_e($t('s_footer_doc')) ?></p>
 <?php endif; ?>
                 <p><?= cms_e(str_replace('{year}', date('Y'), (string) $t('footer_copy', '© {year} Iurefficient. Todos los derechos reservados.'))) ?></p>

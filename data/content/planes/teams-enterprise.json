@@ -1,25 +1,54 @@
 {
   "slug": "teams-enterprise",
   "status": "published",
-  "title": "Teams Enterprise",
+  "title": {
+    "es": "Teams Enterprise",
+    "en": "Teams Enterprise"
+  },
   "product": "teams",
-  "description": "Grandes organizaciones",
+  "description": {
+    "es": "Grandes organizaciones",
+    "en": "Large organizations"
+  },
   "price": "11,999",
   "price_annual": "",
-  "period": "MXN/mes",
-  "badge": "",
+  "period": {
+    "es": "MXN/mes",
+    "en": "MXN/mo"
+  },
+  "badge": {
+    "es": "",
+    "en": ""
+  },
   "featured": false,
-  "features": [
-    "12 usuarios incluidos",
-    "Proyectos ilimitados",
-    "15,000 consultas IA al mes",
-    "10 GB almacenamiento",
-    "Soporte dedicado 24/7",
-    "Capacitacion incluida",
-    "Personalizacion"
-  ],
-  "overage": "",
-  "cta_text": "Contactar ventas",
+  "features": {
+    "es": [
+      "12 usuarios incluidos",
+      "Proyectos ilimitados",
+      "15,000 consultas IA al mes",
+      "10 GB almacenamiento",
+      "Soporte dedicado 24/7",
+      "Capacitacion incluida",
+      "Personalizacion"
+    ],
+    "en": [
+      "12 users included",
+      "Unlimited projects",
+      "15,000 AI queries per month",
+      "10 GB storage",
+      "Dedicated 24/7 support",
+      "Training included",
+      "Customization"
+    ]
+  },
+  "overage": {
+    "es": "",
+    "en": ""
+  },
+  "cta_text": {
+    "es": "Contactar ventas",
+    "en": "Contact sales"
+  },
   "cta_style": "outline",
   "cta_url": "#contacto",
   "order": 3,

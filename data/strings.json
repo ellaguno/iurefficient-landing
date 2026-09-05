@@ -1,294 +1,262 @@
 {
-  "p_hero_title": {
-    "es": "Planes transparentes, <span class=\"gradient-text\">sin sorpresas</span>",
-    "help": "Admite HTML"
-  },
-  "p_hero_text": {
-    "es": "Elige el plan que mejor se adapte a tu práctica. Sin contratos forzosos, cancela cuando quieras.",
-    "help": ""
-  },
   "p_toggle_monthly": {
     "es": "Mensual",
-    "help": ""
+    "help": "",
+    "en": "Monthly"
   },
   "p_toggle_annual": {
     "es": "Anual",
-    "help": ""
+    "help": "",
+    "en": "Annual"
   },
   "p_toggle_discount": {
     "es": "Ahorra 20%",
-    "help": "Vacío = sin etiqueta verde"
-  },
-  "p_compare_title": {
-    "es": "Comparativa <span class=\"gradient-text\">detallada</span>",
-    "help": "Admite HTML"
-  },
-  "p_compare_subtitle": {
-    "es": "Todas las características lado a lado",
-    "help": ""
-  },
-  "p_faq_title": {
-    "es": "Preguntas <span class=\"gradient-text\">frecuentes</span>",
-    "help": "Admite HTML"
-  },
-  "p_guarantee_title": {
-    "es": "🛡️ Garantía de satisfacción de 30 días",
-    "help": "Vacío = se oculta la garantía"
-  },
-  "p_guarantee_text": {
-    "es": "Si no estás completamente satisfecho con Iurefficient en los primeros 30 días, te devolvemos el 100% de tu dinero. Sin preguntas.",
-    "help": ""
-  },
-  "p_cta_title": {
-    "es": "¿Listo para empezar?",
-    "help": ""
-  },
-  "p_cta_text": {
-    "es": "Prueba Iurefficient gratis por 14 días. Sin tarjeta de crédito.",
-    "help": ""
-  },
-  "p_cta_button": {
-    "es": "Comenzar prueba gratuita",
-    "help": ""
-  },
-  "s_hero_title": {
-    "es": "Seguridad, Confidencialidad y <span style=\"color: var(--accent-400)\">Privacidad</span>",
-    "help": "Admite HTML"
-  },
-  "s_hero_text": {
-    "es": "Información completa sobre cómo protegemos tu información y la de tus clientes. A diferencia de servicios de IA genéricos, tu información nunca sale de tu control.",
-    "help": ""
-  },
-  "s_hero_update": {
-    "es": "Última actualización: Enero 2026 | Versión del documento: 1.0",
-    "help": ""
-  },
-  "s_faq_title": {
-    "es": "Preguntas <span class=\"gradient-text\">Frecuentes</span>",
-    "help": "Admite HTML"
-  },
-  "s_contact_title": {
-    "es": "¿Tienes más preguntas?",
-    "help": ""
-  },
-  "s_contact_text": {
-    "es": "Nuestro equipo de seguridad está disponible para responder cualquier duda sobre cómo protegemos tu información.",
-    "help": ""
-  },
-  "s_contact_report": {
-    "es": "Para reportar vulnerabilidades:",
-    "help": ""
-  },
-  "s_cta_title": {
-    "es": "Tu información está segura con nosotros",
-    "help": ""
-  },
-  "s_cta_text": {
-    "es": "Prueba Iurefficient con la confianza de que tus datos están protegidos",
-    "help": ""
-  },
-  "s_cta_button": {
-    "es": "Comenzar prueba gratuita",
-    "help": ""
-  },
-  "s_footer_doc": {
-    "es": "Documento de Seguridad, Confidencialidad y Privacidad - Iurefficient v4.5.0",
-    "help": ""
+    "help": "Vacío = sin etiqueta verde",
+    "en": "Save 20%"
   },
   "nav_btn_abogados": {
     "es": "Abogados",
-    "help": ""
+    "help": "",
+    "en": "Law firms"
   },
   "nav_btn_demo_teams": {
     "es": "Entrar al demo",
-    "help": ""
+    "help": "",
+    "en": "Open the demo"
   },
   "nav_btn_demo_derecho": {
     "es": "Usar Demo",
-    "help": ""
+    "help": "",
+    "en": "Try the demo"
   },
   "footer_copy": {
     "es": "© {year} Iurefficient. Todos los derechos reservados.",
-    "help": "{year} se sustituye por el año actual"
+    "help": "{year} se sustituye por el año actual",
+    "en": "© {year} Iurefficient. All rights reserved."
   },
   "footer_made": {
     "es": "Hecho con ❤️ en México",
-    "help": ""
+    "help": "",
+    "en": "Made with ❤️ in Mexico"
   },
   "crumb_home": {
     "es": "Inicio",
-    "help": ""
+    "help": "",
+    "en": "Home"
   },
   "not_found_title": {
     "es": "Página no encontrada",
-    "help": ""
+    "help": "",
+    "en": "Page not found"
   },
   "not_found_text": {
     "es": "La página que buscas no existe o cambió de lugar.",
-    "help": ""
+    "help": "",
+    "en": "The page you are looking for does not exist or has moved."
   },
   "go_home": {
     "es": "Ir al inicio",
-    "help": ""
+    "help": "",
+    "en": "Go to the home page"
   },
   "f_name_ph": {
     "es": "Tu nombre",
-    "help": ""
+    "help": "",
+    "en": "Your name"
   },
   "f_email_ph": {
     "es": "Tu email",
-    "help": ""
+    "help": "",
+    "en": "Your email"
   },
   "f_email_ph_teams": {
     "es": "Tu email corporativo",
-    "help": ""
+    "help": "",
+    "en": "Your work email"
   },
   "f_phone_ph": {
     "es": "Tu teléfono (opcional)",
-    "help": ""
+    "help": "",
+    "en": "Your phone (optional)"
   },
   "f_size_teams": {
     "es": "Tamaño de tu equipo\n1-5|1-5 personas\n6-20|6-20 personas\n21-50|21-50 personas\n50+|Más de 50",
-    "help": "Primera línea: texto del selector. Después: valor|etiqueta por línea"
+    "help": "Primera línea: texto del selector. Después: valor|etiqueta por línea",
+    "en": "Team size\n1-5|1-5 people\n6-20|6-20 people\n21-50|21-50 people\n50+|More than 50"
   },
   "f_size_derecho": {
     "es": "Tamaño de tu despacho\n1|Solo yo\n2-5|2-5 abogados\n6-20|6-20 abogados\n20+|Más de 20",
-    "help": "Primera línea: texto del selector. Después: valor|etiqueta por línea"
+    "help": "Primera línea: texto del selector. Después: valor|etiqueta por línea",
+    "en": "Firm size\n1|Just me\n2-5|2-5 lawyers\n6-20|6-20 lawyers\n20+|More than 20"
   },
   "home_meta_title": {
     "es": "Iurefficient Teams: gestión de proyectos con IA para equipos",
-    "help": "Título de la pestaña en la portada (sin sufijo)"
+    "help": "Título de la pestaña en la portada (sin sufijo)",
+    "en": "Iurefficient Teams: AI project management for teams"
   },
   "home_meta_desc": {
     "es": "Iurefficient Teams es un software de gestión de proyectos con inteligencia artificial. Conversas con iure, tu asistente de IA, y genera tareas, dependencias y cronograma. Prueba gratis 14 días.",
-    "help": ""
+    "help": "",
+    "en": "Iurefficient Teams is project management software with artificial intelligence. Chat with iure, your AI assistant, and it generates tasks, dependencies and a schedule. Free 14-day trial."
   },
   "precios_meta_title": {
     "es": "Precios y planes de Iurefficient para abogados y despachos",
-    "help": ""
+    "help": "",
+    "en": "Iurefficient pricing and plans for lawyers and law firms"
   },
   "precios_meta_desc": {
     "es": "Planes y precios de Iurefficient, el software legal con IA para despachos. Básico, Profesional y Enterprise, sin contratos forzosos y con prueba gratuita.",
-    "help": ""
+    "help": "",
+    "en": "Plans and pricing for Iurefficient, the AI legal software for law firms. Basic, Professional and Enterprise, no long-term contracts, free trial included."
   },
   "seguridad_meta_title": {
     "es": "Seguridad, confidencialidad y privacidad de tus datos legales",
-    "help": ""
+    "help": "",
+    "en": "Security, confidentiality and privacy of your legal data"
   },
   "seguridad_meta_desc": {
     "es": "Cómo Iurefficient protege la información de tu despacho y de tus clientes: cifrado, servidores propios, sin entrenamiento de IA con tus datos y cumplimiento de la LFPDPPP.",
-    "help": ""
+    "help": "",
+    "en": "How Iurefficient protects your firm's and your clients' information: encryption, private servers, no AI training on your data, and compliance with Mexican data protection law."
   },
   "pg_cta_title": {
     "es": "¿Quieres ver Iurefficient en acción?",
-    "help": "Título del bloque de contacto al final de páginas, artículos y proyectos"
+    "help": "Título del bloque de contacto al final de páginas, artículos y proyectos",
+    "en": "Want to see Iurefficient in action?"
   },
   "pg_cta_text": {
     "es": "Agenda una demostración o empieza tu prueba gratuita hoy mismo.",
-    "help": ""
+    "help": "",
+    "en": "Book a demo or start your free trial today."
   },
   "pg_cta_button": {
     "es": "Solicitar demo",
-    "help": ""
+    "help": "",
+    "en": "Request a demo"
   },
   "toc_title": {
     "es": "Contenido",
-    "help": "Título del índice de una página libre"
+    "help": "Título del índice de una página libre",
+    "en": "Contents"
   },
   "articulos_title": {
     "es": "Artículos",
-    "help": "Título del índice /articulos/"
+    "help": "Título del índice /articulos/",
+    "en": "Articles"
   },
   "articulos_intro": {
     "es": "",
-    "help": "Texto bajo el título del índice de artículos (opcional)"
+    "help": "Texto bajo el título del índice de artículos (opcional)",
+    "en": ""
   },
   "articulos_empty": {
     "es": "Aún no hay artículos publicados.",
-    "help": ""
+    "help": "",
+    "en": "No articles published yet."
   },
   "articulos_meta_title": {
     "es": "Artículos",
-    "help": "SEO: título de /articulos/"
+    "help": "SEO: título de /articulos/",
+    "en": "Articles"
   },
   "articulos_meta_desc": {
     "es": "Artículos y guías de Iurefficient sobre inteligencia artificial para despachos y equipos.",
-    "help": "SEO: descripción de /articulos/"
+    "help": "SEO: descripción de /articulos/",
+    "en": "Iurefficient articles and guides on artificial intelligence for law firms and teams."
   },
   "proyectos_title": {
     "es": "Proyectos",
-    "help": "Título del índice /proyectos/"
+    "help": "Título del índice /proyectos/",
+    "en": "Projects"
   },
   "proyectos_intro": {
     "es": "",
-    "help": "Texto bajo el título del índice de proyectos (opcional)"
+    "help": "Texto bajo el título del índice de proyectos (opcional)",
+    "en": ""
   },
   "proyectos_empty": {
     "es": "Aún no hay proyectos publicados.",
-    "help": ""
+    "help": "",
+    "en": "No projects published yet."
   },
   "proyectos_meta_title": {
     "es": "Proyectos",
-    "help": "SEO: título de /proyectos/"
+    "help": "SEO: título de /proyectos/",
+    "en": "Projects"
   },
   "proyectos_meta_desc": {
     "es": "Casos de éxito y proyectos realizados con Iurefficient.",
-    "help": "SEO: descripción de /proyectos/"
+    "help": "SEO: descripción de /proyectos/",
+    "en": "Success stories and projects built with Iurefficient."
   },
   "published_on": {
     "es": "Publicado el",
-    "help": "Antes de la fecha en un artículo"
+    "help": "Antes de la fecha en un artículo",
+    "en": "Published on"
   },
   "by_author": {
     "es": "por",
-    "help": "Antes del autor en un artículo"
+    "help": "Antes del autor en un artículo",
+    "en": "by"
   },
   "read_more": {
     "es": "Leer más",
-    "help": ""
+    "help": "",
+    "en": "Read more"
   },
   "back_to_list": {
     "es": "Volver al índice",
-    "help": ""
+    "help": "",
+    "en": "Back to the index"
   },
   "search_placeholder": {
     "es": "Buscar en el sitio…",
-    "help": "Texto del campo de búsqueda"
+    "help": "Texto del campo de búsqueda",
+    "en": "Search the site…"
   },
   "search_button": {
     "es": "Buscar",
-    "help": ""
+    "help": "",
+    "en": "Search"
   },
   "search_title": {
     "es": "Buscar",
-    "help": "Título de la página /buscar"
+    "help": "Título de la página /buscar",
+    "en": "Search"
   },
   "search_results": {
     "es": "{n} resultados para «{q}»",
-    "help": "{n} y {q} se sustituyen"
+    "help": "{n} y {q} se sustituyen",
+    "en": "{n} results for “{q}”"
   },
   "search_one": {
     "es": "1 resultado para «{q}»",
-    "help": ""
+    "help": "",
+    "en": "1 result for “{q}”"
   },
   "search_empty": {
     "es": "No encontramos nada para «{q}». Prueba con otras palabras.",
-    "help": ""
+    "help": "",
+    "en": "Nothing found for “{q}”. Try other words."
   },
   "search_hint": {
     "es": "Busca en artículos, novedades de versión, tutoriales, preguntas frecuentes y páginas del sitio.",
-    "help": "Texto bajo el campo cuando aún no hay búsqueda"
+    "help": "Texto bajo el campo cuando aún no hay búsqueda",
+    "en": "Search articles, release notes, tutorials, FAQs and site pages."
   },
   "buscar_meta_title": {
     "es": "Buscar",
-    "help": "SEO: título de /buscar"
+    "help": "SEO: título de /buscar",
+    "en": "Search"
   },
   "t_footer_tagline": {
     "es": "Gestión de proyectos potenciada con inteligencia artificial.",
-    "help": "Lema del pie en las páginas Teams"
+    "help": "Lema del pie en las páginas Teams",
+    "en": "Project management powered by artificial intelligence."
   },
   "t_footer_beta_note": {
     "es": "¿Ya usas Iurefficient para tu despacho? Tu cuenta actual incluye acceso a Teams sin costo adicional durante la fase beta.",
-    "help": "Nota del pie en las páginas Teams"
+    "help": "Nota del pie en las páginas Teams",
+    "en": "Already using Iurefficient for your law firm? Your current account includes access to Teams at no extra cost during the beta."
   }
 }

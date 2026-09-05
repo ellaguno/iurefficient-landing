@@ -1,9 +1,15 @@
 {
   "slug": "seguridad-que-pasa-si-hay-una-brecha-de-seguridad",
   "status": "published",
-  "title": "¿Que pasa si hay una brecha de seguridad?",
+  "title": {
+    "es": "¿Que pasa si hay una brecha de seguridad?",
+    "en": "What happens if there is a security breach?"
+  },
   "section": "seguridad",
-  "answer": "<p>Tenemos un protocolo de respuesta a incidentes que incluye: deteccion automatica de anomalias, notificacion inmediata a los afectados (dentro de 72 horas segun GDPR), analisis forense, correccion de vulnerabilidades y reporte a autoridades cuando sea requerido por ley.</p>",
+  "answer": {
+    "es": "<p>Tenemos un protocolo de respuesta a incidentes que incluye: deteccion automatica de anomalias, notificacion inmediata a los afectados (dentro de 72 horas segun GDPR), analisis forense, correccion de vulnerabilidades y reporte a autoridades cuando sea requerido por ley.</p>",
+    "en": "<p>We have an incident response protocol that includes automatic anomaly detection, immediate notification to those affected (within 72 hours, as GDPR requires), forensic analysis, remediation of vulnerabilities, and reporting to the authorities when required by law.</p>"
+  },
   "order": 15,
   "seo_title": {
     "es": ""

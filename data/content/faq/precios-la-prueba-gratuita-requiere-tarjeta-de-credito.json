@@ -1,9 +1,15 @@
 {
   "slug": "precios-la-prueba-gratuita-requiere-tarjeta-de-credito",
   "status": "published",
-  "title": "¿La prueba gratuita requiere tarjeta de crédito?",
+  "title": {
+    "es": "¿La prueba gratuita requiere tarjeta de crédito?",
+    "en": "Does the free trial require a credit card?"
+  },
   "section": "precios",
-  "answer": "<p>No. La prueba de 14 días es completamente gratuita y no requiere tarjeta de crédito. Solo te pediremos datos de pago si decides continuar.</p>",
+  "answer": {
+    "es": "<p>No. La prueba de 14 días es completamente gratuita y no requiere tarjeta de crédito. Solo te pediremos datos de pago si decides continuar.</p>",
+    "en": "<p>No. The 14-day trial is completely free and requires no credit card. We only ask for payment details if you decide to continue.</p>"
+  },
   "order": 6,
   "seo_title": {
     "es": ""

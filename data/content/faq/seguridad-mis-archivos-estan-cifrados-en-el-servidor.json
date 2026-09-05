@@ -1,9 +1,15 @@
 {
   "slug": "seguridad-mis-archivos-estan-cifrados-en-el-servidor",
   "status": "published",
-  "title": "¿Mis archivos estan cifrados en el servidor?",
+  "title": {
+    "es": "¿Mis archivos estan cifrados en el servidor?",
+    "en": "Are my files encrypted on the server?"
+  },
   "section": "seguridad",
-  "answer": "<p>Si. A partir de la version 4.5.0, todos los archivos subidos se cifran automaticamente con <strong>AES-256-GCM</strong>, el estandar de cifrado mas seguro disponible. Caracteristicas:</p><ul><li><strong>Cifrado transparente:</strong> Los archivos se cifran al subir y descifran al descargar automaticamente</li><li><strong>Claves por caso:</strong> Cada caso utiliza una clave derivada unica (HKDF)</li><li><strong>Autenticacion GCM:</strong> Detecta cualquier manipulacion del archivo</li><li><strong>Retrocompatible:</strong> Los archivos anteriores siguen funcionando normalmente</li></ul><p>Incluso si alguien obtuviera acceso fisico al servidor, los archivos serian completamente ilegibles sin la clave maestra de cifrado.</p>",
+  "answer": {
+    "es": "<p>Si. A partir de la version 4.5.0, todos los archivos subidos se cifran automaticamente con <strong>AES-256-GCM</strong>, el estandar de cifrado mas seguro disponible. Caracteristicas:</p><ul><li><strong>Cifrado transparente:</strong> Los archivos se cifran al subir y descifran al descargar automaticamente</li><li><strong>Claves por caso:</strong> Cada caso utiliza una clave derivada unica (HKDF)</li><li><strong>Autenticacion GCM:</strong> Detecta cualquier manipulacion del archivo</li><li><strong>Retrocompatible:</strong> Los archivos anteriores siguen funcionando normalmente</li></ul><p>Incluso si alguien obtuviera acceso fisico al servidor, los archivos serian completamente ilegibles sin la clave maestra de cifrado.</p>",
+    "en": "<p>Yes. Since version 4.5.0 every uploaded file is automatically encrypted with <strong>AES-256-GCM</strong>, the most secure encryption standard available. Highlights:</p><ul><li><strong>Transparent encryption:</strong> files are encrypted on upload and decrypted on download automatically</li><li><strong>Per-case keys:</strong> each case uses a unique derived key (HKDF)</li><li><strong>GCM authentication:</strong> detects any tampering with the file</li><li><strong>Backward compatible:</strong> earlier files keep working normally</li></ul><p>Even with physical access to the server, files would be completely unreadable without the master encryption key.</p>"
+  },
   "order": 17,
   "seo_title": {
     "es": ""

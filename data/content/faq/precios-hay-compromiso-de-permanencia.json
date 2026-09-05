@@ -1,9 +1,15 @@
 {
   "slug": "precios-hay-compromiso-de-permanencia",
   "status": "published",
-  "title": "¿Hay compromiso de permanencia?",
+  "title": {
+    "es": "¿Hay compromiso de permanencia?",
+    "en": "Is there a minimum commitment?"
+  },
   "section": "precios",
-  "answer": "<p>No. Todos nuestros planes son sin contrato. Puedes cancelar cuando quieras y seguirás teniendo acceso hasta el final de tu período pagado.</p>",
+  "answer": {
+    "es": "<p>No. Todos nuestros planes son sin contrato. Puedes cancelar cuando quieras y seguirás teniendo acceso hasta el final de tu período pagado.</p>",
+    "en": "<p>No. All our plans are contract-free. You can cancel whenever you want and keep access until the end of your paid period.</p>"
+  },
   "order": 2,
   "seo_title": {
     "es": ""

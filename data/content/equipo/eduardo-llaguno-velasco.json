@@ -2,9 +2,15 @@
   "slug": "eduardo-llaguno-velasco",
   "status": "published",
   "title": "Eduardo Llaguno Velasco",
-  "role": "Co-fundador",
+  "role": {
+    "es": "Co-fundador",
+    "en": "Co-founder"
+  },
   "photo": "eduardo.jpg",
-  "bio": "Apasionado por la intersección entre derecho y tecnología. Creamos Iurefficient para resolver los problemas que enfrentamos en nuestra propia práctica.",
+  "bio": {
+    "es": "Apasionado por la intersección entre derecho y tecnología. Creamos Iurefficient para resolver los problemas que enfrentamos en nuestra propia práctica.",
+    "en": "Passionate about the intersection of law and technology. We built Iurefficient to solve the problems we faced in our own practice."
+  },
   "order": 1,
   "seo_title": {
     "es": ""

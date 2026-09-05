@@ -20,15 +20,15 @@ arsort($cats);
 <?php endif; ?>
             </div>
 <?php if ($cats): ?>
-            <nav class="page-cats" aria-label="Categorías">
-                <a href="<?= $list ?>"<?= $cat === '' && $tag === '' && $q === '' ? ' class="on"' : '' ?>>Todos</a>
+            <nav class="page-cats" aria-label="<?= iure_l('Categorías', 'Categories') ?>">
+                <a href="<?= $list ?>"<?= $cat === '' && $tag === '' && $q === '' ? ' class="on"' : '' ?>><?= iure_l('Todos', 'All') ?></a>
 <?php foreach ($cats as $c => $n): ?>
                 <a href="<?= $list ?>?cat=<?= rawurlencode((string) $c) ?>"<?= $cat === (string) $c ? ' class="on"' : '' ?>><?= cms_e($c) ?> <small><?= $n ?></small></a>
 <?php endforeach; ?>
             </nav>
 <?php endif; ?>
 <?php if ($q || $tag || $cat): ?>
-            <p class="page-filter">Resultados para <strong><?= cms_e($q ?: $tag ?: $cat) ?></strong> · <a href="<?= $list ?>">ver todo</a></p>
+            <p class="page-filter"><?= iure_l('Resultados para', 'Results for') ?> <strong><?= cms_e($q ?: $tag ?: $cat) ?></strong> · <a href="<?= $list ?>"><?= iure_l('ver todo', 'see all') ?></a></p>
 <?php endif; ?>
 <?php if (!$items): ?>
             <p class="page-empty"><?= cms_e($t('articulos_empty', 'Aún no hay artículos publicados.')) ?></p>

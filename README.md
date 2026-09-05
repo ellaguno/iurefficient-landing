@@ -12,8 +12,9 @@ tag `pre-cms-migration` de este repositorio y en `../backups/2026-09-03/`.
 |---|---|---|
 | `/` | Portada Iurefficient Teams | página "Portada Teams" del **constructor** (`data/content/paginas/inicio.json`, config `home_item`) |
 | `/derecho` | Landing para abogados | página "Abogados" del **constructor** (`data/content/paginas/derecho.json`, 11 secciones) |
-| `/precios` | Planes, comparativa y FAQ | `site/templates/precios.php` + planes ("precios") + FAQ ("precios") |
-| `/seguridad` | Seguridad, confidencialidad y privacidad | `site/templates/seguridad.php` + FAQ ("seguridad") |
+| `/precios` | Planes, comparativa y FAQ | página del **constructor** (`data/content/paginas/precios.json`) |
+| `/seguridad` | Seguridad, confidencialidad y privacidad | página del **constructor** (`data/content/paginas/seguridad.json`) |
+| `/en/…` | Versión en inglés de todo el sitio | mismas páginas y colecciones, campos bilingües (`i18n`) con respaldo al español |
 | `/legal/privacidad`, `/legal/terminos` | Páginas legales | tipo de contenido "Páginas legales" |
 | `/pages/{url}` | Páginas libres creadas desde el panel | tipo "Páginas" + `site/templates/pagina.php` |
 | `/articulos/`, `/articulos/{url}` | Artículos, tutoriales y novedades de versión (88 entradas migradas del blog el 2026-09-04) | tipo "Artículos" + `articulos.php` / `articulo.php` |
@@ -91,6 +92,16 @@ de demostración con `?cmsbare=1`; `CMS_ROOT=/otro/sitio … --solo-tema` para o
 Admin → Respaldos: zip de `data/` y `uploads/` (opcionalmente `site/`) en `/backups`, con nota; descargar, restaurar
 (con respaldo automático previo y conservando usuarios) y eliminar. Requiere la extensión zip de PHP.
 
+### Sitio bilingüe (español e inglés)
+
+`'langs' => ['es', 'en']` en `site/config.php`; el inglés se activa en Ajustes → Idiomas. Los campos de texto de los
+tipos y de los bloques llevan `'i18n' => true`, así que el editor muestra el conmutador ES/EN. Al dibujar el sitio, el
+núcleo resuelve los campos bilingües al idioma de la petición (`cms_localize`, `cms_render_lang()`), de modo que las
+plantillas y vistas siguen usando `$item['title']` o `$b['title']` sin cambios. Los textos fijos del tema usan
+`iure_l('es', 'en')`; el selector de idioma es `iure_lang_switch()`. Lo que falta por traducir se muestra en español.
+`tools/i18n-en.py` convirtió el contenido existente y creó las páginas precios y seguridad (antes plantillas fijas).
+Los 88 artículos siguen en español (se muestran con respaldo en /en/).
+
 ### Manual embebido
 
 Admin → Manual: diez capítulos en `cms/manual/*.md` (Markdown con capturas en `cms/manual/img/`), desde instalar y
@@ -140,7 +151,7 @@ site/config.php             tipos de contenido, páginas, ajustes, grupos de tex
 site/blocks.php, blocks/    catálogo y vistas de las secciones del constructor
 site/inc/layout.php         cabecera y pie (marca Teams o Abogados según la página)
 site/inc/functions.php      helpers: tarjetas de plan, formulario, índice legal…
-site/templates/             precios, seguridad, legal, pagina (constructor: portada y /derecho), articulos/articulo, proyectos/proyecto,
+site/templates/             legal, pagina (constructor: portada, /derecho, /precios, /seguridad), articulos/articulo, proyectos/proyecto,
                             plan, miembro, pregunta, 404
 site/assets/css|js|img      styles.css, teams.css, precios.css, seguridad.css, legal.css (legales, páginas libres,
                             artículos, proyectos, preguntas y 404), main.js, imágenes
@@ -187,8 +198,8 @@ La primera vez que abres `/admin/` te pide crear el usuario administrador (`data
 ### Actualizar un sitio ya desplegado
 
 Contenido nuevo generado en local (por ejemplo `data/content/articulos/` y `uploads/blog/` de la migración, o
-`data/content/paginas/inicio.json` y `derecho.json`, que desde el 5 de septiembre de 2026 **son** la portada y la landing
-/derecho) se sube aparte, como archivos nuevos, sin tocar el resto de `data/`. Sin esos JSON, `/` cae a `home.php`
+`data/content/paginas/inicio.json`, `derecho.json`, `precios.json` y `seguridad.json`, que desde el 5 de septiembre de
+2026 **son** la portada, /derecho, /precios y /seguridad; y el contenido bilingüe de planes, FAQ, equipo y legales) se sube aparte, como archivos nuevos, sin tocar el resto de `data/`. Sin esos JSON, `/` cae a `home.php`
 (que ya no existe) y `/derecho` responde 404.
 
 Sube solo el código: todo **excepto** `data/` y `uploads/` (ahí viven el contenido, los ajustes, los usuarios y los

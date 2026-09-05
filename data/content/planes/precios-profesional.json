@@ -1,26 +1,56 @@
 {
   "slug": "precios-profesional",
   "status": "published",
-  "title": "Profesional",
+  "title": {
+    "es": "Profesional",
+    "en": "Professional"
+  },
   "product": "precios",
-  "description": "Despachos en crecimiento",
+  "description": {
+    "es": "Despachos en crecimiento",
+    "en": "Growing firms"
+  },
   "price": "5,999",
   "price_annual": "5,499",
-  "period": "MXN/mes",
-  "badge": "Más popular",
+  "period": {
+    "es": "MXN/mes",
+    "en": "MXN/mo"
+  },
+  "badge": {
+    "es": "Más popular",
+    "en": "Most popular"
+  },
   "featured": true,
-  "features": [
-    "7 usuarios incluidos",
-    "200 casos/proyectos",
-    "2,000 consultas IA al mes",
-    "4 GB almacenamiento",
-    "Soporte prioritario",
-    "Integraciones",
-    "Reportes avanzados",
-    "API access"
-  ],
-  "overage": "+$1,000/usuario, +$120.0/GB, +$50/caso, +$120/1000 IA",
-  "cta_text": "Comenzar prueba gratuita",
+  "features": {
+    "es": [
+      "7 usuarios incluidos",
+      "200 casos/proyectos",
+      "2,000 consultas IA al mes",
+      "4 GB almacenamiento",
+      "Soporte prioritario",
+      "Integraciones",
+      "Reportes avanzados",
+      "API access"
+    ],
+    "en": [
+      "7 users included",
+      "200 cases/projects",
+      "2,000 AI queries per month",
+      "4 GB storage",
+      "Priority support",
+      "Integrations",
+      "Advanced reports",
+      "API access"
+    ]
+  },
+  "overage": {
+    "es": "+$1,000/usuario, +$120.0/GB, +$50/caso, +$120/1000 IA",
+    "en": "+$1,000/user, +$120/GB, +$50/case, +$120 per 1,000 AI queries"
+  },
+  "cta_text": {
+    "es": "Comenzar prueba gratuita",
+    "en": "Start free trial"
+  },
   "cta_style": "primary",
   "cta_url": "#contacto",
   "order": 22,

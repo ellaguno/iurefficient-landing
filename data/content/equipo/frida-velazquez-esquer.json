@@ -2,9 +2,15 @@
   "slug": "frida-velazquez-esquer",
   "status": "published",
   "title": "Frida Velázquez Esquer",
-  "role": "Co-fundadora",
+  "role": {
+    "es": "Co-fundadora",
+    "en": "Co-founder"
+  },
   "photo": "frida.jpg",
-  "bio": "Abogada diplomada en Derecho Digital y Legaltech por el Centro de Estudios Jurídicos Carbonell. Nuestra misión es hacer el ejercicio del derecho más accesible en términos tecnológicos.",
+  "bio": {
+    "es": "Abogada diplomada en Derecho Digital y Legaltech por el Centro de Estudios Jurídicos Carbonell. Nuestra misión es hacer el ejercicio del derecho más accesible en términos tecnológicos.",
+    "en": "Lawyer with a diploma in Digital Law and Legaltech from the Centro de Estudios Jurídicos Carbonell. Our mission is to make legal practice more accessible through technology."
+  },
   "order": 2,
   "seo_title": {
     "es": ""

@@ -1,9 +1,15 @@
 {
   "slug": "precios-puedo-cambiar-de-plan-en-cualquier-momento",
   "status": "published",
-  "title": "¿Puedo cambiar de plan en cualquier momento?",
+  "title": {
+    "es": "¿Puedo cambiar de plan en cualquier momento?",
+    "en": "Can I change plans at any time?"
+  },
   "section": "precios",
-  "answer": "<p>Sí, puedes subir o bajar de plan cuando quieras. Los cambios se aplican en tu próximo ciclo de facturación. Si subes de plan, solo pagas la diferencia prorrateada.</p>",
+  "answer": {
+    "es": "<p>Sí, puedes subir o bajar de plan cuando quieras. Los cambios se aplican en tu próximo ciclo de facturación. Si subes de plan, solo pagas la diferencia prorrateada.</p>",
+    "en": "<p>Yes, you can upgrade or downgrade whenever you want. Changes apply on your next billing cycle. If you upgrade, you only pay the prorated difference.</p>"
+  },
   "order": 1,
   "seo_title": {
     "es": ""

@@ -1,9 +1,15 @@
 {
   "slug": "precios-que-pasa-con-mis-datos-si-cancelo",
   "status": "published",
-  "title": "¿Qué pasa con mis datos si cancelo?",
+  "title": {
+    "es": "¿Qué pasa con mis datos si cancelo?",
+    "en": "What happens to my data if I cancel?"
+  },
   "section": "precios",
-  "answer": "<p>Tienes 30 días después de cancelar para exportar todos tus datos. Después de ese período, los eliminamos de forma segura de nuestros servidores.</p>",
+  "answer": {
+    "es": "<p>Tienes 30 días después de cancelar para exportar todos tus datos. Después de ese período, los eliminamos de forma segura de nuestros servidores.</p>",
+    "en": "<p>You have 30 days after cancelling to export all your data. After that period we securely delete it from our servers.</p>"
+  },
   "order": 5,
   "seo_title": {
     "es": ""

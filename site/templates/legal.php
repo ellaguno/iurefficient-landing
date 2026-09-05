@@ -13,7 +13,7 @@
 
 <?php if ($toc): ?>
                 <div class="legal-toc">
-                    <h4>Contenido</h4>
+                    <h4><?= iure_l('Contenido', 'Contents') ?></h4>
                     <ol>
 <?php foreach ($toc as [$id, $text]): ?>
                         <li><a href="#<?= cms_e($id) ?>"><?= cms_e(preg_replace('/^\d+[.)]?\s*/', '', $text)) ?></a></li>
@@ -24,7 +24,7 @@
 
 <?php if (!empty($item['summary'])): ?>
                 <div class="highlight-box">
-                    <p><strong>Resumen:</strong> <?= cms_e($item['summary']) ?></p>
+                    <p><strong><?= iure_l('Resumen', 'Summary') ?>:</strong> <?= cms_e($item['summary']) ?></p>
                 </div>
 <?php endif; ?>
 

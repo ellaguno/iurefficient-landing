@@ -1,0 +1,394 @@
+{
+  "slug": "seguridad",
+  "status": "published",
+  "title": {
+    "es": "Seguridad",
+    "en": "Security"
+  },
+  "brand": "derecho",
+  "parent": "",
+  "path": "seguridad",
+  "order": 4,
+  "image": "",
+  "summary": {
+    "es": "Cómo Iurefficient protege la información de tu despacho y de tus clientes: cifrado, servidores propios, sin entrenamiento de IA con tus datos y cumplimiento de la LFPDPPP.",
+    "en": "How Iurefficient protects your firm's and your clients' information: encryption, private servers, no AI training on your data, and compliance with Mexican data protection law."
+  },
+  "seo_title": {
+    "es": "Seguridad, confidencialidad y privacidad de tus datos legales",
+    "en": "Security, confidentiality and privacy of your legal data"
+  },
+  "seo_desc": {
+    "es": "Cómo Iurefficient protege la información de tu despacho y de tus clientes: cifrado, servidores propios, sin entrenamiento de IA con tus datos y cumplimiento de la LFPDPPP.",
+    "en": "How Iurefficient protects your firm's and your clients' information: encryption, private servers, no AI training on your data, and compliance with Mexican data protection law."
+  },
+  "created": "2026-09-05",
+  "updated": "2026-09-05",
+  "sections": [
+    {
+      "id": "b7a3e0",
+      "type": "encabezado",
+      "data": {
+        "title": {
+          "es": "Seguridad, confidencialidad y <span class=\"gradient-text\">privacidad</span>",
+          "en": "Security, confidentiality and <span class=\"gradient-text\">privacy</span>"
+        },
+        "text": {
+          "es": "Información completa sobre cómo protegemos tu información y la de tus clientes. A diferencia de servicios de IA genéricos, tu información nunca sale de tu control.",
+          "en": "Everything about how we protect your information and your clients'. Unlike generic AI services, your information never leaves your control."
+        },
+        "note": {
+          "es": "Última actualización: Enero 2026 | Versión del documento: 1.0",
+          "en": "Last updated: January 2026 | Document version: 1.0"
+        },
+        "dark": true
+      },
+      "style": {},
+      "hidden": false
+    },
+    {
+      "id": "b5a41b",
+      "type": "html",
+      "data": {
+        "code": {
+          "es": "<div class=\"toc-grid\"><a href=\"#resumen\" class=\"toc-item\"><span>📋</span> Resumen ejecutivo</a><a href=\"#seguridad-datos\" class=\"toc-item\"><span>🔐</span> Seguridad de datos</a><a href=\"#confidencialidad\" class=\"toc-item\"><span>🤫</span> Confidencialidad</a><a href=\"#privacidad-ia\" class=\"toc-item\"><span>🤖</span> Privacidad e IA</a><a href=\"#infraestructura\" class=\"toc-item\"><span>🏗️</span> Infraestructura</a><a href=\"#cumplimiento\" class=\"toc-item\"><span>⚖️</span> Cumplimiento legal</a><a href=\"#derechos\" class=\"toc-item\"><span>✋</span> Tus derechos</a><a href=\"#faq\" class=\"toc-item\"><span>❓</span> Preguntas frecuentes</a></div>",
+          "en": "<div class=\"toc-grid\"><a href=\"#resumen\" class=\"toc-item\"><span>📋</span> Executive summary</a><a href=\"#seguridad-datos\" class=\"toc-item\"><span>🔐</span> Data security</a><a href=\"#confidencialidad\" class=\"toc-item\"><span>🤫</span> Confidentiality</a><a href=\"#privacidad-ia\" class=\"toc-item\"><span>🤖</span> Privacy and AI</a><a href=\"#infraestructura\" class=\"toc-item\"><span>🏗️</span> Infrastructure</a><a href=\"#cumplimiento\" class=\"toc-item\"><span>⚖️</span> Legal compliance</a><a href=\"#derechos\" class=\"toc-item\"><span>✋</span> Your rights</a><a href=\"#faq\" class=\"toc-item\"><span>❓</span> FAQ</a></div>"
+        }
+      },
+      "style": {
+        "pad": "s"
+      },
+      "hidden": false
+    },
+    {
+      "id": "b58909",
+      "type": "texto",
+      "data": {
+        "body": {
+          "es": "<h2>Resumen <span class=\"gradient-text\">ejecutivo</span></h2><blockquote><p><strong>Compromiso de seguridad.</strong> Iurefficient está diseñado desde su arquitectura para proteger la información confidencial de profesionales y sus clientes. A diferencia de servicios de IA genéricos, tu información <strong>nunca sale de tu control</strong>.</p></blockquote>",
+          "en": "<h2>Executive <span class=\"gradient-text\">summary</span></h2><blockquote><p><strong>Security commitment.</strong> Iurefficient is designed from its architecture up to protect the confidential information of professionals and their clients. Unlike generic AI services, your information <strong>never leaves your control</strong>.</p></blockquote>"
+        }
+      },
+      "style": {
+        "anchor": "resumen",
+        "width": "narrow"
+      },
+      "hidden": false
+    },
+    {
+      "id": "8c5e61",
+      "type": "tarjetas",
+      "data": {
+        "title": {
+          "es": "",
+          "en": ""
+        },
+        "subtitle": {
+          "es": "Puntos clave de seguridad",
+          "en": "Key security points"
+        },
+        "variant": "security",
+        "items": {
+          "es": [
+            "Tus datos son tuyos | Todos los documentos, conversaciones y análisis permanecen en tu infraestructura. | ✅",
+            "Sin entrenamiento de IA | Tu información nunca se usa para entrenar modelos de inteligencia artificial. | ✅",
+            "Aislamiento por caso | Cada caso tiene su propia base de conocimiento aislada. Sin mezcla de información. | ✅",
+            "Cifrado completo | Cifrado en tránsito (TLS 1.3) y en reposo (AES-256) para toda la información. | ✅"
+          ],
+          "en": [
+            "Your data is yours | Every document, conversation and analysis stays in your infrastructure. | ✅",
+            "No AI training | Your information is never used to train artificial intelligence models. | ✅",
+            "Isolation per case | Each case has its own isolated knowledge base. No mixing of information. | ✅",
+            "Full encryption | Encryption in transit (TLS 1.3) and at rest (AES-256) for all information. | ✅"
+          ]
+        }
+      },
+      "style": {
+        "pad": "s"
+      },
+      "hidden": false
+    },
+    {
+      "id": "f262a0",
+      "type": "tabla",
+      "data": {
+        "title": {
+          "es": "Comparación con servicios de <span class=\"gradient-text\">IA públicos</span>",
+          "en": "Comparison with <span class=\"gradient-text\">public AI services</span>"
+        },
+        "subtitle": {
+          "es": "Entiende la diferencia entre usar ChatGPT o Claude.ai directamente e Iurefficient",
+          "en": "Understand the difference between using ChatGPT or Claude.ai directly and Iurefficient"
+        },
+        "head": {
+          "es": "Característica | ChatGPT / Claude.ai | Iurefficient",
+          "en": "Feature | ChatGPT / Claude.ai | Iurefficient"
+        },
+        "product": "",
+        "rows": {
+          "es": [
+            "Ubicación de datos | Servidores de terceros (EE. UU.) | Tu infraestructura privada",
+            "Entrenamiento con tus datos | Posible (según configuración) | Nunca, solo procesamiento",
+            "Base de conocimiento | Conocimiento general público | Solo tus documentos (RAG local)",
+            "Aislamiento de datos | Compartido entre usuarios | Aislamiento por caso y cliente",
+            "Retención de conversaciones | Según políticas del proveedor | Tú lo controlas por completo",
+            "Auditoría y trazabilidad | Limitada | Completa, con registros detallados"
+          ],
+          "en": [
+            "Data location | Third-party servers (USA) | Your private infrastructure",
+            "Training on your data | Possible (depends on settings) | Never, processing only",
+            "Knowledge base | General public knowledge | Only your documents (local RAG)",
+            "Data isolation | Shared among users | Isolated per case and client",
+            "Conversation retention | Per provider policy | Fully under your control",
+            "Audit and traceability | Limited | Complete, with detailed logs"
+          ]
+        }
+      },
+      "style": {
+        "bg": "light"
+      },
+      "hidden": false
+    },
+    {
+      "id": "b024da",
+      "type": "texto",
+      "data": {
+        "body": {
+          "es": "<h2>Seguridad de <span class=\"gradient-text\">datos</span></h2><h3>Cifrado y protección</h3><ul><li><strong>Cifrado en tránsito:</strong> TLS 1.3 con certificados SSL válidos</li><li><strong>Cifrado en reposo:</strong> AES-256 para documentos, base de datos y respaldos</li><li><strong>Cifrado de archivos (v4.5.0+):</strong> AES-256-GCM con claves derivadas únicas por caso</li><li><strong>Tokens y credenciales:</strong> contraseñas con bcrypt, JWT con expiración corta</li><li>Llaves de cifrado gestionadas de forma segura y separada</li></ul><h3>Control de acceso</h3><ul><li><strong>Autenticación robusta:</strong> JWT de corta duración, soporte OAuth 2.0</li><li><strong>MFA disponible:</strong> autenticación multifactor opcional</li><li><strong>Roles y permisos:</strong> sistema granular (Admin, Abogado, Asistente, Solo lectura)</li><li><strong>Auditoría completa:</strong> registro de todas las acciones con marcas de tiempo</li><li>Registros inmutables para cumplimiento regulatorio</li></ul><h3>Respaldos y recuperación</h3><ul><li>Respaldos automáticos cada 6 horas</li><li>Retención de 30 días (90 en plan Despacho)</li><li>Respaldos cifrados y geográficamente distribuidos</li><li>Pruebas de restauración mensuales</li><li>RTO menor a 4 horas; RPO menor a 6 horas</li></ul><h3>Monitoreo y detección</h3><ul><li>Monitoreo 24/7 de infraestructura</li><li>Detección de anomalías con machine learning</li><li>Alertas automáticas de actividad sospechosa</li><li>Pruebas de penetración anuales y programa de bug bounty</li></ul><blockquote><p><strong>Registro de auditoría.</strong> Puedes acceder al registro completo desde <strong>Configuración → Registros de auditoría</strong>: todas las acciones del sistema con marcas de tiempo precisas.</p></blockquote>",
+          "en": "<h2>Data <span class=\"gradient-text\">security</span></h2><h3>Encryption and protection</h3><ul><li><strong>In transit:</strong> TLS 1.3 with valid SSL certificates</li><li><strong>At rest:</strong> AES-256 for documents, database and backups</li><li><strong>File encryption (v4.5.0+):</strong> AES-256-GCM with unique derived keys per case</li><li><strong>Tokens and credentials:</strong> bcrypt-hashed passwords, short-lived JWT</li><li>Encryption keys managed securely and separately</li></ul><h3>Access control</h3><ul><li><strong>Strong authentication:</strong> short-lived JWT, OAuth 2.0 support</li><li><strong>MFA available:</strong> optional multi-factor authentication</li><li><strong>Roles and permissions:</strong> granular system (Admin, Lawyer, Assistant, Read-only)</li><li><strong>Full audit:</strong> every action logged with timestamps</li><li>Immutable logs for regulatory compliance</li></ul><h3>Backups and recovery</h3><ul><li>Automatic backups every 6 hours</li><li>30-day retention (90 on the Firm plan)</li><li>Encrypted, geographically distributed backups</li><li>Monthly restore tests</li><li>RTO under 4 hours; RPO under 6 hours</li></ul><h3>Monitoring and detection</h3><ul><li>24/7 infrastructure monitoring</li><li>Anomaly detection with machine learning</li><li>Automatic alerts on suspicious activity</li><li>Annual penetration tests and a bug bounty program</li></ul><blockquote><p><strong>Audit log.</strong> You can open the full log from <strong>Settings → Audit logs</strong>: every action in the system with precise timestamps.</p></blockquote>"
+        }
+      },
+      "style": {
+        "anchor": "seguridad-datos",
+        "width": "narrow"
+      },
+      "hidden": false
+    },
+    {
+      "id": "051fc2",
+      "type": "texto",
+      "data": {
+        "body": {
+          "es": "<h2>Confidencialidad y <span class=\"gradient-text\">aislamiento</span></h2><p>Cómo garantizamos que la información de cada caso permanezca completamente separada.</p><h3>🏢 Arquitectura multi-tenant</h3><ul><li>Cada organización tiene su propia instancia aislada</li><li>Base de datos separada por tenant</li><li>Almacenamiento de documentos aislado</li><li>Índices de búsqueda independientes</li></ul><h3>📁 Aislamiento por caso</h3><ul><li>Cada caso tiene su propia colección RAG (base de conocimiento)</li><li>El chat de IA solo accede a documentos del caso activo</li><li>Imposibilidad técnica de \"filtración\" entre casos</li><li>Permisos granulares por caso y usuario</li></ul><blockquote><p><strong>Secreto profesional.</strong> El diseño respeta el secreto profesional abogado-cliente: ni los administradores del sistema pueden acceder al contenido de los documentos sin autorización explícita y registrada.</p></blockquote><h3>Compartir documentos de forma segura</h3><ul><li>🔗 Enlaces temporales con expiración configurable</li><li>🔑 Protección opcional con contraseña</li><li>📊 Registro de cada acceso al documento compartido</li><li>⏰ Revocación instantánea del acceso cuando sea necesario</li></ul>",
+          "en": "<h2>Confidentiality and <span class=\"gradient-text\">isolation</span></h2><p>How we guarantee that each case's information stays completely separate.</p><h3>🏢 Multi-tenant architecture</h3><ul><li>Each organization has its own isolated instance</li><li>Separate database per tenant</li><li>Isolated document storage</li><li>Independent search indexes</li></ul><h3>📁 Isolation per case</h3><ul><li>Each case has its own RAG collection (knowledge base)</li><li>The AI chat only accesses documents of the active case</li><li>Technically impossible to \"leak\" between cases</li><li>Granular permissions per case and user</li></ul><blockquote><p><strong>Professional secrecy.</strong> The design respects attorney-client privilege: not even system administrators can access document contents without explicit, logged authorization.</p></blockquote><h3>Sharing documents securely</h3><ul><li>🔗 Temporary links with configurable expiration</li><li>🔑 Optional password protection</li><li>📊 A log of every access to the shared document</li><li>⏰ Instant revocation of access when needed</li></ul>"
+        }
+      },
+      "style": {
+        "anchor": "confidencialidad",
+        "width": "narrow",
+        "bg": "light"
+      },
+      "hidden": false
+    },
+    {
+      "id": "e78f12",
+      "type": "tarjetas",
+      "data": {
+        "title": {
+          "es": "Privacidad e <span class=\"gradient-text\">inteligencia artificial</span>",
+          "en": "Privacy and <span class=\"gradient-text\">artificial intelligence</span>"
+        },
+        "subtitle": {
+          "es": "Cuando usas ChatGPT o Claude.ai directamente, tus conversaciones se envían a servidores de terceros y pueden usarse para mejorar sus modelos. Iurefficient funciona diferente: tu información se procesa localmente y a las APIs de IA solo se envían consultas procesadas, nunca documentos completos ni datos sensibles.",
+          "en": "When you use ChatGPT or Claude.ai directly, your conversations are sent to third-party servers and may be used to improve their models. Iurefficient works differently: your information is processed locally, and only processed queries are sent to the AI APIs, never full documents or sensitive data."
+        },
+        "variant": "security",
+        "items": {
+          "es": [
+            "Sin entrenamiento externo | Tus documentos y conversaciones NUNCA se usan para entrenar modelos de IA de terceros como OpenAI, Google o Anthropic. | 🚫",
+            "Procesamiento aislado | Cada consulta de IA se procesa en un entorno aislado. Los datos se eliminan de la memoria inmediatamente después. | 🔐",
+            "Servidores privados | Toda la infraestructura corre en servidores privados dedicados, conforme a la regulación de protección de datos aplicable. | 📍",
+            "Sin retención | No almacenamos el contenido de tus consultas de IA más allá del tiempo necesario para procesarlas y mostrarte la respuesta. | 🗑️"
+          ],
+          "en": [
+            "No external training | Your documents and conversations are NEVER used to train third-party AI models such as OpenAI, Google or Anthropic. | 🚫",
+            "Isolated processing | Each AI query is processed in an isolated environment. Data is removed from memory immediately afterwards. | 🔐",
+            "Private servers | All infrastructure runs on dedicated private servers, in line with applicable data protection regulations. | 📍",
+            "No retention | We do not store the content of your AI queries beyond the time needed to process them and show you the answer. | 🗑️"
+          ]
+        }
+      },
+      "style": {
+        "anchor": "privacidad-ia",
+        "bg": "dark",
+        "text": "light"
+      },
+      "hidden": false
+    },
+    {
+      "id": "f18b4b",
+      "type": "texto",
+      "data": {
+        "body": {
+          "es": "<h2>¿Cómo funciona la <span class=\"gradient-text\">IA en Iurefficient</span>?</h2><ol><li><strong>Indexación local.</strong> Tus documentos se procesan y almacenan en una base de datos vectorial dentro de tu infraestructura. Los embeddings se generan localmente o mediante APIs que no retienen datos.</li><li><strong>Búsqueda semántica local.</strong> Cuando preguntas, el sistema busca en tu base de conocimiento los fragmentos más relevantes. Esta búsqueda ocurre por completo en tu servidor.</li><li><strong>Consulta a la IA con contexto limitado.</strong> Solo los fragmentos relevantes, sin identificadores de clientes ni datos sensibles directos, se envían a la API de IA junto con tu pregunta.</li><li><strong>Respuesta con citas.</strong> La respuesta incluye referencias [1], [2]… a los documentos originales, para que verifiques la fuente de cada afirmación.</li></ol><h3>Políticas de los proveedores de IA</h3><ul><li>🟢 <strong>OpenAI (API):</strong> \"We do not train on your business data (data sent through the API)\". <a href=\"https://openai.com/enterprise-privacy\" target=\"_blank\" rel=\"noopener\">Política de privacidad empresarial</a></li><li>🟢 <strong>Anthropic (Claude API):</strong> \"We do not train our models on customer API data\". <a href=\"https://www.anthropic.com/policies/privacy-policy\" target=\"_blank\" rel=\"noopener\">Política de privacidad</a></li><li>🟢 <strong>OpenRouter:</strong> enrutador que respeta las políticas de privacidad de cada modelo. <a href=\"https://openrouter.ai/privacy\" target=\"_blank\" rel=\"noopener\">Política</a></li><li>🟢 <strong>DeepSeek / Qwen:</strong> APIs empresariales con políticas de no retención de datos.</li></ul><blockquote><p><strong>Garantía anti-entrenamiento.</strong> Ningún proveedor de IA que utiliza Iurefficient entrena sus modelos con los datos enviados a través de sus APIs empresariales. Es una garantía contractual de cada proveedor.</p></blockquote><h3>Sistema anti-alucinación</h3><ul><li>✓ Respuestas basadas <strong>únicamente</strong> en tus documentos, no en conocimiento general</li><li>✓ Citas numeradas [1], [2] que puedes verificar</li><li>✓ Indicadores de confianza (excelente, alto, moderado, bajo)</li><li>✓ Alertas cuando no hay información suficiente para responder</li><li>✓ Validación automática de respuestas para detectar posibles alucinaciones</li></ul>",
+          "en": "<h2>How does <span class=\"gradient-text\">AI work in Iurefficient</span>?</h2><ol><li><strong>Local indexing.</strong> Your documents are processed and stored in a vector database inside your infrastructure. Embeddings are generated locally or through APIs that retain no data.</li><li><strong>Local semantic search.</strong> When you ask a question, the system searches your knowledge base for the most relevant fragments. This search happens entirely on your server.</li><li><strong>AI query with limited context.</strong> Only the relevant fragments, with no client identifiers or direct sensitive data, are sent to the AI API together with your question.</li><li><strong>Answer with citations.</strong> The answer includes references [1], [2]… to the original documents so you can verify the source of every statement.</li></ol><h3>AI provider policies</h3><ul><li>🟢 <strong>OpenAI (API):</strong> \"We do not train on your business data (data sent through the API)\". <a href=\"https://openai.com/enterprise-privacy\" target=\"_blank\" rel=\"noopener\">Enterprise privacy policy</a></li><li>🟢 <strong>Anthropic (Claude API):</strong> \"We do not train our models on customer API data\". <a href=\"https://www.anthropic.com/policies/privacy-policy\" target=\"_blank\" rel=\"noopener\">Privacy policy</a></li><li>🟢 <strong>OpenRouter:</strong> a router that honors the privacy policy of each underlying model. <a href=\"https://openrouter.ai/privacy\" target=\"_blank\" rel=\"noopener\">Policy</a></li><li>🟢 <strong>DeepSeek / Qwen:</strong> enterprise APIs with no-retention policies.</li></ul><blockquote><p><strong>No-training guarantee.</strong> No AI provider used by Iurefficient trains its models on data sent through its enterprise APIs. This is a contractual guarantee from each provider.</p></blockquote><h3>Anti-hallucination system</h3><ul><li>✓ Answers based <strong>only</strong> on your documents, not on general knowledge</li><li>✓ Numbered citations [1], [2] that you can verify</li><li>✓ Confidence indicators (excellent, high, moderate, low)</li><li>✓ Alerts when there is not enough information to answer</li><li>✓ Automatic validation of answers to detect possible hallucinations</li></ul>"
+        }
+      },
+      "style": {
+        "width": "narrow"
+      },
+      "hidden": false
+    },
+    {
+      "id": "3f2f47",
+      "type": "tarjetas",
+      "data": {
+        "title": {
+          "es": "Infraestructura <span class=\"gradient-text\">técnica</span>",
+          "en": "Technical <span class=\"gradient-text\">infrastructure</span>"
+        },
+        "subtitle": {
+          "es": "Opciones de despliegue",
+          "en": "Deployment options"
+        },
+        "variant": "audience",
+        "items": {
+          "es": [
+            "On-Premise | Instalación en tus propios servidores. Máximo control y cumplimiento con políticas internas de seguridad. | 🏠",
+            "Cloud privado | Despliegue en tu cuenta de AWS, Azure o GCP. Beneficios del cloud con control total. | ☁️",
+            "Cloud administrado | Nosotros gestionamos la infraestructura con SLA de seguridad y disponibilidad garantizados. | 🌍"
+          ],
+          "en": [
+            "On-premise | Installed on your own servers. Maximum control and compliance with internal security policies. | 🏠",
+            "Private cloud | Deployed in your AWS, Azure or GCP account. Cloud benefits with full control. | ☁️",
+            "Managed cloud | We run the infrastructure with guaranteed security and availability SLAs. | 🌍"
+          ]
+        }
+      },
+      "style": {
+        "anchor": "infraestructura",
+        "bg": "light"
+      },
+      "hidden": false
+    },
+    {
+      "id": "c146db",
+      "type": "texto",
+      "data": {
+        "body": {
+          "es": "<h3>Capas de protección</h3><ul><li>🌐 <strong>CDN y WAF:</strong> Cloudflare Enterprise con protección DDoS, firewall de aplicaciones web y limitación de tasa</li><li>🔒 <strong>Balanceador con SSL:</strong> terminación TLS 1.3, certificados renovados automáticamente, HSTS habilitado</li><li>🖥️ <strong>Servidores de aplicación:</strong> contenedores aislados en Kubernetes, autoescalado, actualizaciones sin interrupción</li><li>🗄️ <strong>Base de datos:</strong> MySQL/PostgreSQL con cifrado en reposo, réplicas en tiempo real, respaldos automáticos</li><li>📁 <strong>Almacenamiento de archivos:</strong> object storage cifrado con AES-256-GCM, redundancia geográfica, versionado automático</li></ul>",
+          "en": "<h3>Layers of protection</h3><ul><li>🌐 <strong>CDN and WAF:</strong> Cloudflare Enterprise with DDoS protection, web application firewall and rate limiting</li><li>🔒 <strong>Load balancer with SSL:</strong> TLS 1.3 termination, automatically renewed certificates, HSTS enabled</li><li>🖥️ <strong>Application servers:</strong> isolated containers on Kubernetes, autoscaling, zero-downtime updates</li><li>🗄️ <strong>Database:</strong> MySQL/PostgreSQL with encryption at rest, real-time replicas, automatic backups</li><li>📁 <strong>File storage:</strong> object storage encrypted with AES-256-GCM, geographic redundancy, automatic versioning</li></ul>"
+        }
+      },
+      "style": {
+        "width": "narrow",
+        "pad": "s"
+      },
+      "hidden": false
+    },
+    {
+      "id": "fe7f36",
+      "type": "insignias",
+      "data": {
+        "title": {
+          "es": "Cumplimiento legal",
+          "en": "Legal compliance"
+        },
+        "items": {
+          "es": [
+            "🔐 | SSL/TLS 1.2/1.3",
+            "🛡️ | Controles Enterprise",
+            "🌐 | GDPR Ready",
+            "☁️ | Basado en ISO 27001",
+            "🏛️ | Secreto profesional"
+          ],
+          "en": [
+            "🔐 | SSL/TLS 1.2/1.3",
+            "🛡️ | Enterprise controls",
+            "🌐 | GDPR ready",
+            "☁️ | Based on ISO 27001",
+            "🏛️ | Professional secrecy"
+          ]
+        },
+        "button_text": {
+          "es": "",
+          "en": ""
+        },
+        "button_url": ""
+      },
+      "style": {
+        "anchor": "cumplimiento"
+      },
+      "hidden": false
+    },
+    {
+      "id": "048e6c",
+      "type": "texto",
+      "data": {
+        "body": {
+          "es": "<h3>Secreto profesional</h3><p>Iurefficient está diseñado para respetar las obligaciones de secreto profesional de abogados, contadores y otros profesionales:</p><ul><li>✓ Aislamiento técnico que impide el acceso no autorizado a expedientes</li><li>✓ Cifrado que protege la información incluso de administradores de sistemas</li><li>✓ Registros de auditoría para demostrar cumplimiento</li><li>✓ Contratos de confidencialidad con proveedores de servicios</li></ul><h2 id=\"derechos\">Tus <span class=\"gradient-text\">derechos</span></h2><p>Derechos ARCO+ (Acceso, Rectificación, Cancelación, Oposición y Portabilidad):</p><ul><li>👁️ <strong>Acceso:</strong> puedes solicitar una copia de todos tus datos personales almacenados.</li><li>✏️ <strong>Rectificación:</strong> puedes corregir cualquier dato personal inexacto o incompleto.</li><li>🗑️ <strong>Cancelación:</strong> puedes solicitar la eliminación de tus datos cuando ya no sean necesarios.</li><li>🚫 <strong>Oposición:</strong> puedes oponerte al tratamiento de tus datos para fines específicos.</li><li>📦 <strong>Portabilidad:</strong> puedes solicitar tus datos en formato estructurado para llevarlos a otro servicio.</li></ul><blockquote><p><strong>¿Cómo ejercerlos?</strong> Contacta al administrador de tu organización o envía una solicitud desde <strong>Perfil → Privacidad</strong>. Respondemos en un plazo máximo de 20 días hábiles.</p></blockquote>",
+          "en": "<h3>Professional secrecy</h3><p>Iurefficient is designed to respect the professional secrecy obligations of lawyers, accountants and other professionals:</p><ul><li>✓ Technical isolation that prevents unauthorized access to case files</li><li>✓ Encryption that protects information even from system administrators</li><li>✓ Audit logs to demonstrate compliance</li><li>✓ Confidentiality agreements with service providers</li></ul><h2 id=\"derechos\">Your <span class=\"gradient-text\">rights</span></h2><p>ARCO+ rights (Access, Rectification, Cancellation, Opposition and Portability):</p><ul><li>👁️ <strong>Access:</strong> you can request a copy of all your stored personal data.</li><li>✏️ <strong>Rectification:</strong> you can correct any inaccurate or incomplete personal data.</li><li>🗑️ <strong>Cancellation:</strong> you can request the deletion of your data when it is no longer needed.</li><li>🚫 <strong>Opposition:</strong> you can object to the processing of your data for specific purposes.</li><li>📦 <strong>Portability:</strong> you can request your data in a structured format to move it to another service.</li></ul><blockquote><p><strong>How to exercise them?</strong> Contact your organization's administrator or send a request from <strong>Profile → Privacy</strong>. We respond within 20 business days.</p></blockquote>"
+        }
+      },
+      "style": {
+        "width": "narrow"
+      },
+      "hidden": false
+    },
+    {
+      "id": "25f666",
+      "type": "faq",
+      "data": {
+        "title": {
+          "es": "Preguntas <span class=\"gradient-text\">frecuentes</span>",
+          "en": "Frequently asked <span class=\"gradient-text\">questions</span>"
+        },
+        "section": "seguridad",
+        "items": {
+          "es": [],
+          "en": []
+        }
+      },
+      "style": {
+        "anchor": "faq",
+        "bg": "light"
+      },
+      "hidden": false
+    },
+    {
+      "id": "da6e6e",
+      "type": "texto",
+      "data": {
+        "body": {
+          "es": "<h3>📧 ¿Tienes más preguntas?</h3><p>Nuestro equipo de seguridad está disponible para responder cualquier duda sobre cómo protegemos tu información: <a href=\"mailto:seguridad@iurefficient.com\">seguridad@iurefficient.com</a>. Consulta también el <a href=\"/legal/privacidad\">Aviso de Privacidad</a>.</p><p><small>Para reportar vulnerabilidades: <a href=\"mailto:security@iurefficient.com\">security@iurefficient.com</a></small></p>",
+          "en": "<h3>📧 More questions?</h3><p>Our security team is available to answer any question about how we protect your information: <a href=\"mailto:seguridad@iurefficient.com\">seguridad@iurefficient.com</a>. See also the <a href=\"/en/legal/privacidad\">Privacy Notice</a>.</p><p><small>To report vulnerabilities: <a href=\"mailto:security@iurefficient.com\">security@iurefficient.com</a></small></p>"
+        }
+      },
+      "style": {
+        "width": "narrow",
+        "align": "center"
+      },
+      "hidden": false
+    },
+    {
+      "id": "f4509b",
+      "type": "cta",
+      "data": {
+        "title": {
+          "es": "Tu información está segura con nosotros",
+          "en": "Your information is safe with us"
+        },
+        "text": {
+          "es": "Prueba Iurefficient con la confianza de que tus datos están protegidos",
+          "en": "Try Iurefficient knowing your data is protected"
+        },
+        "form": false,
+        "origin": "derecho",
+        "button_text": {
+          "es": "Comenzar prueba gratuita",
+          "en": "Start free trial"
+        },
+        "button_url": "/derecho#contacto",
+        "note": {
+          "es": "",
+          "en": ""
+        },
+        "gradient": false
+      },
+      "style": {
+        "anchor": "contacto"
+      },
+      "hidden": false
+    }
+  ]
+}

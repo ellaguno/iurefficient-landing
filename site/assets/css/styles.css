@@ -1902,3 +1902,7 @@ section {
 body.cms-bare { padding-top: 0; }
 body.cms-bare .sec-hero.hero { padding-top: 60px; min-height: auto; }
 body.cms-bare .legal-page { padding-top: var(--spacing-3xl); }
+
+/* selector de idioma en la cabecera */
+.nav-menu .nav-lang a:not(.btn) { font-weight: 700; font-size: .8125rem; letter-spacing: .06em; border: 1px solid var(--gray-200); border-radius: 999px; padding: .3rem .6rem; }
+.nav-menu .nav-lang a:hover { border-color: var(--primary-500); }

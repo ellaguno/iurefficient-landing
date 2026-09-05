@@ -1,24 +1,52 @@
 {
   "slug": "precios-basico",
   "status": "published",
-  "title": "Básico",
+  "title": {
+    "es": "Básico",
+    "en": "Basic"
+  },
   "product": "precios",
-  "description": "Pequeños despachos e independientes",
+  "description": {
+    "es": "Pequeños despachos e independientes",
+    "en": "Small firms and solo practitioners"
+  },
   "price": "1,499",
   "price_annual": "1,375",
-  "period": "MXN/mes",
-  "badge": "",
+  "period": {
+    "es": "MXN/mes",
+    "en": "MXN/mo"
+  },
+  "badge": {
+    "es": "",
+    "en": ""
+  },
   "featured": false,
-  "features": [
-    "2 usuarios incluidos",
-    "50 casos/proyectos",
-    "500 consultas IA al mes",
-    "2 GB almacenamiento",
-    "Soporte por email",
-    "Exportación de datos"
-  ],
-  "overage": "+$1,000/usuario, +$120.0/GB, +$50/caso, +$120/1000 IA",
-  "cta_text": "Comenzar prueba gratuita",
+  "features": {
+    "es": [
+      "2 usuarios incluidos",
+      "50 casos/proyectos",
+      "500 consultas IA al mes",
+      "2 GB almacenamiento",
+      "Soporte por email",
+      "Exportación de datos"
+    ],
+    "en": [
+      "2 users included",
+      "50 cases/projects",
+      "500 AI queries per month",
+      "2 GB storage",
+      "Email support",
+      "Data export"
+    ]
+  },
+  "overage": {
+    "es": "+$1,000/usuario, +$120.0/GB, +$50/caso, +$120/1000 IA",
+    "en": "+$1,000/user, +$120/GB, +$50/case, +$120 per 1,000 AI queries"
+  },
+  "cta_text": {
+    "es": "Comenzar prueba gratuita",
+    "en": "Start free trial"
+  },
   "cta_style": "outline",
   "cta_url": "#contacto",
   "order": 21,

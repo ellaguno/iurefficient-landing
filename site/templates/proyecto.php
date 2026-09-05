@@ -2,10 +2,10 @@
 $brand = iure_brand($page);
 $hasList = empty($def['no_list']);
 $facts = array_filter([
-    'Cliente' => (string) ($item['client'] ?? ''),
-    'Categoría' => (string) ($item['category'] ?? ''),
-    'Año' => (string) ($item['year'] ?? ''),
-    'Servicios' => implode(', ', (array) ($item['services'] ?? [])),
+    iure_l('Cliente', 'Client') => (string) ($item['client'] ?? ''),
+    iure_l('Categoría', 'Category') => (string) ($item['category'] ?? ''),
+    iure_l('Año', 'Year') => (string) ($item['year'] ?? ''),
+    iure_l('Servicios', 'Services') => implode(', ', (array) ($item['services'] ?? [])),
 ]);
 ?>
     <main class="legal-page page-proyecto">
@@ -33,7 +33,7 @@ $facts = array_filter([
                 <?= cms_content((string) ($item['body'] ?? '')) ?>
 
 <?php if (!empty($item['results'])): ?>
-                <h2>Resultados</h2>
+                <h2><?= iure_l('Resultados', 'Results') ?></h2>
                 <?= cms_content((string) $item['results']) ?>
 <?php endif; ?>
 

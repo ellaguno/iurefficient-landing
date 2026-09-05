@@ -24,5 +24,31 @@
       "label": "Seguridad",
       "url": "/#seguridad"
     }
+  ],
+  "en": [
+    {
+      "label": "Presentation",
+      "url": "/presentacion/"
+    },
+    {
+      "label": "Articles",
+      "url": "/articulos/"
+    },
+    {
+      "label": "Use cases",
+      "url": "/#equipos"
+    },
+    {
+      "label": "Comparison",
+      "url": "/#comparativa"
+    },
+    {
+      "label": "Pricing",
+      "url": "/precios"
+    },
+    {
+      "label": "Security",
+      "url": "/#seguridad"
+    }
   ]
 }

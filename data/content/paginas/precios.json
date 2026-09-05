@@ -1,0 +1,233 @@
+{
+  "slug": "precios",
+  "status": "published",
+  "title": {
+    "es": "Precios",
+    "en": "Pricing"
+  },
+  "brand": "teams",
+  "parent": "",
+  "path": "precios",
+  "order": 3,
+  "image": "",
+  "summary": {
+    "es": "Planes y precios de Iurefficient, el software legal con IA para despachos. Básico, Profesional y Enterprise, sin contratos forzosos y con prueba gratuita.",
+    "en": "Plans and pricing for Iurefficient, the AI legal software for law firms. Basic, Professional and Enterprise, no long-term contracts, free trial included."
+  },
+  "seo_title": {
+    "es": "Precios y planes de Iurefficient para abogados y despachos",
+    "en": "Iurefficient pricing and plans for lawyers and law firms"
+  },
+  "seo_desc": {
+    "es": "Planes y precios de Iurefficient, el software legal con IA para despachos. Básico, Profesional y Enterprise, sin contratos forzosos y con prueba gratuita.",
+    "en": "Plans and pricing for Iurefficient, the AI legal software for law firms. Basic, Professional and Enterprise, no long-term contracts, free trial included."
+  },
+  "created": "2026-09-05",
+  "updated": "2026-09-05",
+  "sections": [
+    {
+      "id": "621146",
+      "type": "encabezado",
+      "data": {
+        "title": {
+          "es": "Planes transparentes, <span class=\"gradient-text\">sin sorpresas</span>",
+          "en": "Transparent plans, <span class=\"gradient-text\">no surprises</span>"
+        },
+        "text": {
+          "es": "Elige el plan que mejor se adapte a tu práctica. Sin contratos forzosos, cancela cuando quieras.",
+          "en": "Choose the plan that best fits your practice. No long-term contracts, cancel whenever you want."
+        },
+        "note": {
+          "es": "",
+          "en": ""
+        },
+        "dark": false
+      },
+      "style": {},
+      "hidden": false
+    },
+    {
+      "id": "cad8ce",
+      "type": "planes",
+      "data": {
+        "title": {
+          "es": "Elige <span class=\"gradient-text\">tu plan</span>",
+          "en": "Choose <span class=\"gradient-text\">your plan</span>"
+        },
+        "subtitle": {
+          "es": "Todos incluyen 14 días de prueba gratuita.",
+          "en": "All plans include a 14-day free trial."
+        },
+        "product": "precios",
+        "toggle": true,
+        "footer_text": {
+          "es": "",
+          "en": ""
+        },
+        "footer_url": ""
+      },
+      "style": {
+        "pad": "s",
+        "anchor": "planes"
+      },
+      "hidden": false
+    },
+    {
+      "id": "086f10",
+      "type": "tabla",
+      "data": {
+        "title": {
+          "es": "Comparativa <span class=\"gradient-text\">detallada</span>",
+          "en": "Detailed <span class=\"gradient-text\">comparison</span>"
+        },
+        "subtitle": {
+          "es": "Todas las características lado a lado",
+          "en": "Every feature side by side"
+        },
+        "head": {
+          "es": "Característica",
+          "en": "Feature"
+        },
+        "product": "precios",
+        "rows": {
+          "es": [
+            "Gestión de Casos:",
+            "Casos activos | 50 | 200 | Ilimitados",
+            "Gestión de clientes | si | si | si",
+            "Calendario legal | si | si | si",
+            "Alertas de plazos | si | si | si",
+            "Inteligencia Artificial:",
+            "Consultas IA mensuales | 500 | 2,000 | 10,000",
+            "Análisis de documentos | si | si | si",
+            "Extracción de cláusulas | si | si | si",
+            "Resumen automático | si | si | si",
+            "Búsqueda semántica avanzada | no | si | si",
+            "Almacenamiento y Documentos:",
+            "Almacenamiento | 2 GB | 4 GB | 40 GB",
+            "Versionado de documentos | si | si | si",
+            "OCR para PDFs escaneados | no | si | si",
+            "Colaboración:",
+            "Usuarios incluidos | 3 | 15 | 100",
+            "Roles y permisos | no | si | si",
+            "Historial de actividad | 30 días | 90 días | Ilimitado",
+            "Integraciones:",
+            "Google Calendar | no | si | si",
+            "Google Drive | no | si | si",
+            "Microsoft 365 | no | no | si",
+            "API acceso | no | si | si",
+            "Webhooks | no | no | si",
+            "Soporte:",
+            "Tipo de soporte | Email | Prioritario | Dedicado 24/7",
+            "Tiempo de respuesta | 48 horas | 12 horas | 2 horas",
+            "Capacitación | Documentación | Webinars | Personalizada",
+            "SLA garantizado | no | 99.5% | 99.9%"
+          ],
+          "en": [
+            "Case Management:",
+            "Active cases | 50 | 200 | Unlimited",
+            "Client management | yes | yes | yes",
+            "Legal calendar | yes | yes | yes",
+            "Deadline alerts | yes | yes | yes",
+            "Artificial Intelligence:",
+            "Monthly AI queries | 500 | 2,000 | 10,000",
+            "Document analysis | yes | yes | yes",
+            "Clause extraction | yes | yes | yes",
+            "Automatic summaries | yes | yes | yes",
+            "Advanced semantic search | no | yes | yes",
+            "Storage and Documents:",
+            "Storage | 2 GB | 4 GB | 40 GB",
+            "Document versioning | yes | yes | yes",
+            "OCR for scanned PDFs | no | yes | yes",
+            "Collaboration:",
+            "Users included | 3 | 15 | 100",
+            "Roles and permissions | no | yes | yes",
+            "Activity history | 30 days | 90 days | Unlimited",
+            "Integrations:",
+            "Google Calendar | no | yes | yes",
+            "Google Drive | no | yes | yes",
+            "Microsoft 365 | no | no | yes",
+            "API access | no | yes | yes",
+            "Webhooks | no | no | yes",
+            "Support:",
+            "Support type | Email | Priority | Dedicated 24/7",
+            "Response time | 48 hours | 12 hours | 2 hours",
+            "Training | Documentation | Webinars | Custom",
+            "Guaranteed SLA | no | 99.5% | 99.9%"
+          ]
+        }
+      },
+      "style": {
+        "anchor": "comparativa"
+      },
+      "hidden": false
+    },
+    {
+      "id": "1def5f",
+      "type": "faq",
+      "data": {
+        "title": {
+          "es": "Preguntas <span class=\"gradient-text\">frecuentes</span>",
+          "en": "Frequently asked <span class=\"gradient-text\">questions</span>"
+        },
+        "section": "precios",
+        "items": {
+          "es": [],
+          "en": []
+        }
+      },
+      "style": {
+        "anchor": "faq"
+      },
+      "hidden": false
+    },
+    {
+      "id": "65d95a",
+      "type": "testimonio",
+      "data": {
+        "quote": {
+          "es": "🛡️ Garantía de satisfacción de 30 días: si no estás completamente satisfecho con Iurefficient en los primeros 30 días, te devolvemos el 100% de tu dinero. Sin preguntas.",
+          "en": "🛡️ 30-day satisfaction guarantee: if you are not completely satisfied with Iurefficient in the first 30 days, we refund 100% of your money. No questions asked."
+        },
+        "cite": {
+          "es": "",
+          "en": ""
+        }
+      },
+      "style": {
+        "bg": "light",
+        "pad": "m"
+      },
+      "hidden": false
+    },
+    {
+      "id": "d3d77e",
+      "type": "cta",
+      "data": {
+        "title": {
+          "es": "¿Listo para empezar?",
+          "en": "Ready to get started?"
+        },
+        "text": {
+          "es": "Prueba Iurefficient gratis por 14 días. Sin tarjeta de crédito.",
+          "en": "Try Iurefficient free for 14 days. No credit card required."
+        },
+        "form": false,
+        "origin": "derecho",
+        "button_text": {
+          "es": "Comenzar prueba gratuita",
+          "en": "Start free trial"
+        },
+        "button_url": "/derecho#contacto",
+        "note": {
+          "es": "",
+          "en": ""
+        },
+        "gradient": false
+      },
+      "style": {
+        "anchor": "contacto"
+      },
+      "hidden": false
+    }
+  ]
+}
