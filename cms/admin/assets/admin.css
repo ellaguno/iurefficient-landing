@@ -239,3 +239,8 @@ a.ad-map-url:hover { color: var(--ink); text-decoration: underline; }
 .ad-map-source { margin-left: auto; font-size: 12px; color: var(--grey); white-space: nowrap; }
 .ad-map-row .ad-btn { flex: 0 0 auto; }
 @media (max-width: 900px) { .ad-map-row { flex-wrap: wrap; } .ad-map-source { margin-left: 0; width: 100%; } }
+
+/* versiones */
+.ad-versions { margin-top: 10px; font-size: 13px; }
+.ad-versions summary { cursor: pointer; color: var(--grey); }
+.ad-versions .ad-list li { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 6px 0; }

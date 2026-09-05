@@ -49,6 +49,16 @@ $alt = function (string $route, ?string $slug = null): array {
 };
 $home_crumb = [$t('crumb_home', $lang === 'en' ? 'Home' : 'Inicio'), cms_url('home', $lang)];
 
+/** Borrador o programado con token de vista previa válido (?preview=…). */
+function cms_preview_item(string $type, string $slug): ?array
+{
+    $tok = (string) ($_GET['preview'] ?? '');
+    if ($tok === '') return null;
+    $it = cms_item($type, $slug, false);
+    if (!$it || cms_item_is_live($it)) return null;
+    return hash_equals(cms_preview_token($type, $slug), $tok) ? $it : null;
+}
+
 $page = ['lang' => $lang, 'path' => $path, 'route' => '404'];
 $template = null;
 $item = null;
@@ -76,7 +86,7 @@ if ($seg === []) {
             $page += ['title' => $t($k . '_meta_title', $label) . ' · ' . $site, 'desc' => $t($k . '_meta_desc'), 'alt' => $alt('list:' . $k), 'noindex' => $filtered];
             $page['route'] = 'list:' . $k;
             $page['jsonld'] = [cms_jsonld_graph(cms_jsonld_org(), cms_jsonld_breadcrumbs([$home_crumb, [$label, cms_url('list:' . $k, $lang)]]))];
-        } elseif (count($seg) === 2 && ($item = cms_item($k, $seg[1]))) {
+        } elseif (count($seg) === 2 && (($item = cms_item($k, $seg[1])) || ($item = cms_preview_item($k, $seg[1])))) {
             $template = $d['template_single'] ?? rtrim($k, 's');
             $type = $k; $def = $d;
             $title = (string) cms_f($item, $d['title_field'] ?? 'title', $lang);
@@ -90,6 +100,7 @@ if ($seg === []) {
                 'og_type' => in_array($d['schema'] ?? '', ['Article', 'BlogPosting', 'NewsArticle'], true) ? 'article' : 'website',
                 'noindex' => !empty($d['noindex'])];
             $page['route'] = 'item:' . $k;
+            if (!cms_item_is_live($item)) { $page['noindex'] = true; $page['preview'] = true; }
             $page['jsonld'] = [cms_jsonld_graph(cms_jsonld_org(), cms_jsonld_breadcrumbs([$home_crumb, [$label, cms_url('list:' . $k, $lang)], [$title, $url]]), cms_jsonld_item($d, $item, $lang, $url))];
         }
         break;

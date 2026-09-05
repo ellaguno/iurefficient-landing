@@ -15,3 +15,5 @@ uploads/*
 !uploads/index.html
 .DS_Store
 Thumbs.db
+data/versions/
+data/.secret
