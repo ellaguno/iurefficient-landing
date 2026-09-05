@@ -44,7 +44,7 @@
     ]
   },
   "overage": {
-    "es": "+$1,000/usuario, +$120.0/GB, +$50/caso, +$120/1000 IA",
+    "es": "+$1,000 por usuario, +$120 por GB, +$50 por caso, +$120 por cada 1,000 consultas IA",
     "en": "+$1,000/user, +$120/GB, +$50/case, +$120 per 1,000 AI queries"
   },
   "cta_text": {
