@@ -3,7 +3,7 @@
  * Iurefficient — configuración del sitio para cms_simple.
  *
  * Rutas públicas:
- *   /                Portada Teams (home.php)
+ *   /                Portada Teams: página por secciones del constructor (paginas/inicio.json)
  *   /derecho         Landing para abogados: página por secciones del constructor (paginas/derecho.json)
  *   /precios         Planes y comparativa (precios.php)
  *   /seguridad       Seguridad, confidencialidad y privacidad (seguridad.php)
@@ -22,7 +22,8 @@
  */
 return [
     'name' => 'Iurefficient',
-    'site_url' => 'https://iurefficient.com',   // dominio canónico (canonical, sitemap, JSON-LD); Ajustes → URL canónica lo puede sobrescribir
+    'site_url' => 'https://iurefficient.com',
+    'home_item' => ['paginas', 'inicio'],        // la portada es la página "Portada Teams" del constructor (data/content/paginas/inicio.json)   // dominio canónico (canonical, sitemap, JSON-LD); Ajustes → URL canónica lo puede sobrescribir
     'langs' => ['es'],
     'default_lang' => 'es',
     'timezone' => 'America/Mexico_City',
@@ -243,17 +244,13 @@ return [
     ],
 
     'strings_groups' => [
-        'Portada Teams' => ['t_hero_title', 't_hero_subtitle', 't_hero_cta1', 't_hero_cta2', 't_problem_title', 't_problem_subtitle', 't_solution_title', 't_solution_subtitle',
-                            't_video_title', 't_video_subtitle', 't_gallery_title', 't_gallery_subtitle', 't_gallery_hint', 't_audience_title', 't_audience_subtitle',
-                            't_testimonial', 't_testimonial_cite', 't_compare_title', 't_compare_subtitle', 't_pricing_title', 't_pricing_subtitle',
-                            't_security_title', 't_security_subtitle', 't_cta_title', 't_cta_button', 't_cta_note', 't_footer_tagline', 't_footer_beta_note'],
         'Precios (/precios)' => ['p_hero_title', 'p_hero_text', 'p_toggle_monthly', 'p_toggle_annual', 'p_toggle_discount', 'p_compare_title', 'p_compare_subtitle',
                             'p_faq_title', 'p_guarantee_title', 'p_guarantee_text', 'p_cta_title', 'p_cta_text', 'p_cta_button'],
         'Seguridad (/seguridad)' => ['s_hero_title', 's_hero_text', 's_hero_update', 's_faq_title', 's_contact_title', 's_contact_text', 's_contact_report', 's_cta_title', 's_cta_text', 's_cta_button', 's_footer_doc'],
         'Páginas, artículos y proyectos' => ['pg_cta_title', 'pg_cta_text', 'pg_cta_button', 'articulos_title', 'articulos_intro', 'articulos_empty', 'articulos_meta_title', 'articulos_meta_desc',
                             'proyectos_title', 'proyectos_intro', 'proyectos_empty', 'proyectos_meta_title', 'proyectos_meta_desc', 'read_more', 'back_to_list', 'toc_title', 'published_on', 'by_author'],
         'Buscador' => ['search_placeholder', 'search_button', 'search_title', 'search_results', 'search_one', 'search_empty', 'search_hint', 'buscar_meta_title'],
-        'Navegación y pie' => ['nav_btn_abogados', 'nav_btn_demo_teams', 'nav_btn_demo_derecho', 'footer_copy', 'footer_made', 'crumb_home', 'not_found_title', 'not_found_text', 'go_home'],
+        'Navegación y pie' => ['nav_btn_abogados', 'nav_btn_demo_teams', 'nav_btn_demo_derecho', 't_footer_tagline', 't_footer_beta_note', 'footer_copy', 'footer_made', 'crumb_home', 'not_found_title', 'not_found_text', 'go_home'],
         'Formulario de contacto' => ['f_name_ph', 'f_email_ph', 'f_email_ph_teams', 'f_phone_ph', 'f_size_teams', 'f_size_derecho'],
         'SEO (título y descripción de cada página)' => ['home_meta_title', 'home_meta_desc', 'precios_meta_title', 'precios_meta_desc',
                             'seguridad_meta_title', 'seguridad_meta_desc'],

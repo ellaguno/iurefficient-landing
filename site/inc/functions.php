@@ -255,13 +255,12 @@ function iure_search_sources(string $lang): array
         foreach (cms_items($type) as $it) {
             $text = '';
             foreach ($fields as $f) { $v = $it[$f] ?? ''; $text .= ' ' . (is_array($v) ? implode(' ', $v) : (string) $v); }
-            $src[] = [$label, (string) ($it['title'] ?? ''), cms_url('item:' . $type, $lang, $it['slug']), cms_content($text), (string) ($it['date'] ?? $it['updated'] ?? '')];
+            foreach ((array) ($it['sections'] ?? []) as $sc) if (empty($sc['hidden'])) foreach ((array) ($sc['data'] ?? []) as $v) $text .= ' ' . (is_array($v) ? implode(' ', $v) : (string) $v);
+            $src[] = [cms_is_home_item($type, $it['slug']) ? 'Portada' : $label, (string) ($it['title'] ?? ''), cms_url('item:' . $type, $lang, $it['slug']), cms_content($text), (string) ($it['date'] ?? $it['updated'] ?? '')];
         }
     }
     // páginas fijas: título SEO, descripción y todos los textos de su grupo en Textos del sitio
     $pages = [
-        'home'      => ['Portada Teams', 'home_meta_title', 'home_meta_desc', cms_url('home', $lang)],
-        'derecho'   => ['Landing Abogados (/derecho)', 'derecho_meta_title', 'derecho_meta_desc', iure_url_derecho($lang)],
         'precios'   => ['Precios (/precios)', 'precios_meta_title', 'precios_meta_desc', cms_url('page:precios', $lang)],
         'seguridad' => ['Seguridad (/seguridad)', 'seguridad_meta_title', 'seguridad_meta_desc', cms_url('page:seguridad', $lang)],
     ];
@@ -378,6 +377,9 @@ function iure_card_icon(string $icon): string
         'chart'    => '<path d="M3 3v18h18"/><path d="M7 15l4-4 4 4 5-6"/>',
         'clock'    => '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>',
         'search'   => '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+        'chat'     => '<path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>',
+        'grid'     => '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',
+        'clip'     => '<path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/>',
         'star'     => '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/>',
     ];
     $k = strtolower(trim($icon));

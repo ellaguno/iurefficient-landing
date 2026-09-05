@@ -1,4 +1,7 @@
 <?php /** Llamado a la acción. $b: title, text, form, origin, button_text, button_url, note */ declare(strict_types=1); ?>
+<?php if (!empty($b['gradient'])): ?>
+        <div class="cta-gradient-bg"><div class="cta-blob cta-blob--1"></div><div class="cta-blob cta-blob--2"></div><div class="cta-blob cta-blob--pointer"></div></div>
+<?php endif; ?>
         <div class="container">
             <div class="cta-content" data-aos="fade-up">
                 <h2><?= iure_inline_html((string) $b['title']) ?></h2>

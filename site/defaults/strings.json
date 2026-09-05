@@ -1,116 +1,4 @@
 {
-  "t_hero_title": {
-    "es": "El plan de proyecto <span class=\"gradient-text\">no se escribe</span>, se conversa",
-    "help": "Admite HTML: <span class=\"gradient-text\">…</span> para el degradado"
-  },
-  "t_hero_subtitle": {
-    "es": "Iurefficient Teams es la primera plataforma de gestión de proyectos donde el chat con IA genera automáticamente tus tareas, dependencias y cronograma. <em>Menos clics, más plan.</em>",
-    "help": "Admite HTML sencillo"
-  },
-  "t_hero_cta1": {
-    "es": "Probar gratis 14 días",
-    "help": ""
-  },
-  "t_hero_cta2": {
-    "es": "Ver cómo funciona",
-    "help": ""
-  },
-  "t_problem_title": {
-    "es": "¿Tu equipo pierde más tiempo <span class=\"gradient-text\">organizando el trabajo</span> que haciéndolo?",
-    "help": "Admite HTML"
-  },
-  "t_problem_subtitle": {
-    "es": "Estos problemas son más comunes de lo que crees.",
-    "help": ""
-  },
-  "t_solution_title": {
-    "es": "Del caos a un plan ejecutable <span class=\"gradient-text\">en minutos</span>",
-    "help": "Admite HTML"
-  },
-  "t_solution_subtitle": {
-    "es": "Iurefficient Teams reúne en un solo lugar la visión de tu proyecto, las tareas de tu equipo, el calendario y la comunicación. Pero lo que lo hace distinto es <strong>iure</strong>, la asistente de IA que entiende tu proyecto y te ayuda a armarlo conversando.",
-    "help": "Admite HTML sencillo"
-  },
-  "t_video_title": {
-    "es": "Mira Iurefficient <span class=\"gradient-text\">en acción</span>",
-    "help": "Admite HTML"
-  },
-  "t_video_subtitle": {
-    "es": "Descubre cómo puedes ahorrar hasta 70% de tu tiempo",
-    "help": ""
-  },
-  "t_gallery_title": {
-    "es": "Conoce la <span class=\"gradient-text\">plataforma</span>",
-    "help": "Admite HTML"
-  },
-  "t_gallery_subtitle": {
-    "es": "Una interfaz intuitiva diseñada para abogados",
-    "help": ""
-  },
-  "t_gallery_hint": {
-    "es": "Usa el scroll para explorar",
-    "help": ""
-  },
-  "t_audience_title": {
-    "es": "Hecho para equipos <span class=\"gradient-text\">que ejecutan</span>",
-    "help": "Admite HTML"
-  },
-  "t_audience_subtitle": {
-    "es": "No solo para despachos. Iurefficient Teams se adapta a cualquier equipo que gestione proyectos.",
-    "help": ""
-  },
-  "t_testimonial": {
-    "es": "\"En la constructora manejamos 12 obras simultáneas. Con Iurefficient levanté la estructura de una obra nueva en lo que tomábamos el café.\"",
-    "help": "Vacío = se oculta el testimonio"
-  },
-  "t_testimonial_cite": {
-    "es": "— Early adopter del programa de acceso anticipado",
-    "help": ""
-  },
-  "t_compare_title": {
-    "es": "Ellos le pegaron IA encima. <span class=\"gradient-text\">Nosotros nacimos con IA adentro.</span>",
-    "help": "Admite HTML"
-  },
-  "t_compare_subtitle": {
-    "es": "La diferencia entre un parche y una plataforma AI-native.",
-    "help": ""
-  },
-  "t_pricing_title": {
-    "es": "Planes para <span class=\"gradient-text\">equipos de cualquier tamaño</span>",
-    "help": "Admite HTML"
-  },
-  "t_pricing_subtitle": {
-    "es": "Sin contratos forzosos. Cancela cuando quieras.",
-    "help": ""
-  },
-  "t_security_title": {
-    "es": "Tus datos de proyecto, <span class=\"gradient-text\">siempre protegidos</span>",
-    "help": "Admite HTML"
-  },
-  "t_security_subtitle": {
-    "es": "Utilizamos la misma infraestructura que ya usan cientos de despachos legales.",
-    "help": ""
-  },
-  "t_cta_title": {
-    "es": "¿Listo para que tu próximo plan de proyecto se haga en una conversación?",
-    "help": ""
-  },
-  "t_cta_button": {
-    "es": "Quiero ser early adopter",
-    "help": ""
-  },
-  "t_cta_note": {
-    "es": "Sin compromiso · 14 días gratis · Soporte incluido",
-    "help": ""
-  },
-  "t_footer_tagline": {
-    "es": "Gestión de proyectos potenciada con inteligencia artificial.",
-    "help": ""
-  },
-  "t_footer_beta_note": {
-    "es": "¿Ya usas Iurefficient para tu despacho? Tu cuenta actual incluye acceso a Teams sin costo adicional durante la fase beta.",
-    "help": "Vacío = se oculta"
-  },
   "p_hero_title": {
     "es": "Planes transparentes, <span class=\"gradient-text\">sin sorpresas</span>",
     "help": "Admite HTML"
@@ -394,5 +282,13 @@
   "buscar_meta_title": {
     "es": "Buscar",
     "help": "SEO: título de /buscar"
+  },
+  "t_footer_tagline": {
+    "es": "Gestión de proyectos potenciada con inteligencia artificial.",
+    "help": "Lema del pie en las páginas Teams"
+  },
+  "t_footer_beta_note": {
+    "es": "¿Ya usas Iurefficient para tu despacho? Tu cuenta actual incluye acceso a Teams sin costo adicional durante la fase beta.",
+    "help": "Nota del pie en las páginas Teams"
   }
 }

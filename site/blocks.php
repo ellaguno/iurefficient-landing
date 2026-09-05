@@ -101,7 +101,7 @@ return [
         'fields' => [
             'title'    => ['type' => 'text', 'label' => 'Título (admite <span class="gradient-text">…</span>)'],
             'subtitle' => ['type' => 'text', 'label' => 'Subtítulo'],
-            'items'    => ['type' => 'lines', 'label' => 'Tarjetas, una por línea: Título | Texto | icono (emoji o: doc, users, bot, calendar, lock, shield, check, cloud, chart, clock)', 'rows' => 6, 'required' => true,
+            'items'    => ['type' => 'lines', 'label' => 'Tarjetas, una por línea: Título | Texto | icono (emoji o: doc, users, bot, calendar, lock, shield, check, cloud, chart, clock, chat, grid, clip, search, star)', 'rows' => 6, 'required' => true,
                            'default' => ['Gestión de documentos | Organiza y analiza documentos con IA. | doc', 'Control de casos | Expedientes y clientes en un solo lugar. | users']],
             'variant'  => ['type' => 'select', 'label' => 'Estilo', 'options' => ['feature' => 'Características (icono grande, efecto luz)', 'benefit' => 'Beneficios (icono a la izquierda)', 'security' => 'Seguridad (tarjeta compacta)', 'audience' => 'Para quién (emoji grande)'], 'default' => 'feature'],
         ],
@@ -199,6 +199,7 @@ return [
             'button_text' => ['type' => 'text', 'label' => 'Texto del botón', 'default' => 'Solicitar demo gratuita'],
             'button_url'  => ['type' => 'text', 'label' => 'URL del botón (solo sin formulario)'],
             'note'        => ['type' => 'text', 'label' => 'Nota pequeña', 'default' => 'Sin compromiso • Setup en 24 horas • Soporte incluido'],
+            'gradient'    => ['type' => 'checkbox', 'label' => 'Fondo', 'text' => 'Degradado animado que sigue al cursor (portada Teams)'],
         ],
     ],
 ];

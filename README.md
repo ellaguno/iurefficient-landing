@@ -10,7 +10,7 @@ tag `pre-cms-migration` de este repositorio y en `../backups/2026-09-03/`.
 
 | URL | Qué es | De dónde sale |
 |---|---|---|
-| `/` | Portada Iurefficient Teams | `site/templates/home.php` + textos + planes (producto "teams") |
+| `/` | Portada Iurefficient Teams | página "Portada Teams" del **constructor** (`data/content/paginas/inicio.json`, config `home_item`) |
 | `/derecho` | Landing para abogados | página "Abogados" del **constructor** (`data/content/paginas/derecho.json`, 11 secciones) |
 | `/precios` | Planes, comparativa y FAQ | `site/templates/precios.php` + planes ("precios") + FAQ ("precios") |
 | `/seguridad` | Seguridad, confidencialidad y privacidad | `site/templates/seguridad.php` + FAQ ("seguridad") |
@@ -34,7 +34,7 @@ Las URLs viejas (`/teams`, `/legal/privacidad.php`, `*.html`) redirigen con 301 
 En el panel todos los tipos de contenido cuelgan del grupo plegable **Páginas** (campo `group` de cada tipo en
 `site/config.php`).
 
-- **Páginas libres**: páginas del **constructor**, en cualquier ruta (`/mi-pagina` o `/padre/hija`, con página padre).
+- **Páginas libres**: páginas del **constructor** (la portada y /derecho son dos de ellas), en cualquier ruta (`/mi-pagina` o `/padre/hija`, con página padre).
   Cada página es una lista de secciones (hero, texto, texto e imagen, imagen, video, galería 3D, HTML, espacio,
   tarjetas, antes y después, tabla comparativa, testimonio, planes, preguntas frecuentes, equipo, últimos artículos,
   páginas hijas, insignias, llamado a la acción) con pestañas Contenido y Estilo (fondo de la paleta, color de texto,
@@ -103,7 +103,7 @@ site/config.php             tipos de contenido, páginas, ajustes, grupos de tex
 site/blocks.php, blocks/    catálogo y vistas de las secciones del constructor
 site/inc/layout.php         cabecera y pie (marca Teams o Abogados según la página)
 site/inc/functions.php      helpers: tarjetas de plan, formulario, índice legal…
-site/templates/             home, precios, seguridad, legal, pagina (constructor), articulos/articulo, proyectos/proyecto,
+site/templates/             precios, seguridad, legal, pagina (constructor: portada y /derecho), articulos/articulo, proyectos/proyecto,
                             plan, miembro, pregunta, 404
 site/assets/css|js|img      styles.css, teams.css, precios.css, seguridad.css, legal.css (legales, páginas libres,
                             artículos, proyectos, preguntas y 404), main.js, imágenes
@@ -150,8 +150,9 @@ La primera vez que abres `/admin/` te pide crear el usuario administrador (`data
 ### Actualizar un sitio ya desplegado
 
 Contenido nuevo generado en local (por ejemplo `data/content/articulos/` y `uploads/blog/` de la migración, o
-`data/content/paginas/derecho.json`, que desde el 5 de septiembre de 2026 **es** la landing /derecho) se sube aparte,
-como archivos nuevos, sin tocar el resto de `data/`. Sin ese JSON, `/derecho` responde 404.
+`data/content/paginas/inicio.json` y `derecho.json`, que desde el 5 de septiembre de 2026 **son** la portada y la landing
+/derecho) se sube aparte, como archivos nuevos, sin tocar el resto de `data/`. Sin esos JSON, `/` cae a `home.php`
+(que ya no existe) y `/derecho` responde 404.
 
 Sube solo el código: todo **excepto** `data/` y `uploads/` (ahí viven el contenido, los ajustes, los usuarios y los
 archivos subidos en producción). Los textos nuevos que traiga el tema se completan solos desde

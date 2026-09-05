@@ -1,0 +1,223 @@
+{
+    "slug": "inicio",
+    "status": "published",
+    "title": "Portada Teams",
+    "sections": [
+        {
+            "id": "030591",
+            "type": "hero",
+            "data": {
+                "title": "El plan de proyecto <span class=\"gradient-text\">no se escribe</span>, se conversa",
+                "subtitle": "Iurefficient Teams es la primera plataforma de gestión de proyectos donde el chat con IA genera automáticamente tus tareas, dependencias y cronograma. <em>Menos clics, más plan.</em>",
+                "buttons": [
+                    "Probar gratis 14 días | #contacto | primary",
+                    "Ver cómo funciona | #video | secondary"
+                ],
+                "image": "",
+                "badges": [
+                    "🤖 | IA Nativa",
+                    "📊 | Kanban + Gantt",
+                    "⚡ | Plan en minutos",
+                    "🔒 | Seguridad Enterprise"
+                ],
+                "shader": true
+            },
+            "style": [],
+            "hidden": false
+        },
+        {
+            "id": "815b4e",
+            "type": "comparacion",
+            "data": {
+                "title": "¿Tu equipo pierde más tiempo <span class=\"gradient-text\">organizando el trabajo</span> que haciéndolo?",
+                "subtitle": "Estos problemas son más comunes de lo que crees.",
+                "before_title": "Sin Iurefficient Teams",
+                "before_icon": "😫",
+                "before_items": [
+                    "Hojas de Excel interminables que nadie actualiza",
+                    "Reuniones de 40 minutos para definir quién hace qué",
+                    "Fechas límite que se cruzan sin aviso",
+                    "Dependencias invisibles hasta que algo se atrasa"
+                ],
+                "after_title": "Con Iurefficient Teams",
+                "after_icon": "😊",
+                "after_items": [
+                    "Un plan ejecutable generado por IA en minutos",
+                    "Tareas y responsables asignados automáticamente",
+                    "Calendario que se ajusta cuando algo cambia",
+                    "Dependencias visibles y alertas en tiempo real"
+                ]
+            },
+            "style": {
+                "anchor": "problema"
+            },
+            "hidden": false
+        },
+        {
+            "id": "09aaa2",
+            "type": "tarjetas",
+            "data": {
+                "title": "Del caos a un plan ejecutable <span class=\"gradient-text\">en minutos</span>",
+                "subtitle": "Iurefficient Teams reúne en un solo lugar la visión de tu proyecto, las tareas de tu equipo, el calendario y la comunicación. Pero lo que lo hace distinto es <strong>iure</strong>, la asistente de IA que entiende tu proyecto y te ayuda a armarlo conversando.",
+                "variant": "feature",
+                "items": [
+                    "Chatea con iure | Dile qué necesitas. La IA te devuelve tareas, subtareas y dependencias listas para ejecutar. | chat",
+                    "Calendario inteligente | Arrastra automáticamente las fechas cuando algo cambia. Sin sorpresas ni cruces de agenda. | calendar",
+                    "Kanban y Gantt vivos | Visualiza el proyecto como quieras. Ambas vistas siempre sincronizadas en tiempo real. | grid",
+                    "Adjuntos y comentarios | Todo el contexto de la tarea en un solo lugar. Sin buscar en correos ni carpetas compartidas. | clip"
+                ]
+            },
+            "style": {
+                "anchor": "solucion"
+            },
+            "hidden": false
+        },
+        {
+            "id": "cb4137",
+            "type": "video",
+            "data": {
+                "title": "Mira Iurefficient <span class=\"gradient-text\">en acción</span>",
+                "subtitle": "Descubre cómo puedes ahorrar hasta 70% de tu tiempo",
+                "url": "https://www.youtube.com/watch?v=SAdlFVYjVI0"
+            },
+            "style": {
+                "anchor": "video"
+            },
+            "hidden": false
+        },
+        {
+            "id": "442e66",
+            "type": "galeria3d",
+            "data": {
+                "title": "Conoce la <span class=\"gradient-text\">plataforma</span>",
+                "subtitle": "Una interfaz intuitiva diseñada para abogados",
+                "hint": "Usa el scroll para explorar",
+                "images": []
+            },
+            "style": {
+                "anchor": "plataforma"
+            },
+            "hidden": false
+        },
+        {
+            "id": "4a97fb",
+            "type": "tarjetas",
+            "data": {
+                "title": "Hecho para equipos <span class=\"gradient-text\">que ejecutan</span>",
+                "subtitle": "No solo para despachos. Iurefficient Teams se adapta a cualquier equipo que gestione proyectos.",
+                "variant": "audience",
+                "items": [
+                    "Constructoras e ingeniería | Oficinas de proyectos (PMO) que coordinan múltiples obras o iniciativas simultáneas. | 🏗️",
+                    "Marketing y producto | Equipos que lanzan campañas, productos y necesitan visibilidad del progreso en tiempo real. | 📈",
+                    "Consultoras | Firmas que gestionan múltiples iniciativas con clientes y necesitan orden sin burocracia. | 🏢",
+                    "Coordinadores académicos | Equipos de investigación y coordinación académica con plazos y entregables complejos. | 🎓"
+                ]
+            },
+            "style": {
+                "anchor": "equipos",
+                "class": "benefits"
+            },
+            "hidden": false
+        },
+        {
+            "id": "08e247",
+            "type": "testimonio",
+            "data": {
+                "quote": "En la constructora manejamos 12 obras simultáneas. Con Iurefficient levanté la estructura de una obra nueva en lo que tomábamos el café.",
+                "cite": "Early adopter del programa de acceso anticipado"
+            },
+            "style": {
+                "pad": "none",
+                "class": "benefits",
+                "bg": "dark"
+            },
+            "hidden": false
+        },
+        {
+            "id": "9ae3a6",
+            "type": "tabla",
+            "data": {
+                "title": "Ellos le pegaron IA encima. <span class=\"gradient-text\">Nosotros nacimos con IA adentro.</span>",
+                "subtitle": "La diferencia entre un parche y una plataforma AI-native.",
+                "head": "Característica | Monday / Asana / Jira | Iurefficient Teams",
+                "rows": [
+                    "Creación del plan | Manual, tarea por tarea | Conversacional, en minutos",
+                    "IA integrada | Parche sobre producto anterior | Nativa, entiende dependencias y fechas",
+                    "Precio (equipo de 8) | ~$10,000-15,000 MXN/mes | Desde $1,499 MXN/mes",
+                    "Enfoque real | Generalista, requiere configuración | Listo para PMO sin curva de aprendizaje",
+                    "Asistente de IA | Funciones básicas, limitadas | iure: genera planes completos desde chat"
+                ]
+            },
+            "style": {
+                "anchor": "comparativa"
+            },
+            "hidden": false
+        },
+        {
+            "id": "aa5d58",
+            "type": "planes",
+            "data": {
+                "title": "Planes para <span class=\"gradient-text\">equipos de cualquier tamaño</span>",
+                "subtitle": "Sin contratos forzosos. Cancela cuando quieras.",
+                "product": "teams",
+                "footer_text": "",
+                "footer_url": ""
+            },
+            "style": {
+                "anchor": "precios"
+            },
+            "hidden": false
+        },
+        {
+            "id": "0767ca",
+            "type": "tarjetas",
+            "data": {
+                "title": "Tus datos de proyecto, <span class=\"gradient-text\">siempre protegidos</span>",
+                "subtitle": "Utilizamos la misma infraestructura que ya usan cientos de despachos legales.",
+                "variant": "security",
+                "items": [
+                    "Cifrado AES-256 | Todos tus documentos y datos de proyecto cifrados en reposo y en tránsito | lock",
+                    "Google Cloud Platform | Infraestructura alojada en Google Cloud con controles de seguridad empresarial | shield",
+                    "Backups Automáticos | Respaldos diarios con retención de 30 días para tu tranquilidad | check",
+                    "Privacidad de IA | Tus documentos nunca se usan para entrenar modelos externos | shield"
+                ]
+            },
+            "style": {
+                "anchor": "seguridad"
+            },
+            "hidden": false
+        },
+        {
+            "id": "aed1d2",
+            "type": "cta",
+            "data": {
+                "title": "¿Listo para que tu próximo plan de proyecto se haga en una conversación?",
+                "text": "",
+                "form": true,
+                "origin": "teams",
+                "button_text": "Quiero ser early adopter",
+                "button_url": "",
+                "note": "Sin compromiso · 14 días gratis · Soporte incluido",
+                "gradient": true
+            },
+            "style": {
+                "anchor": "contacto"
+            },
+            "hidden": false
+        }
+    ],
+    "summary": "Iurefficient Teams es un software de gestión de proyectos con inteligencia artificial. Conversas con iure, tu asistente de IA, y genera tareas, dependencias y cronograma. Prueba gratis 14 días.",
+    "brand": "teams",
+    "image": "",
+    "order": 0,
+    "parent": "",
+    "path": "inicio",
+    "seo_title": {
+        "es": "Iurefficient Teams: gestión de proyectos con IA para equipos"
+    },
+    "seo_desc": {
+        "es": "Iurefficient Teams es un software de gestión de proyectos con inteligencia artificial. Conversas con iure, tu asistente de IA, y genera tareas, dependencias y cronograma. Prueba gratis 14 días."
+    },
+    "created": "2026-09-05",
+    "updated": "2026-09-05"
+}
