@@ -55,7 +55,7 @@ function site_header(array $page): void
                     <span class="logo-teams-badge">Teams</span>
                 </a>
 <?php else: ?>
-                <a href="<?= iure_url_derecho($lang) ?>/" class="logo">
+                <a href="<?= iure_url_derecho($lang) ?>" class="logo">
                     <img src="<?= cms_e(iure_img((string) ($S['logo'] ?? ''), 'logo.svg')) ?>" alt="<?= cms_e($site) ?>" class="logo-img">
                 </a>
 <?php endif; ?>
@@ -72,7 +72,7 @@ function site_header(array $page): void
                     <li><a href="<?= cms_e(cms_menu_url((string) ($it['url'] ?? '/'), $lang)) ?>"<?= !empty($it['new_tab']) ? ' target="_blank" rel="noopener"' : '' ?>><?= cms_e($it['label'] ?? '') ?></a></li>
 <?php endforeach; ?>
                     <?= iure_search_form('teams') ?>
-                    <li><a href="<?= iure_url_derecho($lang) ?>/" class="btn btn-outline btn-sm"><?= cms_e($t('nav_btn_abogados', 'Abogados')) ?></a></li>
+                    <li><a href="<?= iure_url_derecho($lang) ?>" class="btn btn-outline btn-sm"><?= cms_e($t('nav_btn_abogados', 'Abogados')) ?></a></li>
                     <li><a href="<?= cms_e(iure_link('demo_teams_url')) ?>" class="btn btn-primary btn-sm"><?= cms_e($t('nav_btn_demo_teams', 'Entrar al demo')) ?></a></li>
 <?php else:
     foreach ((array) ($S['menu_derecho'] ?? []) as $line):

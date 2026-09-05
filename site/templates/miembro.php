@@ -11,6 +11,6 @@ $photo = iure_img((string) ($item['photo'] ?? ''), (string) ($S['team_placeholde
                     <p class="member-bio"><?= cms_e($item['bio'] ?? '') ?></p>
                 </div>
             </div>
-            <div class="pricing-footer"><p><a href="<?= iure_url_derecho($lang) ?>/#equipo">Conoce a todo el equipo</a></p></div>
+            <div class="pricing-footer"><p><a href="<?= iure_url_derecho($lang) ?>#equipo">Conoce a todo el equipo</a></p></div>
         </div>
     </section>
