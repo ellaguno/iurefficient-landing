@@ -291,3 +291,16 @@ a.ad-map-url:hover { color: var(--ink); text-decoration: underline; }
 .ad-picker-item:hover { border-color: #000; }
 .ad-picker-item span { font-size: 12px; color: var(--grey); }
 .ad-code { width: 100%; font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+/* mapa: acciones y arrastre */
+.ad-map-actions { display: flex; align-items: center; gap: 4px; flex: 0 0 auto; }
+.ad-map-menu { position: relative; }
+.ad-map-menu > summary { list-style: none; cursor: pointer; }
+.ad-map-menu > summary::-webkit-details-marker { display: none; }
+.ad-map-menu-box { position: absolute; right: 0; top: calc(100% + 4px); z-index: 20; min-width: 230px; background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.12); padding: 6px; display: flex; flex-direction: column; gap: 2px; font-size: 13px; }
+.ad-map-menu-box a, .ad-map-menu-box button { display: block; width: 100%; text-align: left; background: transparent; border: 0; padding: 7px 10px; border-radius: 6px; font: inherit; font-size: 13px; color: var(--ink); cursor: pointer; text-decoration: none; }
+.ad-map-menu-box a:hover, .ad-map-menu-box button:hover { background: var(--bg); }
+.ad-map-menu-box .ad-help { padding: 4px 10px; }
+.ad-map-dragging > details > summary, .ad-map-dragging > .ad-map-row { opacity: .5; }
+.ad-map-over { outline: 2px dashed #4f46e5; outline-offset: -2px; background: #eef2ff !important; }
+[data-map-drag] .ad-map-row { cursor: grab; }

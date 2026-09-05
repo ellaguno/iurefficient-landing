@@ -31,6 +31,7 @@ if ($is_new) {
         if ($name === 'order' && ($fd['type'] ?? '') === 'number' && !isset($fd['default'])) $d = count(cms_items($type, false)) + 1;
         $item[$name] = !empty($fd['i18n']) ? array_fill_keys(cms_langs(), $d) : $d;
     }
+    if ($tree && isset($_GET['parent'])) $item['parent'] = cms_slugify((string) $_GET['parent']);
 }
 
 $errors = [];

@@ -20,6 +20,27 @@
     parentPath.textContent = m ? m[1] + "/" : "";
   });
 
+  /* ---------------- mapa del sitio: arrastrar una página bajo otra ---------------- */
+  var moveForm = document.getElementById("map-move");
+  if (moveForm) {
+    document.querySelectorAll("[data-map-drag]").forEach(function (li) {
+      li.addEventListener("dragstart", function (e) { e.stopPropagation(); e.dataTransfer.setData("text/plain", li.getAttribute("data-map-drag")); e.dataTransfer.effectAllowed = "move"; li.classList.add("ad-map-dragging"); });
+      li.addEventListener("dragend", function () { li.classList.remove("ad-map-dragging"); document.querySelectorAll(".ad-map-over").forEach(function (x) { x.classList.remove("ad-map-over"); }); });
+    });
+    document.querySelectorAll("[data-map-drop]").forEach(function (li) {
+      var row = li.querySelector(".ad-map-row");
+      row.addEventListener("dragover", function (e) { e.preventDefault(); e.stopPropagation(); e.dataTransfer.dropEffect = "move"; row.classList.add("ad-map-over"); });
+      row.addEventListener("dragleave", function () { row.classList.remove("ad-map-over"); });
+      row.addEventListener("drop", function (e) {
+        e.preventDefault(); e.stopPropagation(); row.classList.remove("ad-map-over");
+        var src = (e.dataTransfer.getData("text/plain") || "").split(":"), dst = li.getAttribute("data-map-drop").split(":");
+        if (src.length < 2 || src[0] !== dst[0] || src[1] === dst[1]) return;
+        moveForm.querySelector('[name="type"]').value = src[0]; moveForm.querySelector('[name="slug"]').value = src[1]; moveForm.querySelector('[name="parent"]').value = dst[1] || "";
+        moveForm.submit();
+      });
+    });
+  }
+
   /* ---------------- utilidades ---------------- */
   function upload(file) {
     var fd = new FormData();
