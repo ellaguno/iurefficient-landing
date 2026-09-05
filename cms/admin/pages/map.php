@@ -1,7 +1,6 @@
 <?php
 /** Mapa del sitio: árbol de todo lo publicado y en borrador, con origen y acceso a editar. */
 declare(strict_types=1);
-require_once CMS_DIR . '/lib/map.php';
 
 $lang = (string) ($_GET['lang'] ?? cms_default_lang());
 if (!in_array($lang, cms_langs(), true)) $lang = cms_default_lang();

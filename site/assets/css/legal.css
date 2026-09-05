@@ -200,3 +200,10 @@
 .search-results h3 a:hover { color: var(--primary-500); }
 .search-results p { margin: 0; color: var(--gray-600); line-height: 1.6; }
 .search-results mark { background: #fef3c7; color: inherit; padding: 0 .1em; border-radius: 2px; }
+
+/* páginas en árbol: migas de pan e hijas */
+.page-crumbs { font-size: .875rem; color: var(--gray-500); margin-bottom: var(--spacing-lg); }
+.page-crumbs a { color: var(--gray-600); }
+.page-crumbs a:hover { color: var(--primary-500); }
+.page-crumbs span { margin: 0 .2rem; }
+.page-children { margin-top: var(--spacing-2xl); }

@@ -192,6 +192,62 @@ function cms_f(array $item, string $field, string $lang, $default = '')
     return $v ?? $default;
 }
 
+/* ------------------------------------------------------------------ tipos en árbol ('tree' => true: elementos con 'parent' y ruta completa 'path') */
+
+/** Ruta completa de un elemento de un tipo en árbol (padre/…/slug), calculada a partir de 'parent'. */
+function cms_tree_path(string $type, array $items, string $slug, int $depth = 0): string
+{
+    $it = $items[$slug] ?? null;
+    if (!$it) return $slug;
+    $parent = (string) ($it['parent'] ?? '');
+    if ($parent === '' || $parent === $slug || $depth > 20 || !isset($items[$parent])) return $slug;
+    return cms_tree_path($type, $items, $parent, $depth + 1) . '/' . $slug;
+}
+
+/** Recalcula y guarda 'path' en todos los elementos del tipo cuyo valor haya cambiado (tras renombrar o mover). */
+function cms_tree_rebuild(string $type): void
+{
+    $items = [];
+    foreach (glob(cms_content_dir($type) . '/*.json') ?: [] as $f) { $it = cms_json_read($f, null); if (is_array($it) && !empty($it['slug'])) $items[$it['slug']] = $it; }
+    foreach ($items as $slug => $it) {
+        $path = cms_tree_path($type, $items, $slug);
+        if (($it['path'] ?? '') !== $path) { $it['path'] = $path; cms_json_write(cms_content_dir($type) . '/' . $slug . '.json', $it); }
+    }
+}
+
+/** Elemento de un tipo en árbol por su ruta completa. */
+function cms_tree_item(string $type, string $path, bool $published_only = true): ?array
+{
+    foreach (cms_items($type, $published_only) as $it) if (($it['path'] ?? $it['slug']) === $path) return $it;
+    return null;
+}
+
+/** Ancestros de un elemento (del más lejano al padre directo). */
+function cms_tree_ancestors(string $type, array $item, bool $published_only = true): array
+{
+    $items = cms_items($type, $published_only);
+    $out = []; $p = (string) ($item['parent'] ?? ''); $n = 0;
+    while ($p !== '' && isset($items[$p]) && $n++ < 20) { array_unshift($out, $items[$p]); $p = (string) ($items[$p]['parent'] ?? ''); }
+    return $out;
+}
+
+/** Hijos directos publicados de un elemento (o de la raíz si $slug = ''), en el orden del tipo. */
+function cms_tree_children(string $type, string $slug = ''): array
+{
+    return array_values(array_filter(cms_items($type), fn($i) => (string) ($i['parent'] ?? '') === $slug));
+}
+
+/** Primeros segmentos de URL que no puede usar una página de árbol en la raíz. */
+function cms_reserved_segments(): array
+{
+    $r = ['admin', 'cms', 'site', 'data', 'uploads', 'api', 'index.php', 'sitemap.xml', 'robots.txt', 'llms.txt', '_cms'];
+    foreach (cms_config('types') as $k => $d) foreach ((array) ($d['routes'] ?? [$k]) as $sg) if ($sg !== '') $r[] = $sg;
+    foreach (cms_config('pages') as $k => $d) foreach ((array) ($d['routes'] ?? [$k]) as $sg) if ($sg !== '') $r[] = $sg;
+    foreach (cms_langs() as $l) $r[] = $l;
+    if (function_exists('cms_static_dirs')) foreach (cms_static_dirs() as $d) $r[] = $d;
+    return array_values(array_unique($r));
+}
+
 /* ------------------------------------------------------------------ usuarios */
 
 function cms_users(): array

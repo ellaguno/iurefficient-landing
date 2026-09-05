@@ -25,6 +25,7 @@ if (admin_is_post()) {
 }
 
 $items = cms_items($type, false);
+if (!empty($def['tree'])) uasort($items, fn($a, $b) => strcmp((string) ($a['path'] ?? $a['slug']), (string) ($b['path'] ?? $b['slug'])));
 $dl = cms_default_lang();
 $titleField = $def['title_field'] ?? 'title';
 $cols = (array) ($def['list'] ?? []);
@@ -38,7 +39,7 @@ admin_header($def['label'] ?? $type, 'content:' . $type);
   <tbody>
 <?php foreach ($items as $it): $pub = ($it['status'] ?? '') === 'published'; $live = cms_item_is_live($it); ?>
     <tr>
-      <td><a href="<?= admin_url('edit', ['type' => $type, 'slug' => $it['slug']]) ?>"><strong><?= cms_e(cms_f($it, $titleField, $dl) ?: $it['slug']) ?></strong></a><small class="ad-help">/<?= cms_e(cms_segment($def, $dl)) ?>/<?= cms_e($it['slug']) ?></small></td>
+      <td><a href="<?= admin_url('edit', ['type' => $type, 'slug' => $it['slug']]) ?>"><strong><?= cms_e(cms_f($it, $titleField, $dl) ?: $it['slug']) ?></strong></a><small class="ad-help"><?= cms_e(preg_replace('#^https?://[^/]+#', '', cms_url('item:' . $type, $dl, $it['slug']))) ?></small></td>
 <?php foreach ($cols as $c): $v = cms_f($it, $c, $dl); ?>
       <td><?= cms_e(is_array($v) ? implode(', ', $v) : (string) $v) ?></td>
 <?php endforeach; ?>

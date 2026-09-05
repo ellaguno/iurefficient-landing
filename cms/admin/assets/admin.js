@@ -13,6 +13,13 @@
     d.addEventListener("toggle", function () { try { localStorage.setItem(key, d.open ? "1" : "0"); } catch (e) {} });
   });
 
+  /* ---------------- página padre → prefijo de la ruta ---------------- */
+  var parentSel = document.querySelector('select[name="parent"]'), parentPath = document.querySelector("[data-parent-path]");
+  if (parentSel && parentPath) parentSel.addEventListener("change", function () {
+    var m = (parentSel.options[parentSel.selectedIndex].text || "").match(/\(\/([^)]*)\)\s*$/);
+    parentPath.textContent = m ? m[1] + "/" : "";
+  });
+
   /* ---------------- utilidades ---------------- */
   function upload(file) {
     var fd = new FormData();

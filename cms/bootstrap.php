@@ -78,4 +78,5 @@ require_once CMS_DIR . '/lib/url.php';
 require_once CMS_DIR . '/lib/html.php';
 require_once CMS_DIR . '/lib/icons.php';
 require_once CMS_DIR . '/lib/seo.php';
+require_once CMS_DIR . '/lib/map.php';
 if (is_file(CMS_SITE . '/inc/functions.php')) require_once CMS_SITE . '/inc/functions.php';

@@ -7,8 +7,20 @@ if (!$def) { admin_flash('Tipo de contenido desconocido.', 'err'); admin_redirec
 $fields = (array) ($def['fields'] ?? []);
 $titleField = $def['title_field'] ?? 'title';
 $dl = cms_default_lang();
+$tree = !empty($def['tree']);
 
 $orig = cms_slugify((string) ($_GET['slug'] ?? ''));
+if ($tree) {
+    // selector de página padre: todas las del tipo menos la propia y sus descendientes
+    $all = cms_items($type, false);
+    $opts = ['' => '— Raíz del sitio —'];
+    $isDesc = function (string $slug) use ($all, $orig): bool { $n = 0; while ($slug !== '' && $n++ < 20) { if ($slug === $orig) return true; $slug = (string) ($all[$slug]['parent'] ?? ''); } return false; };
+    $paths = [];
+    foreach ($all as $sl => $it) $paths[$sl] = $it['path'] ?? $sl;
+    asort($paths);
+    foreach ($paths as $sl => $pth) if ($sl !== $orig && !$isDesc($sl)) $opts[$sl] = str_repeat('· ', substr_count($pth, '/')) . cms_f($all[$sl], $titleField, $dl) . '  (/' . $pth . ')';
+    $fields = ['parent' => ['type' => 'select', 'label' => 'Página padre', 'sidebar' => true, 'options' => $opts, 'help' => 'La URL se forma con la ruta del padre + la URL de esta página.']] + $fields;
+}
 $item = $orig ? cms_item($type, $orig, false) : null;
 $is_new = !$item;
 if ($orig && !$item) { admin_flash('El elemento no existe.', 'err'); admin_redirect(admin_url('content', ['type' => $type])); }
@@ -48,6 +60,8 @@ if (admin_is_post()) {
         if ($v === '' || $v === []) $errors[] = 'El campo "' . admin_field_label($name, $fd) . '" es obligatorio.';
     }
     if ($slug === '') $errors[] = 'No se pudo generar la URL (slug).';
+    if ($tree && ($new['parent'] ?? '') === '' && in_array($slug, cms_reserved_segments(), true)) $errors[] = 'La URL "' . $slug . '" está reservada por otra sección del sitio; elige otra o ponla bajo una página padre.';
+    if ($tree && ($new['parent'] ?? '') === $slug) $new['parent'] = '';
     if ($slug && $slug !== $orig && is_file(cms_content_dir($type) . '/' . $slug . '.json')) $errors[] = 'Ya existe un elemento con la URL "' . $slug . '".';
     $new['slug'] = $slug;
     $new['seo_title'] = admin_read_field('seo_title', ['type' => 'text', 'i18n' => true]);
@@ -56,8 +70,14 @@ if (admin_is_post()) {
     $new['updated'] = date('Y-m-d');
     $item = $new + $item;
     if (!$errors) {
+        if ($tree) { $all2 = cms_items($type, false); $all2[$slug] = $item; $item['path'] = cms_tree_path($type, $all2, $slug); }
         if (cms_item_save($type, $item)) {
-            if ($orig && $orig !== $slug) { cms_item_delete($type, $orig); if (is_dir(cms_versions_dir($type, $orig)) && !is_dir(cms_versions_dir($type, $slug))) @rename(cms_versions_dir($type, $orig), cms_versions_dir($type, $slug)); }
+            if ($orig && $orig !== $slug) {
+                cms_item_delete($type, $orig);
+                if (is_dir(cms_versions_dir($type, $orig)) && !is_dir(cms_versions_dir($type, $slug))) @rename(cms_versions_dir($type, $orig), cms_versions_dir($type, $slug));
+                if ($tree) foreach (cms_items($type, false) as $ch) if (($ch['parent'] ?? '') === $orig) { $ch['parent'] = $slug; cms_json_write(cms_content_dir($type) . '/' . $ch['slug'] . '.json', $ch); }
+            }
+            if ($tree) cms_tree_rebuild($type);
             admin_flash('Guardado.');
             admin_redirect(admin_url('edit', ['type' => $type, 'slug' => $slug]));
         }
@@ -84,7 +104,7 @@ $titleInputName = !empty($fields[$titleField]['i18n']) ? $titleField . '[' . $dl
       <div class="ad-field"><label>Estado</label>
         <select name="status"><option value="draft"<?= $item['status'] !== 'published' ? ' selected' : '' ?>>Borrador</option><option value="published"<?= $item['status'] === 'published' ? ' selected' : '' ?>>Publicado</option></select></div>
       <div class="ad-field"><label>Publicar a partir de <small class="ad-help">(vacío = de inmediato)</small></label><input type="date" name="publish_at" value="<?= cms_e($item['publish_at'] ?? '') ?>" min="<?= date('Y-m-d', time() + 86400) ?>"></div>
-      <div class="ad-field"><label>URL (slug)</label><input type="text" name="slug" value="<?= cms_e($item['slug']) ?>" data-slug placeholder="se genera del título"><p class="ad-help">/<?= cms_e(cms_segment($def, $dl)) ?>/<span data-slug-preview><?= cms_e($item['slug']) ?></span></p></div>
+      <div class="ad-field"><label>URL (slug)</label><input type="text" name="slug" value="<?= cms_e($item['slug']) ?>" data-slug placeholder="se genera del título"><p class="ad-help"><?php if ($tree): $pp = ($item['parent'] ?? '') !== '' ? (cms_items($type, false)[$item['parent']]['path'] ?? $item['parent']) . '/' : ''; $sg = cms_segment($def, $dl); ?>/<?= $sg !== '' ? cms_e($sg) . '/' : '' ?><span data-parent-path><?= cms_e($pp) ?></span><?php else: ?>/<?= cms_e(cms_segment($def, $dl)) ?>/<?php endif; ?><span data-slug-preview><?= cms_e($item['slug']) ?></span></p></div>
 <?php foreach ($side as $name => $fd) admin_field($name, $fd, $item[$name] ?? ''); ?>
       <div class="ad-field ad-sticky-save">
         <button class="ad-btn" type="submit">Guardar</button>

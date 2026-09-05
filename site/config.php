@@ -9,12 +9,13 @@
  *   /seguridad       Seguridad, confidencialidad y privacidad (seguridad.php)
  *   /buscar?q=       Buscador del sitio (buscar.php, noindex)
  *   /legal/{slug}    Aviso de privacidad, términos… (tipo "legal", legal.php)
- *   /pages/{slug}    Páginas libres creadas desde el panel (tipo "paginas", pagina.php)
+ *   /{ruta}          Páginas libres creadas desde el panel, en árbol (tipo "paginas", pagina.php)
  *   /articulos/      Artículos, tutoriales y novedades (tipo "articulos", articulos.php + articulo.php)
  *   /proyectos/      Proyectos / casos (tipo "proyectos", proyectos.php + proyecto.php) — declarado, sin uso aún
  *   /help-portal/    Centro de ayuda (carpeta estática, fuera del CMS)
  *   /presentacion/   Presentación comercial (carpeta estática, fuera del CMS)
  *
+ * 'tree' => true en un tipo: elementos con página padre y ruta completa (path); 'routes' vacío = cuelgan de la raíz.
  * 'noindex' => true en un tipo: sus detalles llevan meta robots noindex y no entran al sitemap.
  * Los tipos con 'group' => 'Nombre' se agrupan bajo ese encabezado (plegable) en el menú del panel.
  * Tipos de campo: text, textarea, html, date, number, url, email, select, checkbox, image, images, lines, tags.
@@ -33,8 +34,9 @@ return [
             'label' => 'Páginas libres',
             'label_singular' => 'Página',
             'group' => 'Páginas',
-            'help' => 'Páginas de contenido libre (/pages/{url}). Elige en la barra lateral si llevan la cabecera y el pie de Teams o de Abogados.',
-            'routes' => ['es' => 'pages'],
+            'help' => 'Páginas de contenido libre en cualquier ruta (/mi-pagina o /padre/hija). Elige en la barra lateral si llevan la cabecera y el pie de Teams o de Abogados.',
+            'routes' => ['es' => ''],   // cuelgan de la raíz
+            'tree' => true,             // con página padre y ruta completa
             'no_list' => true,
             'template_single' => 'pagina',
             'schema' => 'WebPage',
