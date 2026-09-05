@@ -397,6 +397,9 @@ textarea {
     pointer-events: none;
 }
 
+/* Variables que usan los paquetes de bloques (cms/packs) */
+:root { --cms-max: 1200px; --cms-gutter: var(--spacing-lg); --cms-accent: var(--primary-500); --cms-text: var(--gray-900); --cms-muted: var(--gray-600); --cms-radius: var(--radius-md); --cms-radius-lg: var(--radius-xl); --cms-space-y: var(--spacing-3xl); --cms-space: var(--spacing-2xl); }
+
 /* WebGL Shader Background */
 #hero-shader {
     position: absolute;

@@ -96,7 +96,7 @@ function clean_body(string $html, string $title, array $slugMap, bool $dry): str
             $src = html_entity_decode($im[1]);
             if (preg_match('#(?:embed/|v=|youtu\.be/)([A-Za-z0-9_-]{6,})#', $src, $idm)) {
                 $t = isset($im[2]) && $im[2] !== '' ? $im[2] : 'Video';
-                return '<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/' . $idm[1] . '" title="' . cms_e(html_entity_decode($t)) . '" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>';
+                return '<div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/' . $idm[1] . '" title="' . cms_e(html_entity_decode($t)) . '" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
             }
         }
         // otros embeds: dejar el iframe si lo hay, si no el texto

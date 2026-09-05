@@ -4,10 +4,8 @@ $yt = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path
 $arrow = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
 $play = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>';
 ?>
+<?php cms_section_effect('visual/shader', !empty($b['shader'])); ?>
         <div class="hero-bg"></div>
-<?php if (!empty($b['shader'])): ?>
-        <canvas id="hero-shader" aria-hidden="true"></canvas>
-<?php endif; ?>
         <div class="container">
             <div class="hero-content" data-aos="fade-up">
                 <h1 class="hero-title"><?= iure_inline_html((string) $b['title']) ?></h1>

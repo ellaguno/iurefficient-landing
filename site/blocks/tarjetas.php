@@ -4,6 +4,7 @@ $grid = ['feature' => 'features-grid', 'benefit' => 'benefits-grid', 'security' 
 $card = ['feature' => 'feature-card', 'benefit' => 'benefit-item', 'security' => 'security-card', 'audience' => 'audience-card'][$v] ?? 'feature-card';
 $iconCls = ['feature' => 'feature-icon', 'benefit' => 'benefit-icon', 'security' => 'security-icon', 'audience' => 'audience-icon'][$v] ?? 'feature-icon';
 $hTag = $v === 'feature' ? 'h3' : 'h4';
+cms_section_effect('visual/spotlight', $v === 'feature');
 ?>
         <div class="container">
             <?= iure_section_header((string) $b['title'], (string) $b['subtitle']) ?>

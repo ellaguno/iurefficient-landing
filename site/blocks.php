@@ -12,14 +12,14 @@ return [
     // ---- Cabeceras -------------------------------------------------------------------------------
     'hero' => [
         'label' => 'Hero', 'group' => 'Cabeceras', 'desc' => 'Título grande, subtítulo, botones, imagen y fondo animado opcional.',
-        'wrap_class' => 'hero', 'styles' => ['bg', 'text', 'anchor', 'class', 'hide_mobile'],
+        'wrap_class' => 'hero', 'styles' => ['bg', 'text', 'anchor', 'class', 'hide_mobile'], 'effects' => ['visual/shader'],
         'fields' => [
             'title'    => ['type' => 'text', 'label' => 'Título (admite <span class="gradient-text">…</span> para el degradado)', 'required' => true],
             'subtitle' => ['type' => 'textarea', 'label' => 'Subtítulo (admite negritas y cursivas en HTML)', 'rows' => 2],
             'buttons'  => ['type' => 'lines', 'label' => 'Botones, uno por línea: Texto | URL | estilo (primary, secondary, outline, youtube)', 'rows' => 3, 'default' => ['Solicitar demo | #contacto | primary']],
             'image'    => ['type' => 'image', 'label' => 'Imagen (captura o mockup; vacío = captura del dashboard de Ajustes)'],
             'badges'   => ['type' => 'lines', 'label' => 'Insignias bajo la imagen: emoji | texto', 'rows' => 3],
-            'shader'   => ['type' => 'checkbox', 'label' => 'Fondo', 'text' => 'Fondo animado (shader)', 'default' => true],
+            'shader'   => ['type' => 'checkbox', 'label' => 'Fondo', 'text' => 'Fondo animado de ondas (efecto visual/shader)', 'default' => true],
         ],
     ],
     'insignias' => [
@@ -70,16 +70,6 @@ return [
             'url'      => ['type' => 'text', 'label' => 'URL del video (YouTube o Vimeo)', 'required' => true, 'placeholder' => 'https://www.youtube.com/watch?v=…'],
         ],
     ],
-    'galeria3d' => [
-        'label' => 'Galería 3D', 'group' => 'Contenido', 'desc' => 'Capturas en la galería tridimensional con scroll.',
-        'wrap_class' => 'screenshots', 'styles' => ['anchor', 'class', 'hide_mobile'],
-        'fields' => [
-            'title'    => ['type' => 'text', 'label' => 'Título', 'default' => 'Conoce la <span class="gradient-text">plataforma</span>'],
-            'subtitle' => ['type' => 'text', 'label' => 'Subtítulo'],
-            'hint'     => ['type' => 'text', 'label' => 'Texto de ayuda', 'default' => 'Usa el scroll para explorar'],
-            'images'   => ['type' => 'images', 'label' => 'Imágenes (una por línea; vacío = capturas de Ajustes)', 'rows' => 5],
-        ],
-    ],
     'html' => [
         'label' => 'HTML', 'group' => 'Contenido', 'desc' => 'Código HTML tal cual (avanzado).',
         'wrap_class' => 'sec-generic',
@@ -98,6 +88,7 @@ return [
     'tarjetas' => [
         'label' => 'Tarjetas', 'group' => 'Tarjetas y listas', 'desc' => 'Rejilla de tarjetas con icono, título y texto (características, beneficios, seguridad, para quién).',
         'wrap_class_by' => ['field' => 'variant', 'map' => ['feature' => 'features', 'benefit' => 'benefits', 'security' => 'security', 'audience' => 'audience']],
+        'effects' => ['visual/spotlight'],   // la vista lo quita si la variante no es 'feature'
         'fields' => [
             'title'    => ['type' => 'text', 'label' => 'Título (admite <span class="gradient-text">…</span>)'],
             'subtitle' => ['type' => 'text', 'label' => 'Subtítulo'],
@@ -190,7 +181,7 @@ return [
     // ---- Cierre ------------------------------------------------------------------------------------
     'cta' => [
         'label' => 'Llamado a la acción', 'group' => 'Cierre', 'desc' => 'Bloque final con título, texto y formulario de contacto o botón.',
-        'wrap_class' => 'cta', 'styles' => ['anchor', 'class', 'hide_mobile'],
+        'wrap_class' => 'cta', 'styles' => ['anchor', 'class', 'hide_mobile'], 'effects' => ['visual/gradient'],
         'fields' => [
             'title'       => ['type' => 'text', 'label' => 'Título', 'default' => '¿Listo para transformar tu práctica legal?', 'required' => true],
             'text'        => ['type' => 'text', 'label' => 'Texto'],

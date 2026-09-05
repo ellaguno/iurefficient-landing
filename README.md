@@ -60,6 +60,24 @@ En el panel todos los tipos de contenido cuelgan del grupo plegable **Páginas**
 - Panel: Mapa del sitio (árbol de todo lo que responde), vista previa de borradores con token, publicación
   programada, versiones (últimas 10, restaurables), duplicar.
 
+### Paquetes de bloques y efectos (cms/packs)
+
+Recursos compartidos entre sitios: cada paquete es una carpeta autocontenida (`pack.php` manifiesto, `blocks.php`,
+`blocks/*.php`, `assets/`, `LICENSES.md`). El tema los activa con `'packs' => ['visual']` en `site/config.php`;
+sus bloques aparecen en el selector como `visual/galeria3d`, y sus efectos en la pestaña Estilo de cualquier sección.
+El núcleo carga el CSS y JS de un paquete solo en las páginas que usan alguno de sus bloques o efectos, y las
+librerías abiertas (three.js, Swiper, GLightbox, GSAP…) las descarga `cms/assets/cms.js` bajo demanda con
+`CMS.load('three')`. Un bloque del tema puede usar un efecto de paquete declarándolo en `'effects'` y activándolo o
+no desde su vista con `cms_section_effect('visual/shader', $on)`. Los bloques de paquete usan clases neutras
+(`cms-*`, `vis-*`) y variables `--cms-*` que el tema define en `styles.css`; `sections.classes` en la configuración
+mapea la cabecera estándar a las clases del tema.
+
+Paquete **visual** (extraído de este sitio): galería 3D, carrusel, galería con lightbox; efectos fondo de ondas
+WebGL, luz que sigue al cursor en tarjetas, degradado animado. El hero, las tarjetas y el cierre del tema los usan.
+Paquete **motion** (reescrito en limpio a partir de katapolt.mx, sobre GSAP 3.13 gratuito): marquesina, cifras
+animadas, titular grande, galería con parallax; efectos texto revelado, aparición escalonada, parallax de fondo y
+cursor magnético de sitio. Cada paquete lleva su `LICENSES.md`.
+
 ### Editor visual
 
 Barra completa (títulos 1 a 4, negritas, cursivas, subrayado, tachado, listas con sangría, cita, bloque de código,
@@ -95,7 +113,7 @@ Genera además `tools/wp-redirects.txt` con las reglas 301 para el `.htaccess` d
 ## Estructura
 
 ```
-index.php, admin/, cms/     núcleo de cms_simple 1.5.0 (se actualiza sustituyendo cms/). Cambios locales pendientes de
+index.php, admin/, cms/     núcleo de cms_simple 1.6.0 (cms/packs: paquetes compartidos; cms/assets/cms.js: cargador) (se actualiza sustituyendo cms/). Cambios locales pendientes de
                             llevar al repo cms_simple: grupos en el menú del panel ('group'), textos por defecto
                             completados desde site/defaults, 'noindex' por tipo, URL canónica (site_url), /llms.txt,
                             cms_jsonld_graph() acepta null (páginas sin schema)

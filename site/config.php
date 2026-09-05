@@ -212,7 +212,14 @@ return [
     ],
 
     // Constructor de páginas: paleta de fondos que ofrece la pestaña "Estilo" de cada sección (clases sec-bg-* en sections.css)
-    'sections' => ['palette' => ['white' => 'Blanco', 'light' => 'Gris claro', 'dark' => 'Oscuro', 'primary' => 'Índigo', 'gradient' => 'Degradado de marca']],
+    'sections' => [
+        'palette' => ['white' => 'Blanco', 'light' => 'Gris claro', 'dark' => 'Oscuro', 'primary' => 'Índigo', 'gradient' => 'Degradado de marca'],
+        // clases del tema que usan los bloques de los paquetes (cabecera estándar, botones)
+        'classes' => ['container' => 'container', 'header' => 'section-header', 'title' => 'section-title', 'subtitle' => 'section-subtitle', 'btn' => 'btn btn-primary'],
+    ],
+    // Paquetes de bloques y efectos compartidos (cms/packs/*): galería 3D, carrusel, lightbox, shader, luz en tarjetas, degradado
+    'packs' => ['visual', 'motion'],
+    'block_aliases' => ['galeria3d' => 'visual/galeria3d'],   // páginas guardadas con el bloque antiguo del tema
 
     'pages' => [
         // 'derecho' ya no es plantilla fija: es la página "Abogados" del constructor (data/content/paginas/derecho.json)

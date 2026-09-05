@@ -88,12 +88,21 @@
     },
     {
       "id": "442e66",
-      "type": "galeria3d",
+      "type": "visual/galeria3d",
       "data": {
         "title": "Conoce la <span class=\"gradient-text\">plataforma</span>",
         "subtitle": "Una interfaz intuitiva diseñada para abogados",
         "hint": "Usa el scroll para explorar",
-        "images": []
+        "images": [
+          "screenshot-1.png",
+          "screenshot-2.png",
+          "screenshot-3.png",
+          "screenshot-4.png",
+          "screenshot-5.png",
+          "screenshot-6.png",
+          "screenshot-7.png"
+        ],
+        "height": "normal"
       },
       "style": {
         "anchor": "plataforma"

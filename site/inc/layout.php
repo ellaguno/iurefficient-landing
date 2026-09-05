@@ -16,7 +16,6 @@ function site_header(array $page): void
     $brand = iure_brand($page);
     $route = $page['route'] ?? '';
     $v = CMS_VERSION . '.' . (string) @filemtime(CMS_SITE . '/assets/css/styles.css');
-    $landing = in_array($route, ['home', 'page:derecho', 'item:paginas'], true);   // hero con shader, galería 3D, video (las páginas libres pueden usar esos bloques)
     $pageCss = iure_page_css($route);
     $bodyClass = 'brand-' . $brand . ($pageCss ? ' page-' . $pageCss : '') . ($route === '404' ? ' page-404' : '');
     if ($ld = iure_jsonld($page)) $page['jsonld'][] = $ld;
@@ -29,10 +28,6 @@ function site_header(array $page): void
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<?php if ($landing): ?>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
-<?php endif; ?>
     <link rel="stylesheet" href="<?= cms_asset('css/styles.css') ?>?v=<?= $v ?>">
 <?php if ($route === 'home'): // teams.css restyla .comparison-table; solo en la portada ?>
     <link rel="stylesheet" href="<?= cms_asset('css/teams.css') ?>?v=<?= $v ?>">
@@ -97,7 +92,6 @@ function site_footer(array $page): void
     $t = fn(string $k, $d = '') => cms_t($k, $lang, $d);
     $brand = iure_brand($page);
     $route = $page['route'] ?? '';
-    $landing = in_array($route, ['home', 'page:derecho', 'item:paginas'], true);
     $v = CMS_VERSION . '.' . (string) @filemtime(CMS_SITE . '/assets/js/main.js');
     $home = cms_url('home', $lang);
     $derecho = iure_url_derecho($lang);
@@ -194,12 +188,8 @@ function site_footer(array $page): void
     </button>
 
     <!-- Scripts -->
-<?php if ($landing): // three.js (600 KB) lo carga main.js solo cuando la galería 3D se acerca al viewport ?>
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
-<?php endif; ?>
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script defer src="<?= cms_asset('js/main.js') ?>?v=<?= $v ?>" data-three="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="<?= cms_asset('js/main.js') ?>?v=<?= $v ?>"></script>
 </body>
 </html>
 <?php

@@ -6,7 +6,7 @@ if ($src === '') return;
             <?= iure_section_header((string) $b['title'], (string) $b['subtitle']) ?>
             <div class="video-wrapper" data-aos="zoom-in">
                 <div class="video-container">
-                    <iframe src="<?= cms_e($src) ?>" title="<?= cms_e(strip_tags((string) $b['title']) ?: 'Video') ?>" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe src="<?= cms_e($src) ?>" title="<?= cms_e(strip_tags((string) $b['title']) ?: 'Video') ?>" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
