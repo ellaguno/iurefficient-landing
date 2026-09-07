@@ -92,6 +92,11 @@ de demostración con `?cmsbare=1`; `CMS_ROOT=/otro/sitio … --solo-tema` para o
 Admin → Respaldos: zip de `data/` y `uploads/` (opcionalmente `site/`) en `/backups`, con nota; descargar, restaurar
 (con respaldo automático previo y conservando usuarios) y eliminar. Requiere la extensión zip de PHP.
 
+### Aviso de cookies
+
+Ajustes → Aviso de cookies: barra con texto por idioma, botón, enlace y posición; la inyecta el núcleo desde
+`cms_head()`, sin tocar el tema (restilizable con `.cms-cookie`). Está apagada hasta que se marque la casilla.
+
 ### Importar un diseño (IA con visión)
 
 Admin → Importar diseño: de un PDF o imagen de una página a un borrador del constructor. El navegador rasteriza el
