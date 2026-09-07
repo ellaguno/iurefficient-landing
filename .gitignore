@@ -18,3 +18,4 @@ Thumbs.db
 data/versions/
 data/.secret
 tools/__pycache__/
+data/import-tmp/
