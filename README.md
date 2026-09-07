@@ -99,7 +99,10 @@ archivo con pdf.js en pantallas de 1400×1100 y extrae su capa de texto (`cms/ad
 arma el prompt con el catálogo real de bloques y un JSON Schema de la respuesta, llama al modelo y materializa las
 secciones (`cms/lib/import.php`). Proveedores: OpenRouter (cualquier modelo con visión; clave y modelo en la propia
 pantalla, guardados en `data/settings.json`) o la CLI de Claude Code si está instalada en el equipo (desarrollo local).
-Las pantallas de referencia quedan en `uploads/import/<slug>/` y se muestran, con las notas del análisis (imágenes que
+Las imágenes incrustadas en el PDF se extraen en el navegador a su resolución original con su posición (lista de
+operadores de pdf.js; recorte de la página como respaldo) y el modelo las coloca por número; lo que no se extrae queda
+como imagen provisional con su descripción. Un PDF puede ser una página web (apilar), una por página del PDF o
+cortes marcados a mano. Las pantallas de referencia y las imágenes quedan en `uploads/import/<slug>/` y se muestran, con las notas del análisis (imágenes que
 faltan, partes sin bloque, paleta), en el panel "Diseño importado" del constructor. `'importer' => false` en
 `site/config.php` lo desactiva. Experimento desde la línea de comandos: `tools/import-design.py` (usa
 `tools/blocks-schema.php`, que exporta catálogo, schema y prompt). Resultado de las pruebas con la portada real:
