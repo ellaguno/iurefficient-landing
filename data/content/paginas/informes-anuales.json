@@ -1,0 +1,134 @@
+{
+    "parent": "import-panel-prueba",
+    "brand": "teams",
+    "slug": "informes-anuales",
+    "status": "draft",
+    "title": {
+        "es": "Informes anuales"
+    },
+    "sections": [
+        {
+            "id": "9d06f5",
+            "type": "hero",
+            "data": {
+                "title": {
+                    "es": "INFORMES DE SUSTENTABILIDAD"
+                },
+                "image": "uploads/import/informes-anuales/imagen-01.png",
+                "shader": false
+            },
+            "style": [],
+            "hidden": false
+        },
+        {
+            "id": "1d2a5b",
+            "type": "tarjetas",
+            "data": {
+                "subtitle": {
+                    "es": "At katapolt we design financial, sustainability and integrated Annual Reports."
+                },
+                "items": {
+                    "es": [
+                        "Added Value",
+                        "Editorial Design",
+                        "Financial Statements Design",
+                        "Details",
+                        "Graphic Supports",
+                        "Design of Graphics"
+                    ]
+                },
+                "variant": "benefit"
+            },
+            "style": {
+                "bg": "light"
+            },
+            "hidden": false
+        },
+        {
+            "id": "4487cf",
+            "type": "visual/lightbox",
+            "data": {
+                "images": [
+                    "uploads/import/informes-anuales/imagen-02.png",
+                    "uploads/import/informes-anuales/imagen-03.png",
+                    "uploads/import/informes-anuales/imagen-04.jpg",
+                    "uploads/import/informes-anuales/imagen-05.jpg",
+                    "uploads/import/informes-anuales/imagen-06.png",
+                    "uploads/import/informes-anuales/imagen-07.jpg",
+                    "uploads/import/informes-anuales/imagen-08.jpg",
+                    "uploads/import/informes-anuales/imagen-09.jpg",
+                    "uploads/import/informes-anuales/imagen-10.png",
+                    "uploads/import/informes-anuales/imagen-11.jpg",
+                    "uploads/import/informes-anuales/imagen-12.png"
+                ],
+                "columns": "3"
+            },
+            "style": {
+                "bg": "light"
+            },
+            "hidden": false
+        }
+    ],
+    "summary": {
+        "es": "Portafolio de katapolt, estudio especializado en el diseño de informes anuales financieros, de sustentabilidad e integrados: hero con una pieza destacada, lista de servicios y galería de trabajos."
+    },
+    "image": "",
+    "order": 12,
+    "created": "2026-09-07",
+    "updated": "2026-09-07",
+    "import": {
+        "source": "Diseño-Verne RA-ENG.pdf",
+        "date": "2026-09-07",
+        "lang": "es",
+        "images": [
+            "uploads/import/informes-anuales/imagen-01.png",
+            "uploads/import/informes-anuales/imagen-02.png",
+            "uploads/import/informes-anuales/imagen-03.png",
+            "uploads/import/informes-anuales/imagen-04.jpg",
+            "uploads/import/informes-anuales/imagen-05.jpg",
+            "uploads/import/informes-anuales/imagen-06.png",
+            "uploads/import/informes-anuales/imagen-07.jpg",
+            "uploads/import/informes-anuales/imagen-08.jpg",
+            "uploads/import/informes-anuales/imagen-09.jpg",
+            "uploads/import/informes-anuales/imagen-10.png",
+            "uploads/import/informes-anuales/imagen-11.jpg",
+            "uploads/import/informes-anuales/imagen-12.png"
+        ],
+        "images_used": 12,
+        "palette": {
+            "primary": "#F4C094",
+            "accent": "#1FADA6",
+            "background": "#E9EAEA",
+            "text": "#363B44"
+        },
+        "fonts": [
+            "Sans-serif geométrica redondeada (logo y títulos)",
+            "Sans-serif de palo seco (texto de cuerpo)"
+        ],
+        "notes": [
+            "[Hero] pantalla 1: Fondo naranja liso (no hay uno de los fondos estándar disponibles, se deja vacío). El título se muestra superpuesto a unas letras 'IS' enormes de fondo, puramente decorativas. Hay controles PREV/NEXT de un carrusel a los lados de la imagen que no tienen equivalente en este bloque.",
+            "[Tarjetas] pantalla 1: En el diseño esta lista aparece como una columna fija a la derecha mientras a la izquierda se desplaza la galería de imágenes de la siguiente sección; aquí se representa como lista de tarjetas sin texto de apoyo por ítem ni icono.",
+            "[Galería con lightbox] pantalla 1: Galería de portadas y páginas interiores de informes anuales sobre fondos de color (naranja, verde azulado, granate, verde oliva, rosa). Algunas imágenes numeradas comparten la misma posición (#4/#5, #7/#8, #10/#11/#12): son capas superpuestas de una misma composición de mockup, se listan todas tal como fueron extraídas."
+        ],
+        "unmapped": [
+            "Controles PREV / NEXT del carrusel del hero (pantalla 1), sin equivalente en el bloque hero",
+            "Letras 'IS' superpuestas de gran tamaño como fondo decorativo del título (pantalla 1)"
+        ],
+        "screens": [
+            "uploads/import/informes-anuales/pantalla-01.png",
+            "uploads/import/informes-anuales/pantalla-02.png"
+        ],
+        "stats": {
+            "format": "json_schema",
+            "input_tokens": 109108,
+            "output_tokens": 9694,
+            "cost_usd": 0.2193828,
+            "turns": 4,
+            "seconds": 111.4,
+            "provider": "claude-cli",
+            "model": "sonnet",
+            "screens": 2
+        }
+    },
+    "path": "import-panel-prueba/informes-anuales"
+}
