@@ -415,3 +415,23 @@ function iure_lang_switch(array $page): string
     }
     return $h;
 }
+
+/**
+ * Variables CSS derivadas de Ajustes → Diseño (color principal, acento, tipografía). Vacío = los valores de styles.css.
+ * Los tonos 300/400/600/700 se derivan del principal para que botones, degradados y hovers sigan al color elegido.
+ */
+function iure_design_css(array $S): string
+{
+    $vars = [];
+    $p = (string) ($S['color_primary'] ?? '');
+    if (preg_match('/^#[0-9a-f]{6}$/i', $p)) {
+        $vars['--primary-500'] = $p; $vars['--primary-600'] = cms_color_shade($p, -0.12); $vars['--primary-700'] = cms_color_shade($p, -0.3);
+        $vars['--primary-400'] = cms_color_shade($p, 0.15); $vars['--primary-300'] = cms_color_shade($p, 0.35);
+    }
+    $a = (string) ($S['color_accent'] ?? '');
+    if (preg_match('/^#[0-9a-f]{6}$/i', $a)) { $vars['--accent-500'] = $a; $vars['--accent-400'] = cms_color_shade($a, 0.15); $vars['--accent-300'] = cms_color_shade($a, 0.4); }
+    $font = trim((string) ($S['font_custom'] ?? '')) ?: trim((string) ($S['font'] ?? ''));
+    if ($font !== '' && $font !== 'Inter') $vars['--font-family'] = "'" . str_replace("'", '', $font) . "', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+    if (!$vars) return '';
+    return ':root{' . implode('', array_map(fn($k, $v) => $k . ':' . $v . ';', array_keys($vars), $vars)) . '}';
+}

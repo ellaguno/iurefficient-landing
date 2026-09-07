@@ -26,9 +26,12 @@ function site_header(array $page): void
     <meta name="author" content="<?= cms_e($site) ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<?php $font = trim((string) ($S['font_custom'] ?? '')) ?: (trim((string) ($S['font'] ?? '')) ?: 'Inter'); ?>
+    <link href="<?= cms_e(cms_google_fonts_url([$font])) ?>" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= cms_asset('css/styles.css') ?>?v=<?= $v ?>">
+<?php if ($css = iure_design_css($S)): ?>    <style><?= $css ?></style>
+<?php endif; ?>
 <?php if ($route === 'home'): // teams.css restyla .comparison-table; solo en la portada ?>
     <link rel="stylesheet" href="<?= cms_asset('css/teams.css') ?>?v=<?= $v ?>">
 <?php endif; ?>

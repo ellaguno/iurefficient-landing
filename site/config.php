@@ -227,6 +227,12 @@ return [
     ],
 
     'settings' => [
+        'Diseño' => [
+            'color_primary' => ['type' => 'color', 'label' => 'Color principal (botones, enlaces, degradados)', 'placeholder' => '#4f46e5 (índigo del tema)', 'half' => true],
+            'color_accent'  => ['type' => 'color', 'label' => 'Color de acento (segundo color del degradado)', 'placeholder' => '#06b6d4 (cian del tema)', 'half' => true],
+            'font'          => ['type' => 'select', 'label' => 'Tipografía (Google Fonts)', 'options' => ['' => 'Inter (la del tema)', 'Poppins' => 'Poppins', 'Montserrat' => 'Montserrat', 'Manrope' => 'Manrope', 'DM Sans' => 'DM Sans', 'Plus Jakarta Sans' => 'Plus Jakarta Sans', 'Sora' => 'Sora', 'Outfit' => 'Outfit', 'Work Sans' => 'Work Sans', 'Nunito' => 'Nunito', 'Roboto' => 'Roboto', 'Open Sans' => 'Open Sans'], 'half' => true],
+            'font_custom'   => ['type' => 'text', 'label' => 'Otra tipografía de Google Fonts (nombre exacto)', 'placeholder' => 'Figtree', 'half' => true],
+        ],
         'Enlaces y demos' => [
             'demo_teams_url'   => ['type' => 'url', 'label' => 'Demo de Teams (botón "Entrar al demo")'],
             'demo_derecho_url' => ['type' => 'url', 'label' => 'Demo para abogados (botón "Usar Demo")'],
