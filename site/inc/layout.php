@@ -46,6 +46,10 @@ function site_header(array $page): void
 </head>
 <body class="<?= $bodyClass ?><?= !empty($_GET['cmsbare']) ? ' cms-bare' : '' ?>">
 <?php if (!empty($_GET['cmsbare'])) return; // solo el contenido: vistas previas de bloques ?>
+<?php // bandas marcadas "arriba de la cabecera" (banda de aviso, ticker): van antes del menú; la cabecera fija baja lo que miden (main.js)
+[$topBands] = cms_sections_top((array) ($page['sections'] ?? []));
+if ($topBands) echo '    <div class="top-bands" id="top-bands">', cms_sections_render($topBands, ['lang' => $lang, 'S' => $S, 't' => $t, 'page' => $page, 'item' => $GLOBALS['item'] ?? null]), '</div>', "\n",
+    '    <script>document.documentElement.style.setProperty("--top-bands", document.getElementById("top-bands").offsetHeight + "px");</script>', "\n"; // antes de pintar la cabecera, sin esperar a main.js ?>
     <header class="header" id="header">
         <div class="container">
             <nav class="nav">

@@ -1,6 +1,7 @@
 <?php /** Página libre en árbol (/{ruta}). Variables: $lang, $S, $t, $page, $item, $def */ declare(strict_types=1);
 $sections = (array) ($item['sections'] ?? []);
 if ($sections) {
+    [, $sections] = cms_sections_top($sections);   // las bandas "arriba de la cabecera" ya las dibujó site_header()
     echo '<main class="page-sections">', cms_sections_render($sections, ['lang' => $lang, 'S' => $S, 't' => $t, 'page' => $page, 'item' => $item]), '</main>';
     return;
 }

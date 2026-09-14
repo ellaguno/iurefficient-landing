@@ -70,3 +70,8 @@
 .page-sections > .cms-band:first-child { margin-top: 80px; }
 .page-sections > .cms-band + .hero { padding-top: var(--spacing-4xl); }
 .page-sections > .cms-band + .page-head { padding-top: var(--spacing-3xl); }
+
+/* Bandas "arriba de la cabecera": van antes del <header> fijo, como parte normal del flujo; la cabecera baja lo que miden
+   (variable --top-bands, calculada en main.js) y vuelve a top:0 cuando la banda sale de pantalla al desplazarse. */
+.top-bands { position: relative; z-index: 1001; }
+.top-bands .sec { margin: 0; }

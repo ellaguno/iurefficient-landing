@@ -65,6 +65,15 @@ function initHeader() {
     const header = document.getElementById('header');
     let lastScroll = 0;
 
+    // bandas sobre la cabecera: la cabecera fija empieza debajo de ellas y sube a top:0 conforme se desplazan fuera
+    const bands = document.getElementById('top-bands');
+    if (bands) {
+        const place = () => document.documentElement.style.setProperty('--top-bands', Math.max(0, bands.offsetHeight - window.pageYOffset) + 'px');
+        place();
+        window.addEventListener('scroll', place, { passive: true });
+        if (window.ResizeObserver) new ResizeObserver(place).observe(bands); else window.addEventListener('resize', place);
+    }
+
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
 

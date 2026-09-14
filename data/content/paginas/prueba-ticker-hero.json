@@ -1,0 +1,100 @@
+{
+  "slug": "prueba-ticker-hero",
+  "status": "published",
+  "title": {
+    "es": "Prueba ticker hero",
+    "en": "x"
+  },
+  "brand": "teams",
+  "parent": "",
+  "path": "prueba-ticker-hero",
+  "order": 99,
+  "image": "",
+  "summary": {
+    "es": "",
+    "en": ""
+  },
+  "seo_title": {
+    "es": "",
+    "en": ""
+  },
+  "seo_desc": {
+    "es": "",
+    "en": ""
+  },
+  "created": "2026-09-14",
+  "updated": "2026-09-14",
+  "sections": [
+    {
+      "id": "t4",
+      "type": "contenido/ticker",
+      "data": {
+        "source": "manual",
+        "collection": "articulos",
+        "filter": "",
+        "feed_url": "",
+        "feed_category": "",
+        "refresh": "30",
+        "items": [
+          "Webinar de IA jurídica el 30 de septiembre | #",
+          "Nueva integración con Google Drive"
+        ],
+        "count": 5,
+        "mode": "scroll",
+        "speed": "fast",
+        "label": "",
+        "icon": "",
+        "icon_custom": "🎉",
+        "show_date": false,
+        "more_text": "",
+        "more_url": "",
+        "closable": true,
+        "key": "ticker-t4",
+        "top": true
+      },
+      "style": {}
+    },
+    {
+      "id": "030591",
+      "type": "hero",
+      "data": {
+        "title": {
+          "es": "El plan de proyecto <span class=\"gradient-text\">no se escribe</span>, se conversa",
+          "en": "The project plan <span class=\"gradient-text\">isn't written</span>, it's talked through"
+        },
+        "subtitle": {
+          "es": "Iurefficient Teams es la primera plataforma de gestión de proyectos donde el chat con IA genera automáticamente tus tareas, dependencias y cronograma. <em>Menos clics, más plan.</em>",
+          "en": "Iurefficient Teams is the first project management platform where the AI chat automatically generates your tasks, dependencies and schedule. <em>Fewer clicks, more plan.</em>"
+        },
+        "buttons": {
+          "es": [
+            "Probar gratis 14 días | #contacto | primary",
+            "Ver cómo funciona | #video | secondary"
+          ],
+          "en": [
+            "Try free for 14 days | #contacto | primary",
+            "See how it works | #video | secondary"
+          ]
+        },
+        "image": "",
+        "badges": {
+          "es": [
+            "🤖 | IA Nativa",
+            "📊 | Kanban + Gantt",
+            "⚡ | Plan en minutos",
+            "🔒 | Seguridad Enterprise"
+          ],
+          "en": [
+            "🤖 | Native AI",
+            "📊 | Kanban + Gantt",
+            "⚡ | A plan in minutes",
+            "🔒 | Enterprise security"
+          ]
+        },
+        "shader": true
+      },
+      "style": [],
+      "hidden": false
+    }
+  ]
+}

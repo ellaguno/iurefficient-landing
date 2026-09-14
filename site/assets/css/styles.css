@@ -246,7 +246,7 @@ textarea {
    -------------------------------------------------------------------------- */
 .header {
     position: fixed;
-    top: 0;
+    top: var(--top-bands, 0px);   /* bandas sobre la cabecera (#top-bands): main.js pone aquí lo que queda visible de ellas */
     left: 0;
     right: 0;
     z-index: 1000;
