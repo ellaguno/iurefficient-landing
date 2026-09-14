@@ -1,0 +1,191 @@
+{
+  "slug": "prueba-ticker",
+  "status": "published",
+  "title": {
+    "es": "Prueba ticker",
+    "en": "Ticker test"
+  },
+  "brand": "teams",
+  "parent": "",
+  "path": "prueba-ticker",
+  "order": 99,
+  "image": "",
+  "summary": {
+    "es": "",
+    "en": ""
+  },
+  "seo_title": {
+    "es": "",
+    "en": ""
+  },
+  "seo_desc": {
+    "es": "",
+    "en": ""
+  },
+  "created": "2026-09-14",
+  "updated": "2026-09-14",
+  "sections": [
+    {
+      "id": "a1",
+      "type": "contenido/aviso",
+      "data": {
+        "text": "Aviso de prueba de regresión",
+        "icon": "🎉",
+        "link_text": "Enlace",
+        "link_url": "#",
+        "closable": true,
+        "key": "aviso-prueba"
+      },
+      "style": {}
+    },
+    {
+      "id": "t1",
+      "type": "contenido/ticker",
+      "data": {
+        "source": "collection",
+        "collection": "articulos",
+        "filter": "",
+        "feed_url": "",
+        "feed_category": "",
+        "refresh": "30",
+        "items": [],
+        "count": 5,
+        "mode": "scroll",
+        "speed": "normal",
+        "label": "Artículos",
+        "icon": "article",
+        "icon_custom": "",
+        "show_date": true,
+        "more_text": "Ver todo",
+        "more_url": "",
+        "closable": true,
+        "key": "ticker-t1"
+      },
+      "style": {}
+    },
+    {
+      "id": "t2",
+      "type": "contenido/ticker",
+      "data": {
+        "source": "feed",
+        "collection": "articulos",
+        "filter": "",
+        "feed_url": "https://blog.iurefficient.com",
+        "feed_category": "Noticias",
+        "refresh": "30",
+        "items": [],
+        "count": 4,
+        "mode": "rotate",
+        "speed": "normal",
+        "label": "Noticias",
+        "icon": "news",
+        "icon_custom": "",
+        "show_date": true,
+        "more_text": "Ver todo",
+        "more_url": "",
+        "closable": false,
+        "key": "ticker-t2",
+        "style": {}
+      },
+      "style": {}
+    },
+    {
+      "id": "t3",
+      "type": "contenido/ticker",
+      "data": {
+        "source": "feed",
+        "collection": "articulos",
+        "filter": "",
+        "feed_url": "blog.iurefficient.com/feed/",
+        "feed_category": "Versiones",
+        "refresh": "30",
+        "items": [],
+        "count": 3,
+        "mode": "still",
+        "speed": "normal",
+        "label": "Versiones",
+        "icon": "sparkles",
+        "icon_custom": "",
+        "show_date": true,
+        "more_text": "Ver todo",
+        "more_url": "",
+        "closable": false,
+        "key": "ticker-t3"
+      },
+      "style": {}
+    },
+    {
+      "id": "t4",
+      "type": "contenido/ticker",
+      "data": {
+        "source": "manual",
+        "collection": "articulos",
+        "filter": "",
+        "feed_url": "",
+        "feed_category": "",
+        "refresh": "30",
+        "items": [
+          "Webinar de IA jurídica el 30 de septiembre | #",
+          "Nueva integración con Google Drive"
+        ],
+        "count": 5,
+        "mode": "scroll",
+        "speed": "fast",
+        "label": "",
+        "icon": "",
+        "icon_custom": "🎉",
+        "show_date": false,
+        "more_text": "",
+        "more_url": "",
+        "closable": false,
+        "key": "ticker-t4"
+      },
+      "style": {}
+    },
+    {
+      "id": "t5",
+      "type": "contenido/ticker",
+      "data": {
+        "source": "feed",
+        "collection": "articulos",
+        "filter": "",
+        "feed_url": "https://blog.iurefficient.com",
+        "feed_category": "NoExiste",
+        "refresh": "30",
+        "items": [],
+        "count": 5,
+        "mode": "scroll",
+        "speed": "normal",
+        "label": "Vacío",
+        "icon": "bell",
+        "icon_custom": "",
+        "show_date": true,
+        "more_text": "Ver todo",
+        "more_url": "",
+        "closable": false,
+        "key": "ticker-t5"
+      },
+      "style": {}
+    },
+    {
+      "id": "e1",
+      "type": "encabezado",
+      "data": {
+        "title": {
+          "es": "Página de prueba del ticker",
+          "en": "Ticker test"
+        },
+        "text": {
+          "es": "Cinco variantes arriba.",
+          "en": ""
+        },
+        "note": {
+          "es": "",
+          "en": ""
+        },
+        "dark": false
+      },
+      "style": {}
+    }
+  ]
+}

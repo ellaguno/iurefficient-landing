@@ -47,3 +47,44 @@ La sección **Código del tema** permite editar plantillas, CSS y JS desde el pa
 - **Una página da 404 después de moverla o renombrarla**: crea la redirección 301 desde la ruta vieja.
 - **El sitio se ve sin estilos después de actualizar**: recarga forzando (Ctrl+Shift+R); el navegador tenía el CSS anterior en caché.
 - **Un cambio en Ajustes no se ve**: comprueba que guardaste; el panel muestra "Ajustes guardados" arriba.
+
+## Cambiar el aspecto del sitio sin tocar el contenido
+
+En **Diseño** están las variaciones de estilo que trae el tema: cada una cambia colores, tipografías, esquinas y
+espacios de todo el sitio de una vez. La tarjeta muestra el sitio dibujado de verdad con esa variación, así que puedes
+compararlas antes de decidir. Al pulsar **Usar esta** se aplica y sus colores y tipografías pasan a Ajustes → Diseño,
+donde puedes seguir afinándolos. Si ya tienes tus colores y solo quieres el resto, marca «conservar mis colores».
+
+Las páginas, los artículos y las imágenes no se tocan: es solo la piel.
+
+## Cambiar de tema
+
+En **Diseño**, arriba, están los temas instalados. Cada ficha dice de qué va el tema y, si no es el que usas, avisa de
+lo que ese tema no trae y tu contenido sí usa. Al activarlo, el sitio cambia de plantillas, de bloques y de estilo;
+el contenido no se borra. Las secciones hechas con bloques que el tema nuevo no conozca dejan de verse, pero siguen
+guardadas y reaparecen si vuelves al tema anterior.
+
+Desde ahí también puedes **instalar un tema** desde un archivo zip y **descargar el que estás usando**, que es la forma
+de llevarlo a otro sitio. Un tema contiene programación que se ejecuta en tu servidor: instala solo los que te dé
+alguien de confianza.
+
+## El catálogo: instalar temas y paquetes
+
+En **Catálogo** aparecen los temas y los paquetes de bloques que se pueden instalar desde internet, y más abajo los
+paquetes que ya tienes, con su interruptor. Instalar descarga programación que se ejecutará en tu servidor: hazlo solo
+desde catálogos de confianza. En Ajustes puedes añadir los tuyos.
+
+Desactivar un paquete no borra nada: los bloques que aporta dejan de estar disponibles y las secciones que los usen
+dejan de dibujarse, pero vuelven en cuanto lo actives otra vez.
+
+## Actualizar el CMS con un botón
+
+En **Actualizar** ves la versión que tienes y la publicada. Pulsa **Buscar actualizaciones** (esa consulta sale a
+internet, por eso no se hace sola) y, si hay una nueva, aparecen las notas del cambio y el botón para instalarla.
+
+La actualización sustituye solo el motor del CMS. Tu contenido, tus imágenes y tu diseño no se tocan. La versión
+anterior queda guardada y puedes volver a ella desde esa misma página si algo no te cuadra. Aun así, antes de una
+actualización grande vale la pena crear un respaldo.
+
+Si tu servidor no deja escribir en la carpeta del sitio, la página te lo dirá; en ese caso hay que actualizar por FTP,
+copiando la carpeta `cms/` nueva encima de la vieja.

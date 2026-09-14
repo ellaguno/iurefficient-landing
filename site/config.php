@@ -217,7 +217,7 @@ return [
         'classes' => ['container' => 'container', 'header' => 'section-header', 'title' => 'section-title', 'subtitle' => 'section-subtitle', 'btn' => 'btn btn-primary'],
     ],
     // Paquetes de bloques y efectos compartidos (cms/packs/*): galería 3D, carrusel, lightbox, shader, luz en tarjetas, degradado
-    'packs' => ['visual', 'motion'],
+    'packs' => ['visual', 'motion', 'contenido'],
     'block_aliases' => ['galeria3d' => 'visual/galeria3d'],   // páginas guardadas con el bloque antiguo del tema
 
     'pages' => [

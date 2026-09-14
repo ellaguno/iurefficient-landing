@@ -64,3 +64,9 @@
 .page-head-dark { background: linear-gradient(135deg, var(--gray-900) 0%, #1e1b4b 100%); }
 .page-head-dark h1, .page-head-dark .gradient-text { color: #fff; } .page-head-dark p { color: rgba(255,255,255,.8); }
 .sec-texto.sec-generic { padding-top: var(--spacing-2xl); padding-bottom: var(--spacing-2xl); }
+
+/* Bandas de paquete (banda de aviso, ticker) al principio de la página: la cabecera es fija y mide 80px, así que la
+   primera banda baja ese alto y la sección que la sigue deja de reservar el hueco de la cabecera. */
+.page-sections > .cms-band:first-child { margin-top: 80px; }
+.page-sections > .cms-band + .hero { padding-top: var(--spacing-4xl); }
+.page-sections > .cms-band + .page-head { padding-top: var(--spacing-3xl); }

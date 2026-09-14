@@ -58,6 +58,7 @@ function cms_section_styles(): array
         'bg_image'    => ['type' => 'image', 'label' => 'Imagen de fondo'],
         'overlay'     => ['type' => 'number', 'label' => 'Oscurecer la imagen de fondo (0 a 90 %)', 'min' => 0, 'max' => 90, 'step' => 10],
         'effect'      => ['type' => 'select', 'label' => 'Efecto', 'options' => ['' => 'Ninguno'] + array_map(fn($e) => (string) $e['label'], cms_effects())],
+        'accent'      => ['type' => 'color', 'label' => 'Color de acento solo en esta sección', 'placeholder' => 'vacío = el del sitio'],
         'anchor'      => ['type' => 'text', 'label' => 'Ancla (id para enlaces #ancla)', 'placeholder' => 'contacto'],
         'class'       => ['type' => 'text', 'label' => 'Clases CSS adicionales (avanzado)'],
         'hide_mobile' => ['type' => 'checkbox', 'label' => 'Móvil', 'text' => 'Ocultar en pantallas pequeñas'],
@@ -71,6 +72,52 @@ function cms_block_styles(array $def): array
     if (!cms_effects()) unset($all['effect']);
     if (!array_key_exists('styles', $def)) return $all;
     return array_intersect_key($all, array_flip((array) $def['styles']));
+}
+
+/** Campos configurables de un efecto (los declara el paquete en pack.php). */
+function cms_effect_fields(string $key): array
+{
+    return (array) (cms_effects()[$key]['fields'] ?? []);
+}
+
+/** Opciones guardadas de un efecto en una sección, con los valores por defecto de su definición. */
+function cms_effect_options(array $style, string $key): array
+{
+    $fields = cms_effect_fields($key);
+    if (!$fields) return [];
+    $saved = (array) (($style['fx'] ?? [])[$key] ?? []);
+    $out = [];
+    foreach ($fields as $k => $fd) {
+        $v = $saved[$k] ?? null;
+        if ($v === null || $v === '') { if (array_key_exists('default', $fd)) $out[$k] = $fd['default']; continue; }
+        $out[$k] = $v;
+    }
+    return $out;
+}
+
+/** Valor apto para una variable CSS (evita cerrar la declaración o inyectar). */
+function cms_css_value($v): string
+{
+    $v = is_bool($v) ? ($v ? '1' : '0') : (string) $v;
+    $v = preg_replace('/[^A-Za-z0-9 #%.,()\/_-]/', '', $v) ?? '';
+    return mb_substr(trim($v), 0, 80);
+}
+
+/** Variables CSS y JSON de las opciones de los efectos activos en una sección. Devuelve [css, json]. */
+function cms_effects_style(array $style, array $effects): array
+{
+    $css = ''; $json = [];
+    foreach ($effects as $key) {
+        $opts = cms_effect_options($style, $key);
+        if (!$opts) continue;
+        $prefix = '--fx-' . str_replace('/', '-', $key) . '-';
+        foreach ($opts as $k => $v) {
+            if ($v === '' || $v === null || $v === []) continue;
+            $css .= $prefix . preg_replace('/[^a-z0-9_-]/i', '', $k) . ':' . cms_css_value($v) . ';';
+        }
+        $json[$key] = $opts;
+    }
+    return [$css, $json];
 }
 
 function cms_section_id(): string
@@ -127,7 +174,11 @@ function cms_sections_render(array $sections, array $ctx = []): string
         $style = '';
         if (!empty($st['bg_image'])) $style .= '--sec-bg:url(' . cms_e(cms_img((string) $st['bg_image'])) . ');';
         if (isset($st['overlay']) && $st['overlay'] !== '') $style .= '--sec-overlay:' . (int) $st['overlay'] / 100 . ';';
-        if ($style !== '') $attrs .= ' style="' . $style . '"';
+        // color de acento solo en esta sección: la variable de los paquetes y las que el tema declare en sections.accent_vars
+        if (!empty($st['accent']) && preg_match('/^#[0-9a-f]{6}$/i', (string) $st['accent'])) {
+            $style .= '--cms-accent:' . $st['accent'] . ';';
+            foreach ((array) (cms_config('sections')['accent_vars'] ?? []) as $var) if (preg_match('/^--[a-z0-9_-]+$/i', (string) $var)) $style .= $var . ':' . $st['accent'] . ';';
+        }
         $anim = (string) ($st['animate'] ?? '');
         if ($anim === '') $anim = (string) ($def['animate'] ?? '');
         if ($anim !== '' && $anim !== 'none') $attrs .= ' data-aos="' . cms_e($anim) . '"';
@@ -149,7 +200,13 @@ function cms_sections_render(array $sections, array $ctx = []): string
         }
         $inner = ob_get_clean();
         $fx = array_values(array_filter((array) ($GLOBALS['cms_current_effects'] ?? []), fn($e) => preg_match('#^[a-z0-9_-]+/[a-z0-9_-]+$#i', (string) $e)));
-        if ($fx) $attrs .= ' data-effect="' . cms_e(implode(' ', $fx)) . '"';
+        if ($fx) {
+            $attrs .= ' data-effect="' . cms_e(implode(' ', $fx)) . '"';
+            [$fxCss, $fxJson] = cms_effects_style($st, $fx);
+            $style .= $fxCss;
+            if ($fxJson) $attrs .= ' data-fx="' . cms_e(json_encode($fxJson, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)) . '"';
+        }
+        if ($style !== '') $attrs .= ' style="' . $style . '"';
         $out .= '<section' . $attrs . '>' . $inner . '</section>' . "\n";
     }
     if ($builder) $out .= cms_sections_builder_script();
@@ -212,4 +269,86 @@ function cms_block_header(string $title, string $subtitle = '', string $extraCla
     if (trim($title) !== '') $h .= '<h2 class="' . cms_e(cms_block_class('title')) . '">' . $clean($title) . '</h2>';
     if (trim($subtitle) !== '') $h .= '<p class="' . cms_e(cms_block_class('subtitle')) . '">' . $clean($subtitle) . '</p>';
     return $h . '</div>';
+}
+
+/* ------------------------------------------------------------------ ejemplos en vivo (manual y selector del constructor) */
+
+/** Tipo de contenido que usa el constructor (el primero con un campo 'sections'), o null. */
+function cms_builder_type(): ?string
+{
+    foreach (cms_config('types') as $k => $d) foreach ((array) ($d['fields'] ?? []) as $fd) if (($fd['type'] ?? '') === 'sections') return (string) $k;
+    return null;
+}
+
+/** ¿Se está dibujando un ejemplo del panel (manual o selector)? Los bloques que listan contenido lo usan para mostrar elementos de muestra. */
+function cms_is_demo(): bool
+{
+    return !empty($GLOBALS['cms_demo']);
+}
+
+/** Imágenes de muestra que trae el núcleo (cms/assets/img/demo/). $kind: foto, persona, logo. */
+function cms_demo_image(string $kind = 'foto', int $n = 1): string
+{
+    $max = ['foto' => 6, 'persona' => 4, 'logo' => 6][$kind] ?? 6;
+    return 'cms/assets/img/demo/' . $kind . '-' . (($n - 1) % $max + 1) . '.' . ($kind === 'logo' ? 'png' : 'jpg');
+}
+
+/**
+ * Datos de ejemplo de un bloque: lo que declare en 'sample' completa lo que se deduce de la definición
+ * (valores por defecto, imágenes de muestra, textos genéricos). Los campos bilingües reciben el mismo texto en todos los idiomas.
+ */
+function cms_block_sample(array $def): array
+{
+    $sample = (array) ($def['sample'] ?? []);
+    $texts = !$sample;   // sin 'sample' se inventan títulos y textos; con él, lo que no se declare queda vacío
+    $data = [];
+    $img = 0;
+    foreach ((array) ($def['fields'] ?? []) as $k => $fd) {
+        $t = (string) ($fd['type'] ?? 'text');
+        if (array_key_exists($k, $sample)) { $data[$k] = $sample[$k]; continue; }
+        if (array_key_exists('default', $fd)) { $data[$k] = $fd['default']; continue; }
+        switch (true) {
+            case $t === 'image': $data[$k] = cms_demo_image('foto', ++$img); break;
+            case $t === 'images': $data[$k] = [cms_demo_image('foto', 1), cms_demo_image('foto', 2), cms_demo_image('foto', 3)]; break;
+            case in_array($t, ['lines', 'tags'], true): $data[$k] = []; break;
+            case $t === 'html': $data[$k] = '<p>Texto de ejemplo con <strong>negritas</strong> y un <a href="#">enlace</a>.</p>'; break;
+            case $t === 'checkbox': $data[$k] = false; break;
+            case $t === 'number': $data[$k] = (int) ($fd['min'] ?? 3); break;
+            case $t === 'select': $data[$k] = (string) array_key_first((array) ($fd['options'] ?? [''])); break;
+            case $texts && $k === 'title': $data[$k] = 'Título de ejemplo'; break;
+            case $texts && $k === 'subtitle': $data[$k] = 'Un subtítulo de apoyo para el bloque'; break;
+            case $texts && ($k === 'text' || $k === 'sub'): $data[$k] = 'Texto breve que acompaña al bloque y explica de qué trata.'; break;
+            default: $data[$k] = '';
+        }
+    }
+    foreach ($sample as $k => $v) if (!array_key_exists($k, $data)) $data[$k] = $v;
+    return $data;
+}
+
+/**
+ * Sección de demostración de un efecto: el efecto declara en 'sample' uno o varios candidatos
+ * [['block' => 'tarjetas', 'data' => […], 'style' => […]], …]; se usa el primero cuyo bloque exista en este sitio.
+ * Sin candidatos válidos, el primer bloque del tema que no sea cabecera ni pie.
+ */
+function cms_effect_sample(array $def): ?array
+{
+    $cands = (array) ($def['sample'] ?? []);
+    if ($cands && isset($cands['block'])) $cands = [$cands];
+    $blocks = cms_blocks();
+    $chosen = null;
+    foreach ($cands as $c) if (($bd = cms_block((string) ($c['block'] ?? ''))) !== null) { $chosen = (array) $c + ['data' => [], 'style' => []]; $chosen['def'] = $bd; break; }
+    if (!$chosen) {
+        foreach ($blocks as $k => $bd) if (!in_array((string) ($bd['group'] ?? ''), ['Estructura'], true) && !isset($bd['pack'])) { $chosen = ['def' => $bd, 'data' => [], 'style' => []]; break; }
+        if (!$chosen && $blocks) $chosen = ['def' => reset($blocks), 'data' => [], 'style' => []];
+    }
+    if (!$chosen) return null;
+    $bd = $chosen['def'];
+    return ['id' => 'demo01', 'type' => (string) $bd['key'], 'data' => (array) $chosen['data'] + cms_block_sample($bd), 'style' => ['effect' => (string) $def['key']] + (array) $chosen['style']];
+}
+
+/** URL del ejemplo en vivo de un bloque o un efecto (página del panel que lo dibuja con el tema, sin cabecera ni pie), o '' si el tema no usa el constructor. */
+function cms_demo_url(string $key, bool $effect = false): string
+{
+    if (!defined('ADMIN_URL') || cms_builder_type() === null) return '';
+    return ADMIN_URL . '/?p=demo&' . ($effect ? 'effect' : 'block') . '=' . rawurlencode($key);
 }
